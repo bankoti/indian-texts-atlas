@@ -48,6 +48,49 @@ const lessonSteps = [
   { id: 'remember', label: 'Remember' },
 ]
 
+const courseZeroSteps = [
+  { id: 'landscape', label: 'Landscape' },
+  { id: 'coordinates', label: '3 questions' },
+  { id: 'vedic-family', label: 'Vedic family' },
+  { id: 'upanishads', label: 'Upaniṣads' },
+  { id: 'rebuild', label: 'Rebuild' },
+  { id: 'checkpoint', label: 'Checkpoint' },
+]
+
+const courseZeroFamilies = [
+  {
+    title: 'Veda-oriented and Brahmanical-Hindu worlds',
+    text: 'Vedas, epics, Purāṇas, Dharma texts, philosophical schools, and many later devotional and scholarly works.',
+  },
+  {
+    title: 'Buddhist textual traditions',
+    text: 'Different Buddhist communities preserved their own canons, teachings, commentaries, and philosophical debates.',
+  },
+  {
+    title: 'Jain textual traditions',
+    text: 'Jain communities preserved distinct scriptures, narratives, philosophy, ethics, and commentarial traditions.',
+  },
+  {
+    title: 'Languages and regions cross the boundaries',
+    text: 'Sanskrit, Pali, Prakrit, Tamil, and other languages carry works from several traditions. A language is not a religion.',
+  },
+]
+
+const vedicLayers = [
+  { name: 'Saṃhitā', plain: 'Hymns, chants, and ritual formulas', note: 'The core collections associated with each Veda.' },
+  { name: 'Brāhmaṇa', plain: 'Ritual explanation', note: 'Prose that explains actions, meanings, and correspondences.' },
+  { name: 'Āraṇyaka', plain: '“Forest” reflection', note: 'Ritual and cosmology are re-read in more inward or esoteric ways.' },
+  { name: 'Upaniṣad', plain: 'Philosophical inquiry', note: 'Sustained questions about self, reality, knowledge, action, and liberation.' },
+]
+
+const upanishadVedaFamilies = [
+  { veda: 'Ṛgveda', texts: 'Aitareya · Kauṣītaki' },
+  { veda: 'Sāmaveda', texts: 'Kena · Chāndogya' },
+  { veda: 'Śukla Yajurveda', texts: 'Īśā · Bṛhadāraṇyaka' },
+  { veda: 'Kṛṣṇa Yajurveda', texts: 'Kaṭha · Taittirīya · Śvetāśvatara · Maitrī' },
+  { veda: 'Atharvaveda', texts: 'Muṇḍaka · Māṇḍūkya · Praśna' },
+]
+
 function readStoredProgress(): ProgressState {
   try {
     const stored = window.localStorage.getItem('indian-texts-atlas-progress-v1')
@@ -119,7 +162,7 @@ function App() {
 
   return (
     <div className="app-shell">
-      <Header view={view} menuOpen={menuOpen} setMenuOpen={setMenuOpen} navigate={navigate} />
+      {!activeLesson && <Header view={view} menuOpen={menuOpen} setMenuOpen={setMenuOpen} navigate={navigate} />}
 
       {menuOpen && (
         <nav className="mobile-menu" aria-label="Mobile course navigation">
@@ -329,6 +372,13 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
   const [step, setStep] = useState(0)
   const isFoundation = lesson.id === 'course-0'
 
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      document.querySelector<HTMLElement>('.lesson-panel h2')?.focus()
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [step])
+
   if (!detail) {
     return (
       <section className="mapped-lesson">
@@ -346,15 +396,26 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
     )
   }
 
+  if (isFoundation) {
+    return (
+      <CourseZeroLessonView
+        lesson={lesson}
+        detail={detail}
+        completed={completed}
+        reflection={reflection}
+        selectedQuiz={selectedQuiz}
+        step={step}
+        setStep={setStep}
+        onReflectionChange={onReflectionChange}
+        onQuizSelect={onQuizSelect}
+        onComplete={onComplete}
+        onClose={onClose}
+      />
+    )
+  }
+
   const correct = selectedQuiz === detail.quiz.correct
-  const panelCopy = isFoundation ? {
-    locate: ['FOUNDATION · ORIENT', 'See the whole landscape.'],
-    read: ['READ THE CONNECTION MAP', 'Three organizing axes intersect.'],
-    unpack: ['UNPACK THE CATEGORIES', 'Learn what each label is doing.'],
-    compare: ['COMPARE THE LANDSCAPES', 'No single branch contains the whole.'],
-    reflect: ['REFLECT BEFORE READING', 'Notice the map you brought with you.'],
-    remember: ['REMEMBER THE MAP', 'Check the connections.'],
-  } : {
+  const panelCopy = {
     locate: ['LOCATE IN THE TRADITION', 'First, know where you are.'],
     read: ['READ A PASSAGE CLUSTER', 'Stay close to the text.'],
     unpack: ['UNPACK KEY IDEAS', 'Keep difficult words visible.'],
@@ -368,7 +429,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
       <header className="lesson-player-header">
         <button className="back-button" onClick={onClose}><ArrowLeft size={17} /> Path</button>
         <div><small>Lesson {String(lesson.order).padStart(2, '0')} · {lesson.veda}</small><strong>{lesson.title}</strong></div>
-        <span>{completed ? <><CheckCircle2 size={15} /> Complete</> : `${step + 1} / ${lessonSteps.length}`}</span>
+        <span aria-live="polite">{completed ? <><CheckCircle2 size={15} /> Complete</> : `${step + 1} / ${lessonSteps.length}`}</span>
       </header>
 
       <nav className="step-rail" aria-label="Lesson steps">
@@ -390,15 +451,6 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
         {step === 1 && (
           <LessonPanel kicker={panelCopy.read[0]} title={panelCopy.read[1]} icon={<BookOpenText size={22} />}>
             <div className="passage-anchor">{detail.read.anchorLabel ?? 'Passage anchor'} · {detail.read.anchor}</div>
-            {isFoundation && (
-              <div className="course-zero-map" aria-label="Three intersecting ways to locate a text">
-                <article><small>01 · AUTHORITY</small><strong>How is it regarded?</strong><span>Śruti ↔ Smṛti</span></article>
-                <i aria-hidden="true">×</i>
-                <article><small>02 · GENRE</small><strong>What kind of work is it?</strong><span>Upaniṣad · Itihāsa · Purāṇa · more</span></article>
-                <i aria-hidden="true">×</i>
-                <article><small>03 · RECEPTION</small><strong>Who interprets it?</strong><span>Schools · lineages · communities</span></article>
-              </div>
-            )}
             <p className="large-reading">{detail.read.paraphrase}</p>
             <div className="interpretation-note"><strong>Reading note</strong><p>{detail.read.readingNote}</p></div>
           </LessonPanel>
@@ -427,7 +479,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
               const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
               return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
             })}</div>
-            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? (isFoundation ? 'That connection is right.' : 'That is the central move.') : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
+            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? 'That is the central move.' : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Lesson completed' : 'Mark lesson complete'} <CheckCircle2 size={17} /></button>}
             <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
@@ -443,8 +495,146 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
   )
 }
 
+function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQuiz, step, setStep, onReflectionChange, onQuizSelect, onComplete, onClose }: {
+  lesson: CourseLesson
+  detail: LessonDetail
+  completed: boolean
+  reflection: string
+  selectedQuiz?: number
+  step: number
+  setStep: (step: number) => void
+  onReflectionChange: (value: string) => void
+  onQuizSelect: (answer: number) => void
+  onComplete: () => void
+  onClose: () => void
+}) {
+  const correct = selectedQuiz === detail.quiz.correct
+
+  return (
+    <section className="lesson-player course-zero-player">
+      <header className="lesson-player-header">
+        <button className="back-button" onClick={onClose}><ArrowLeft size={17} /> Path</button>
+        <div><small>Course 0 · Start here</small><strong>{lesson.title}</strong></div>
+        <span aria-live="polite">{completed ? <><CheckCircle2 size={15} /> Complete</> : `${step + 1} / ${courseZeroSteps.length}`}</span>
+      </header>
+
+      <nav className="step-rail course-zero-rail" aria-label="Course 0 steps">
+        {courseZeroSteps.map((item, index) => (
+          <button key={item.id} className={index === step ? 'active' : index < step ? 'visited' : ''} onClick={() => setStep(index)} aria-current={index === step ? 'step' : undefined}>
+            <i>{index < step || completed ? <Check size={12} /> : index + 1}</i><span>{item.label}</span>
+          </button>
+        ))}
+      </nav>
+
+      <div className="lesson-content course-zero-content">
+        {step === 0 && (
+          <LessonPanel kicker="1 · THE LANDSCAPE" title="There is no single bookshelf." icon={<LibraryBig size={22} />}>
+            <p className="course-zero-lead">Ancient South Asia did not share one master list of important texts. Begin with several libraries in conversation.</p>
+            <p className="course-zero-definition"><strong>Canon</strong><span>A collection a community treats as especially authoritative—not a universal list for everyone.</span></p>
+            <figure className="course-zero-figure">
+              <img src="./course-zero-landscape.jpg" alt="Four distinct streams of blank manuscript materials cross and exchange threads without merging into a single stream" />
+              <figcaption>Different textual traditions developed their own collections while exchanging stories, arguments, languages, and practices.</figcaption>
+            </figure>
+            <div className="course-zero-thesis"><strong>The first idea to remember</strong><span>Indian textual history is a connected landscape of many libraries—not one canon.</span></div>
+            <div className="landscape-families">
+              {courseZeroFamilies.map((family, index) => (
+                <article key={family.title}><span>0{index + 1}</span><h3>{family.title}</h3><p>{family.text}</p></article>
+              ))}
+            </div>
+          </LessonPanel>
+        )}
+
+        {step === 1 && (
+          <LessonPanel kicker="2 · A WORKED EXAMPLE" title="A text has more than one address." icon={<Compass size={22} />}>
+            <p className="course-zero-lead">When you meet a text, do not force it onto one branch. Give it three coordinates by asking three separate questions.</p>
+            <div className="coordinate-example" aria-label="Three coordinates of the Bhagavad Gita">
+              <div className="coordinate-center"><small>EXAMPLE TEXT</small><strong>Bhagavad Gītā</strong><span>A dialogue inside the Mahābhārata</span></div>
+              <div className="coordinate-grid">
+                <article><span>01</span><small>AUTHORITY</small><h3>How is it regarded?</h3><p>Traditionally classified as <strong>Smṛti</strong>—“remembered tradition,” rather than Vedic Śruti.</p></article>
+                <article><span>02</span><small>GENRE + LOCATION</small><h3>What is it, and where?</h3><p>A dialogue within the <strong>Mahābhārata</strong>, an Itihāsa or epic traditional history.</p></article>
+                <article><span>03</span><small>RECEPTION</small><h3>Who interprets it?</h3><p>Several <strong>Vedānta schools</strong> and devotional traditions, with different readings.</p></article>
+              </div>
+            </div>
+            <div className="course-zero-caveat"><strong>Do not choose only one label.</strong><p>The Gītā is not “either Smṛti, Itihāsa, or Vedānta.” Each label answers a different question. A coordinate is not a competing branch.</p></div>
+          </LessonPanel>
+        )}
+
+        {step === 2 && (
+          <LessonPanel kicker="3 · ZOOM IN" title="Now enter the Vedic family." icon={<Layers3 size={22} />}>
+            <p className="course-zero-lead">The Vedic textual world begins with four Vedas, each transmitted through particular schools or lineages.</p>
+            <p className="course-zero-definition"><strong>Veda</strong><span>Not one book, but four related textual families preserved in multiple transmission lineages.</span></p>
+            <div className="four-vedas" aria-label="The four Vedas"><span>Ṛgveda</span><span>Sāmaveda</span><span>Yajurveda</span><span>Atharvaveda</span></div>
+            <div className="vedic-layer-intro"><strong>Within those lineages, four layers of emphasis help us orient ourselves:</strong></div>
+            <div className="vedic-layer-flow">
+              {vedicLayers.map((layer, index) => (
+                <article key={layer.name} className={layer.name === 'Upaniṣad' ? 'highlight' : ''}>
+                  <span>{String(index + 1).padStart(2, '0')}</span><h3>{layer.name}</h3><strong>{layer.plain}</strong><p>{layer.note}</p>
+                </article>
+              ))}
+            </div>
+            <div className="course-zero-caveat"><strong>This is a guide, not a rigid timeline.</strong><p>The layers overlap, their boundaries vary by Vedic school, and an Upaniṣad may sit inside a Saṃhitā, Brāhmaṇa, or Āraṇyaka. The Upaniṣads did not simply replace ritual with philosophy.</p></div>
+          </LessonPanel>
+        )}
+
+        {step === 3 && (
+          <LessonPanel kicker="4 · YOUR FIRST PATH" title="The Upaniṣads are one room in a larger house." icon={<BookOpenText size={22} />}>
+            <div className="vedic-house" aria-label="Upanishads highlighted within the Vedic textual family">
+              <div><small>THE VEDIC TEXTUAL FAMILY</small><strong>Four Vedas · many transmission lineages</strong></div>
+              <div className="vedic-house-layers"><span>Saṃhitā</span><span>Brāhmaṇa</span><span>Āraṇyaka</span><span className="active">Upaniṣad</span></div>
+            </div>
+            <p className="course-zero-lead">Every principal Upaniṣad in this course is associated with a Veda and a transmission lineage. These are the thirteen on our first path:</p>
+            <div className="upanishad-families">
+              {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
+            </div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch. Later paths will add epics and the Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, and regional-language literatures. Close-reading lessons will use short cited passages and, where relevant, shlokas with transliteration, an attributed translation, and a plain explanation.</span></div>
+            <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
+          </LessonPanel>
+        )}
+
+        {step === 4 && (
+          <LessonPanel kicker="5 · REBUILD THE MAP" title="Can you explain it without the labels?" icon={<NotebookPen size={22} />}>
+            <p className="course-zero-lead">Write three or four plain sentences. If you can rebuild the map in your own words, the vocabulary will have somewhere to attach.</p>
+            <ol className="rebuild-prompts">
+              <li><span>01</span><p>Why is “Indian texts” a landscape of libraries rather than one canon?</p></li>
+              <li><span>02</span><p>What three questions give a text its coordinates?</p></li>
+              <li><span>03</span><p>Where do the Upaniṣads sit inside the Vedic family?</p></li>
+            </ol>
+            <label className="reflection-field"><span>Your private note · saved on this device</span><textarea value={reflection} onChange={(event) => onReflectionChange(event.target.value)} placeholder="Try: ‘There was no single bookshelf because…’" rows={8} /></label>
+          </LessonPanel>
+        )}
+
+        {step === 5 && (
+          <LessonPanel kicker="6 · CHECKPOINT" title="Keep four sentences." icon={<CheckCircle2 size={22} />}>
+            <div className="course-zero-recap" aria-label="Course 0 summary">
+              <span>One landscape, many libraries.</span>
+              <span>Every text needs more than one coordinate.</span>
+              <span>Four Vedas contain school-specific, overlapping layers.</span>
+              <span>Upaniṣads belong to the Vedic world; they are not all Indian thought.</span>
+            </div>
+            <p className="quiz-question">{detail.quiz.question}</p>
+            <div className="quiz-choices">{detail.quiz.choices.map((choice, index) => {
+              const chosen = selectedQuiz === index
+              const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
+              return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
+            })}</div>
+            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? 'Yes—that is the connection.' : 'Look again at what each label is describing.'}</strong><p>{detail.quiz.explanation}</p></div>}
+            {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Course 0 completed' : 'Mark Course 0 complete'} <CheckCircle2 size={17} /></button>}
+            <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
+          </LessonPanel>
+        )}
+      </div>
+
+      <footer className="lesson-controls">
+        <button onClick={() => setStep(Math.max(0, step - 1))} disabled={step === 0}><ChevronLeft size={18} /> Previous</button>
+        <span>{courseZeroSteps[step].label}</span>
+        {step < courseZeroSteps.length - 1 ? <button className="next-step" onClick={() => setStep(Math.min(courseZeroSteps.length - 1, step + 1))}>Next <ChevronRight size={18} /></button> : <button className="next-step" onClick={onClose}>Return to path <ChevronRight size={18} /></button>}
+      </footer>
+    </section>
+  )
+}
+
 function LessonPanel({ kicker, title, icon, children }: { kicker: string; title: string; icon: React.ReactNode; children: React.ReactNode }) {
-  return <article className="lesson-panel"><div className="panel-title"><div>{icon}</div><span className="kicker">{kicker}</span><h2>{title}</h2></div><div className="panel-body">{children}</div></article>
+  return <article className="lesson-panel"><div className="panel-title"><div>{icon}</div><span className="kicker">{kicker}</span><h2 tabIndex={-1}>{title}</h2></div><div className="panel-body">{children}</div></article>
 }
 
 function NotebookView({ progress, updateReflection, openLesson }: { progress: ProgressState; updateReflection: (id: string, value: string) => void; openLesson: (id: string) => void }) {

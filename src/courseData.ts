@@ -40,9 +40,9 @@ export type LessonDetail = {
 }
 
 export const foundationLesson: CourseLesson = {
-  id: 'course-0', order: 0, title: 'Course 0 · How It All Connects', plainTitle: 'Course 0', veda: 'Foundation', form: 'Orientation', minutes: 15,
-  question: 'How do authorities, genres, texts, and schools fit together?',
-  insight: 'There is no single ancient “Indian canon.” This orientation gives you three intersecting maps—authority, genre, and interpretive tradition—before you open any one text.',
+  id: 'course-0', order: 0, title: 'Course 0 · How It All Connects', plainTitle: 'Course 0', veda: 'Foundation', form: 'Visual orientation', minutes: 18,
+  question: 'What is the whole landscape, and where do the Upaniṣads fit?',
+  insight: 'Begin with one clear picture: many textual libraries in conversation. Then use a worked example to learn three coordinates before zooming into the Vedas and Upaniṣads.',
   status: 'available', references: ['Śruti / Smṛti', 'Genre / textual layer', 'Tradition / school'],
 }
 
@@ -156,7 +156,7 @@ export const lessonDetails: Record<string, LessonDetail> = {
       { name: 'Reception lens', reading: 'Ask who interprets it and how. The Gītā became foundational to several Vedānta traditions without itself becoming a Darśana.' },
       { name: 'Wider landscape', reading: 'Brahmanical-Hindu, Buddhist, and Jain traditions developed in exchange and disagreement. Tamil and other language spheres cross those boundaries.' },
     ],
-    reflection: 'Before this course, what did your mental map look like? Note one category you assumed was a single book, a strict chronology, or a complete hierarchy.',
+    reflection: 'Rebuild the map in three or four plain sentences: why is there no single canon, what three questions locate a text, and where do the Upaniṣads sit inside the Vedic family?',
     quiz: {
       question: 'Why should Śruti, Purāṇa, and Darśana not appear as three equivalent branches?',
       choices: [
@@ -172,6 +172,8 @@ export const lessonDetails: Record<string, LessonDetail> = {
       { label: 'IEP overview of Hindu philosophy', url: 'https://iep.utm.edu/hindu-ph/' },
       { label: 'Harvard Pluralism Project: Veda, scripture, and authority', url: 'https://pluralism.org/veda-scripture-and-authority' },
       { label: 'Vedic Heritage Portal: Upaniṣads', url: 'https://vedicheritage.gov.in/upanishads/' },
+      { label: 'Stanford Encyclopedia: Buddhist Abhidharma collections', url: 'https://plato.stanford.edu/entries/abhidharma/' },
+      { label: 'JAINpedia: sacred writings and differing canons', url: 'https://jainpedia.org/themes/principles/sacred-writings/' },
     ],
   },
   kena: {

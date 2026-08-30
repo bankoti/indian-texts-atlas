@@ -162,7 +162,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .full-path .lesson-card:nth-child(odd) { border-right: 1px solid var(--line); }
 
 /* Lesson player */
-.lesson-player { min-height: calc(100vh - 72px); padding: 0 48px 40px; }
+.lesson-player { min-height: 100dvh; padding: 0 48px 40px; }
 .lesson-player-header { min-height: 82px; padding: 14px 0; display: grid; grid-template-columns: 130px minmax(0, 1fr) 130px; gap: 20px; align-items: center; border-bottom: 1px solid var(--line); }
 .lesson-player-header > div { text-align: center; display: grid; gap: 4px; }
 .lesson-player-header small { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .13em; }
@@ -187,16 +187,74 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .reading-block h3 { margin-bottom: 8px; color: var(--rose); font-family: var(--sans); font-size: 9px; font-weight: 750; text-transform: uppercase; letter-spacing: .14em; }
 .reading-block p { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.58; }
 .passage-anchor { display: inline-flex; padding: 7px 10px; border-radius: 7px; background: var(--saffron-soft); color: var(--rose); font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
-.course-zero-map { margin: 22px 0 28px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center; }
-.course-zero-map article { min-width: 0; min-height: 142px; padding: 15px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.38); }
-.course-zero-map article small { margin-bottom: auto; color: var(--rose); font-size: 8px; font-weight: 750; letter-spacing: .12em; }
-.course-zero-map article strong { margin: 13px 0 7px; font-family: var(--serif); font-size: 16px; font-weight: 500; line-height: 1.15; }
-.course-zero-map article span { color: var(--muted); font-size: 10px; line-height: 1.35; }
-.course-zero-map > i { color: var(--saffron); font-family: var(--serif); font-size: 22px; font-style: normal; }
 .large-reading { margin: 24px 0 30px; font-family: var(--serif); font-size: 25px; line-height: 1.52; }
 .interpretation-note { padding: 18px 20px; border-left: 3px solid var(--saffron); background: rgba(255,255,255,.28); }
 .interpretation-note strong { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
 .interpretation-note p { margin: 8px 0 0; color: var(--muted); font-family: var(--serif); line-height: 1.55; }
+
+/* Course 0: a concrete, visual orientation before the text lessons */
+.course-zero-content .lesson-panel { max-width: 1120px; grid-template-columns: minmax(230px, .52fr) minmax(0, 1.48fr); }
+.course-zero-content .panel-title h2:focus { outline: 2px solid var(--saffron); outline-offset: 7px; border-radius: 2px; }
+.course-zero-content .panel-body, .course-zero-content .panel-body > * { min-width: 0; }
+.course-zero-lead { margin: 0 0 22px; font-family: var(--serif); font-size: 21px; line-height: 1.52; }
+.course-zero-definition { margin: -8px 0 20px; padding: 12px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.26); }
+.course-zero-definition strong { color: var(--rose); font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
+.course-zero-definition span { color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.42; }
+.course-zero-figure { margin: 0 0 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.34); }
+.course-zero-figure img { width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover; }
+.course-zero-figure figcaption { padding: 11px 14px 13px; color: var(--muted); font-family: var(--serif); font-size: 12px; line-height: 1.45; }
+.course-zero-thesis { margin: 18px 0; padding: 17px 19px; display: grid; gap: 6px; border-left: 4px solid var(--saffron); background: var(--saffron-soft); }
+.course-zero-thesis strong { color: var(--rose); font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
+.course-zero-thesis span { font-family: var(--serif); font-size: 18px; line-height: 1.45; }
+.landscape-families { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.landscape-families article { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.3); }
+.landscape-families article > span { color: var(--saffron); font-family: var(--serif); font-size: 12px; }
+.landscape-families h3 { margin: 9px 0 7px; font-size: 18px; line-height: 1.22; }
+.landscape-families p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.5; }
+.coordinate-example { margin-top: 24px; }
+.coordinate-center { padding: 18px 20px; display: grid; gap: 3px; border: 1px solid var(--ink); border-radius: 13px 13px 0 0; background: var(--ink); color: var(--paper); text-align: center; }
+.coordinate-center small { color: #cfc0ad; font-size: 8px; font-weight: 750; letter-spacing: .14em; }
+.coordinate-center strong { font-family: var(--serif); font-size: 27px; font-weight: 500; }
+.coordinate-center span { color: #d9cbbb; font-family: var(--serif); font-size: 12px; }
+.coordinate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.coordinate-grid article { min-width: 0; padding: 17px; border: 1px solid var(--line); border-top: 0; background: rgba(255,255,255,.3); }
+.coordinate-grid article:first-child { border-radius: 0 0 0 13px; }
+.coordinate-grid article:last-child { border-radius: 0 0 13px 0; }
+.coordinate-grid article > span { color: var(--saffron); font-family: var(--serif); font-size: 12px; }
+.coordinate-grid small { display: block; margin: 8px 0 11px; color: var(--rose); font-size: 8px; font-weight: 800; letter-spacing: .11em; }
+.coordinate-grid h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.2; }
+.coordinate-grid p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.5; }
+.course-zero-caveat { margin-top: 18px; padding: 17px 19px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.25); }
+.course-zero-caveat strong { font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
+.course-zero-caveat p { margin: 7px 0 0; color: var(--muted); font-family: var(--serif); line-height: 1.52; }
+.four-vedas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+.four-vedas span { min-width: 0; padding: 12px 7px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.34); font-family: var(--serif); font-size: 13px; text-align: center; }
+.vedic-layer-intro { margin: 24px 0 12px; font-family: var(--serif); font-size: 15px; }
+.vedic-layer-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.vedic-layer-flow article { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.3); }
+.vedic-layer-flow article.highlight { border-color: var(--saffron); background: var(--saffron-soft); }
+.vedic-layer-flow article > span { float: right; color: var(--saffron); font-family: var(--serif); font-size: 12px; }
+.vedic-layer-flow h3 { margin: 0 0 4px; font-size: 22px; }
+.vedic-layer-flow article > strong { color: var(--rose); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.vedic-layer-flow p { margin: 10px 0 0; color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.48; }
+.vedic-house { margin-bottom: 22px; padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.3); }
+.vedic-house > div:first-child { display: grid; gap: 5px; }
+.vedic-house small { color: var(--rose); font-size: 8px; font-weight: 800; letter-spacing: .13em; }
+.vedic-house strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+.vedic-house-layers { margin-top: 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.vedic-house-layers span { min-width: 0; padding: 10px 5px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); font-family: var(--serif); font-size: 12px; text-align: center; }
+.vedic-house-layers span.active { border-color: var(--saffron); background: var(--saffron-soft); color: var(--ink); font-weight: 650; }
+.upanishad-families { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.upanishad-families article { min-width: 0; padding: 16px 10px 16px 0; border-bottom: 1px solid var(--line); }
+.upanishad-families article:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
+.upanishad-families h3 { margin: 0 0 5px; font-size: 18px; }
+.upanishad-families p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.48; }
+.rebuild-prompts { margin: 0 0 22px; padding: 0; display: grid; gap: 8px; list-style: none; }
+.rebuild-prompts li { min-width: 0; padding: 15px 17px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.28); }
+.rebuild-prompts span { color: var(--saffron); font-family: var(--serif); }
+.rebuild-prompts p { margin: 0; font-family: var(--serif); font-size: 16px; line-height: 1.48; }
+.course-zero-recap { margin-bottom: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.course-zero-recap span { min-width: 0; padding: 14px 15px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.3); font-family: var(--serif); font-size: 14px; line-height: 1.4; }
 .concept-list { border-top: 1px solid var(--line); }
 .concept-list article { padding: 24px 0; display: grid; grid-template-columns: minmax(110px, .35fr) minmax(0, 1fr); gap: 28px; border-bottom: 1px solid var(--line); }
 .concept-list h3 { margin: 0; font-size: 23px; }
@@ -317,7 +375,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .full-path { grid-template-columns: 1fr; }
   .full-path .lesson-card:nth-child(odd) { border-right: 0; }
 
-  .lesson-player { min-height: calc(100vh - 64px); padding: 0 18px 28px; }
+  .lesson-player { min-height: 100dvh; padding: 0 18px 28px; }
   .lesson-player-header { min-height: 72px; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; }
   .lesson-player-header .back-button { font-size: 0; }
   .lesson-player-header .back-button svg { width: 20px; height: 20px; }
@@ -335,11 +393,23 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .panel-title h2 { font-size: 41px; }
   .panel-body { padding-top: 0; }
   .large-reading, .reflection-prompt, .quiz-question { font-size: 21px; }
-  .course-zero-map { grid-template-columns: 1fr; }
-  .course-zero-map article { min-height: 118px; }
-  .course-zero-map > i { text-align: center; line-height: .7; }
+  .course-zero-player .lesson-player-header > span { font-size: 9px; }
+  .course-zero-rail { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; overflow: visible; }
+  .course-zero-rail button { min-width: 0; min-height: 44px; justify-content: center; padding: 0; }
+  .course-zero-rail button span { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .course-zero-content .lesson-panel { min-height: auto; grid-template-columns: 1fr; gap: 26px; }
+  .course-zero-content .panel-title h2 { font-size: 39px; }
+  .course-zero-content .panel-body { padding-top: 0; }
+  .course-zero-lead { font-size: 19px; }
+  .landscape-families, .coordinate-grid, .vedic-layer-flow, .upanishad-families, .course-zero-recap { grid-template-columns: 1fr; }
+  .coordinate-grid article { border-top: 0; }
+  .coordinate-grid article:first-child, .coordinate-grid article:last-child { border-radius: 0; }
+  .coordinate-grid article:last-child { border-radius: 0 0 13px 13px; }
+  .four-vedas, .vedic-house-layers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .upanishad-families article, .upanishad-families article:nth-child(even) { padding: 15px 0; border-left: 0; }
   .concept-list article { grid-template-columns: 1fr; gap: 7px; }
-  .lesson-controls { padding: 17px 0 max(12px, env(safe-area-inset-bottom)); }
+  .lesson-controls { position: sticky; z-index: 8; bottom: 0; padding: 17px 0 max(12px, env(safe-area-inset-bottom)); background: rgba(244,236,220,.96); backdrop-filter: blur(12px); }
+  .lesson-controls button { min-height: 48px; }
   .lesson-controls > span { display: none; }
   .lesson-controls { grid-template-columns: 1fr 1fr; }
   .mapped-lesson { min-height: calc(100vh - 64px); padding: 35px 22px 92px; }
