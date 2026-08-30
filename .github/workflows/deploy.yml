@@ -27,8 +27,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Build course
-        run: npm run build
+      - name: Verify and build course
+        run: npm run verify
       - name: Add Pages fallback
         run: cp dist/index.html dist/404.html
       - name: Configure Pages

@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import {
   courseLessons,
+  courseSections,
   lessonDetails,
   referenceSources,
   rootBranches,
@@ -94,7 +95,21 @@ const upanishadVedaFamilies = [
 function readStoredProgress(): ProgressState {
   try {
     const stored = window.localStorage.getItem('indian-texts-atlas-progress-v1')
-    return stored ? { ...emptyProgress, ...JSON.parse(stored) } : emptyProgress
+    if (!stored) return emptyProgress
+    const parsed: unknown = JSON.parse(stored)
+    if (!parsed || typeof parsed !== 'object') return emptyProgress
+    const data = parsed as Partial<ProgressState>
+    const reflections = data.reflections && typeof data.reflections === 'object'
+      ? Object.fromEntries(Object.entries(data.reflections).filter((entry): entry is [string, string] => typeof entry[1] === 'string'))
+      : {}
+    const quizAnswers = data.quizAnswers && typeof data.quizAnswers === 'object'
+      ? Object.fromEntries(Object.entries(data.quizAnswers).filter((entry): entry is [string, number] => typeof entry[1] === 'number'))
+      : {}
+    return {
+      completed: Array.isArray(data.completed) ? data.completed.filter((id): id is string => typeof id === 'string') : [],
+      reflections,
+      quizAnswers,
+    }
   } catch {
     return emptyProgress
   }
@@ -115,6 +130,10 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeBranch, setActiveBranch] = useState('shruti')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(lessonFromHash)
+  const [activeCourseSectionId, setActiveCourseSectionId] = useState(() => {
+    const lessonId = lessonFromHash()
+    return courseLessons.find((lesson) => lesson.id === lessonId)?.sectionId ?? 'foundation'
+  })
   const [progress, setProgress] = useState<ProgressState>(readStoredProgress)
 
   useEffect(() => {
@@ -123,8 +142,13 @@ function App() {
 
   useEffect(() => {
     const handleHashChange = () => {
+      const lessonId = lessonFromHash()
       setView(viewFromHash())
-      setActiveLessonId(lessonFromHash())
+      setActiveLessonId(lessonId)
+      if (lessonId) {
+        const sectionId = courseLessons.find((lesson) => lesson.id === lessonId)?.sectionId
+        if (sectionId) setActiveCourseSectionId(sectionId)
+      }
       window.scrollTo({ top: 0 })
     }
     window.addEventListener('hashchange', handleHashChange)
@@ -142,6 +166,8 @@ function App() {
   const openLesson = (id: string) => {
     setView('path')
     setActiveLessonId(id)
+    const sectionId = courseLessons.find((lesson) => lesson.id === id)?.sectionId
+    if (sectionId) setActiveCourseSectionId(sectionId)
     window.location.hash = `lesson/${id}`
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -190,7 +216,7 @@ function App() {
         ) : (
           <>
             {view === 'atlas' && <AtlasView activeBranch={activeBranch} setActiveBranch={setActiveBranch} navigate={navigate} openLesson={openLesson} />}
-            {view === 'path' && <PathView completed={progress.completed} openLesson={openLesson} />}
+            {view === 'path' && <PathView completed={progress.completed} openLesson={openLesson} activeSectionId={activeCourseSectionId} setActiveSectionId={setActiveCourseSectionId} />}
             {view === 'notebook' && <NotebookView progress={progress} updateReflection={updateReflection} openLesson={openLesson} />}
             {view === 'reference' && <ReferenceView />}
           </>
@@ -201,10 +227,10 @@ function App() {
 
       {!activeLesson && (
         <nav className="bottom-nav" aria-label="Course navigation">
-          <button className={view === 'atlas' ? 'active' : ''} onClick={() => navigate('atlas')}><Map size={19} /><span>Atlas</span></button>
-          <button className={view === 'path' ? 'active' : ''} onClick={() => navigate('path')}><Route size={19} /><span>Path</span></button>
-          <button className={view === 'notebook' ? 'active' : ''} onClick={() => navigate('notebook')}><NotebookPen size={19} /><span>Notes</span></button>
-          <button className={view === 'reference' ? 'active' : ''} onClick={() => navigate('reference')}><BookMarked size={19} /><span>Sources</span></button>
+          <button className={view === 'atlas' ? 'active' : ''} aria-current={view === 'atlas' ? 'page' : undefined} onClick={() => navigate('atlas')}><Map size={19} /><span>Atlas</span></button>
+          <button className={view === 'path' ? 'active' : ''} aria-current={view === 'path' ? 'page' : undefined} onClick={() => navigate('path')}><Route size={19} /><span>Path</span></button>
+          <button className={view === 'notebook' ? 'active' : ''} aria-current={view === 'notebook' ? 'page' : undefined} onClick={() => navigate('notebook')}><NotebookPen size={19} /><span>Notes</span></button>
+          <button className={view === 'reference' ? 'active' : ''} aria-current={view === 'reference' ? 'page' : undefined} onClick={() => navigate('reference')}><BookMarked size={19} /><span>Sources</span></button>
         </nav>
       )}
     </div>
@@ -224,10 +250,10 @@ function Header({ view, menuOpen, setMenuOpen, navigate }: {
         <span><strong>Indian Texts Atlas</strong><small>an evolving course</small></span>
       </button>
       <nav className="desktop-nav" aria-label="Course navigation">
-        <button className={view === 'atlas' ? 'active' : ''} onClick={() => navigate('atlas')}>Atlas</button>
-        <button className={view === 'path' ? 'active' : ''} onClick={() => navigate('path')}>Learning path</button>
-        <button className={view === 'notebook' ? 'active' : ''} onClick={() => navigate('notebook')}>Notebook</button>
-        <button className={view === 'reference' ? 'active' : ''} onClick={() => navigate('reference')}>References</button>
+        <button className={view === 'atlas' ? 'active' : ''} aria-current={view === 'atlas' ? 'page' : undefined} onClick={() => navigate('atlas')}>Atlas</button>
+        <button className={view === 'path' ? 'active' : ''} aria-current={view === 'path' ? 'page' : undefined} onClick={() => navigate('path')}>Learning path</button>
+        <button className={view === 'notebook' ? 'active' : ''} aria-current={view === 'notebook' ? 'page' : undefined} onClick={() => navigate('notebook')}>Notebook</button>
+        <button className={view === 'reference' ? 'active' : ''} aria-current={view === 'reference' ? 'page' : undefined} onClick={() => navigate('reference')}>References</button>
       </nav>
       <button className="menu-button" onClick={() => setMenuOpen((open) => !open)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
         {menuOpen ? <X size={21} /> : <Menu size={21} />}
@@ -256,9 +282,9 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
             <button className="quiet-button" onClick={() => navigate('path')}>View the whole path</button>
           </div>
           <div className="hero-stats" aria-label="Course statistics">
-            <div><strong>4</strong><span>Vedas mapped</span></div>
+            <div><strong>{courseSections.length}</strong><span>guided paths</span></div>
             <div><strong>13</strong><span>principal Upaniṣads</span></div>
-            <div><strong>4</strong><span>interactive lessons live</span></div>
+            <div><strong>{courseLessons.length}</strong><span>interactive units</span></div>
           </div>
         </div>
         <div className="root-orbit" aria-label="A visual map connecting ancient Indian textual traditions">
@@ -279,9 +305,9 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
         </div>
 
         <div className="atlas-workspace">
-          <div className="branch-list" role="tablist" aria-label="Textual traditions">
+          <div className="branch-list" aria-label="Textual traditions">
             {rootBranches.map((item) => (
-              <button key={item.id} className={`branch-tab ${item.id === activeBranch ? 'active' : ''}`} onClick={() => setActiveBranch(item.id)} role="tab" aria-selected={item.id === activeBranch}>
+              <button key={item.id} className={`branch-tab ${item.id === activeBranch ? 'active' : ''}`} onClick={() => setActiveBranch(item.id)} aria-pressed={item.id === activeBranch}>
                 <span className={`branch-dot ${item.tone}`} />
                 <span><small>{item.eyebrow}</small><strong>{item.title}</strong></span>
                 <ChevronRight size={18} />
@@ -304,7 +330,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="path-preview">
         <div className="section-heading compact">
-          <div><span className="kicker">02 · START WITH CONTEXT</span><h2>Course 0, then the Upaniṣadic questions</h2></div>
+          <div><span className="kicker">02 · START WITH CONTEXT</span><h2>Course 0, the Upaniṣads, then nine wider paths</h2></div>
           <button className="text-button" onClick={() => navigate('path')}>See the full path <ArrowRight size={17} /></button>
         </div>
         <div className="lesson-grid">
@@ -313,25 +339,60 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
       </section>
 
       <section className="cover-section">
-        <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, historical questions, later commentary, and living interpretations. Sanskrit terms stay visible when one English word would conceal a real debate.</p></div>
+        <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, historical questions, later commentary, and living interpretations. Lessons identify a passage or text-cluster anchor; future depth expansions can add relevant shlokas with transliteration, an attributed translation, and a plain explanation.</p></div>
       </section>
     </>
   )
 }
 
-function PathView({ completed, openLesson }: { completed: string[]; openLesson: (id: string) => void }) {
+function PathView({ completed, openLesson, activeSectionId, setActiveSectionId }: {
+  completed: string[]
+  openLesson: (id: string) => void
+  activeSectionId: string
+  setActiveSectionId: (id: string) => void
+}) {
   const available = courseLessons.filter((item) => item.status === 'available')
-  const progress = Math.round((completed.length / available.length) * 100)
+  const validCompleted = completed.filter((id) => available.some((lesson) => lesson.id === id))
+  const progress = Math.round((validCompleted.length / available.length) * 100)
+  const activeSection = courseSections.find((section) => section.id === activeSectionId) ?? courseSections[0]
+  const sectionLessons = courseLessons.filter((lesson) => lesson.sectionId === activeSection.id)
+  const sectionCompleted = sectionLessons.filter((lesson) => completed.includes(lesson.id)).length
+
   return (
     <section className="course-view">
       <div className="course-hero">
-        <div><span className="kicker">COURSE 0 + THE FIRST LEARNING PATH</span><h1>See the landscape before entering a text.</h1><p>Course 0 explains how authority, genre, textual layer, and philosophical school connect. Then a pedagogical path moves through thirteen principal Upaniṣads. Four lessons are fully interactive now; the remaining ten are mapped for the next releases.</p></div>
-        <div className="progress-medallion"><strong>{progress}%</strong><span>of live lessons<br />completed</span></div>
+        <div><span className="kicker">THE COMPLETE CURRICULUM MAP</span><h1>Start at the root. Grow branch by branch.</h1><p>Course 0 gives you the coordinates. Thirteen principal Upaniṣads come next. Nine wider paths then open the Vedas, epics, Purāṇas, philosophical debate, Buddhist and Jain libraries, social thought, technical sciences, and regional literatures. This is a curated map of representative text clusters—not a claim to contain every surviving work.</p></div>
+        <div className="progress-medallion"><strong>{progress}%</strong><span>of {available.length} units<br />completed</span></div>
       </div>
-      <div className="path-legend"><span><i className="legend-live" /> Interactive now</span><span><i className="legend-mapped" /> Mapped next</span></div>
+      <div className="path-legend"><span><i className="legend-live" /> {courseSections.length} guided paths</span><span><i className="legend-cluster" /> {available.length} interactive units</span></div>
+
+      <div className="curriculum-section-grid" aria-label="Course paths">
+        {courseSections.map((section) => {
+          const lessons = courseLessons.filter((lesson) => lesson.sectionId === section.id)
+          const completedCount = lessons.filter((lesson) => completed.includes(lesson.id)).length
+          return (
+            <button
+              key={section.id}
+              className={`curriculum-section-card ${section.tone} ${section.id === activeSection.id ? 'active' : ''}`}
+              onClick={() => setActiveSectionId(section.id)}
+              aria-pressed={section.id === activeSection.id}
+            >
+              <span className="section-card-index">{String(section.order).padStart(2, '0')}</span>
+              <span className="section-card-copy"><small>{section.eyebrow}</small><strong>{section.shortTitle}</strong><span>{section.description}</span></span>
+              <span className="section-card-progress"><i><b style={{ width: `${lessons.length ? (completedCount / lessons.length) * 100 : 0}%` }} /></i><em>{completedCount} / {lessons.length}</em></span>
+            </button>
+          )
+        })}
+      </div>
+
+      <div className={`selected-course-header ${activeSection.tone}`}>
+        <div><span className="kicker">{activeSection.eyebrow}</span><h2>{activeSection.title}</h2><p>{activeSection.description}</p></div>
+        <aside><strong>{sectionCompleted} / {sectionLessons.length}</strong><span>completed in this path</span><p>{activeSection.promise}</p></aside>
+      </div>
+
       <div className="full-path">
-        {courseLessons.map((lesson) => (
+        {sectionLessons.map((lesson) => (
           <LessonCard lesson={lesson} key={lesson.id} onOpen={() => openLesson(lesson.id)} completed={completed.includes(lesson.id)} />
         ))}
       </div>
@@ -384,7 +445,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
       <section className="mapped-lesson">
         <button className="back-button" onClick={onClose}><ArrowLeft size={17} /> Back to the path</button>
         <div className="mapped-card">
-          <span className="mapped-badge">Mapped for the next release</span>
+          <span className="mapped-badge">Lesson data unavailable</span>
           <small>{lesson.veda} · {lesson.form}</small>
           <h1>{lesson.title}</h1>
           <p className="mapped-question">{lesson.question}</p>
@@ -477,9 +538,9 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
             <div className="quiz-choices">{detail.quiz.choices.map((choice, index) => {
               const chosen = selectedQuiz === index
               const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
-              return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
+              return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} aria-pressed={chosen} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
             })}</div>
-            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? 'That is the central move.' : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
+            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{correct ? 'That is the central move.' : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Lesson completed' : 'Mark lesson complete'} <CheckCircle2 size={17} /></button>}
             <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
@@ -532,7 +593,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <p className="course-zero-lead">Ancient South Asia did not share one master list of important texts. Begin with several libraries in conversation.</p>
             <p className="course-zero-definition"><strong>Canon</strong><span>A collection a community treats as especially authoritative—not a universal list for everyone.</span></p>
             <figure className="course-zero-figure">
-              <img src="./course-zero-landscape.jpg" alt="Four distinct streams of blank manuscript materials cross and exchange threads without merging into a single stream" />
+              <img src="./course-zero-landscape.jpg" alt="Four distinct streams of blank manuscript materials cross and exchange threads without merging into a single stream" loading="lazy" decoding="async" />
               <figcaption>Different textual traditions developed their own collections while exchanging stories, arguments, languages, and practices.</figcaption>
             </figure>
             <div className="course-zero-thesis"><strong>The first idea to remember</strong><span>Indian textual history is a connected landscape of many libraries—not one canon.</span></div>
@@ -586,7 +647,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="upanishad-families">
               {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
             </div>
-            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch. Later paths will add epics and the Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, and regional-language literatures. Close-reading lessons will use short cited passages and, where relevant, shlokas with transliteration, an attributed translation, and a plain explanation.</span></div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures. Future depth expansions can add relevant shlokas with transliteration, an attributed translation, and a plain explanation.</span></div>
             <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
           </LessonPanel>
         )}
@@ -615,9 +676,9 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="quiz-choices">{detail.quiz.choices.map((choice, index) => {
               const chosen = selectedQuiz === index
               const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
-              return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
+              return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} aria-pressed={chosen} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
             })}</div>
-            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? 'Yes—that is the connection.' : 'Look again at what each label is describing.'}</strong><p>{detail.quiz.explanation}</p></div>}
+            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{correct ? 'Yes—that is the connection.' : 'Look again at what each label is describing.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Course 0 completed' : 'Mark Course 0 complete'} <CheckCircle2 size={17} /></button>}
             <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
@@ -638,19 +699,34 @@ function LessonPanel({ kicker, title, icon, children }: { kicker: string; title:
 }
 
 function NotebookView({ progress, updateReflection, openLesson }: { progress: ProgressState; updateReflection: (id: string, value: string) => void; openLesson: (id: string) => void }) {
+  const [activeSectionId, setActiveSectionId] = useState('foundation')
   const liveLessons = courseLessons.filter((lesson) => lesson.status === 'available')
+  const selectedSection = courseSections.find((section) => section.id === activeSectionId) ?? courseSections[0]
+  const selectedLessons = liveLessons.filter((lesson) => lesson.sectionId === selectedSection.id)
+  const validCompleted = progress.completed.filter((id) => liveLessons.some((lesson) => lesson.id === id))
   return (
     <section className="notebook-page">
       <div className="course-hero notebook-hero">
         <div><span className="kicker">YOUR NOTEBOOK</span><h1>Questions worth carrying.</h1><p>Reflections stay in this browser on this device. They are never uploaded by the course.</p></div>
-        <div className="notebook-count"><strong>{progress.completed.length}</strong><span>of {liveLessons.length}<br />live lessons complete</span></div>
+        <div className="notebook-count"><strong>{validCompleted.length}</strong><span>of {liveLessons.length}<br />units complete</span></div>
+      </div>
+      <div className="notebook-filter" aria-label="Choose a course path">
+        {courseSections.map((section) => (
+          <button key={section.id} className={section.id === selectedSection.id ? 'active' : ''} onClick={() => setActiveSectionId(section.id)} aria-pressed={section.id === selectedSection.id}>
+            <span>{section.shortTitle}</span><small>{courseLessons.filter((lesson) => lesson.sectionId === section.id).length}</small>
+          </button>
+        ))}
+      </div>
+      <div className="notebook-section-heading">
+        <div><span className="kicker">{selectedSection.eyebrow}</span><h2>{selectedSection.title}</h2></div>
+        <p>{selectedSection.promise}</p>
       </div>
       <div className="notebook-grid">
-        {liveLessons.map((lesson) => (
+        {selectedLessons.map((lesson) => (
           <article className="note-card" key={lesson.id}>
             <header><div><small>{lesson.veda}</small><h2>{lesson.title}</h2></div>{progress.completed.includes(lesson.id) && <CheckCircle2 size={20} />}</header>
-            <p>{lessonDetails[lesson.id].reflection}</p>
-            <textarea value={progress.reflections[lesson.id] ?? ''} onChange={(event) => updateReflection(lesson.id, event.target.value)} placeholder="Your reflection will appear here…" rows={5} />
+            <p>{lessonDetails[lesson.id]?.reflection}</p>
+            <textarea aria-label={`Reflection for ${lesson.title}`} value={progress.reflections[lesson.id] ?? ''} onChange={(event) => updateReflection(lesson.id, event.target.value)} placeholder="Your reflection will appear here…" rows={5} />
             <button onClick={() => openLesson(lesson.id)}>Return to lesson <ArrowRight size={16} /></button>
           </article>
         ))}
@@ -675,10 +751,20 @@ function ReferenceView() {
       </div>
 
       <div className="guardrail-grid">
-        <article><strong>Not one fixed canon</strong><p>Ten texts are commonly privileged in Vedānta, thirteen make a useful early foundation, the later Muktikā lists 108, and hundreds more use the title Upaniṣad.</p></article>
+        <article><strong>A curated map, not every text</strong><p>The atlas teaches representative works and text clusters across eleven paths. “Complete” here means every mapped section is teachable, not that every surviving manuscript has been summarized.</p></article>
+        <article><strong>Not one fixed canon</strong><p>Ten Upaniṣads are commonly privileged in Vedānta, thirteen make a useful early foundation, the later Muktikā lists 108, and hundreds more use the title Upaniṣad.</p></article>
         <article><strong>Dates are approximate</strong><p>Historical dates describe periods of oral composition and redaction, often with several strata—not modern publication dates or single known authors.</p></article>
         <article><strong>Translation is interpretation</strong><p>Ātman, brahman, dharma, tapas, and yoga do not each have one context-free English equivalent. Named translations matter.</p></article>
         <article><strong>Living traditions differ</strong><p>Advaita, Viśiṣṭādvaita, Dvaita, and other lineages may draw sharply different conclusions from the same passage.</p></article>
+        <article><strong>Prescription is not a census</strong><p>A normative rule, ritual manual, or political ideal is evidence for an argument and institution—not proof that every person or community lived that way.</p></article>
+      </div>
+
+      <div className="reference-section curriculum-scope-section">
+        <div><span className="kicker">CURRICULUM SCOPE</span><h2>Eleven connected paths</h2><p>Each path keeps the base text, commentary, performance, and modern reception visible as different layers.</p></div>
+        <div className="curriculum-scope-grid">{courseSections.map((section) => {
+          const count = courseLessons.filter((lesson) => lesson.sectionId === section.id).length
+          return <article key={section.id} className={section.tone}><small>{String(section.order).padStart(2, '0')}</small><div><strong>{section.shortTitle}</strong><span>{count} {count === 1 ? 'unit' : 'units'}</span></div></article>
+        })}</div>
       </div>
 
       <div className="reference-section">
@@ -688,7 +774,7 @@ function ReferenceView() {
 
       <div className="reference-section source-section">
         <div><span className="kicker">PUBLIC SOURCE STACK</span><h2>Follow the scholarship</h2><p>Course summaries are orientation. Use these sources to inspect texts, translations, and academic context directly.</p></div>
-        <div className="source-list">{referenceSources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><div><strong>{source.label}</strong><span>{source.use}</span></div><ExternalLink size={17} /></a>)}</div>
+        <div className="source-list">{referenceSources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={`${source.label}-${source.url}`}><div><strong>{source.label}</strong><span>{source.use}</span></div><ExternalLink size={17} /></a>)}</div>
       </div>
     </section>
   )

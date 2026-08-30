@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "verify": "npm run lint && npm run build && npm run verify:curriculum",
+    "verify:curriculum": "node scripts/verify-curriculum.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
