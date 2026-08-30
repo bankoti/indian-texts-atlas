@@ -1,6 +1,6 @@
 export type CourseStatus = 'available' | 'mapped'
 
-export type Upanishad = {
+export type CourseLesson = {
   id: string
   order: number
   title: string
@@ -23,6 +23,7 @@ export type LessonDetail = {
   }
   read: {
     anchor: string
+    anchorLabel?: string
     paraphrase: string
     readingNote: string
   }
@@ -38,7 +39,14 @@ export type LessonDetail = {
   sourceLinks: Array<{ label: string; url: string }>
 }
 
-export const upanishads: Upanishad[] = [
+export const foundationLesson: CourseLesson = {
+  id: 'course-0', order: 0, title: 'Course 0 · How It All Connects', plainTitle: 'Course 0', veda: 'Foundation', form: 'Orientation', minutes: 15,
+  question: 'How do authorities, genres, texts, and schools fit together?',
+  insight: 'There is no single ancient “Indian canon.” This orientation gives you three intersecting maps—authority, genre, and interpretive tradition—before you open any one text.',
+  status: 'available', references: ['Śruti / Smṛti', 'Genre / textual layer', 'Tradition / school'],
+}
+
+export const upanishads: CourseLesson[] = [
   {
     id: 'kena', order: 1, title: 'Kena Upaniṣad', plainTitle: 'Kena', veda: 'Sāmaveda', form: 'Prose and verse', minutes: 12,
     question: 'What makes the mind think?',
@@ -119,7 +127,53 @@ export const upanishads: Upanishad[] = [
   },
 ]
 
+export const courseLessons: CourseLesson[] = [foundationLesson, ...upanishads]
+
 export const lessonDetails: Record<string, LessonDetail> = {
+  'course-0': {
+    id: 'course-0',
+    locate: {
+      corpus: 'South Asian textual worlds → Veda-oriented, Buddhist, Jain, and other lineages → many texts, genres, and schools',
+      placement: 'This orientation comes before Kena because “Where does this text belong?” must be answered in more than one way.',
+      context: 'There is no single ancient table of contents for all Indian thought. Modern labels such as Hinduism gather many historical communities, and every classification reflects a particular purpose and perspective.',
+    },
+    read: {
+      anchorLabel: 'Connection map',
+      anchor: 'authority × genre × tradition or school',
+      paraphrase: 'Śruti and Smṛti primarily describe authority within Veda-oriented traditions. Itihāsa and Purāṇa describe kinds of literature. Darśana names a viewpoint or intellectual lineage. One text can therefore occupy all three maps at once.',
+      readingNote: 'Treat Saṃhitā → Brāhmaṇa → Āraṇyaka → Upaniṣad as a progression of emphasis, not four perfectly separate shelves. The layers overlap, vary by Vedic school, and continue to contain ritual, cosmology, and philosophical inquiry.',
+    },
+    concepts: [
+      { term: 'Śruti', meaning: '“Heard” Vedic authority: the four Vedas and their school-specific textual layers. Its lived authority varies among communities.' },
+      { term: 'Smṛti', meaning: '“Remembered” tradition, including epics, Purāṇas, Dharma literature, and many later works. It is an authority category, not one book.' },
+      { term: 'Genre', meaning: 'What kind of work a text is—for example Itihāsa, Purāṇa, Upaniṣad, Sūtra, or Śāstra.' },
+      { term: 'Darśana', meaning: 'A viewpoint or intellectual lineage, not a scripture tier. Here āstika means Veda-recognizing, not necessarily belief in a creator god.' },
+      { term: 'Textual world', meaning: 'The communities, languages, practices, debates, and commentaries through which a work is preserved and understood.' },
+    ],
+    lenses: [
+      { name: 'Authority lens', reading: 'Ask how a community regards a work. Śruti and Smṛti are especially internal classifications of Veda-oriented traditions, not labels for every Indian text.' },
+      { name: 'Genre lens', reading: 'Ask what kind of writing it is. The Bhagavad Gītā is Smṛti by authority and part of an Itihāsa—the Mahābhārata—by genre and location.' },
+      { name: 'Reception lens', reading: 'Ask who interprets it and how. The Gītā became foundational to several Vedānta traditions without itself becoming a Darśana.' },
+      { name: 'Wider landscape', reading: 'Brahmanical-Hindu, Buddhist, and Jain traditions developed in exchange and disagreement. Tamil and other language spheres cross those boundaries.' },
+    ],
+    reflection: 'Before this course, what did your mental map look like? Note one category you assumed was a single book, a strict chronology, or a complete hierarchy.',
+    quiz: {
+      question: 'Why should Śruti, Purāṇa, and Darśana not appear as three equivalent branches?',
+      choices: [
+        'They were written in three unrelated countries',
+        'Only Darśana is an ancient category',
+        'They answer different questions: authority, genre, and interpretive school',
+        'Purāṇas are always older than the Vedas',
+      ],
+      correct: 2,
+      explanation: 'Śruti denotes authority, Purāṇa denotes genre, and Darśana denotes a philosophical viewpoint or lineage. A text may need all three coordinates to be located accurately.',
+    },
+    sourceLinks: [
+      { label: 'IEP overview of Hindu philosophy', url: 'https://iep.utm.edu/hindu-ph/' },
+      { label: 'Harvard Pluralism Project: Veda, scripture, and authority', url: 'https://pluralism.org/veda-scripture-and-authority' },
+      { label: 'Vedic Heritage Portal: Upaniṣads', url: 'https://vedicheritage.gov.in/upanishads/' },
+    ],
+  },
   kena: {
     id: 'kena',
     locate: {
@@ -247,11 +301,11 @@ export const rootBranches = [
     note: 'Āgama and Tantra span Śaiva, Vaiṣṇava, Śākta, Buddhist, and Jain contexts.',
   },
   {
-    id: 'plural', eyebrow: 'Parallel Indian traditions', title: 'Many voices', tone: 'leaf',
-    description: 'Ancient Indian thought is not exhausted by Veda-oriented traditions. Other communities developed their own canons, languages, and arguments.',
-    nodes: ['Buddhist canons', 'Jain textual histories', 'Sangam corpus', 'Materialist voices'],
-    subnodes: ['Pāli & beyond', 'Śvetāmbara / Digambara', 'Classical Tamil', 'Cārvāka fragments'],
-    note: 'Buddhist and Jain traditions belong alongside—not underneath—the Brahmanical map.',
+    id: 'plural', eyebrow: 'Traditions and language spheres', title: 'Many voices', tone: 'leaf',
+    description: 'Veda-oriented, Buddhist, and Jain traditions developed in exchange and disagreement. Texts in Tamil and other regional languages cross those boundaries.',
+    nodes: ['Buddhist lineages', 'Jain textual histories', 'Tamil literary sphere', 'Materialist voices'],
+    subnodes: ['Pāli & beyond', 'Śvetāmbara / Digambara', 'Hindu, Jain, Buddhist & more', 'Cārvāka fragments'],
+    note: 'No single branch contains the whole Indian textual landscape, and language is not the same kind of category as religious tradition.',
   },
 ]
 

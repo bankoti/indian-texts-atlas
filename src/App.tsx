@@ -20,12 +20,12 @@ import {
   X,
 } from 'lucide-react'
 import {
+  courseLessons,
   lessonDetails,
   referenceSources,
   rootBranches,
-  upanishads,
+  type CourseLesson,
   type LessonDetail,
-  type Upanishad,
 } from './courseData'
 import './App.css'
 
@@ -115,7 +115,7 @@ function App() {
     setProgress((current) => current.completed.includes(id) ? current : { ...current, completed: [...current.completed, id] })
   }
 
-  const activeLesson = activeLessonId ? upanishads.find((item) => item.id === activeLessonId) ?? null : null
+  const activeLesson = activeLessonId ? courseLessons.find((item) => item.id === activeLessonId) ?? null : null
 
   return (
     <div className="app-shell">
@@ -209,13 +209,13 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
           <h1>A living map of India’s ancient texts.</h1>
           <p className="hero-intro">Learn how traditions relate, where the Upaniṣads belong, and what questions each text asks—without pretending there is only one canon or interpretation.</p>
           <div className="hero-actions">
-            <button className="primary-button" onClick={() => openLesson('kena')}>Begin with Kena <ArrowRight size={18} /></button>
+            <button className="primary-button" onClick={() => openLesson('course-0')}>Begin with Course 0 <ArrowRight size={18} /></button>
             <button className="quiet-button" onClick={() => navigate('path')}>View the whole path</button>
           </div>
           <div className="hero-stats" aria-label="Course statistics">
             <div><strong>4</strong><span>Vedas mapped</span></div>
             <div><strong>13</strong><span>principal Upaniṣads</span></div>
-            <div><strong>3</strong><span>interactive lessons live</span></div>
+            <div><strong>4</strong><span>interactive lessons live</span></div>
           </div>
         </div>
         <div className="root-orbit" aria-label="A visual map connecting ancient Indian textual traditions">
@@ -261,11 +261,11 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="path-preview">
         <div className="section-heading compact">
-          <div><span className="kicker">02 · FIRST EXPEDITION</span><h2>The Upaniṣadic questions</h2></div>
-          <button className="text-button" onClick={() => navigate('path')}>See all thirteen <ArrowRight size={17} /></button>
+          <div><span className="kicker">02 · START WITH CONTEXT</span><h2>Course 0, then the Upaniṣadic questions</h2></div>
+          <button className="text-button" onClick={() => navigate('path')}>See the full path <ArrowRight size={17} /></button>
         </div>
         <div className="lesson-grid">
-          {upanishads.slice(0, 4).map((lesson) => <LessonCard lesson={lesson} key={lesson.id} onOpen={() => openLesson(lesson.id)} />)}
+          {courseLessons.slice(0, 4).map((lesson) => <LessonCard lesson={lesson} key={lesson.id} onOpen={() => openLesson(lesson.id)} />)}
         </div>
       </section>
 
@@ -278,17 +278,17 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 }
 
 function PathView({ completed, openLesson }: { completed: string[]; openLesson: (id: string) => void }) {
-  const available = upanishads.filter((item) => item.status === 'available')
+  const available = courseLessons.filter((item) => item.status === 'available')
   const progress = Math.round((completed.length / available.length) * 100)
   return (
     <section className="course-view">
       <div className="course-hero">
-        <div><span className="kicker">THE FIRST LEARNING PATH</span><h1>Thirteen texts, one question at a time.</h1><p>This sequence is pedagogical, not a claim about the only traditional reading order. Three lessons are fully interactive now; the remaining ten are already mapped for the next releases.</p></div>
+        <div><span className="kicker">COURSE 0 + THE FIRST LEARNING PATH</span><h1>See the landscape before entering a text.</h1><p>Course 0 explains how authority, genre, textual layer, and philosophical school connect. Then a pedagogical path moves through thirteen principal Upaniṣads. Four lessons are fully interactive now; the remaining ten are mapped for the next releases.</p></div>
         <div className="progress-medallion"><strong>{progress}%</strong><span>of live lessons<br />completed</span></div>
       </div>
       <div className="path-legend"><span><i className="legend-live" /> Interactive now</span><span><i className="legend-mapped" /> Mapped next</span></div>
       <div className="full-path">
-        {upanishads.map((lesson) => (
+        {courseLessons.map((lesson) => (
           <LessonCard lesson={lesson} key={lesson.id} onOpen={() => openLesson(lesson.id)} completed={completed.includes(lesson.id)} />
         ))}
       </div>
@@ -296,9 +296,9 @@ function PathView({ completed, openLesson }: { completed: string[]; openLesson: 
   )
 }
 
-function LessonCard({ lesson, onOpen, completed = false }: { lesson: Upanishad; onOpen: () => void; completed?: boolean }) {
+function LessonCard({ lesson, onOpen, completed = false }: { lesson: CourseLesson; onOpen: () => void; completed?: boolean }) {
   return (
-    <article className={`lesson-card ${lesson.status}`}>
+    <article className={`lesson-card ${lesson.status} ${lesson.id === 'course-0' ? 'foundation' : ''}`}>
       <div className="lesson-number">{String(lesson.order).padStart(2, '0')}</div>
       <div className="lesson-body">
         <span>{lesson.veda} · {lesson.form}</span>
@@ -316,7 +316,7 @@ function LessonCard({ lesson, onOpen, completed = false }: { lesson: Upanishad; 
 }
 
 function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onReflectionChange, onQuizSelect, onComplete, onClose }: {
-  lesson: Upanishad
+  lesson: CourseLesson
   detail?: LessonDetail
   completed: boolean
   reflection: string
@@ -327,6 +327,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
   onClose: () => void
 }) {
   const [step, setStep] = useState(0)
+  const isFoundation = lesson.id === 'course-0'
 
   if (!detail) {
     return (
@@ -346,6 +347,21 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
   }
 
   const correct = selectedQuiz === detail.quiz.correct
+  const panelCopy = isFoundation ? {
+    locate: ['FOUNDATION · ORIENT', 'See the whole landscape.'],
+    read: ['READ THE CONNECTION MAP', 'Three organizing axes intersect.'],
+    unpack: ['UNPACK THE CATEGORIES', 'Learn what each label is doing.'],
+    compare: ['COMPARE THE LANDSCAPES', 'No single branch contains the whole.'],
+    reflect: ['REFLECT BEFORE READING', 'Notice the map you brought with you.'],
+    remember: ['REMEMBER THE MAP', 'Check the connections.'],
+  } : {
+    locate: ['LOCATE IN THE TRADITION', 'First, know where you are.'],
+    read: ['READ A PASSAGE CLUSTER', 'Stay close to the text.'],
+    unpack: ['UNPACK KEY IDEAS', 'Keep difficult words visible.'],
+    compare: ['COMPARE INTERPRETIVE LENSES', 'A text can sustain disagreement.'],
+    reflect: ['REFLECT', 'Bring the question into your life.'],
+    remember: ['REMEMBER', 'Check the shape of the idea.'],
+  }
 
   return (
     <section className="lesson-player">
@@ -365,45 +381,55 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, onRef
 
       <div className="lesson-content">
         {step === 0 && (
-          <LessonPanel kicker="LOCATE IN THE TRADITION" title="First, know where you are." icon={<Map size={22} />}>
+          <LessonPanel kicker={panelCopy.locate[0]} title={panelCopy.locate[1]} icon={<Map size={22} />}>
             <div className="location-chain">{detail.locate.corpus.split(' → ').map((item, index) => <span key={item}>{index > 0 && <ChevronRight size={15} />}{item}</span>)}</div>
             <div className="reading-block"><h3>Placement</h3><p>{detail.locate.placement}</p></div>
             <div className="reading-block"><h3>Context</h3><p>{detail.locate.context}</p></div>
           </LessonPanel>
         )}
         {step === 1 && (
-          <LessonPanel kicker="READ A PASSAGE CLUSTER" title="Stay close to the text." icon={<BookOpenText size={22} />}>
-            <div className="passage-anchor">Passage anchor · {detail.read.anchor}</div>
+          <LessonPanel kicker={panelCopy.read[0]} title={panelCopy.read[1]} icon={<BookOpenText size={22} />}>
+            <div className="passage-anchor">{detail.read.anchorLabel ?? 'Passage anchor'} · {detail.read.anchor}</div>
+            {isFoundation && (
+              <div className="course-zero-map" aria-label="Three intersecting ways to locate a text">
+                <article><small>01 · AUTHORITY</small><strong>How is it regarded?</strong><span>Śruti ↔ Smṛti</span></article>
+                <i aria-hidden="true">×</i>
+                <article><small>02 · GENRE</small><strong>What kind of work is it?</strong><span>Upaniṣad · Itihāsa · Purāṇa · more</span></article>
+                <i aria-hidden="true">×</i>
+                <article><small>03 · RECEPTION</small><strong>Who interprets it?</strong><span>Schools · lineages · communities</span></article>
+              </div>
+            )}
             <p className="large-reading">{detail.read.paraphrase}</p>
             <div className="interpretation-note"><strong>Reading note</strong><p>{detail.read.readingNote}</p></div>
           </LessonPanel>
         )}
         {step === 2 && (
-          <LessonPanel kicker="UNPACK KEY IDEAS" title="Keep difficult words visible." icon={<LibraryBig size={22} />}>
+          <LessonPanel kicker={panelCopy.unpack[0]} title={panelCopy.unpack[1]} icon={<LibraryBig size={22} />}>
             <div className="concept-list">{detail.concepts.map((concept) => <article key={concept.term}><h3>{concept.term}</h3><p>{concept.meaning}</p></article>)}</div>
           </LessonPanel>
         )}
         {step === 3 && (
-          <LessonPanel kicker="COMPARE INTERPRETIVE LENSES" title="A text can sustain disagreement." icon={<Layers3 size={22} />}>
+          <LessonPanel kicker={panelCopy.compare[0]} title={panelCopy.compare[1]} icon={<Layers3 size={22} />}>
             <div className="lens-grid">{detail.lenses.map((lens, index) => <article key={lens.name}><span>0{index + 1}</span><h3>{lens.name}</h3><p>{lens.reading}</p></article>)}</div>
           </LessonPanel>
         )}
         {step === 4 && (
-          <LessonPanel kicker="REFLECT" title="Bring the question into your life." icon={<NotebookPen size={22} />}>
+          <LessonPanel kicker={panelCopy.reflect[0]} title={panelCopy.reflect[1]} icon={<NotebookPen size={22} />}>
             <p className="reflection-prompt">{detail.reflection}</p>
             <label className="reflection-field"><span>Your private note · saved on this device</span><textarea value={reflection} onChange={(event) => onReflectionChange(event.target.value)} placeholder="Write without trying to sound philosophical…" rows={7} /></label>
           </LessonPanel>
         )}
         {step === 5 && (
-          <LessonPanel kicker="REMEMBER" title="Check the shape of the idea." icon={<CheckCircle2 size={22} />}>
+          <LessonPanel kicker={panelCopy.remember[0]} title={panelCopy.remember[1]} icon={<CheckCircle2 size={22} />}>
             <p className="quiz-question">{detail.quiz.question}</p>
             <div className="quiz-choices">{detail.quiz.choices.map((choice, index) => {
               const chosen = selectedQuiz === index
               const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
               return <button key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} onClick={() => onQuizSelect(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <Check size={17} />}</button>
             })}</div>
-            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? 'That is the central move.' : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
+            {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`}><strong>{correct ? (isFoundation ? 'That connection is right.' : 'That is the central move.') : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Lesson completed' : 'Mark lesson complete'} <CheckCircle2 size={17} /></button>}
+            <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
         )}
       </div>
@@ -422,7 +448,7 @@ function LessonPanel({ kicker, title, icon, children }: { kicker: string; title:
 }
 
 function NotebookView({ progress, updateReflection, openLesson }: { progress: ProgressState; updateReflection: (id: string, value: string) => void; openLesson: (id: string) => void }) {
-  const liveLessons = upanishads.filter((lesson) => lesson.status === 'available')
+  const liveLessons = courseLessons.filter((lesson) => lesson.status === 'available')
   return (
     <section className="notebook-page">
       <div className="course-hero notebook-hero">
