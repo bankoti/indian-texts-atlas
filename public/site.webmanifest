@@ -1,0 +1,10 @@
+{
+  "name": "Indian Texts Atlas",
+  "short_name": "Texts Atlas",
+  "description": "A mobile-first interactive course mapping ancient Indian texts and the principal Upanishads.",
+  "start_url": "./#atlas",
+  "display": "standalone",
+  "background_color": "#f4ecdc",
+  "theme_color": "#211a16",
+  "icons": []
+}
