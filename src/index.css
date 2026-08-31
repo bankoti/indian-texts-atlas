@@ -6,6 +6,7 @@
   --line: rgba(59, 43, 31, 0.17);
   --card: rgba(255, 252, 246, 0.68);
   --saffron: #bd7226;
+  --saffron-text: #9d5918;
   --saffron-soft: #efd9b9;
   --rose: #8a493f;
   --rose-soft: #ead4ce;
@@ -29,5 +30,5 @@ html { scroll-behavior: smooth; background: var(--paper); }
 body { margin: 0; min-width: 320px; min-height: 100vh; }
 button, input, textarea { font: inherit; }
 button { color: inherit; }
-button:focus-visible, a:focus-visible { outline: 3px solid rgba(189, 114, 38, 0.42); outline-offset: 3px; }
+button:focus-visible, a:focus-visible, select:focus-visible, summary:focus-visible, textarea:focus-visible { outline: 3px solid rgba(189, 114, 38, 0.42); outline-offset: 3px; }
 ::selection { background: var(--saffron-soft); color: var(--ink); }

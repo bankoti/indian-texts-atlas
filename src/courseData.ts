@@ -67,10 +67,10 @@ export const foundationLesson: CourseLesson = {
 
 export const upanishads: CourseLesson[] = [
   {
-    id: 'kena', sectionId: 'upanishads', order: 1, title: 'Kena Upaniṣad', plainTitle: 'Kena', veda: 'Sāmaveda', form: 'Prose and verse', minutes: 12,
+    id: 'kena', sectionId: 'upanishads', order: 1, title: 'Kena Upaniṣad', plainTitle: 'Kena', veda: 'Sāmaveda', form: '35-unit depth edition', minutes: 95,
     question: 'What makes the mind think?',
-    insight: 'Mind, speech, sight, and hearing do not exhaust what makes cognition possible. Its closing story also humbles any claim to possess ultimate knowledge.',
-    status: 'available', references: ['Kena 1.1–9', 'Kena 3–4'],
+    insight: 'Read every mantra and prose passage: the inquiry behind mind and senses becomes a story about power, humility, revelation, and disciplined truthfulness.',
+    status: 'available', references: ['Kena I · 9 mantras', 'Kena II · 5 mantras', 'Kena III–IV · 21 prose passages'],
   },
   {
     id: 'katha', sectionId: 'upanishads', order: 2, title: 'Kaṭha Upaniṣad', plainTitle: 'Katha', veda: 'Kṛṣṇa Yajurveda', form: 'Dialogue', minutes: 14,
@@ -222,24 +222,26 @@ export const lessonDetails: Record<string, LessonDetail> = {
   kena: {
     id: 'kena',
     locate: {
-      corpus: 'Sāmaveda → Talavakāra branch → Kena Upaniṣad',
-      placement: 'One of the early principal Upaniṣads; its name comes from its opening question, “by whom?”',
-      context: 'The work moves from compressed philosophical questions to a narrative in which the gods mistake a victory for their own achievement.',
+      corpus: 'Sāmaveda → Talavakāra / Jaiminīya tradition → Kena Upaniṣad',
+      placement: 'An early principal Upaniṣad whose title comes from its opening question, kena—“by whom?” Its manuscript placement and unit numbering vary across editions.',
+      context: 'The course follows a 35-unit convention: 9 + 5 metrical mantras, then 12 + 9 prose paragraphs. Some editions combine two early units and therefore count 34.',
     },
     read: {
-      anchor: 'Kena 1.1–9 and 3–4',
-      paraphrase: 'The text asks what impels mind, speech, breath, sight, and hearing. It answers by pointing toward what enables these capacities without becoming one more object among them. A later story lets an unknown presence defeat the gods’ certainty.',
-      readingNote: 'This is a course paraphrase, not a substitute for a named translation. Notice how the text teaches through both paradox and story.',
+      anchor: 'Kena 1.1–4.9 · 35 learning units',
+      paraphrase: 'The text asks what impels mind, speech, breath, sight, and hearing. It complicates any claim to know their ground as an ordinary object, then stages that lesson in a story: an unknown presence defeats the gods’ certainty before Umā identifies the source of their victory.',
+      readingNote: 'Sanskrit, IAST, course paraphrase, teaching note, vocabulary, and selected textual notes are shown as separate layers. Sections III–IV are prose and should not all be called ślokas.',
     },
     concepts: [
       { term: 'Kena', meaning: '“By whom?”—the question that opens the inquiry.' },
       { term: 'Brahman', meaning: 'Here, the enabling reality that exceeds ordinary sensory and conceptual grasp.' },
       { term: 'Vidyā', meaning: 'Knowledge or understanding; the text complicates what it means to “know.”' },
+      { term: 'Yakṣa', meaning: 'The mysterious, awe-inspiring presence before whom Agni and Vāyu discover the limits of their power.' },
     ],
     lenses: [
       { name: 'Epistemic lens', reading: 'The point is not anti-intellectualism. It is a warning that the conditions of knowing are not captured like ordinary objects.' },
       { name: 'Narrative lens', reading: 'The Yakṣa story converts abstraction into an ethical lesson: insight and power do not justify pride.' },
       { name: 'Vedānta reception', reading: 'Later schools explain the relation between awareness, self, and Brahman differently; the base text should be encountered before choosing one synthesis.' },
+      { name: 'Textual lens', reading: 'Numbering and readings such as daharam/dabhram vary among printed and electronic editions. A responsible reader makes such seams visible rather than manufacturing a single frictionless text.' },
     ],
     reflection: 'Think of something you understand well. What makes that understanding possible, yet is difficult to turn into an object of the same understanding?',
     quiz: {
@@ -249,8 +251,10 @@ export const lessonDetails: Record<string, LessonDetail> = {
       explanation: 'The text redirects attention from objects we know toward what makes knowing possible, while refusing to reduce that ground to another ordinary object.',
     },
     sourceLinks: [
+      { label: 'Sanskrit Wikisource: Kena Upaniṣad', url: 'https://sa.wikisource.org/wiki/केनोपनिषद्' },
+      { label: 'Max Müller, Talavakāra Upaniṣad (1879)', url: 'https://en.wikisource.org/wiki/Sacred_Books_of_the_East/Volume_1/Talavakâra-upanishad' },
+      { label: 'Hume, Thirteen Principal Upanishads (1921)', url: 'https://commons.wikimedia.org/wiki/File:The_Thirteen_Principal_Upanishads_(IA_bwb_T5-AQK-009).pdf' },
       { label: 'IEP overview of the Upaniṣads', url: 'https://iep.utm.edu/upanisad/' },
-      { label: 'Public-domain Hume translation index', url: 'https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp42350' },
     ],
   },
   katha: {
