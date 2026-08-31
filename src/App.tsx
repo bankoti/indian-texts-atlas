@@ -29,12 +29,18 @@ import {
   type CourseLesson,
   type LessonDetail,
 } from './courseData'
+import {
+  getDepthEditionDescriptor,
+  isDepthEdition,
+  isValidDepthPassageId,
+} from './depthEditionRegistry'
 import type { DepthEditionProgress, DepthEditionProgressMap } from './depthEditionTypes'
 import './App.css'
 
 const KenaDepthLessonView = lazy(() => import('./KenaDepthLessonView'))
+const KathaDepthLessonView = lazy(() => import('./KathaDepthLessonView'))
 
-class KenaErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+class DepthEditionErrorBoundary extends Component<{ children: ReactNode; lessonTitle: string; onClose: () => void }, { failed: boolean }> {
   state = { failed: false }
 
   static getDerivedStateFromError() {
@@ -45,7 +51,13 @@ class KenaErrorBoundary extends Component<{ children: ReactNode }, { failed: boo
     if (!this.state.failed) return this.props.children
     return (
       <section className="lesson-player kena-load-error" role="alert">
-        <div><BookOpenText size={28} /><h1>The reader did not finish loading.</h1><p>Your saved progress is safe. Check your connection and try once more.</p><button className="primary-button" onClick={() => window.location.reload()}>Reload the Kena reader</button></div>
+        <div>
+          <BookOpenText size={28} />
+          <h1>The {this.props.lessonTitle} reader did not finish loading.</h1>
+          <p>Your saved progress is safe. Check your connection and try once more.</p>
+          <button className="primary-button" onClick={() => window.location.reload()}>Reload reader</button>
+          <button className="quiet-button" onClick={this.props.onClose}>Return to the path</button>
+        </div>
       </section>
     )
   }
@@ -62,14 +74,10 @@ type ProgressState = {
 
 const emptyDepthProgress: DepthEditionProgress = { readIds: [], checkpointAnswers: {} }
 const emptyProgress: ProgressState = { completed: [], reflections: {}, quizAnswers: {}, depthEditions: {} }
-const kenaSectionSizes: Record<number, number> = { 1: 9, 2: 5, 3: 12, 4: 9 }
+const lessonIdSet = new Set(courseLessons.map((lesson) => lesson.id))
 
-function isKenaPassageId(id: string) {
-  const match = /^(\d)\.(\d{1,2})$/.exec(id)
-  if (!match) return false
-  const section = Number(match[1])
-  const number = Number(match[2])
-  return id === `${section}.${number}` && number >= 1 && number <= (kenaSectionSizes[section] ?? 0)
+function lessonIsComplete(id: string, completed: string[], depthEditions: DepthEditionProgressMap) {
+  return isDepthEdition(id) ? depthEditions[id]?.completed === true : completed.includes(id)
 }
 
 function canPersistProgress() {
@@ -143,32 +151,50 @@ function readStoredProgress(): ProgressState {
     if (!parsed || typeof parsed !== 'object') return emptyProgress
     const data = parsed as Partial<ProgressState>
     const reflections = data.reflections && typeof data.reflections === 'object'
-      ? Object.fromEntries(Object.entries(data.reflections).filter((entry): entry is [string, string] => typeof entry[1] === 'string'))
+      ? Object.fromEntries(Object.entries(data.reflections).filter((entry): entry is [string, string] => lessonIdSet.has(entry[0]) && typeof entry[1] === 'string'))
       : {}
     const quizAnswers = data.quizAnswers && typeof data.quizAnswers === 'object'
-      ? Object.fromEntries(Object.entries(data.quizAnswers).filter((entry): entry is [string, number] => typeof entry[1] === 'number'))
+      ? Object.fromEntries(Object.entries(data.quizAnswers).filter((entry): entry is [string, number] => {
+          const [lessonId, answer] = entry
+          const choiceCount = lessonDetails[lessonId]?.quiz.choices.length ?? 0
+          return lessonIdSet.has(lessonId) && Number.isInteger(answer) && answer >= 0 && answer < choiceCount
+        }))
       : {}
     const depthEditions: DepthEditionProgressMap = {}
     if (data.depthEditions && typeof data.depthEditions === 'object') {
       for (const [editionId, editionValue] of Object.entries(data.depthEditions)) {
-        if (!editionValue || typeof editionValue !== 'object') continue
+        const descriptor = getDepthEditionDescriptor(editionId)
+        if (!descriptor || !editionValue || typeof editionValue !== 'object') continue
         const edition = editionValue as Partial<DepthEditionProgress>
         const checkpointAnswers = edition.checkpointAnswers && typeof edition.checkpointAnswers === 'object'
-          ? Object.fromEntries(Object.entries(edition.checkpointAnswers).filter((entry): entry is [string, number] => typeof entry[1] === 'number'))
+          ? Object.fromEntries(Object.entries(edition.checkpointAnswers).filter((entry): entry is [string, number] => {
+              const [sectionId, answer] = entry
+              return descriptor.sectionIds.includes(sectionId)
+                && Number.isInteger(answer)
+                && answer >= 0
+                && answer < descriptor.checkpointChoiceCount
+            }))
           : {}
         const rawReadIds = Array.isArray(edition.readIds) ? edition.readIds.filter((id): id is string => typeof id === 'string') : []
-        const readIds = editionId === 'kena' ? [...new Set(rawReadIds.filter(isKenaPassageId))] : rawReadIds
-        const lastId = typeof edition.lastId === 'string' && (editionId !== 'kena' || isKenaPassageId(edition.lastId)) ? edition.lastId : undefined
+        const readIds = [...new Set(rawReadIds.filter((id) => isValidDepthPassageId(editionId, id)))]
+        const lastId = typeof edition.lastId === 'string' && isValidDepthPassageId(editionId, edition.lastId) ? edition.lastId : undefined
+        const completionIsValid = edition.completed === true
+          && readIds.length === descriptor.totalUnits
+          && descriptor.sectionIds.every((sectionId) => checkpointAnswers[sectionId] === descriptor.checkpointCorrectAnswers[sectionId])
+          && quizAnswers[editionId] === lessonDetails[editionId]?.quiz.correct
         depthEditions[editionId] = {
           readIds,
           checkpointAnswers,
           ...(lastId ? { lastId } : {}),
-          ...(edition.completed === true ? { completed: true } : {}),
+          ...(edition.studyMode === 'guided' || edition.studyMode === 'text' || edition.studyMode === 'full' ? { studyMode: edition.studyMode } : {}),
+          ...(completionIsValid ? { completed: true } : {}),
         }
       }
     }
     return {
-      completed: Array.isArray(data.completed) ? data.completed.filter((id): id is string => typeof id === 'string') : [],
+      completed: Array.isArray(data.completed)
+        ? [...new Set(data.completed.filter((id): id is string => typeof id === 'string' && lessonIdSet.has(id)))]
+        : [],
       reflections,
       quizAnswers,
       depthEditions,
@@ -415,7 +441,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="cover-section">
         <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, historical questions, later commentary, and living interpretations. Kena now opens the depth series with all 35 mantra and prose units; later texts can grow through the same source-conscious pattern.</p></div>
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, historical questions, later commentary, and living interpretations. Kena and Kaṭha now form the first complete depth editions: one asks what enables knowing, and the next tests what deserves choosing in the face of death.</p></div>
       </section>
     </>
   )
@@ -429,12 +455,11 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
   setActiveSectionId: (id: string) => void
 }) {
   const available = courseLessons.filter((item) => item.status === 'available')
-  const validCompleted = completed.filter((id) => id !== 'kena' && available.some((lesson) => lesson.id === id))
-  if (depthEditions.kena?.completed) validCompleted.push('kena')
+  const validCompleted = available.filter((lesson) => lessonIsComplete(lesson.id, completed, depthEditions))
   const progress = Math.round((validCompleted.length / available.length) * 100)
   const activeSection = courseSections.find((section) => section.id === activeSectionId) ?? courseSections[0]
   const sectionLessons = courseLessons.filter((lesson) => lesson.sectionId === activeSection.id)
-  const sectionCompleted = sectionLessons.filter((lesson) => lesson.id === 'kena' ? depthEditions.kena?.completed : completed.includes(lesson.id)).length
+  const sectionCompleted = sectionLessons.filter((lesson) => lessonIsComplete(lesson.id, completed, depthEditions)).length
 
   return (
     <section className="course-view">
@@ -447,7 +472,7 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
       <div className="curriculum-section-grid" aria-label="Course paths">
         {courseSections.map((section) => {
           const lessons = courseLessons.filter((lesson) => lesson.sectionId === section.id)
-          const completedCount = lessons.filter((lesson) => lesson.id === 'kena' ? depthEditions.kena?.completed : completed.includes(lesson.id)).length
+          const completedCount = lessons.filter((lesson) => lessonIsComplete(lesson.id, completed, depthEditions)).length
           return (
             <button
               key={section.id}
@@ -469,27 +494,33 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
       </div>
 
       <div className="full-path">
-        {sectionLessons.map((lesson) => (
-          <LessonCard
-            lesson={lesson}
-            key={lesson.id}
-            onOpen={() => openLesson(lesson.id)}
-            completed={lesson.id === 'kena' ? Boolean(depthEditions.kena?.completed) : completed.includes(lesson.id)}
-            overviewCompleted={lesson.id === 'kena' && completed.includes(lesson.id) && !depthEditions.kena?.completed}
-            depthReadCount={lesson.id === 'kena' ? new Set(depthEditions.kena?.readIds ?? []).size : undefined}
-          />
-        ))}
+        {sectionLessons.map((lesson) => {
+          const descriptor = getDepthEditionDescriptor(lesson.id)
+          const editionProgress = descriptor ? depthEditions[lesson.id] : undefined
+          return (
+            <LessonCard
+              lesson={lesson}
+              key={lesson.id}
+              onOpen={() => openLesson(lesson.id)}
+              completed={lessonIsComplete(lesson.id, completed, depthEditions)}
+              overviewCompleted={Boolean(descriptor && completed.includes(lesson.id) && !editionProgress?.completed)}
+              depthReadCount={descriptor ? new Set(editionProgress?.readIds ?? []).size : undefined}
+              depthTotal={descriptor?.totalUnits}
+            />
+          )
+        })}
       </div>
     </section>
   )
 }
 
-function LessonCard({ lesson, onOpen, completed = false, overviewCompleted = false, depthReadCount }: {
+function LessonCard({ lesson, onOpen, completed = false, overviewCompleted = false, depthReadCount, depthTotal }: {
   lesson: CourseLesson
   onOpen: () => void
   completed?: boolean
   overviewCompleted?: boolean
   depthReadCount?: number
+  depthTotal?: number
 }) {
   return (
     <article className={`lesson-card ${lesson.status} ${lesson.id === 'course-0' ? 'foundation' : ''}`}>
@@ -500,7 +531,7 @@ function LessonCard({ lesson, onOpen, completed = false, overviewCompleted = fal
         <p className="lesson-question">{lesson.question}</p>
         <p>{lesson.insight}</p>
         <div className="lesson-meta-row">
-          <span>{lesson.id === 'kena' && depthReadCount !== undefined ? `${depthReadCount}/35 read · depth edition` : lesson.status === 'available' ? `${lesson.minutes} min · interactive` : 'Course map ready'}</span>
+          <span>{depthReadCount !== undefined && depthTotal !== undefined ? `${depthReadCount}/${depthTotal} read · depth edition` : lesson.status === 'available' ? `${lesson.minutes} min · interactive` : 'Course map ready'}</span>
           {completed && <span className="complete-label"><CheckCircle2 size={14} /> Completed</span>}
           {overviewCompleted && <span className="overview-label"><BookOpenText size={14} /> Overview saved</span>}
         </div>
@@ -568,11 +599,12 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
     )
   }
 
-  if (lesson.id === 'kena') {
+  if (isDepthEdition(lesson.id)) {
+    const DepthReader = lesson.id === 'kena' ? KenaDepthLessonView : KathaDepthLessonView
     return (
-      <KenaErrorBoundary>
-        <Suspense fallback={<section className="lesson-player kena-loading" aria-live="polite"><div><BookOpenText size={28} /><strong>Opening the Kena reader…</strong></div></section>}>
-          <KenaDepthLessonView
+      <DepthEditionErrorBoundary key={lesson.id} lessonTitle={lesson.plainTitle} onClose={onClose}>
+        <Suspense fallback={<section className="lesson-player kena-loading" aria-live="polite"><div><BookOpenText size={28} /><strong>Opening the {lesson.plainTitle} reader…</strong></div></section>}>
+          <DepthReader
             lesson={lesson}
             detail={detail}
             completed={completed}
@@ -586,7 +618,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
             onClose={onClose}
           />
         </Suspense>
-      </KenaErrorBoundary>
+      </DepthEditionErrorBoundary>
     )
   }
 
@@ -762,7 +794,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="upanishad-families">
               {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
             </div>
-            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch. Its complete 35-unit reader models how later depth editions can keep Sanskrit, transliteration, course paraphrase, teaching note, textual variants, and interpretation distinct. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch, then Kaṭha on the Kṛṣṇa Yajurveda branch. Their complete depth readers keep Sanskrit, transliteration, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to each text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
             <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
           </LessonPanel>
         )}
@@ -818,8 +850,7 @@ function NotebookView({ progress, updateReflection, openLesson }: { progress: Pr
   const liveLessons = courseLessons.filter((lesson) => lesson.status === 'available')
   const selectedSection = courseSections.find((section) => section.id === activeSectionId) ?? courseSections[0]
   const selectedLessons = liveLessons.filter((lesson) => lesson.sectionId === selectedSection.id)
-  const isLessonComplete = (id: string) => id === 'kena' ? Boolean(progress.depthEditions.kena?.completed) : progress.completed.includes(id)
-  const validCompleted = liveLessons.filter((lesson) => isLessonComplete(lesson.id))
+  const validCompleted = liveLessons.filter((lesson) => lessonIsComplete(lesson.id, progress.completed, progress.depthEditions))
   return (
     <section className="notebook-page">
       <div className="course-hero notebook-hero">
@@ -840,7 +871,7 @@ function NotebookView({ progress, updateReflection, openLesson }: { progress: Pr
       <div className="notebook-grid">
         {selectedLessons.map((lesson) => (
           <article className="note-card" key={lesson.id}>
-            <header><div><small>{lesson.veda}</small><h2>{lesson.title}</h2></div>{isLessonComplete(lesson.id) && <CheckCircle2 size={20} />}</header>
+            <header><div><small>{lesson.veda}</small><h2>{lesson.title}</h2></div>{lessonIsComplete(lesson.id, progress.completed, progress.depthEditions) && <CheckCircle2 size={20} />}</header>
             <p>{lessonDetails[lesson.id]?.reflection}</p>
             <textarea aria-label={`Reflection for ${lesson.title}`} value={progress.reflections[lesson.id] ?? ''} onChange={(event) => updateReflection(lesson.id, event.target.value)} placeholder="Your reflection will appear here…" rows={5} />
             <button onClick={() => openLesson(lesson.id)}>Return to lesson <ArrowRight size={16} /></button>

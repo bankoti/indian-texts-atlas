@@ -7,6 +7,7 @@ A mobile-first interactive course for learning how ancient Indian textual tradit
 - An interactive root map separating authority, genre, school, and parallel traditions
 - A thirteen-text Upaniṣad learning path
 - A complete Kena Upaniṣad depth edition: 35 mantra/prose units with Sanskrit, IAST, original course paraphrases, plain explanations, vocabulary, variant notes, visual models, checkpoints, and device-local reading progress
+- A complete Kaṭha Upaniṣad depth edition: 119 numbered units across two adhyāyas and six vallīs, paced into 18 sessions with layered reading modes, visual models, recall pauses, checkpoints, and a final synthesis
 - A prerequisite Course 0 explaining how authority, genre, textual layer, and interpretive school connect
 - Nine wider paths through Vedic foundations, the epics, Purāṇic and devotional traditions, philosophical schools, Buddhist and Jain libraries, social thought, technical sciences, and regional literatures
 - 75 interactive units across 11 connected paths, each with location, close-reading orientation, key concepts, interpretive lenses, reflection, quiz, and public sources

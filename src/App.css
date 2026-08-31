@@ -413,7 +413,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .kena-passage-card > header > div span { color: var(--rose); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
 .kena-passage-card > header > div small { padding: 5px 7px; border-radius: 999px; background: var(--indigo-soft); color: var(--indigo); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
 .kena-passage-card > header h1 { margin: 13px 0 0; font-size: clamp(38px, 5vw, 57px); line-height: 1; letter-spacing: -.035em; }
-.kena-passage-card > header h1:focus { outline: 2px solid var(--saffron); outline-offset: 7px; border-radius: 2px; }
+.kena-passage-card > header h1:focus, .katha-map-page h1:focus, .katha-sections-page h1:focus, .katha-review-page h1:focus, .katha-session-pause h2:focus, .kena-checkpoint-card h2:focus { outline: 3px solid var(--rose); outline-offset: 7px; border-radius: 2px; }
 .kena-read-badge { position: absolute; top: 27px; right: 30px; display: inline-flex; align-items: center; gap: 5px; color: var(--leaf); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .kena-text-layer { min-width: 0; padding: 28px 35px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; border-bottom: 1px solid var(--line); }
 .kena-text-layer > div { display: grid; align-content: start; gap: 5px; }
@@ -477,7 +477,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .kena-checkpoint-card > div:first-child > span { color: var(--rose); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
 .kena-checkpoint-card > div:first-child h2 { margin: 9px 0 22px; font-size: 28px; line-height: 1.22; }
 .kena-checkpoint-card > p { font-family: var(--serif); font-size: 21px; line-height: 1.4; }
-.kena-reader-controls { position: fixed; z-index: 29; left: 50%; bottom: 0; width: min(calc(100% - 96px), 1120px); transform: translateX(-50%); margin: 0; padding: 12px 30px max(12px, env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border: 1px solid var(--line); border-bottom: 0; border-radius: 16px 16px 0 0; background: rgba(244,236,220,.96); box-shadow: 0 -10px 30px rgba(45,31,20,.08); backdrop-filter: blur(16px); }
+.kena-reader-controls { position: fixed; z-index: 29; left: 50%; bottom: 0; width: min(calc(100% - 96px), 1120px); transform: translateX(-50%); margin: 0; padding: 12px max(30px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(30px, env(safe-area-inset-left)); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border: 1px solid var(--line); border-bottom: 0; border-radius: 16px 16px 0 0; background: rgba(244,236,220,.96); box-shadow: 0 -10px 30px rgba(45,31,20,.08); backdrop-filter: blur(16px); }
 .kena-reader-controls button { min-height: 48px; border: 0; background: transparent; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
 .kena-reader-controls button:disabled { opacity: .3; cursor: default; }
 .kena-reader-controls button:last-child { justify-self: end; }
@@ -501,7 +501,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .kena-review-summary h2 { max-width: 780px; margin: 0 0 35px; font-size: clamp(37px, 5vw, 58px); line-height: 1; }
 .kena-review-summary > div { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center; }
 .kena-review-summary article { min-width: 0; min-height: 110px; padding: 16px; border: 1px solid var(--line); border-radius: 11px; display: grid; align-content: space-between; background: rgba(255,255,255,.27); }
-.kena-review-summary article strong { color: var(--saffron); font-family: var(--serif); }
+.kena-review-summary article strong { color: var(--saffron-text); font-family: var(--serif); }
 .kena-review-summary article span { font-family: var(--serif); font-size: 14px; }
 .kena-review-summary svg { width: 18px; color: var(--muted); }
 .kena-review-checkpoints { padding: 60px 30px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; border-bottom: 1px solid var(--line); }
@@ -736,7 +736,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .kena-reader-checkpoint { margin: 0 6px 28px; }
   .kena-checkpoint-card { padding: 23px 20px; }
   .kena-checkpoint-card > div:first-child h2 { font-size: 23px; }
-  .kena-reader-controls { left: 0; width: 100%; transform: none; margin: 0; padding: 10px 16px max(10px, env(safe-area-inset-bottom)); grid-template-columns: auto minmax(0, 1fr) auto; gap: 5px; border-radius: 14px 14px 0 0; }
+  .kena-reader-controls { left: 0; width: 100%; transform: none; margin: 0; padding: 10px max(16px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); grid-template-columns: auto minmax(0, 1fr) auto; gap: 5px; border-radius: 14px 14px 0 0; }
   .kena-reader-controls button { min-width: 48px; justify-content: center; }
   .kena-reader-controls .kena-read-continue { justify-self: center; }
 
@@ -792,7 +792,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .kena-player-header > span { font-size: 8px; letter-spacing: .04em; }
   .kena-rail button > span { font-size: 7px; }
   .kena-rail button > svg { width: 15px; }
-  .kena-reader-controls { margin: 0; padding-left: 12px; padding-right: 12px; }
+  .kena-reader-controls { margin: 0; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
   .kena-reader-controls > button:first-child span, .kena-reader-controls > button:last-child span { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); }
   .kena-reader-controls .kena-read-continue { padding: 0 13px; font-size: 12px; }
   .kena-invocation p[lang="sa-Deva"] { font-size: 18px; }
@@ -800,4 +800,150 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Kaṭha depth edition: six vallīs, eighteen paced sessions */
+.katha-rail { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.katha-rail button { padding-inline: 6px; gap: 6px; }
+.katha-rail button > i { width: 31px; height: 31px; flex-basis: 31px; font-size: 9px; }
+.katha-mobile-nav { display: none; }
+.katha-map-hero h1 { max-width: 790px; font-size: clamp(48px, 6.8vw, 81px); }
+
+.katha-movement-map { padding: 68px 30px; border-bottom: 1px solid var(--line); }
+.katha-movement-map > div:first-child { max-width: 760px; }
+.katha-movement-map h2 { margin: 8px 0 30px; font-size: clamp(35px, 4.7vw, 55px); line-height: 1.02; letter-spacing: -.035em; }
+.katha-movement-map ol { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.katha-movement-map li { min-width: 0; min-height: 128px; padding: 17px; display: grid; align-content: space-between; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.22); }
+.katha-movement-map li strong { color: var(--saffron-text); font-family: var(--serif); font-size: 18px; font-weight: 550; }
+.katha-movement-map li span { color: var(--muted); font-family: var(--serif); font-size: 12px; line-height: 1.35; }
+
+.katha-two-adhyayas { padding: 72px 30px; border-bottom: 1px solid var(--line); }
+.katha-two-adhyayas > div:first-child { max-width: 790px; }
+.katha-two-adhyayas h2 { margin: 8px 0 12px; font-size: clamp(38px, 5vw, 59px); line-height: 1; }
+.katha-two-adhyayas > div:first-child p { color: var(--muted); font-family: var(--serif); line-height: 1.55; }
+.katha-adhyaya-columns { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.katha-adhyaya-columns > section { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.2); }
+.katha-adhyaya-columns header { min-height: 100px; padding: 20px; display: grid; align-content: center; gap: 5px; background: var(--ink); color: var(--paper); }
+.katha-adhyaya-columns header small { color: #d7c9bb; font-size: 9px; letter-spacing: .11em; }
+.katha-adhyaya-columns header h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 500; }
+.katha-adhyaya-columns button { width: 100%; min-height: 104px; padding: 16px 18px; border: 0; border-top: 1px solid var(--line); background: transparent; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(54px, .4fr) auto; gap: 12px; align-items: center; color: var(--ink); text-align: left; cursor: pointer; }
+.katha-adhyaya-columns button:hover { background: rgba(255,255,255,.4); }
+.katha-adhyaya-columns button > span { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: var(--saffron-text); font-family: var(--serif); font-size: 12px; }
+.katha-adhyaya-columns button > div { min-width: 0; display: grid; gap: 4px; }
+.katha-adhyaya-columns button strong { font-family: var(--serif); font-size: 18px; font-weight: 550; }
+.katha-adhyaya-columns button small, .katha-adhyaya-columns button em { color: var(--muted); font-size: 9px; font-style: normal; }
+.katha-adhyaya-columns button > i { height: 4px; overflow: hidden; border-radius: 99px; background: rgba(57,42,30,.1); }
+.katha-adhyaya-columns button > i b { height: 100%; display: block; border-radius: inherit; background: var(--saffron); }
+
+.katha-sections-page { max-width: 1120px; margin: 0 auto; padding: 58px 30px 90px; }
+.katha-sections-page > header { max-width: 790px; margin-bottom: 38px; }
+.katha-sections-page > header h1 { margin: 10px 0 15px; font-size: clamp(46px, 6vw, 72px); line-height: .98; letter-spacing: -.045em; }
+.katha-sections-page > header p { color: var(--muted); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
+.katha-sections-page > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.katha-sections-page article { min-width: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.23); }
+.katha-sections-page article > button { width: 100%; min-height: 235px; padding: 22px; border: 0; background: transparent; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: start; color: var(--ink); text-align: left; cursor: pointer; }
+.katha-sections-page article > button > span { color: var(--saffron-text); font-family: var(--serif); font-size: 18px; }
+.katha-sections-page article > button > div { min-width: 0; }
+.katha-sections-page article > button small { color: var(--rose); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.katha-sections-page article > button h2 { margin: 7px 0 9px; font-size: 30px; }
+.katha-sections-page article > button p { min-height: 62px; margin: 0 0 25px; color: var(--muted); font-family: var(--serif); line-height: 1.45; }
+.katha-sections-page article > button i { height: 5px; overflow: hidden; display: block; border-radius: 99px; background: rgba(57,42,30,.1); }
+.katha-sections-page article > button i b { height: 100%; display: block; background: var(--saffron); }
+.katha-sections-page article > button em { margin-top: 8px; display: block; color: var(--muted); font-size: 9px; font-style: normal; }
+.katha-sections-page article > ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.katha-sections-page article > ol li { min-width: 0; border-top: 1px solid var(--line); }
+.katha-sections-page article > ol li:first-child { border-top: 0; }
+.katha-sections-page article > ol li > button { width: 100%; min-width: 0; min-height: 56px; padding: 12px 18px; border: 0; background: transparent; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; color: var(--ink); text-align: left; cursor: pointer; }
+.katha-sections-page article > ol li > button:hover { background: rgba(255,255,255,.4); }
+.katha-sections-page article > ol li > button > span { width: 25px; height: 25px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 9px; }
+.katha-sections-page article > ol li > button > div { min-width: 0; display: grid; gap: 2px; }
+.katha-sections-page article > ol strong { font-family: var(--serif); font-weight: 550; }
+.katha-sections-page article > ol small { color: var(--muted); font-size: 9px; }
+
+.katha-study-mode { margin: 20px 30px 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 11px; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgba(255,255,255,.2); }
+.katha-study-mode > span { color: var(--rose); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.katha-study-mode > div { display: flex; flex-wrap: wrap; gap: 5px; }
+.katha-study-mode button { min-height: 44px; padding: 0 12px; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
+.katha-study-mode button.active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.katha-breadcrumb { margin-top: 16px; padding: 13px; border-left: 3px solid var(--saffron); display: grid; gap: 5px; background: var(--saffron-soft); }
+.katha-breadcrumb small { color: var(--saffron-text); font-size: 10px; }
+.katha-breadcrumb strong { font-family: var(--serif); font-size: 13px; font-weight: 500; line-height: 1.4; }
+.katha-session-pause { scroll-margin-top: 18px; margin: 0 30px 35px; display: grid; gap: 18px; }
+.katha-session-pause > div:first-child { padding: 27px 30px; border: 1px solid var(--line); border-radius: 17px; background: var(--indigo-soft); }
+.katha-session-pause > div:first-child > span { color: var(--indigo); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.katha-session-pause > div:first-child h2 { margin: 8px 0 10px; font-size: 28px; line-height: 1.2; }
+.katha-session-pause > div:first-child p { margin: 0; color: var(--muted); font-family: var(--serif); }
+.katha-session-pause > .primary-button { justify-self: end; }
+
+.katha-boons-figure ol { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; list-style: none; }
+.katha-boons-figure li { padding: 15px; border: 1px solid rgba(56,68,93,.18); border-radius: 10px; display: grid; gap: 6px; background: rgba(255,255,255,.32); }
+.katha-boons-figure li > span { color: var(--indigo); font-family: var(--serif); }
+.katha-boons-figure li strong { font-family: var(--serif); font-weight: 550; }
+.katha-boons-figure li small { color: var(--muted); }
+.katha-choice-figure > div { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.25fr); gap: 12px; align-items: center; }
+.katha-choice-figure article { min-height: 100px; padding: 14px; border: 1px solid rgba(56,68,93,.18); border-radius: 10px; display: grid; align-content: center; gap: 7px; background: rgba(255,255,255,.32); }
+.katha-choice-figure article:last-child { grid-template-columns: 1fr 1fr; gap: 7px; background: transparent; border: 0; padding: 0; }
+.katha-choice-figure article > span { min-height: 100px; padding: 14px; border-radius: 10px; display: grid; align-content: center; gap: 6px; background: rgba(255,255,255,.43); color: var(--muted); font-family: var(--serif); }
+.katha-choice-figure article > span b { display: block; color: var(--ink); }
+.katha-chariot-figure > div { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 7px; align-items: center; }
+.katha-chariot-figure > div span { min-height: 74px; padding: 9px; border: 1px solid rgba(56,68,93,.18); border-radius: 8px; display: grid; place-items: center; align-content: center; gap: 4px; background: rgba(255,255,255,.33); font-family: var(--serif); font-size: 12px; text-align: center; }
+.katha-chariot-figure > div small { color: var(--indigo); font-family: var(--sans); font-size: 8px; font-weight: 800; }
+.katha-inward-figure > div { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: center; }
+.katha-inward-figure article, .katha-elements-figure article { padding: 16px; border: 1px solid rgba(56,68,93,.18); border-radius: 10px; display: grid; gap: 7px; background: rgba(255,255,255,.32); }
+.katha-inward-figure article svg, .katha-elements-figure article svg { color: var(--saffron); }
+.katha-inward-figure article strong, .katha-elements-figure article strong { font-family: var(--serif); font-weight: 550; }
+.katha-inward-figure article small, .katha-elements-figure article span { color: var(--muted); font-size: 9px; }
+.katha-elements-figure > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.katha-tree-figure > div { padding: 17px; border: 1px solid rgba(56,68,93,.18); border-radius: 11px; display: grid; justify-items: center; gap: 12px; background: rgba(255,255,255,.32); text-align: center; }
+.katha-tree-figure > div strong { padding: 10px 14px; border-radius: 8px; background: var(--indigo); color: white; font-family: var(--serif); font-weight: 500; }
+.katha-tree-figure > div span { font-family: var(--serif); }
+.katha-stillness-figure > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+.katha-stillness-figure > div span, .katha-stillness-figure > div strong { min-height: 65px; padding: 10px; border: 1px solid rgba(56,68,93,.18); border-radius: 9px; display: grid; place-items: center; background: rgba(255,255,255,.32); font-family: var(--serif); text-align: center; }
+.katha-stillness-figure > div strong { background: var(--indigo); color: white; font-weight: 500; }
+
+.katha-review-summary > div { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.katha-review-step { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.katha-review-step:nth-child(3) > svg { display: none; }
+.katha-review-step article { min-height: 95px; }
+.katha-review-page .kena-complete-action .quiet-button { min-height: 44px; }
+
+@media (max-width: 760px) {
+  .katha-rail { display: none; }
+  .katha-mobile-nav { max-width: 1120px; margin: 0 auto; padding: 7px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; border-bottom: 1px solid var(--line); }
+  .katha-mobile-nav button { min-width: 0; min-height: 48px; padding: 5px 2px; border: 1px solid transparent; border-radius: 9px; background: transparent; display: grid; place-items: center; align-content: center; gap: 3px; color: var(--muted); font-size: 10px; cursor: pointer; }
+  .katha-mobile-nav button.active { border-color: var(--line); background: rgba(255,255,255,.48); color: var(--ink); }
+  .katha-map-hero h1 { font-size: clamp(45px, 13.5vw, 66px); }
+  .katha-movement-map, .katha-two-adhyayas { padding: 50px 6px; }
+  .katha-movement-map ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .katha-movement-map li { min-height: 112px; }
+  .katha-adhyaya-columns { grid-template-columns: 1fr; }
+  .katha-adhyaya-columns button { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .katha-adhyaya-columns button > i { display: none; }
+  .katha-sections-page { padding: 44px 6px 78px; }
+  .katha-sections-page > div { grid-template-columns: 1fr; }
+  .katha-sections-page article > button { min-height: 0; padding: 20px; grid-template-columns: auto minmax(0, 1fr); }
+  .katha-sections-page article > button > svg { display: none; }
+  .katha-study-mode { margin: 16px 6px 0; align-items: flex-start; flex-direction: column; }
+  .katha-study-mode > div { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .katha-study-mode button { min-width: 0; padding: 0 6px; font-size: 10px; }
+  .katha-session-pause { margin: 0 6px 28px; }
+  .katha-session-pause > div:first-child { padding: 23px 20px; }
+  .katha-session-pause > div:first-child h2 { font-size: 24px; }
+  .katha-boons-figure ol, .katha-elements-figure > div, .katha-stillness-figure > div { grid-template-columns: 1fr; }
+  .katha-choice-figure > div, .katha-inward-figure > div { grid-template-columns: 1fr; }
+  .katha-choice-figure > div > svg, .katha-inward-figure > div > svg { justify-self: center; transform: rotate(90deg); }
+  .katha-choice-figure article:last-child { grid-template-columns: 1fr; }
+  .katha-chariot-figure > div { grid-template-columns: 1fr; }
+  .katha-chariot-figure > div > svg { justify-self: center; transform: rotate(90deg); }
+  .katha-review-summary > div { grid-template-columns: 1fr; }
+  .katha-review-step, .katha-review-step:nth-child(3) { grid-template-columns: 1fr; }
+  .katha-review-step > svg, .katha-review-step:nth-child(3) > svg { display: block; justify-self: center; transform: rotate(90deg); }
+  .katha-review-step:last-child > svg { display: none; }
+}
+
+@media (max-width: 430px) {
+  .katha-player-header > div small { max-width: 180px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }
+  .katha-movement-map ol { grid-template-columns: 1fr; }
+  .katha-adhyaya-columns button { gap: 8px; padding-inline: 12px; }
+  .katha-adhyaya-columns button > span { width: 36px; height: 36px; }
 }
