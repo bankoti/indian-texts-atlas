@@ -1,5 +1,6 @@
 import { createServer } from 'vite'
 import { existsSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 
 const server = await createServer({
   appType: 'custom',
@@ -18,18 +19,59 @@ const validCheckpoint = (section, expectedChoices) => Boolean(
   && section.checkpoint.correct >= 0
   && section.checkpoint.correct < section.checkpoint.choices.length
 )
+const wordStudyFields = ['source', 'iast', 'meaning', 'grammar']
+const validWordStudyWord = (word) => wordStudyFields.every((field) => (
+  typeof word?.[field] === 'string'
+  && word[field].trim()
+  && word[field] === word[field].normalize('NFC')
+))
+const validWordStudyWords = (words) => Array.isArray(words) && words.length > 0 && words.every(validWordStudyWord)
+const validWordStudyEntry = (entry) => Boolean(entry?.id?.trim() && validWordStudyWords(entry.words))
+const wordStudyRowsMatch = (left, right) => JSON.stringify(left) === JSON.stringify(right)
+const sha256 = (value) => createHash('sha256').update(value).digest('hex')
+const sourceTextFingerprint = (id, text) => sha256(JSON.stringify([id, text?.devanagari, text?.iast]))
+const validWordStudyAuditEntry = (entry) => Boolean(
+  entry?.id?.trim()
+  && /^[a-f0-9]{64}$/.test(entry.textFingerprint ?? '')
+  && Number.isInteger(entry.rowCount)
+  && entry.rowCount > 0
+)
+const reviewedWordStudyDigests = {
+  kena: 'b76d29a5a6b3042df5f8c3a2a24b0f2ae378fa66fd61e8fe31dfbdca784d76cc',
+  katha: '5c30ae7743a94dca2f026acb14810ff20184824d0140c51732fa6c1565c48952',
+}
+const wordStudyDigest = (entries, invocation, audit, invocationAudit) => sha256(JSON.stringify({
+  entries,
+  invocation,
+  audit,
+  invocationAudit,
+}))
 
 try {
-  const [curriculum, kenaEdition, kathaEdition, registryModule] = await Promise.all([
+  const [curriculum, kenaEdition, kathaEdition, registryModule, kenaWordStudyModule, kathaWordStudyModule] = await Promise.all([
     server.ssrLoadModule('/src/courseData.ts'),
     server.ssrLoadModule('/src/kenaData.ts'),
     server.ssrLoadModule('/src/kathaData.ts'),
     server.ssrLoadModule('/src/depthEditionRegistry.ts'),
+    server.ssrLoadModule('/src/kenaWordStudy.generated.ts'),
+    server.ssrLoadModule('/src/kathaWordStudy.generated.ts'),
   ])
   const { courseLessons, courseSections, lessonDetails } = curriculum
   const { kenaInvocation, kenaPassages, kenaSections, kenaSources } = kenaEdition
   const { kathaInvocation, kathaPassages, kathaSections, kathaSessions, kathaSources } = kathaEdition
   const { depthEditionRegistry, expectedDepthPassageIds, isValidDepthPassageId } = registryModule
+  const {
+    kenaInvocationWordStudy,
+    kenaInvocationWordStudyAudit,
+    kenaWordStudy,
+    kenaWordStudyAudit,
+  } = kenaWordStudyModule
+  const {
+    kathaInvocationWordStudy,
+    kathaInvocationWordStudyAudit,
+    kathaWordStudy,
+    kathaWordStudyAudit,
+  } = kathaWordStudyModule
 
   const lessonIds = courseLessons.map((lesson) => lesson.id)
   const duplicateLessonIds = duplicateValues(lessonIds)
@@ -63,6 +105,37 @@ try {
   const expectedKenaIds = expectedDepthPassageIds(kenaDescriptor)
   const kenaIdsExact = JSON.stringify(kenaIds) === JSON.stringify(expectedKenaIds)
   const duplicateKenaIds = duplicateValues(kenaIds)
+  const kenaWordStudyIds = kenaWordStudy.map((entry) => entry.id)
+  const kenaWordStudyIdsExact = JSON.stringify(kenaWordStudyIds) === JSON.stringify(expectedKenaIds)
+  const duplicateKenaWordStudyIds = duplicateValues(kenaWordStudyIds)
+  const invalidKenaWordStudyEntries = kenaWordStudy.filter((entry) => !validWordStudyEntry(entry)).map((entry) => entry.id)
+  const kenaWordStudyRows = kenaWordStudy.reduce((total, entry) => total + entry.words.length, 0)
+  const kenaWordStudyById = new Map(kenaWordStudy.map((entry) => [entry.id, entry.words]))
+  const kenaWordStudyAttached = kenaPassages.every((passage) => wordStudyRowsMatch(passage.words, kenaWordStudyById.get(passage.id)))
+  const kenaWordStudyAuditIds = kenaWordStudyAudit.map((entry) => entry.id)
+  const kenaWordStudyAuditIdsExact = JSON.stringify(kenaWordStudyAuditIds) === JSON.stringify(expectedKenaIds)
+  const duplicateKenaWordStudyAuditIds = duplicateValues(kenaWordStudyAuditIds)
+  const invalidKenaWordStudyAuditEntries = kenaWordStudyAudit.filter((entry) => !validWordStudyAuditEntry(entry)).map((entry) => entry.id)
+  const kenaWordStudyAuditById = new Map(kenaWordStudyAudit.map((entry) => [entry.id, entry]))
+  const kenaSourceFingerprintsValid = kenaPassages.every((passage) => (
+    kenaWordStudyAuditById.get(passage.id)?.textFingerprint === sourceTextFingerprint(passage.id, passage)
+  ))
+  const kenaRowCountsExact = kenaWordStudy.every((entry) => (
+    kenaWordStudyAuditById.get(entry.id)?.rowCount === entry.words.length
+  ))
+  const kenaInvocationWordStudyValid = kenaInvocationWordStudy.id === 'invocation'
+    && validWordStudyEntry(kenaInvocationWordStudy)
+    && wordStudyRowsMatch(kenaInvocation.words, kenaInvocationWordStudy.words)
+  const kenaInvocationWordStudyAuditValid = kenaInvocationWordStudyAudit.id === 'invocation'
+    && validWordStudyAuditEntry(kenaInvocationWordStudyAudit)
+    && kenaInvocationWordStudyAudit.rowCount === kenaInvocationWordStudy.words.length
+    && kenaInvocationWordStudyAudit.textFingerprint === sourceTextFingerprint('invocation', kenaInvocation)
+  const kenaReviewedWordStudyDigestValid = wordStudyDigest(
+    kenaWordStudy,
+    kenaInvocationWordStudy,
+    kenaWordStudyAudit,
+    kenaInvocationWordStudyAudit,
+  ) === reviewedWordStudyDigests.kena
   const kenaSectionIds = kenaSections.map((section) => String(section.id))
   const kenaSectionIdsExact = JSON.stringify(kenaSectionIds) === JSON.stringify(kenaDescriptor.sectionIds)
   const kenaSectionCounts = Object.fromEntries(kenaSections.map((section) => [
@@ -82,6 +155,7 @@ try {
         || !passage.explanation?.trim()
         || !passage.terms?.length
         || passage.terms.some((term) => !term.term?.trim() || !term.meaning?.trim())
+        || !validWordStudyWords(passage.words)
     })
     .map((passage) => passage.id)
   const invalidKenaSections = kenaSections
@@ -103,6 +177,37 @@ try {
   const expectedKathaIds = expectedDepthPassageIds(kathaDescriptor)
   const kathaIdsExact = JSON.stringify(kathaIds) === JSON.stringify(expectedKathaIds)
   const duplicateKathaIds = duplicateValues(kathaIds)
+  const kathaWordStudyIds = kathaWordStudy.map((entry) => entry.id)
+  const kathaWordStudyIdsExact = JSON.stringify(kathaWordStudyIds) === JSON.stringify(expectedKathaIds)
+  const duplicateKathaWordStudyIds = duplicateValues(kathaWordStudyIds)
+  const invalidKathaWordStudyEntries = kathaWordStudy.filter((entry) => !validWordStudyEntry(entry)).map((entry) => entry.id)
+  const kathaWordStudyRows = kathaWordStudy.reduce((total, entry) => total + entry.words.length, 0)
+  const kathaWordStudyById = new Map(kathaWordStudy.map((entry) => [entry.id, entry.words]))
+  const kathaWordStudyAttached = kathaPassages.every((passage) => wordStudyRowsMatch(passage.words, kathaWordStudyById.get(passage.id)))
+  const kathaWordStudyAuditIds = kathaWordStudyAudit.map((entry) => entry.id)
+  const kathaWordStudyAuditIdsExact = JSON.stringify(kathaWordStudyAuditIds) === JSON.stringify(expectedKathaIds)
+  const duplicateKathaWordStudyAuditIds = duplicateValues(kathaWordStudyAuditIds)
+  const invalidKathaWordStudyAuditEntries = kathaWordStudyAudit.filter((entry) => !validWordStudyAuditEntry(entry)).map((entry) => entry.id)
+  const kathaWordStudyAuditById = new Map(kathaWordStudyAudit.map((entry) => [entry.id, entry]))
+  const kathaSourceFingerprintsValid = kathaPassages.every((passage) => (
+    kathaWordStudyAuditById.get(passage.id)?.textFingerprint === sourceTextFingerprint(passage.id, passage)
+  ))
+  const kathaRowCountsExact = kathaWordStudy.every((entry) => (
+    kathaWordStudyAuditById.get(entry.id)?.rowCount === entry.words.length
+  ))
+  const kathaInvocationWordStudyValid = kathaInvocationWordStudy.id === 'invocation'
+    && validWordStudyEntry(kathaInvocationWordStudy)
+    && wordStudyRowsMatch(kathaInvocation.words, kathaInvocationWordStudy.words)
+  const kathaInvocationWordStudyAuditValid = kathaInvocationWordStudyAudit.id === 'invocation'
+    && validWordStudyAuditEntry(kathaInvocationWordStudyAudit)
+    && kathaInvocationWordStudyAudit.rowCount === kathaInvocationWordStudy.words.length
+    && kathaInvocationWordStudyAudit.textFingerprint === sourceTextFingerprint('invocation', kathaInvocation)
+  const kathaReviewedWordStudyDigestValid = wordStudyDigest(
+    kathaWordStudy,
+    kathaInvocationWordStudy,
+    kathaWordStudyAudit,
+    kathaInvocationWordStudyAudit,
+  ) === reviewedWordStudyDigests.katha
   const kathaSectionIds = kathaSections.map((section) => section.id)
   const kathaSectionIdsExact = JSON.stringify(kathaSectionIds) === JSON.stringify(kathaDescriptor.sectionIds)
   const kathaSectionCounts = Object.fromEntries(kathaSections.map((section) => [
@@ -123,7 +228,8 @@ try {
       || !passage.gloss?.trim()
       || !passage.explanation?.trim()
       || !passage.terms?.length
-      || passage.terms.some((term) => !term.term?.trim() || !term.meaning?.trim()))
+      || passage.terms.some((term) => !term.term?.trim() || !term.meaning?.trim())
+      || !validWordStudyWords(passage.words))
     .map((passage) => passage.id)
   const invalidKathaSections = kathaSections
     .filter((section) => section.id !== `${section.adhyaya}.${section.valli}`
@@ -202,6 +308,23 @@ try {
       checkpointAnswersMatchRegistry: kenaCheckpointAnswersMatchRegistry,
       sources: kenaSources.length,
       hasInvocation: Boolean(kenaInvocation?.devanagari?.trim() && kenaInvocation?.iast?.trim()),
+      wordStudy: {
+        entries: kenaWordStudy.length,
+        rows: kenaWordStudyRows,
+        idsExact: kenaWordStudyIdsExact,
+        duplicateIds: duplicateKenaWordStudyIds,
+        invalidEntries: invalidKenaWordStudyEntries,
+        attachedToPassages: kenaWordStudyAttached,
+        auditIdsExact: kenaWordStudyAuditIdsExact,
+        duplicateAuditIds: duplicateKenaWordStudyAuditIds,
+        invalidAuditEntries: invalidKenaWordStudyAuditEntries,
+        sourceFingerprintsValid: kenaSourceFingerprintsValid,
+        rowCountsExact: kenaRowCountsExact,
+        reviewedDigestValid: kenaReviewedWordStudyDigestValid,
+        invocationRows: kenaInvocationWordStudy.words.length,
+        invocationValid: kenaInvocationWordStudyValid,
+        invocationAuditValid: kenaInvocationWordStudyAuditValid,
+      },
       hasIllustration: kenaIllustrationExists,
     },
     kathaEdition: {
@@ -222,6 +345,23 @@ try {
       sources: kathaSources.length,
       metadataValid: kathaMetadataValid,
       hasInvocation: Boolean(kathaInvocation?.devanagari?.trim() && kathaInvocation?.iast?.trim()),
+      wordStudy: {
+        entries: kathaWordStudy.length,
+        rows: kathaWordStudyRows,
+        idsExact: kathaWordStudyIdsExact,
+        duplicateIds: duplicateKathaWordStudyIds,
+        invalidEntries: invalidKathaWordStudyEntries,
+        attachedToPassages: kathaWordStudyAttached,
+        auditIdsExact: kathaWordStudyAuditIdsExact,
+        duplicateAuditIds: duplicateKathaWordStudyAuditIds,
+        invalidAuditEntries: invalidKathaWordStudyAuditEntries,
+        sourceFingerprintsValid: kathaSourceFingerprintsValid,
+        rowCountsExact: kathaRowCountsExact,
+        reviewedDigestValid: kathaReviewedWordStudyDigestValid,
+        invocationRows: kathaInvocationWordStudy.words.length,
+        invocationValid: kathaInvocationWordStudyValid,
+        invocationAuditValid: kathaInvocationWordStudyAuditValid,
+      },
       hasIllustration: kathaIllustrationExists,
     },
     sectionCounts: Object.fromEntries(courseSections.map((section) => [
@@ -253,6 +393,21 @@ try {
     || !kenaCheckpointAnswersMatchRegistry
     || !kenaInvocation?.devanagari?.trim()
     || !kenaInvocation?.iast?.trim()
+    || kenaWordStudy.length !== 35
+    || kenaWordStudyRows !== 605
+    || !kenaWordStudyIdsExact
+    || duplicateKenaWordStudyIds.length > 0
+    || invalidKenaWordStudyEntries.length > 0
+    || !kenaWordStudyAttached
+    || !kenaWordStudyAuditIdsExact
+    || duplicateKenaWordStudyAuditIds.length > 0
+    || invalidKenaWordStudyAuditEntries.length > 0
+    || !kenaSourceFingerprintsValid
+    || !kenaRowCountsExact
+    || !kenaReviewedWordStudyDigestValid
+    || kenaInvocationWordStudy.words.length !== 46
+    || !kenaInvocationWordStudyValid
+    || !kenaInvocationWordStudyAuditValid
     || !kenaIllustrationExists
     || kathaPassages.length !== 119
     || !kathaIdsExact
@@ -272,6 +427,21 @@ try {
     || !kathaMetadataValid
     || !kathaInvocation?.devanagari?.trim()
     || !kathaInvocation?.iast?.trim()
+    || kathaWordStudy.length !== 119
+    || kathaWordStudyRows !== 1979
+    || !kathaWordStudyIdsExact
+    || duplicateKathaWordStudyIds.length > 0
+    || invalidKathaWordStudyEntries.length > 0
+    || !kathaWordStudyAttached
+    || !kathaWordStudyAuditIdsExact
+    || duplicateKathaWordStudyAuditIds.length > 0
+    || invalidKathaWordStudyAuditEntries.length > 0
+    || !kathaSourceFingerprintsValid
+    || !kathaRowCountsExact
+    || !kathaReviewedWordStudyDigestValid
+    || kathaInvocationWordStudy.words.length !== 20
+    || !kathaInvocationWordStudyValid
+    || !kathaInvocationWordStudyAuditValid
     || !kathaIllustrationExists
 
   if (failed) process.exitCode = 1

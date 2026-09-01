@@ -1569,7 +1569,7 @@ export const kathaTeaching: KathaTeaching[] = [
         "meaning": "consisting of or filled with deities"
       }
     ],
-    "textNote": "Like the preceding mantra, this one has difficult case-constructions, so translations vary over whether Aditi is born from or looks out through beings. Readings that make her a technical label for a later philosophical principle are interpretive."
+    "textNote": "Like the preceding mantra, this one has a difficult instrumental construction: bhūtebhiḥ is rendered ‘with/among beings’ or ‘from the elements.’ Identifying Aditi with a later technical philosophical principle is interpretive."
   },
   {
     "id": "2.1.8",

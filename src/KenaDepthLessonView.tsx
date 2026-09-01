@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import type { CourseLesson, LessonDetail } from './courseData'
 import type { DepthEditionProgress } from './depthEditionTypes'
+import WordByWordStudy from './WordByWordStudy'
 import {
   getKenaPassagesForSection,
   getKenaSection,
@@ -29,6 +30,7 @@ import {
 } from './kenaData'
 
 type KenaMode = 'map' | 'reader' | 'review'
+type StudyMode = 'guided' | 'text' | 'full'
 
 type KenaDepthLessonViewProps = {
   lesson: CourseLesson
@@ -98,6 +100,7 @@ export default function KenaDepthLessonView({
   const finalQuizCorrect = selectedQuiz === detail.quiz.correct
   const depthReady = readCount === kenaPassages.length && checkpointCorrectCount === kenaSections.length && finalQuizCorrect
   const editionCompleted = progress.completed === true
+  const studyMode: StudyMode = progress.studyMode === 'guided' || progress.studyMode === 'full' ? progress.studyMode : 'text'
 
   useEffect(() => {
     if (mode !== 'reader') return
@@ -171,6 +174,10 @@ export default function KenaDepthLessonView({
     })
   }
 
+  const updateStudyMode = (nextMode: StudyMode) => {
+    onProgressChange({ ...progress, studyMode: nextMode })
+  }
+
   const completeDepthEdition = () => {
     if (!depthReady || editionCompleted) return
     onProgressChange({ ...progress, readIds, completed: true })
@@ -227,6 +234,11 @@ export default function KenaDepthLessonView({
             </label>
           </div>
 
+          <div className="katha-study-mode" role="group" aria-label="Reading layer">
+            <span>Reading layer</span>
+            <div>{(['guided', 'text', 'full'] as StudyMode[]).map((item) => <button key={item} className={studyMode === item ? 'active' : ''} aria-label={item === 'guided' ? 'Guided: Sanskrit and course meaning' : item === 'text' ? 'IAST: add transliteration' : 'Word by word: add literal meanings, grammar, and sandhi'} aria-pressed={studyMode === item} onClick={() => updateStudyMode(item)}>{item === 'guided' ? 'Guided' : item === 'text' ? '+ IAST' : 'Word by word'}</button>)}</div>
+          </div>
+
           <div className="kena-reader-layout">
             <article className="kena-passage-card">
               <header>
@@ -240,10 +252,14 @@ export default function KenaDepthLessonView({
                 <p lang="sa-Deva">{activePassage.devanagari}</p>
               </section>
 
-              <section className="kena-text-layer iast-layer" aria-labelledby={`iast-${activePassage.id}`}>
-                <div><span>IAST</span><h2 id={`iast-${activePassage.id}`}>Transliteration</h2></div>
-                <p lang="sa-Latn">{activePassage.iast}</p>
-              </section>
+              {studyMode !== 'guided' && (
+                <section className="kena-text-layer iast-layer" aria-labelledby={`iast-${activePassage.id}`}>
+                  <div><span>IAST</span><h2 id={`iast-${activePassage.id}`}>Transliteration</h2></div>
+                  <p lang="sa-Latn">{activePassage.iast}</p>
+                </section>
+              )}
+
+              {studyMode === 'full' && <WordByWordStudy passageId={`kena-${activePassage.id}`} words={activePassage.words} />}
 
               <section className="kena-explanation" aria-labelledby={`meaning-${activePassage.id}`}>
                 <span className="kena-section-label">COURSE PARAPHRASE</span>
@@ -349,7 +365,7 @@ function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpe
           <p>Begin with the faculties. Pass through a paradox about knowledge. Then watch a blade of grass undo the gods’ certainty.</p>
           <div className="kena-map-actions">
             <button className="primary-button" onClick={() => onOpenPassage(resumeId)}>{readSet.size ? `Resume at ${resumeId}` : 'Begin with 1.1'} <ChevronRight size={17} /></button>
-            <span>35 units · your progress stays on this device</span>
+            <span>35 units · word-by-word Sanskrit · progress stays on this device</span>
           </div>
         </div>
         <div className="kena-progress-orbit" style={{ background: `conic-gradient(var(--saffron) ${progressPercent * 3.6}deg, rgba(255,255,255,.34) 0deg)` }} role="progressbar" aria-label="Kena depth edition reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPercent}>
@@ -397,7 +413,7 @@ function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpe
 
       <details className="kena-invocation">
         <summary><Sparkles size={17} /> Begin with the peace invocation <span>not counted among the 35 units</span></summary>
-        <div><p lang="sa-Deva">{kenaInvocation.devanagari}</p><p lang="sa-Latn">{kenaInvocation.iast}</p><small>{kenaInvocation.note}</small></div>
+        <div><p lang="sa-Deva">{kenaInvocation.devanagari}</p><p lang="sa-Latn">{kenaInvocation.iast}</p><small>{kenaInvocation.note}</small><WordByWordStudy invocation passageId="kena-invocation" words={kenaInvocation.words} /></div>
       </details>
     </div>
   )
@@ -526,7 +542,7 @@ function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, r
       <section className="kena-sources" aria-labelledby="kena-sources-title">
         <div><span>TEXT & EDITORIAL SOURCES</span><h2 id="kena-sources-title">Know what layer you are reading.</h2><p>{kenaEditorialNote}</p></div>
         <div>{kenaSources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span><strong>{source.label}</strong><small>{source.use}</small></span><ExternalLink size={16} /></a>)}</div>
-        <p className="kena-license-note">The Sanskrit and IAST text layers are adapted from “केनोपनिषद्” by Sanskrit Wikisource contributors (source linked above); spacing, punctuation, transliteration, and learning-unit segmentation have been changed. Those adapted text layers are licensed under CC BY-SA 4.0 (license linked above). Course paraphrases, teaching notes, diagrams, and questions are original editorial material. No copyrighted modern translation is reproduced.</p>
+        <p className="kena-license-note">The Sanskrit and IAST text layers are adapted from “केनोपनिषद्” by Sanskrit Wikisource contributors (source linked above); spacing, punctuation, transliteration, and learning-unit segmentation have been changed. Those adapted text layers are licensed under CC BY-SA 4.0 (license linked above). Word-by-word meanings and grammar cues, course paraphrases, teaching notes, diagrams, and questions are original editorial material. No copyrighted modern translation is reproduced.</p>
       </section>
     </div>
   )

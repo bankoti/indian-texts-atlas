@@ -1,5 +1,7 @@
 import { kathaTeaching } from './kathaTeaching.generated'
 import { kathaVerseTexts } from './kathaVerseTexts.generated'
+import { kathaInvocationWordStudy, kathaWordStudy } from './kathaWordStudy.generated'
+import type { WordStudyWord } from './wordStudyTypes'
 
 export type KathaTerm = {
   term: string
@@ -18,6 +20,7 @@ export type KathaPassage = {
   gloss: string
   explanation: string
   terms: KathaTerm[]
+  words: WordStudyWord[]
   textNote?: string
 }
 
@@ -57,6 +60,7 @@ export const kathaInvocation = {
 tejasvi nāv adhītam astu | mā vidviṣāvahai ||
 oṃ śāntiḥ śāntiḥ śāntiḥ ||`,
   note: 'Traditional peace invocation for teacher and learner. It appears at the opening and again after the text in many editions; it is not counted among the 119 progress-bearing units.',
+  words: kathaInvocationWordStudy.words,
 }
 
 export const kathaSections: KathaSection[] = [
@@ -163,12 +167,15 @@ export const kathaSources = [
   { label: 'Dominik Haas · Vom Feueraltar zum Yoga (2024)', url: 'https://hasp.ub.uni-heidelberg.de/catalog/book/1329', use: 'Open-access recent critical study for textual and interpretive checks.' },
   { label: 'Max Müller · Kaṭha Upaniṣad (1884)', url: 'https://en.wikisource.org/wiki/Sacred_Books_of_the_East/Volume_15/Katha-upanishad', use: 'Public-domain English comparison and historical notes; not copied as the course voice.' },
   { label: 'R. E. Hume · Thirteen Principal Upanishads (1921)', url: 'https://openlibrary.org/books/OL6639499M/The_thirteen_principal_Upanishads', use: 'Public-domain comparison translation.' },
+  { label: 'Cologne Digital Sanskrit Dictionaries', url: 'https://www.sanskrit-lexicon.uni-koeln.de/', use: 'Lexical reference for the original word-by-word English senses; dictionary prose is not copied.' },
+  { label: 'Sanskrit Heritage Engine · reference manual', url: 'https://sanskrit.uohyd.ac.in/SKT/manual.html', use: 'Morphology and sandhi reference used to check learning segmentations and grammatical labels.' },
   { label: 'Creative Commons Attribution-ShareAlike 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/', use: 'License governing the adapted Wikisource Sanskrit and derived IAST layers.' },
 ]
 
-export const kathaEditorialNote = 'This course presents 119 progress-bearing numbered units in the traditional two-adhyāya, six-vallī hierarchy: 29 + 25 + 17 + 15 + 15 + 18. Opening and closing peace invocations are not counted. The Devanagari layer is adapted from Sanskrit Wikisource and checked against the Vedic Heritage Portal, GRETIL, TITUS, and recent open scholarship; punctuation, lineation, spelling, and the generated IAST study layer are normalized. It is an unaccented study text, not a chanting guide. Course paraphrases are original and intentionally separated from interpretation; selected variant notes mark consequential uncertainties.'
+export const kathaEditorialNote = 'This course presents 119 progress-bearing numbered units in the traditional two-adhyāya, six-vallī hierarchy: 29 + 25 + 17 + 15 + 15 + 18. Opening and closing peace invocations are not counted. The Devanagari layer is adapted from Sanskrit Wikisource and checked against the Vedic Heritage Portal, GRETIL, TITUS, and recent open scholarship; punctuation, lineation, spelling, and the generated IAST study layer are normalized. It is an unaccented study text, not a chanting guide. Word-by-word entries are original, context-sensitive learning aids: they separate surface sandhi and compounds where useful, but they are not a canonical padapāṭha and another grammatical analysis may segment a phrase differently. Course paraphrases are original and intentionally separated from interpretation; selected variant notes mark consequential uncertainties.'
 
 const teachingById = new Map(kathaTeaching.map((item) => [item.id, item]))
+const wordStudyById = new Map(kathaWordStudy.map((item) => [item.id, item.words]))
 
 function sessionFor(sectionId: string, number: number): KathaSession {
   const session = kathaSessions.find((item) => item.sectionId === sectionId && number >= item.range[0] && number <= item.range[1])
@@ -179,9 +186,12 @@ function sessionFor(sectionId: string, number: number): KathaSession {
 export const kathaPassages: KathaPassage[] = kathaVerseTexts.map((text) => {
   const teaching = teachingById.get(text.id)
   if (!teaching) throw new Error(`No Kaṭha teaching metadata for ${text.id}`)
+  const words = wordStudyById.get(text.id)
+  if (!words) throw new Error(`No Kaṭha word study for ${text.id}`)
   return {
     ...text,
     ...teaching,
+    words,
     sessionId: sessionFor(text.sectionId, text.number).id,
     kind: 'numbered unit',
   }

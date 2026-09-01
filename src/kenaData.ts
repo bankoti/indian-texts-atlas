@@ -1,3 +1,6 @@
+import { kenaInvocationWordStudy, kenaWordStudy } from './kenaWordStudy.generated'
+import type { WordStudyWord } from './wordStudyTypes'
+
 export type KenaTerm = {
   term: string
   meaning: string
@@ -14,6 +17,7 @@ export type KenaPassage = {
   gloss: string
   explanation: string
   terms: KenaTerm[]
+  words: WordStudyWord[]
   textNote?: string
 }
 
@@ -41,6 +45,7 @@ export const kenaInvocation = {
 sarvaṃ brahmaupaniṣadaṃ mā 'haṃ brahma nirākuryāṃ mā mā brahma nirākarod anirākaraṇam astv anirākaraṇaṃ me 'stu |
 tadātmani nirate ya upaniṣatsu dharmās te mayi santu te mayi santu | oṃ śāntiḥ śāntiḥ śāntiḥ ||`,
   note: 'Traditional peace invocation. It frames study as a practice involving body, speech, breath, attention, and mutual non-rejection; it is not counted among the 35 numbered units.',
+  words: kenaInvocationWordStudy.words,
 }
 
 export const kenaSections: KenaSection[] = [
@@ -106,7 +111,7 @@ export const kenaSections: KenaSection[] = [
   },
 ]
 
-export const kenaPassages: KenaPassage[] = [
+const kenaPassageBase: Omit<KenaPassage, 'words'>[] = [
   {
     id: '1.1', section: 1, number: 1, kind: 'mantra', title: 'The question behind every faculty',
     devanagari: `ॐ केनेषितं पतति प्रेषितं मनः
@@ -549,6 +554,14 @@ loke jyeye pratitiṣṭhati pratitiṣṭhati || 9 ||`,
   },
 ]
 
+const kenaWordsById = new Map(kenaWordStudy.map((entry) => [entry.id, entry.words]))
+
+export const kenaPassages: KenaPassage[] = kenaPassageBase.map((passage) => {
+  const words = kenaWordsById.get(passage.id)
+  if (!words) throw new Error(`Missing Kena word study for ${passage.id}`)
+  return { ...passage, words }
+})
+
 export const kenaSources = [
   {
     label: 'Sanskrit Wikisource · Kena Upaniṣad',
@@ -559,6 +572,21 @@ export const kenaSources = [
     label: 'TITUS · Kena Upaniṣad Roman text',
     url: 'https://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/sv/upanisad/kenup/kenupt.htm',
     use: 'Scholarly electronic collation aid for numbering and selected readings; linked for checking, not used as the republication source.',
+  },
+  {
+    label: 'Vedic Heritage Portal · Kenopaniṣad',
+    url: 'https://vedicheritage.gov.in/hi/upanishads/kenopanisad/',
+    use: 'Government-hosted Sanskrit comparison for the received text and section boundaries.',
+  },
+  {
+    label: 'Cologne Digital Sanskrit Dictionaries',
+    url: 'https://www.sanskrit-lexicon.uni-koeln.de/',
+    use: 'Lexical reference for the original word-by-word English senses; dictionary prose is not copied.',
+  },
+  {
+    label: 'Sanskrit Heritage Engine · reference manual',
+    url: 'https://sanskrit.uohyd.ac.in/SKT/manual.html',
+    use: 'Morphology and sandhi reference used to check learning segmentations and grammatical labels.',
   },
   {
     label: 'Max Müller · Talavakāra Upaniṣad (1879)',
@@ -582,7 +610,7 @@ export const kenaSources = [
   },
 ]
 
-export const kenaEditorialNote = 'This course uses one 35-learning-unit segmentation: 9 + 5 metrical mantras and 12 + 9 prose units. Other editions may combine two early units and count 34. The Sanskrit is normalized and unaccented for study, with the pluta marker retained at 4.4; it is not a chanting guide. The IAST follows this study text. Course paraphrases, teaching notes, diagrams, and checkpoints are original editorial work. Selected consequential variants are flagged.'
+export const kenaEditorialNote = 'This course uses one 35-learning-unit segmentation: 9 + 5 metrical mantras and 12 + 9 prose units. Other editions may combine two early units and count 34. The Sanskrit is normalized and unaccented for study, with the pluta marker retained at 4.4; it is not a chanting guide. The IAST follows this study text. Word-by-word entries are original, context-sensitive learning aids: they separate surface sandhi and compounds where useful, but they are not a canonical padapāṭha and another grammatical analysis may segment a phrase differently. Course paraphrases, teaching notes, diagrams, and checkpoints are original editorial work. Selected consequential variants are flagged.'
 
 export function getKenaSection(id: number) {
   return kenaSections.find((section) => section.id === id)

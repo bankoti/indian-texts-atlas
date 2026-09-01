@@ -69,13 +69,13 @@ export const upanishads: CourseLesson[] = [
   {
     id: 'kena', sectionId: 'upanishads', order: 1, title: 'Kena Upaniṣad', plainTitle: 'Kena', veda: 'Sāmaveda', form: '35-unit depth edition', minutes: 95,
     question: 'What makes the mind think?',
-    insight: 'Read every mantra and prose passage: the inquiry behind mind and senses becomes a story about power, humility, revelation, and disciplined truthfulness.',
+    insight: 'Read every mantra and prose passage with an optional word-by-word Sanskrit layer: the inquiry behind mind and senses becomes a story about power, humility, revelation, and disciplined truthfulness.',
     status: 'available', references: ['Kena I · 9 mantras', 'Kena II · 5 mantras', 'Kena III–IV · 21 prose passages'],
   },
   {
     id: 'katha', sectionId: 'upanishads', order: 2, title: 'Kaṭha Upaniṣad', plainTitle: 'Kaṭha', veda: 'Kṛṣṇa Yajurveda', form: '119-unit depth edition', minutes: 360,
     question: 'What can death teach us about the self?',
-    insight: 'Read all six vallīs in eighteen paced sessions: Naciketas protects his question, distinguishes śreyas from preyas, trains the faculties, turns inward, recognizes one presence through many forms, and follows the teaching toward release.',
+    insight: 'Read all six vallīs in eighteen paced sessions, with every unit available word by word: Naciketas protects his question, distinguishes śreyas from preyas, trains the faculties, turns inward, recognizes one presence through many forms, and follows the teaching toward release.',
     status: 'available', references: ['Kaṭha I · 71 units', 'Kaṭha II · 48 units', 'Six vallīs · 119 total'],
   },
   {
@@ -229,7 +229,7 @@ export const lessonDetails: Record<string, LessonDetail> = {
     read: {
       anchor: 'Kena 1.1–4.9 · 35 learning units',
       paraphrase: 'The text asks what impels mind, speech, breath, sight, and hearing. It complicates any claim to know their ground as an ordinary object, then stages that lesson in a story: an unknown presence defeats the gods’ certainty before Umā identifies the source of their victory.',
-      readingNote: 'Sanskrit, IAST, course paraphrase, teaching note, vocabulary, and selected textual notes are shown as separate layers. Sections III–IV are prose and should not all be called ślokas.',
+      readingNote: 'Sanskrit, IAST, word-by-word literal senses with grammar and sandhi cues, course paraphrase, teaching note, vocabulary, and selected textual notes are shown as separate layers. Sections III–IV are prose and should not all be called ślokas.',
     },
     concepts: [
       { term: 'Kena', meaning: '“By whom?”—the question that opens the inquiry.' },
@@ -268,7 +268,7 @@ export const lessonDetails: Record<string, LessonDetail> = {
       anchor: 'Kaṭha 1.1.1–2.3.18 · 119 numbered units',
       anchorLabel: 'Complete reading layer',
       paraphrase: 'Naciketas first protects a difficult question against every attractive substitute. Yama then teaches discrimination, the limits of second-hand knowing, the coordinated chariot of the person, an inward turn of attention, one reality appearing through many forms, and a steadiness in which binding desires and heart-knots loosen.',
-      readingNote: 'This is a complete study edition, not a modern translation pasted onto Sanskrit. Devanagari, generated IAST, original course paraphrase, teaching explanation, and consequential variants stay visibly separate.',
+      readingNote: 'This is a complete study edition, not a modern translation pasted onto Sanskrit. Devanagari, generated IAST, word-by-word literal senses with grammar and sandhi cues, original course paraphrase, teaching explanation, and consequential variants stay visibly separate.',
     },
     concepts: [
       { term: 'Śreyas', meaning: 'The genuinely good or beneficial, especially over a longer horizon.' },

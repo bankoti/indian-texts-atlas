@@ -441,7 +441,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="cover-section">
         <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, historical questions, later commentary, and living interpretations. Kena and Kaṭha now form the first complete depth editions: one asks what enables knowing, and the next tests what deserves choosing in the face of death.</p></div>
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, literal word meanings, historical questions, later commentary, and living interpretations. Kena and Kaṭha now form the first complete depth editions, with a Sanskrit-learning layer for every unit.</p></div>
       </section>
     </>
   )
@@ -794,7 +794,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="upanishad-families">
               {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
             </div>
-            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch, then Kaṭha on the Kṛṣṇa Yajurveda branch. Their complete depth readers keep Sanskrit, transliteration, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to each text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch, then Kaṭha on the Kṛṣṇa Yajurveda branch. Their complete depth readers keep Sanskrit, transliteration, word-by-word literal meaning and grammar, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to each text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
             <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
           </LessonPanel>
         )}

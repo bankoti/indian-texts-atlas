@@ -461,6 +461,39 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .kena-text-note { background: var(--saffron-soft); }
 .kena-text-note p { margin: 0; padding: 0 35px 25px; color: var(--muted); font-family: var(--serif); line-height: 1.55; }
 
+.word-study { min-width: 0; padding: 31px 35px 28px; border-bottom: 1px solid var(--line); background: rgba(217,222,234,.42); }
+.word-study-header { display: grid; grid-template-columns: minmax(0, .9fr) minmax(220px, 1.1fr); gap: 24px; align-items: end; }
+.word-study-header > div, .word-study-header > p { min-width: 0; }
+.word-study-header span { color: var(--indigo); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.word-study-header h2 { margin: 7px 0 0; font-size: clamp(24px, 3vw, 32px); line-height: 1.08; }
+.word-study-header p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 13px; line-height: 1.5; }
+.word-study-columns { margin-top: 25px; padding: 0 14px 8px; display: grid; grid-template-columns: minmax(130px, .62fr) minmax(150px, .82fr) minmax(190px, 1.35fr); gap: 16px; color: var(--indigo); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
+.word-study-list { margin: 0; padding: 0; border: 1px solid rgba(56,68,93,.17); border-radius: 13px; overflow: hidden; list-style: none; background: rgba(255,255,255,.25); }
+.word-study-list li { min-width: 0; padding: 13px 14px; display: grid; grid-template-columns: minmax(130px, .62fr) minmax(150px, .82fr) minmax(190px, 1.35fr); gap: 16px; align-items: center; border-top: 1px solid rgba(56,68,93,.13); }
+.word-study-list li:first-child { border-top: 0; }
+.word-study-list li:nth-child(even) { background: rgba(255,255,255,.22); }
+.word-study-form { min-width: 0; display: grid; gap: 2px; }
+.word-study-form strong { overflow-wrap: anywhere; font-family: 'Noto Serif Devanagari', 'Kohinoor Devanagari', 'Devanagari Sangam MN', serif; font-size: 20px; font-weight: 550; line-height: 1.35; }
+.word-study-form span { overflow-wrap: anywhere; color: var(--indigo); font-family: var(--serif); font-size: 12px; font-style: italic; }
+.word-study-list p { min-width: 0; margin: 0; overflow-wrap: anywhere; white-space: normal; font-family: var(--serif); font-size: 15px; line-height: 1.38; }
+.word-study-list small { min-width: 0; overflow-wrap: anywhere; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.word-study-key { margin-top: 15px; padding: 13px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; border-left: 3px solid var(--indigo); background: rgba(255,255,255,.27); }
+.word-study-key strong { color: var(--indigo); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.word-study-key span { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.word-study-key b { color: var(--ink); font-weight: 650; }
+.invocation-word-study { margin-top: 22px; padding: 24px 0 0; border-top: 1px solid var(--line); border-bottom: 0; background: transparent; }
+
+@media (min-width: 821px) and (max-width: 1050px) {
+  .word-study-header { grid-template-columns: 1fr; gap: 10px; }
+  .word-study-columns { display: none; }
+  .word-study-list { margin-top: 20px; }
+  .word-study-list li { padding: 15px; grid-template-columns: 1fr; gap: 7px; }
+  .word-study-form { padding-bottom: 8px; border-bottom: 1px solid rgba(56,68,93,.13); }
+  .word-study-list p::before { content: 'Literal · '; color: var(--indigo); font-family: var(--sans); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .word-study-list small::before { content: 'Grammar · '; color: var(--indigo); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .word-study-key { grid-template-columns: 1fr; gap: 5px; }
+}
+
 .kena-section-sidebar { position: sticky; top: 18px; padding: 23px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.27); }
 .kena-section-sidebar > span, .kena-section-sidebar > small { color: var(--rose); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
 .kena-section-sidebar h2 { margin: 10px 0 12px; font-size: 28px; line-height: 1.08; }
@@ -732,6 +765,17 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .kena-vocabulary dl { padding: 0 20px 22px; }
   .kena-vocabulary dl > div { grid-template-columns: 1fr; gap: 4px; }
   .kena-text-note p { padding: 0 20px 22px; }
+  .word-study { padding: 26px 20px 24px; }
+  .word-study-header { grid-template-columns: 1fr; gap: 10px; }
+  .word-study-columns { display: none; }
+  .word-study-list { margin-top: 20px; }
+  .word-study-list li { padding: 15px; grid-template-columns: 1fr; gap: 7px; }
+  .word-study-form { padding-bottom: 8px; border-bottom: 1px solid rgba(56,68,93,.13); }
+  .word-study-form strong { font-size: 22px; }
+  .word-study-list p::before { content: 'Literal · '; color: var(--indigo); font-family: var(--sans); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .word-study-list small::before { content: 'Grammar · '; color: var(--indigo); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .word-study-key { grid-template-columns: 1fr; gap: 5px; }
+  .invocation-word-study { padding: 22px 0 0; }
   .kena-section-sidebar { position: static; }
   .kena-reader-checkpoint { margin: 0 6px 28px; }
   .kena-checkpoint-card { padding: 23px 20px; }

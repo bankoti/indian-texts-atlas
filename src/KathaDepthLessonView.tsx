@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import type { CourseLesson, LessonDetail } from './courseData'
 import type { DepthEditionProgress } from './depthEditionTypes'
+import WordByWordStudy from './WordByWordStudy'
 import {
   getKathaPassagesForSection,
   getKathaPassagesForSession,
@@ -299,9 +300,9 @@ export default function KathaDepthLessonView({
             </label>
           </div>
 
-          <div className="katha-study-mode" aria-label="Reading layer">
+          <div className="katha-study-mode" role="group" aria-label="Reading layer">
             <span>Reading layer</span>
-            <div>{(['guided', 'text', 'full'] as StudyMode[]).map((item) => <button key={item} className={studyMode === item ? 'active' : ''} aria-pressed={studyMode === item} onClick={() => updateStudyMode(item)}>{item === 'guided' ? 'Guided' : item === 'text' ? '+ IAST' : 'Full study'}</button>)}</div>
+            <div>{(['guided', 'text', 'full'] as StudyMode[]).map((item) => <button key={item} className={studyMode === item ? 'active' : ''} aria-label={item === 'guided' ? 'Guided: Sanskrit and course meaning' : item === 'text' ? 'IAST: add transliteration' : 'Word by word: add literal meanings, grammar, and sandhi'} aria-pressed={studyMode === item} onClick={() => updateStudyMode(item)}>{item === 'guided' ? 'Guided' : item === 'text' ? '+ IAST' : 'Word by word'}</button>)}</div>
           </div>
 
           <div className="kena-reader-layout">
@@ -323,6 +324,8 @@ export default function KathaDepthLessonView({
                   <p lang="sa-Latn">{activePassage.iast}</p>
                 </section>
               )}
+
+              {studyMode === 'full' && <WordByWordStudy passageId={`katha-${activePassage.id}`} words={activePassage.words} />}
 
               <section className="kena-explanation" aria-labelledby={`katha-meaning-${activePassage.id}`}>
                 <span className="kena-section-label">COURSE PARAPHRASE</span>
@@ -420,7 +423,7 @@ function KathaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOp
   return (
     <div className="kena-map-page katha-map-page">
       <section className="kena-map-hero katha-map-hero">
-        <div><span className="kicker">KAṬHA UPANIṢAD · COMPLETE READER</span><h1 id="katha-map-title" tabIndex={-1}>What deserves choosing when time is limited?</h1><p>A young seeker protects one question through three boons. Death answers with discrimination, disciplined attention, inward recognition, and release.</p><div className="kena-map-actions"><button className="primary-button" onClick={() => onOpenPassage(resumeId)}>{readSet.size ? `Resume ${resumeId}` : 'Begin with 1.1.1'} <ChevronRight size={17} /></button><span>119 units · 18 sessions · about 6 hours</span></div></div>
+        <div><span className="kicker">KAṬHA UPANIṢAD · COMPLETE READER</span><h1 id="katha-map-title" tabIndex={-1}>What deserves choosing when time is limited?</h1><p>A young seeker protects one question through three boons. Death answers with discrimination, disciplined attention, inward recognition, and release.</p><div className="kena-map-actions"><button className="primary-button" onClick={() => onOpenPassage(resumeId)}>{readSet.size ? `Resume ${resumeId}` : 'Begin with 1.1.1'} <ChevronRight size={17} /></button><span>119 units · 18 sessions · about 6 hours · word-by-word Sanskrit</span></div></div>
         <div className="kena-progress-orbit" style={{ background: `conic-gradient(var(--saffron) ${progressPercent * 3.6}deg, rgba(255,255,255,.34) 0deg)` }} role="progressbar" aria-label="Kaṭha depth edition reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPercent}><div><strong>{progressPercent}%</strong><span>{readSet.size} / 119 read</span></div></div>
       </section>
 
@@ -444,7 +447,7 @@ function KathaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOp
         <article><span>HOW TO READ THIS EDITION</span><h2>Text, paraphrase, and interpretation remain separate.</h2><p>{kathaEditorialNote}</p></article>
       </section>
 
-      <details className="kena-invocation"><summary><Sparkles size={17} /> Begin with the peace invocation <span>not counted among the 119 units</span></summary><div><p lang="sa-Deva">{kathaInvocation.devanagari}</p><p lang="sa-Latn">{kathaInvocation.iast}</p><small>{kathaInvocation.note}</small></div></details>
+      <details className="kena-invocation"><summary><Sparkles size={17} /> Begin with the peace invocation <span>not counted among the 119 units</span></summary><div><p lang="sa-Deva">{kathaInvocation.devanagari}</p><p lang="sa-Latn">{kathaInvocation.iast}</p><small>{kathaInvocation.note}</small><WordByWordStudy invocation passageId="katha-invocation" words={kathaInvocation.words} /></div></details>
     </div>
   )
 }
@@ -508,6 +511,6 @@ function KathaReview({ detail, overviewCompleted, editionCompleted, depthReady, 
 
     <section className="kena-final-quiz" aria-labelledby="katha-final-quiz-title"><span>FINAL SYNTHESIS</span><h2 id="katha-final-quiz-title">{detail.quiz.question}</h2><div className="quiz-choices" role="radiogroup" aria-label="Final synthesis answer">{detail.quiz.choices.map((choice, index) => { const chosen = selectedQuiz === index; const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct; return <button role="radio" key={choice} className={`${chosen ? 'chosen' : ''} ${showCorrect ? 'correct' : ''}`} aria-checked={chosen} tabIndex={chosen || (selectedQuiz === undefined && index === 0) ? 0 : -1} disabled={editionCompleted} onClick={() => onQuizSelect(index)} onKeyDown={(event) => moveRadioChoice(event, index, detail.quiz.choices.length, onQuizSelect)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span>{showCorrect && <><span className="sr-only">Correct answer</span><Check size={17} aria-hidden="true" /></>}</button> })}</div>{selectedQuiz !== undefined && <div className={`quiz-feedback ${finalQuizCorrect ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{finalQuizCorrect ? 'You have the dialogue’s full arc.' : 'Return to the sequence, not only its famous sayings.'}</strong><p>{detail.quiz.explanation}</p></div>}<div className="kena-complete-action"><button className="primary-button" disabled={!depthReady || editionCompleted} onClick={onComplete}>{editionCompleted ? 'Depth edition completed' : depthReady ? 'Complete the Kaṭha edition' : 'Finish the three checks above'} <CheckCircle2 size={17} /></button>{!depthReady && <button className="quiet-button" onClick={() => onOpenPassage('1.1.1')}>Return to the text</button>}</div></section>
 
-    <section className="kena-sources" aria-labelledby="katha-sources-title"><div><span>TEXT & EDITORIAL SOURCES</span><h2 id="katha-sources-title">Know what layer you are reading.</h2><p>{kathaEditorialNote}</p></div><div>{kathaSources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span><strong>{source.label}</strong><small>{source.use}</small></span><ExternalLink size={16} /></a>)}</div><p className="kena-license-note">The Sanskrit and IAST text layers are adapted from the six “कठोपनिषत्” vallī pages by Sanskrit Wikisource contributors (first source linked above); punctuation, spelling, lineation, transliteration, and study formatting have been changed. Those adapted layers are licensed under CC BY-SA 4.0 (license linked above). Course paraphrases, teaching notes, diagrams, session prompts, and questions are original editorial material. No copyrighted modern English translation is reproduced.</p></section>
+    <section className="kena-sources" aria-labelledby="katha-sources-title"><div><span>TEXT & EDITORIAL SOURCES</span><h2 id="katha-sources-title">Know what layer you are reading.</h2><p>{kathaEditorialNote}</p></div><div>{kathaSources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span><strong>{source.label}</strong><small>{source.use}</small></span><ExternalLink size={16} /></a>)}</div><p className="kena-license-note">The Sanskrit and IAST text layers are adapted from the six “कठोपनिषत्” vallī pages by Sanskrit Wikisource contributors (first source linked above); punctuation, spelling, lineation, transliteration, and study formatting have been changed. Those adapted layers are licensed under CC BY-SA 4.0 (license linked above). Word-by-word meanings and grammar cues, course paraphrases, teaching notes, diagrams, session prompts, and questions are original editorial material. No copyrighted modern English translation is reproduced.</p></section>
   </div>
 }
