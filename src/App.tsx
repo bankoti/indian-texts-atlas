@@ -34,11 +34,18 @@ import {
   isDepthEdition,
   isValidDepthPassageId,
 } from './depthEditionRegistry'
+import type { DepthEditionId } from './depthEditionRegistry'
 import type { DepthEditionProgress, DepthEditionProgressMap } from './depthEditionTypes'
 import './App.css'
 
 const KenaDepthLessonView = lazy(() => import('./KenaDepthLessonView'))
 const KathaDepthLessonView = lazy(() => import('./KathaDepthLessonView'))
+const IshaDepthLessonView = lazy(() => import('./IshaDepthLessonView'))
+const depthEditionReaders = {
+  kena: KenaDepthLessonView,
+  katha: KathaDepthLessonView,
+  isha: IshaDepthLessonView,
+} satisfies Record<DepthEditionId, typeof KenaDepthLessonView>
 
 class DepthEditionErrorBoundary extends Component<{ children: ReactNode; lessonTitle: string; onClose: () => void }, { failed: boolean }> {
   state = { failed: false }
@@ -69,12 +76,14 @@ type ProgressState = {
   completed: string[]
   reflections: Record<string, string>
   quizAnswers: Record<string, number>
+  quizVersions: Record<string, number>
   depthEditions: DepthEditionProgressMap
 }
 
 const emptyDepthProgress: DepthEditionProgress = { readIds: [], checkpointAnswers: {} }
-const emptyProgress: ProgressState = { completed: [], reflections: {}, quizAnswers: {}, depthEditions: {} }
+const emptyProgress: ProgressState = { completed: [], reflections: {}, quizAnswers: {}, quizVersions: {}, depthEditions: {} }
 const lessonIdSet = new Set(courseLessons.map((lesson) => lesson.id))
+const currentQuizVersions: Record<string, number> = { isha: 2 }
 
 function lessonIsComplete(id: string, completed: string[], depthEditions: DepthEditionProgressMap) {
   return isDepthEdition(id) ? depthEditions[id]?.completed === true : completed.includes(id)
@@ -153,11 +162,21 @@ function readStoredProgress(): ProgressState {
     const reflections = data.reflections && typeof data.reflections === 'object'
       ? Object.fromEntries(Object.entries(data.reflections).filter((entry): entry is [string, string] => lessonIdSet.has(entry[0]) && typeof entry[1] === 'string'))
       : {}
+    const quizVersions = data.quizVersions && typeof data.quizVersions === 'object'
+      ? Object.fromEntries(Object.entries(data.quizVersions).filter((entry): entry is [string, number] => (
+          lessonIdSet.has(entry[0]) && Number.isInteger(entry[1]) && entry[1] > 0
+        )))
+      : {}
     const quizAnswers = data.quizAnswers && typeof data.quizAnswers === 'object'
       ? Object.fromEntries(Object.entries(data.quizAnswers).filter((entry): entry is [string, number] => {
           const [lessonId, answer] = entry
           const choiceCount = lessonDetails[lessonId]?.quiz.choices.length ?? 0
-          return lessonIdSet.has(lessonId) && Number.isInteger(answer) && answer >= 0 && answer < choiceCount
+          const currentVersion = currentQuizVersions[lessonId]
+          return lessonIdSet.has(lessonId)
+            && Number.isInteger(answer)
+            && answer >= 0
+            && answer < choiceCount
+            && (currentVersion === undefined || quizVersions[lessonId] === currentVersion)
         }))
       : {}
     const depthEditions: DepthEditionProgressMap = {}
@@ -197,6 +216,7 @@ function readStoredProgress(): ProgressState {
         : [],
       reflections,
       quizAnswers,
+      quizVersions,
       depthEditions,
     }
   } catch {
@@ -271,7 +291,13 @@ function App() {
   }
 
   const selectQuiz = (id: string, answer: number) => {
-    setProgress((current) => ({ ...current, quizAnswers: { ...current.quizAnswers, [id]: answer } }))
+    setProgress((current) => ({
+      ...current,
+      quizAnswers: { ...current.quizAnswers, [id]: answer },
+      quizVersions: currentQuizVersions[id]
+        ? { ...current.quizVersions, [id]: currentQuizVersions[id] }
+        : current.quizVersions,
+    }))
   }
 
   const completeLesson = (id: string) => {
@@ -441,7 +467,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="cover-section">
         <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, literal word meanings, historical questions, later commentary, and living interpretations. Kena and Kaṭha now form the first complete depth editions, with a Sanskrit-learning layer for every unit.</p></div>
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, literal word meanings, historical questions, later commentary, and living interpretations. Kena, Kaṭha, and Īśā now form the first complete depth editions, with a Sanskrit-learning layer for every unit.</p></div>
       </section>
     </>
   )
@@ -600,7 +626,7 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
   }
 
   if (isDepthEdition(lesson.id)) {
-    const DepthReader = lesson.id === 'kena' ? KenaDepthLessonView : KathaDepthLessonView
+    const DepthReader = depthEditionReaders[lesson.id]
     return (
       <DepthEditionErrorBoundary key={lesson.id} lessonTitle={lesson.plainTitle} onClose={onClose}>
         <Suspense fallback={<section className="lesson-player kena-loading" aria-live="polite"><div><BookOpenText size={28} /><strong>Opening the {lesson.plainTitle} reader…</strong></div></section>}>
@@ -794,7 +820,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="upanishad-families">
               {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
             </div>
-            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with Kena on the Sāmaveda branch, then Kaṭha on the Kṛṣṇa Yajurveda branch. Their complete depth readers keep Sanskrit, transliteration, word-by-word literal meaning and grammar, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to each text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with three complete readers on three Vedic branches: Kena on the Sāmaveda, Kaṭha on the Kṛṣṇa Yajurveda, and Īśā as chapter 40 of the Śukla Yajurveda’s Vājasaneyi Saṃhitā. Each keeps Sanskrit, transliteration, word-by-word literal meaning and grammar, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to its text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
             <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
           </LessonPanel>
         )}
