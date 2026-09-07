@@ -1032,12 +1032,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .isha-sessions-page > header p { color: var(--muted); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
 .isha-sessions-page > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .isha-sessions-page article { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.23); }
-.isha-sessions-page article > button { width: 100%; min-height: 245px; padding: 22px; border: 0; background: transparent; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 16px; align-items: start; color: var(--ink); text-align: left; cursor: pointer; }
+.isha-sessions-page article > button { width: 100%; min-height: 245px; padding: 22px; border: 0; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 16px; align-items: start; color: var(--ink); text-align: left; cursor: pointer; }
 .isha-sessions-page article > button:hover { background: rgba(255,255,255,.38); }
 .isha-sessions-page article > button > span { color: var(--saffron-text); font-family: var(--serif); font-size: 18px; }
-.isha-sessions-page article > button > div { min-width: 0; }
+.isha-sessions-page article > button > div { min-width: 0; grid-column: 1 / -1; }
+.isha-sessions-page article > button > svg { grid-column: 2; grid-row: 1; }
 .isha-sessions-page article > button small { color: var(--rose); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
-.isha-sessions-page article > button h2 { margin: 7px 0 9px; overflow-wrap: anywhere; font-size: 28px; }
+.isha-sessions-page article > button h2 { margin: 7px 0 9px; overflow-wrap: normal; word-break: normal; font-size: 28px; }
 .isha-sessions-page article > button p { min-height: 82px; margin: 0 0 25px; color: var(--muted); font-family: var(--serif); line-height: 1.45; }
 .isha-sessions-page article > button i { height: 5px; overflow: hidden; display: block; border-radius: 99px; background: rgba(57,42,30,.1); }
 .isha-sessions-page article > button i b { height: 100%; display: block; background: var(--saffron); }
@@ -1152,7 +1153,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .isha-section-cards article button { min-height: 245px; }
   .isha-sessions-page { padding: 44px 6px 78px; }
   .isha-sessions-page > div { grid-template-columns: 1fr; }
-  .isha-sessions-page article > button { min-height: 0; padding: 20px; grid-template-columns: auto minmax(0, 1fr); }
+  .isha-sessions-page article > button { min-height: 0; padding: 20px; grid-template-columns: minmax(0, 1fr); }
+  .isha-sessions-page article > button > div { grid-column: auto; }
   .isha-sessions-page article > button > svg { display: none; }
   .isha-study-mode { margin: 16px 6px 0; align-items: flex-start; flex-direction: column; }
   .isha-study-mode > div { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
