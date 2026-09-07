@@ -29,6 +29,7 @@ const validWordStudyWords = (words) => Array.isArray(words) && words.length > 0 
 const validWordStudyEntry = (entry) => Boolean(entry?.id?.trim() && validWordStudyWords(entry.words))
 const wordStudyRowsMatch = (left, right) => JSON.stringify(left) === JSON.stringify(right)
 const sha256 = (value) => createHash('sha256').update(value).digest('hex')
+const nonEmptyNfc = (value) => typeof value === 'string' && Boolean(value.trim()) && value === value.normalize('NFC')
 const sourceTextFingerprint = (id, text) => sha256(JSON.stringify([id, text?.devanagari, text?.iast]))
 const validWordStudyAuditEntry = (entry) => Boolean(
   entry?.id?.trim()
@@ -39,6 +40,7 @@ const validWordStudyAuditEntry = (entry) => Boolean(
 const reviewedWordStudyDigests = {
   kena: 'b76d29a5a6b3042df5f8c3a2a24b0f2ae378fa66fd61e8fe31dfbdca784d76cc',
   katha: '5c30ae7743a94dca2f026acb14810ff20184824d0140c51732fa6c1565c48952',
+  isha: '892ed6532e6e5ece80b0a5bcc01cd11c3679f9b1882cef3abc6ba34a76253867',
 }
 const wordStudyDigest = (entries, invocation, audit, invocationAudit) => sha256(JSON.stringify({
   entries,
@@ -48,18 +50,45 @@ const wordStudyDigest = (entries, invocation, audit, invocationAudit) => sha256(
 }))
 
 try {
-  const [curriculum, kenaEdition, kathaEdition, registryModule, kenaWordStudyModule, kathaWordStudyModule] = await Promise.all([
+  const [
+    curriculum,
+    kenaEdition,
+    kathaEdition,
+    ishaEdition,
+    registryModule,
+    kenaWordStudyModule,
+    kathaWordStudyModule,
+    ishaWordStudyModule,
+  ] = await Promise.all([
     server.ssrLoadModule('/src/courseData.ts'),
     server.ssrLoadModule('/src/kenaData.ts'),
     server.ssrLoadModule('/src/kathaData.ts'),
+    server.ssrLoadModule('/src/ishaData.ts'),
     server.ssrLoadModule('/src/depthEditionRegistry.ts'),
     server.ssrLoadModule('/src/kenaWordStudy.generated.ts'),
     server.ssrLoadModule('/src/kathaWordStudy.generated.ts'),
+    server.ssrLoadModule('/src/ishaWordStudy.generated.ts'),
   ])
   const { courseLessons, courseSections, lessonDetails } = curriculum
   const { kenaInvocation, kenaPassages, kenaSections, kenaSources } = kenaEdition
   const { kathaInvocation, kathaPassages, kathaSections, kathaSessions, kathaSources } = kathaEdition
-  const { depthEditionRegistry, expectedDepthPassageIds, isValidDepthPassageId } = registryModule
+  const {
+    ishaEditorialNote,
+    ishaFinalSynthesis,
+    ishaInterpretiveLenses,
+    ishaInvocation,
+    ishaPassages,
+    ishaSections,
+    ishaSessions,
+    ishaSources,
+  } = ishaEdition
+  const {
+    depthEditionRegistry,
+    expectedDepthPassageIds,
+    getDepthEditionDescriptor,
+    isDepthEdition,
+    isValidDepthPassageId,
+  } = registryModule
   const {
     kenaInvocationWordStudy,
     kenaInvocationWordStudyAudit,
@@ -72,6 +101,12 @@ try {
     kathaWordStudy,
     kathaWordStudyAudit,
   } = kathaWordStudyModule
+  const {
+    ishaInvocationWordStudy,
+    ishaInvocationWordStudyAudit,
+    ishaWordStudy,
+    ishaWordStudyAudit,
+  } = ishaWordStudyModule
 
   const lessonIds = courseLessons.map((lesson) => lesson.id)
   const duplicateLessonIds = duplicateValues(lessonIds)
@@ -279,12 +314,175 @@ try {
   const kathaLesson = courseLessons.find((lesson) => lesson.id === 'katha')
   const kathaMetadataValid = Boolean(kathaLesson?.form?.includes('119') && kathaLesson.minutes === 360)
 
+  const ishaDescriptor = depthEditionRegistry.isha
+  const expectedIshaIds = Array.from({ length: 18 }, (_, index) => String(index + 1))
+  const expectedIshaMovements = [
+    { id: '1', verses: [1, 2, 3, 4, 5, 6, 7, 8] },
+    { id: '2', verses: [9, 10, 11, 12, 13, 14] },
+    { id: '3', verses: [15, 16, 17, 18] },
+  ]
+  const expectedIshaSessions = [
+    { id: '1', movementId: '1', order: 1, verses: [1, 2] },
+    { id: '2', movementId: '1', order: 2, verses: [3, 4, 5] },
+    { id: '3', movementId: '1', order: 3, verses: [6, 7, 8] },
+    { id: '4', movementId: '2', order: 4, verses: [9, 10, 11] },
+    { id: '5', movementId: '2', order: 5, verses: [12, 13, 14] },
+    { id: '6', movementId: '3', order: 6, verses: [15, 16, 17, 18] },
+  ]
+  const ishaIds = ishaPassages.map((passage) => passage.id)
+  const ishaIdsExact = JSON.stringify(ishaIds) === JSON.stringify(expectedIshaIds)
+    && JSON.stringify(ishaIds) === JSON.stringify(expectedDepthPassageIds(ishaDescriptor))
+  const duplicateIshaIds = duplicateValues(ishaIds)
+  const ishaSectionIds = ishaSections.map((section) => section.id)
+  const ishaSectionIdsExact = JSON.stringify(ishaSectionIds) === JSON.stringify(['1', '2', '3'])
+    && JSON.stringify(ishaSectionIds) === JSON.stringify(ishaDescriptor.sectionIds)
+  const ishaSectionCounts = Object.fromEntries(ishaSections.map((section) => [
+    section.id,
+    ishaPassages.filter((passage) => passage.sectionId === section.id).length,
+  ]))
+  const ishaMovementVersesExact = JSON.stringify(ishaSections.map(({ id, verses }) => ({ id, verses })))
+    === JSON.stringify(expectedIshaMovements)
+  const invalidIshaPassages = ishaPassages
+    .filter((passage) => {
+      const expectedMovement = expectedIshaMovements.find((movement) => movement.verses.includes(passage.number))
+      const expectedSession = expectedIshaSessions.find((session) => session.verses.includes(passage.number))
+      return !isValidDepthPassageId('isha', passage.id)
+        || passage.id !== String(passage.number)
+        || passage.kind !== 'mantra'
+        || passage.sectionId !== expectedMovement?.id
+        || passage.sessionId !== expectedSession?.id
+        || !nonEmptyNfc(passage.title)
+        || !nonEmptyNfc(passage.devanagari)
+        || !nonEmptyNfc(passage.iast)
+        || !nonEmptyNfc(passage.gloss)
+        || !nonEmptyNfc(passage.explanation)
+        || (passage.textNote !== undefined && !nonEmptyNfc(passage.textNote))
+        || !passage.terms?.length
+        || passage.terms.some((term) => !nonEmptyNfc(term.term) || !nonEmptyNfc(term.meaning))
+        || !validWordStudyWords(passage.words)
+    })
+    .map((passage) => passage.id)
+  const invalidIshaSections = ishaSections
+    .filter((section) => !nonEmptyNfc(section.label)
+      || !nonEmptyNfc(section.title)
+      || !nonEmptyNfc(section.form)
+      || !nonEmptyNfc(section.question)
+      || !nonEmptyNfc(section.summary)
+      || !nonEmptyNfc(section.recap)
+      || !validCheckpoint(section, ishaDescriptor.checkpointChoiceCount))
+    .map((section) => section.id)
+  const invalidIshaSessions = ishaSessions
+    .filter((session) => !nonEmptyNfc(session.id)
+      || !ishaDescriptor.sectionIds.includes(session.movementId)
+      || !Number.isInteger(session.order)
+      || !Array.isArray(session.verses)
+      || session.verses.length === 0
+      || session.verses.some((verse) => !Number.isInteger(verse) || verse < 1 || verse > 18)
+      || !nonEmptyNfc(session.title)
+      || !nonEmptyNfc(session.recall)
+      || !nonEmptyNfc(session.nextQuestion))
+    .map((session) => session.id)
+  const ishaSessionsExact = JSON.stringify(ishaSessions.map(({ id, movementId, order, verses }) => ({
+    id,
+    movementId,
+    order,
+    verses,
+  }))) === JSON.stringify(expectedIshaSessions)
+  const duplicateIshaSessionIds = duplicateValues(ishaSessions.map((session) => session.id))
+  const ishaSessionCoverageProblems = ishaPassages
+    .filter((passage) => {
+      const matches = ishaSessions.filter((session) => session.verses.includes(passage.number))
+      return matches.length !== 1 || matches[0]?.id !== passage.sessionId || matches[0]?.movementId !== passage.sectionId
+    })
+    .map((passage) => passage.id)
+  const ishaCheckpointAnswersMatchRegistry = ishaSections.every((section) => (
+    ishaDescriptor.checkpointCorrectAnswers[section.id] === section.checkpoint.correct
+  ))
+  const invalidIshaSources = ishaSources.filter((source) => !validSource(source)).map((source) => source.url)
+  const ishaTeachingMetadataValid = nonEmptyNfc(ishaEditorialNote)
+    && nonEmptyNfc(ishaFinalSynthesis?.statement)
+    && nonEmptyNfc(ishaFinalSynthesis?.question)
+    && nonEmptyNfc(ishaFinalSynthesis?.explanation)
+    && nonEmptyNfc(ishaFinalSynthesis?.reflectionPrompt)
+    && nonEmptyNfc(ishaFinalSynthesis?.retrievalPrompt)
+    && Array.isArray(ishaFinalSynthesis?.choices)
+    && ishaFinalSynthesis.choices.length === 4
+    && ishaFinalSynthesis.choices.every(nonEmptyNfc)
+    && Number.isInteger(ishaFinalSynthesis.correct)
+    && ishaFinalSynthesis.correct >= 0
+    && ishaFinalSynthesis.correct < ishaFinalSynthesis.choices.length
+    && Array.isArray(ishaInterpretiveLenses)
+    && ishaInterpretiveLenses.length >= 3
+    && ishaInterpretiveLenses.every((lens) => nonEmptyNfc(lens.name) && nonEmptyNfc(lens.reading))
+  const ishaLesson = courseLessons.find((lesson) => lesson.id === 'isha')
+  const ishaDetail = lessonDetails.isha
+  const ishaMetadataValid = Boolean(
+    ishaLesson?.form === '18-mantra depth edition'
+    && ishaLesson.minutes === 90
+    && ishaLesson.references?.length >= 3,
+  )
+  const ishaCourseDetailAligned = Boolean(
+    ishaDetail?.read?.paraphrase === ishaFinalSynthesis.statement
+    && ishaDetail?.reflection === ishaFinalSynthesis.reflectionPrompt
+    && JSON.stringify(ishaDetail?.lenses) === JSON.stringify(ishaInterpretiveLenses)
+    && JSON.stringify(ishaDetail?.quiz) === JSON.stringify({
+      question: ishaFinalSynthesis.question,
+      choices: ishaFinalSynthesis.choices,
+      correct: ishaFinalSynthesis.correct,
+      explanation: ishaFinalSynthesis.explanation,
+    })
+  )
+  const ishaWordStudyIds = ishaWordStudy.map((entry) => entry.id)
+  const ishaWordStudyIdsExact = JSON.stringify(ishaWordStudyIds) === JSON.stringify(expectedIshaIds)
+  const duplicateIshaWordStudyIds = duplicateValues(ishaWordStudyIds)
+  const invalidIshaWordStudyEntries = ishaWordStudy.filter((entry) => !validWordStudyEntry(entry)).map((entry) => entry.id)
+  const ishaWordStudyRows = ishaWordStudy.reduce((total, entry) => total + entry.words.length, 0)
+  const ishaWordStudyById = new Map(ishaWordStudy.map((entry) => [entry.id, entry.words]))
+  const ishaWordStudyAttached = ishaPassages.every((passage) => wordStudyRowsMatch(passage.words, ishaWordStudyById.get(passage.id)))
+  const ishaWordStudyAuditIds = ishaWordStudyAudit.map((entry) => entry.id)
+  const ishaWordStudyAuditIdsExact = JSON.stringify(ishaWordStudyAuditIds) === JSON.stringify(expectedIshaIds)
+  const duplicateIshaWordStudyAuditIds = duplicateValues(ishaWordStudyAuditIds)
+  const invalidIshaWordStudyAuditEntries = ishaWordStudyAudit.filter((entry) => !validWordStudyAuditEntry(entry)).map((entry) => entry.id)
+  const ishaWordStudyAuditById = new Map(ishaWordStudyAudit.map((entry) => [entry.id, entry]))
+  const ishaSourceFingerprintsValid = ishaPassages.every((passage) => (
+    ishaWordStudyAuditById.get(passage.id)?.textFingerprint === sourceTextFingerprint(passage.id, passage)
+  ))
+  const ishaRowCountsExact = ishaWordStudy.every((entry) => (
+    ishaWordStudyAuditById.get(entry.id)?.rowCount === entry.words.length
+  ))
+  const ishaInvocationWordStudyValid = ishaInvocationWordStudy.id === 'invocation'
+    && validWordStudyEntry(ishaInvocationWordStudy)
+    && wordStudyRowsMatch(ishaInvocation.words, ishaInvocationWordStudy.words)
+  const ishaInvocationWordStudyAuditValid = ishaInvocationWordStudyAudit.id === 'invocation'
+    && validWordStudyAuditEntry(ishaInvocationWordStudyAudit)
+    && ishaInvocationWordStudyAudit.rowCount === ishaInvocationWordStudy.words.length
+    && ishaInvocationWordStudyAudit.textFingerprint === sourceTextFingerprint('invocation', ishaInvocation)
+  const ishaReviewedWordStudyDigestValid = wordStudyDigest(
+    ishaWordStudy,
+    ishaInvocationWordStudy,
+    ishaWordStudyAudit,
+    ishaInvocationWordStudyAudit,
+  ) === reviewedWordStudyDigests.isha
+  const ishaIllustrationExists = existsSync(new URL('../public/isha-golden-disc.jpg', import.meta.url))
+  const prototypeLikeEditionIds = ['__proto__', 'constructor', 'prototype', 'toString']
+  const registryRejectsPrototypeKeys = prototypeLikeEditionIds.every((id) => (
+    getDepthEditionDescriptor(id) === undefined
+    && isDepthEdition(id) === false
+    && isValidDepthPassageId(id, '1') === false
+  ))
+
   const registryValid = kenaDescriptor.totalUnits === 35
     && JSON.stringify(kenaDescriptor.sectionIds) === JSON.stringify(['1', '2', '3', '4'])
     && JSON.stringify(kenaDescriptor.sectionSizes) === JSON.stringify({ 1: 9, 2: 5, 3: 12, 4: 9 })
     && kathaDescriptor.totalUnits === 119
     && JSON.stringify(kathaDescriptor.sectionIds) === JSON.stringify(['1.1', '1.2', '1.3', '2.1', '2.2', '2.3'])
     && JSON.stringify(kathaDescriptor.sectionSizes) === JSON.stringify({ '1.1': 29, '1.2': 25, '1.3': 17, '2.1': 15, '2.2': 15, '2.3': 18 })
+    && ishaDescriptor.totalUnits === 18
+    && ishaDescriptor.firstPassageId === '1'
+    && JSON.stringify(ishaDescriptor.passageIds) === JSON.stringify(expectedIshaIds)
+    && JSON.stringify(ishaDescriptor.sectionIds) === JSON.stringify(['1', '2', '3'])
+    && JSON.stringify(ishaDescriptor.sectionSizes) === JSON.stringify({ 1: 8, 2: 6, 3: 4 })
+    && registryRejectsPrototypeKeys
 
   const report = {
     sections: courseSections.length,
@@ -296,6 +494,7 @@ try {
     emptySections,
     unknownSections,
     registryValid,
+    registryRejectsPrototypeKeys,
     kenaEdition: {
       passages: kenaPassages.length,
       idsExact: kenaIdsExact,
@@ -363,6 +562,50 @@ try {
         invocationAuditValid: kathaInvocationWordStudyAuditValid,
       },
       hasIllustration: kathaIllustrationExists,
+    },
+    ishaEdition: {
+      passages: ishaPassages.length,
+      idsExact: ishaIdsExact,
+      sectionIdsExact: ishaSectionIdsExact,
+      sectionCounts: ishaSectionCounts,
+      movementVersesExact: ishaMovementVersesExact,
+      duplicateIds: duplicateIshaIds,
+      invalidPassages: invalidIshaPassages,
+      invalidSections: invalidIshaSections,
+      sessions: ishaSessions.length,
+      sessionsExact: ishaSessionsExact,
+      duplicateSessionIds: duplicateIshaSessionIds,
+      invalidSessions: invalidIshaSessions,
+      sessionCoverageProblems: ishaSessionCoverageProblems,
+      invalidSources: invalidIshaSources,
+      checkpointAnswersMatchRegistry: ishaCheckpointAnswersMatchRegistry,
+      sources: ishaSources.length,
+      metadataValid: ishaMetadataValid,
+      courseDetailAligned: ishaCourseDetailAligned,
+      teachingMetadataValid: ishaTeachingMetadataValid,
+      hasInvocation: Boolean(
+        nonEmptyNfc(ishaInvocation?.devanagari)
+        && nonEmptyNfc(ishaInvocation?.iast)
+        && nonEmptyNfc(ishaInvocation?.note)
+      ),
+      wordStudy: {
+        entries: ishaWordStudy.length,
+        rows: ishaWordStudyRows,
+        idsExact: ishaWordStudyIdsExact,
+        duplicateIds: duplicateIshaWordStudyIds,
+        invalidEntries: invalidIshaWordStudyEntries,
+        attachedToPassages: ishaWordStudyAttached,
+        auditIdsExact: ishaWordStudyAuditIdsExact,
+        duplicateAuditIds: duplicateIshaWordStudyAuditIds,
+        invalidAuditEntries: invalidIshaWordStudyAuditEntries,
+        sourceFingerprintsValid: ishaSourceFingerprintsValid,
+        rowCountsExact: ishaRowCountsExact,
+        reviewedDigestValid: ishaReviewedWordStudyDigestValid,
+        invocationRows: ishaInvocationWordStudy.words.length,
+        invocationValid: ishaInvocationWordStudyValid,
+        invocationAuditValid: ishaInvocationWordStudyAuditValid,
+      },
+      hasIllustration: ishaIllustrationExists,
     },
     sectionCounts: Object.fromEntries(courseSections.map((section) => [
       section.id,
@@ -443,6 +686,44 @@ try {
     || !kathaInvocationWordStudyValid
     || !kathaInvocationWordStudyAuditValid
     || !kathaIllustrationExists
+    || ishaPassages.length !== 18
+    || !ishaIdsExact
+    || !ishaSectionIdsExact
+    || JSON.stringify(ishaSectionCounts) !== JSON.stringify({ 1: 8, 2: 6, 3: 4 })
+    || !ishaMovementVersesExact
+    || duplicateIshaIds.length > 0
+    || invalidIshaPassages.length > 0
+    || invalidIshaSections.length > 0
+    || ishaSessions.length !== 6
+    || !ishaSessionsExact
+    || duplicateIshaSessionIds.length > 0
+    || invalidIshaSessions.length > 0
+    || ishaSessionCoverageProblems.length > 0
+    || ishaSources.length < 7
+    || invalidIshaSources.length > 0
+    || !ishaCheckpointAnswersMatchRegistry
+    || !ishaMetadataValid
+    || !ishaCourseDetailAligned
+    || !ishaTeachingMetadataValid
+    || !nonEmptyNfc(ishaInvocation?.devanagari)
+    || !nonEmptyNfc(ishaInvocation?.iast)
+    || !nonEmptyNfc(ishaInvocation?.note)
+    || ishaWordStudy.length !== 18
+    || ishaWordStudyRows !== 288
+    || !ishaWordStudyIdsExact
+    || duplicateIshaWordStudyIds.length > 0
+    || invalidIshaWordStudyEntries.length > 0
+    || !ishaWordStudyAttached
+    || !ishaWordStudyAuditIdsExact
+    || duplicateIshaWordStudyAuditIds.length > 0
+    || invalidIshaWordStudyAuditEntries.length > 0
+    || !ishaSourceFingerprintsValid
+    || !ishaRowCountsExact
+    || !ishaReviewedWordStudyDigestValid
+    || ishaInvocationWordStudy.words.length !== 18
+    || !ishaInvocationWordStudyValid
+    || !ishaInvocationWordStudyAuditValid
+    || !ishaIllustrationExists
 
   if (failed) process.exitCode = 1
 } finally {
