@@ -32,10 +32,15 @@ import {
 import {
   getDepthEditionDescriptor,
   isDepthEdition,
-  isValidDepthPassageId,
 } from './depthEditionRegistry'
 import type { DepthEditionId } from './depthEditionRegistry'
 import type { DepthEditionProgress, DepthEditionProgressMap } from './depthEditionTypes'
+import { guidedContent, guidedStepFromHash, setLessonStepHash } from './guidedData'
+import { GuidedTeaching, SanskritExcerpt, WorkedExample } from './GuidedContent'
+import CourseReview from './CourseReview'
+import { nextLessonInPath, openCourseReview } from './courseReviewData'
+import { canPersistProgress, currentCompleted, currentQuizVersions, emptyDepthProgress, lessonIsComplete, readStoredProgress } from './progressStorage'
+import type { ProgressState } from './progressStorage'
 import './App.css'
 
 const KenaDepthLessonView = lazy(() => import('./KenaDepthLessonView'))
@@ -71,34 +76,6 @@ class DepthEditionErrorBoundary extends Component<{ children: ReactNode; lessonT
 }
 
 type View = 'atlas' | 'path' | 'notebook' | 'reference'
-
-type ProgressState = {
-  completed: string[]
-  reflections: Record<string, string>
-  quizAnswers: Record<string, number>
-  quizVersions: Record<string, number>
-  depthEditions: DepthEditionProgressMap
-}
-
-const emptyDepthProgress: DepthEditionProgress = { readIds: [], checkpointAnswers: {} }
-const emptyProgress: ProgressState = { completed: [], reflections: {}, quizAnswers: {}, quizVersions: {}, depthEditions: {} }
-const lessonIdSet = new Set(courseLessons.map((lesson) => lesson.id))
-const currentQuizVersions: Record<string, number> = { isha: 2 }
-
-function lessonIsComplete(id: string, completed: string[], depthEditions: DepthEditionProgressMap) {
-  return isDepthEdition(id) ? depthEditions[id]?.completed === true : completed.includes(id)
-}
-
-function canPersistProgress() {
-  const probeKey = 'indian-texts-atlas-storage-probe'
-  try {
-    window.localStorage.setItem(probeKey, '1')
-    window.localStorage.removeItem(probeKey)
-    return true
-  } catch {
-    return false
-  }
-}
 
 const lessonSteps = [
   { id: 'locate', label: 'Locate' },
@@ -152,78 +129,6 @@ const upanishadVedaFamilies = [
   { veda: 'Atharvaveda', texts: 'Muṇḍaka · Māṇḍūkya · Praśna' },
 ]
 
-function readStoredProgress(): ProgressState {
-  try {
-    const stored = window.localStorage.getItem('indian-texts-atlas-progress-v1')
-    if (!stored) return emptyProgress
-    const parsed: unknown = JSON.parse(stored)
-    if (!parsed || typeof parsed !== 'object') return emptyProgress
-    const data = parsed as Partial<ProgressState>
-    const reflections = data.reflections && typeof data.reflections === 'object'
-      ? Object.fromEntries(Object.entries(data.reflections).filter((entry): entry is [string, string] => lessonIdSet.has(entry[0]) && typeof entry[1] === 'string'))
-      : {}
-    const quizVersions = data.quizVersions && typeof data.quizVersions === 'object'
-      ? Object.fromEntries(Object.entries(data.quizVersions).filter((entry): entry is [string, number] => (
-          lessonIdSet.has(entry[0]) && Number.isInteger(entry[1]) && entry[1] > 0
-        )))
-      : {}
-    const quizAnswers = data.quizAnswers && typeof data.quizAnswers === 'object'
-      ? Object.fromEntries(Object.entries(data.quizAnswers).filter((entry): entry is [string, number] => {
-          const [lessonId, answer] = entry
-          const choiceCount = lessonDetails[lessonId]?.quiz.choices.length ?? 0
-          const currentVersion = currentQuizVersions[lessonId]
-          return lessonIdSet.has(lessonId)
-            && Number.isInteger(answer)
-            && answer >= 0
-            && answer < choiceCount
-            && (currentVersion === undefined || quizVersions[lessonId] === currentVersion)
-        }))
-      : {}
-    const depthEditions: DepthEditionProgressMap = {}
-    if (data.depthEditions && typeof data.depthEditions === 'object') {
-      for (const [editionId, editionValue] of Object.entries(data.depthEditions)) {
-        const descriptor = getDepthEditionDescriptor(editionId)
-        if (!descriptor || !editionValue || typeof editionValue !== 'object') continue
-        const edition = editionValue as Partial<DepthEditionProgress>
-        const checkpointAnswers = edition.checkpointAnswers && typeof edition.checkpointAnswers === 'object'
-          ? Object.fromEntries(Object.entries(edition.checkpointAnswers).filter((entry): entry is [string, number] => {
-              const [sectionId, answer] = entry
-              return descriptor.sectionIds.includes(sectionId)
-                && Number.isInteger(answer)
-                && answer >= 0
-                && answer < descriptor.checkpointChoiceCount
-            }))
-          : {}
-        const rawReadIds = Array.isArray(edition.readIds) ? edition.readIds.filter((id): id is string => typeof id === 'string') : []
-        const readIds = [...new Set(rawReadIds.filter((id) => isValidDepthPassageId(editionId, id)))]
-        const lastId = typeof edition.lastId === 'string' && isValidDepthPassageId(editionId, edition.lastId) ? edition.lastId : undefined
-        const completionIsValid = edition.completed === true
-          && readIds.length === descriptor.totalUnits
-          && descriptor.sectionIds.every((sectionId) => checkpointAnswers[sectionId] === descriptor.checkpointCorrectAnswers[sectionId])
-          && quizAnswers[editionId] === lessonDetails[editionId]?.quiz.correct
-        depthEditions[editionId] = {
-          readIds,
-          checkpointAnswers,
-          ...(lastId ? { lastId } : {}),
-          ...(edition.studyMode === 'guided' || edition.studyMode === 'text' || edition.studyMode === 'full' ? { studyMode: edition.studyMode } : {}),
-          ...(completionIsValid ? { completed: true } : {}),
-        }
-      }
-    }
-    return {
-      completed: Array.isArray(data.completed)
-        ? [...new Set(data.completed.filter((id): id is string => typeof id === 'string' && lessonIdSet.has(id)))]
-        : [],
-      reflections,
-      quizAnswers,
-      quizVersions,
-      depthEditions,
-    }
-  } catch {
-    return emptyProgress
-  }
-}
-
 function viewFromHash(): View {
   const value = window.location.hash.replace('#', '').split('/')[0]
   return value === 'path' || value === 'notebook' || value === 'reference' || value === 'lesson' ? (value === 'lesson' ? 'path' : value) : 'atlas'
@@ -244,13 +149,14 @@ function App() {
     return courseLessons.find((lesson) => lesson.id === lessonId)?.sectionId ?? 'foundation'
   })
   const [progress, setProgress] = useState<ProgressState>(readStoredProgress)
-  const [storageWarning] = useState(() => !canPersistProgress())
+  const [storageWarning, setStorageWarning] = useState(() => !canPersistProgress())
 
   useEffect(() => {
     try {
       window.localStorage.setItem('indian-texts-atlas-progress-v1', JSON.stringify(progress))
     } catch {
       // Progress remains usable in memory for this visit when storage is unavailable.
+      queueMicrotask(() => setStorageWarning(true))
     }
   }, [progress])
 
@@ -309,6 +215,8 @@ function App() {
   }
 
   const activeLesson = activeLessonId ? courseLessons.find((item) => item.id === activeLessonId) ?? null : null
+  const completedForEdition = currentCompleted(progress)
+  const completedIds = courseLessons.filter((lesson) => lessonIsComplete(lesson.id, completedForEdition, progress.depthEditions)).map((lesson) => lesson.id)
 
   return (
     <div className="app-shell">
@@ -325,12 +233,13 @@ function App() {
       )}
 
       <main>
+        {!activeLesson && view === 'path' && completedForEdition.length < progress.completed.length && <div className="storage-warning" role="status">Some previously completed lessons have new understanding checks. Your notes and reading records are preserved; retake the updated checks to restore their current completion.</div>}
         {activeLesson ? (
           <LessonView
             key={activeLesson.id}
             lesson={activeLesson}
             detail={lessonDetails[activeLesson.id]}
-            completed={progress.completed.includes(activeLesson.id)}
+            completed={completedForEdition.includes(activeLesson.id)}
             reflection={progress.reflections[activeLesson.id] ?? ''}
             selectedQuiz={progress.quizAnswers[activeLesson.id]}
             depthProgress={progress.depthEditions[activeLesson.id] ?? emptyDepthProgress}
@@ -339,12 +248,13 @@ function App() {
             onDepthProgressChange={(value) => updateDepthProgress(activeLesson.id, value)}
             onComplete={() => completeLesson(activeLesson.id)}
             onClose={() => navigate('path')}
+            onOpenLesson={openLesson}
           />
         ) : (
           <>
             {view === 'atlas' && <AtlasView activeBranch={activeBranch} setActiveBranch={setActiveBranch} navigate={navigate} openLesson={openLesson} />}
-            {view === 'path' && <PathView completed={progress.completed} depthEditions={progress.depthEditions} openLesson={openLesson} activeSectionId={activeCourseSectionId} setActiveSectionId={setActiveCourseSectionId} />}
-            {view === 'notebook' && <NotebookView progress={progress} updateReflection={updateReflection} openLesson={openLesson} />}
+            {view === 'path' && <><PathView completed={completedForEdition} depthEditions={progress.depthEditions} openLesson={openLesson} activeSectionId={activeCourseSectionId} setActiveSectionId={setActiveCourseSectionId} /><CourseReview completedIds={completedIds} answers={progress.reviewAnswers} reflection={progress.reviewReflection} onAnswer={(id, answer) => setProgress((current) => ({ ...current, reviewAnswers: { ...current.reviewAnswers, [id]: answer } }))} onReflection={(value) => setProgress((current) => ({ ...current, reviewReflection: value }))} openLesson={openLesson} /></>}
+            {view === 'notebook' && <NotebookView progress={{ ...progress, completed: completedForEdition }} updateReflection={updateReflection} openLesson={openLesson} />}
             {view === 'reference' && <ReferenceView />}
           </>
         )}
@@ -467,7 +377,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="cover-section">
         <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Every lesson separates the base text, literal word meanings, historical questions, later commentary, and living interpretations. Kena, Kaṭha, and Īśā now form the first complete depth editions, with a Sanskrit-learning layer for every unit.</p></div>
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Study the key teachings across the map, with concrete examples, diagrams, and questions. Sanskrit excerpts include word-by-word meanings. Kena, Kaṭha, and Īśā also offer complete passage-by-passage editions. Ancient foundations and their later literary afterlives are kept distinct.</p></div>
       </section>
     </>
   )
@@ -486,6 +396,7 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
   const activeSection = courseSections.find((section) => section.id === activeSectionId) ?? courseSections[0]
   const sectionLessons = courseLessons.filter((lesson) => lesson.sectionId === activeSection.id)
   const sectionCompleted = sectionLessons.filter((lesson) => lessonIsComplete(lesson.id, completed, depthEditions)).length
+  const nextId = nextLessonInPath(available.map((lesson) => lesson.id), validCompleted.map((lesson) => lesson.id))
 
   return (
     <section className="course-view">
@@ -494,6 +405,11 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
         <div className="progress-medallion"><strong>{progress}%</strong><span>of {available.length} units<br />completed</span></div>
       </div>
       <div className="path-legend"><span><i className="legend-live" /> {courseSections.length} guided paths</span><span><i className="legend-cluster" /> {available.length} interactive units</span></div>
+      <div className="course-route">
+        <div><strong>A pace you can sustain</strong><p>Start with Course 0. Follow a path one short session at a time; longer depth editions save each passage separately. Course numbers guide study, not a single historical timeline.</p></div>
+        <div><strong>A clear finish line</strong><p>Complete all 75 lessons and the seven-part final review below. This covers key teachings across the map, with three full Upaniṣad editions—not every manuscript or all 108 titles.</p></div>
+        <div className="course-route-actions">{nextId && <button className="primary-button" onClick={() => openLesson(nextId)}>{validCompleted.length ? 'Continue with' : 'Begin with'} {courseLessons.find((lesson) => lesson.id === nextId)?.plainTitle} <ArrowRight size={17} /></button>}<button className="quiet-button" onClick={openCourseReview}>Go to final review ↓</button></div>
+      </div>
 
       <div className="curriculum-section-grid" aria-label="Course paths">
         {courseSections.map((section) => {
@@ -557,7 +473,7 @@ function LessonCard({ lesson, onOpen, completed = false, overviewCompleted = fal
         <p className="lesson-question">{lesson.question}</p>
         <p>{lesson.insight}</p>
         <div className="lesson-meta-row">
-          <span>{depthReadCount !== undefined && depthTotal !== undefined ? `${depthReadCount}/${depthTotal} read · depth edition` : lesson.status === 'available' ? `${lesson.minutes} min · interactive` : 'Course map ready'}</span>
+          <span>{depthReadCount !== undefined && depthTotal !== undefined ? `${depthReadCount}/${depthTotal} read · depth edition` : lesson.status === 'available' ? `${lesson.minutes} min · ${guidedContent[lesson.id] ? 'key teachings' : 'visual foundation'}` : 'Course map ready'}</span>
           {completed && <span className="complete-label"><CheckCircle2 size={14} /> Completed</span>}
           {overviewCompleted && <span className="overview-label"><BookOpenText size={14} /> Overview saved</span>}
         </div>
@@ -567,7 +483,7 @@ function LessonCard({ lesson, onOpen, completed = false, overviewCompleted = fal
   )
 }
 
-function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depthProgress, onReflectionChange, onQuizSelect, onDepthProgressChange, onComplete, onClose }: {
+export function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depthProgress, onReflectionChange, onQuizSelect, onDepthProgressChange, onComplete, onClose, onOpenLesson }: {
   lesson: CourseLesson
   detail?: LessonDetail
   completed: boolean
@@ -579,9 +495,23 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
   onDepthProgressChange: (progress: DepthEditionProgress) => void
   onComplete: () => void
   onClose: () => void
+  onOpenLesson: (id: string) => void
 }) {
-  const [step, setStep] = useState(0)
+  const [step, updateStep] = useState(() => guidedStepFromHash(window.location.hash, lesson.id))
+  const guide = guidedContent[lesson.id]
+  const setStep = (next: number | ((current: number) => number)) => {
+    const index = typeof next === 'function' ? next(step) : next
+    updateStep(index)
+    if (guide || lesson.id === 'course-0') setLessonStepHash(lesson.id, index)
+  }
   const isFoundation = lesson.id === 'course-0'
+
+  useEffect(() => {
+    if (!guide && lesson.id !== 'course-0') return
+    const restore = () => updateStep(guidedStepFromHash(window.location.hash, lesson.id))
+    window.addEventListener('hashchange', restore)
+    return () => window.removeEventListener('hashchange', restore)
+  }, [guide, lesson.id])
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
@@ -649,9 +579,11 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
   }
 
   const correct = selectedQuiz === detail.quiz.correct
+  const nextLesson = courseLessons[courseLessons.findIndex((item) => item.id === lesson.id) + 1]
+  const sources = [...new globalThis.Map([...detail.sourceLinks, ...(guide?.sourceLinks ?? [])].map((source) => [source.url, source])).values()]
   const panelCopy = {
     locate: ['LOCATE IN THE TRADITION', 'First, know where you are.'],
-    read: ['READ A PASSAGE CLUSTER', 'Stay close to the text.'],
+    read: ['FOLLOW THE TEACHING', 'Three ideas to work through.'],
     unpack: ['UNPACK KEY IDEAS', 'Keep difficult words visible.'],
     compare: ['COMPARE INTERPRETIVE LENSES', 'A text can sustain disagreement.'],
     reflect: ['REFLECT', 'Bring the question into your life.'],
@@ -668,8 +600,8 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
 
       <nav className="step-rail" aria-label="Lesson steps">
         {lessonSteps.map((item, index) => (
-          <button key={item.id} className={index === step ? 'active' : index < step ? 'visited' : ''} onClick={() => setStep(index)} aria-current={index === step ? 'step' : undefined}>
-            <i>{index < step || completed ? <Check size={12} /> : index + 1}</i><span>{item.label}</span>
+          <button key={item.id} className={index === step ? 'active' : ''} onClick={() => setStep(index)} aria-current={index === step ? 'step' : undefined}>
+            <i>{completed ? <Check size={12} /> : index + 1}</i><span>{item.label}</span>
           </button>
         ))}
       </nav>
@@ -677,26 +609,31 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
       <div className="lesson-content">
         {step === 0 && (
           <LessonPanel kicker={panelCopy.locate[0]} title={panelCopy.locate[1]} icon={<Map size={22} />}>
+            {guide && <p className="guided-opening">{guide.opening}</p>}
             <div className="location-chain">{detail.locate.corpus.split(' → ').map((item, index) => <span key={item}>{index > 0 && <ChevronRight size={15} />}{item}</span>)}</div>
             <div className="reading-block"><h3>Placement</h3><p>{detail.locate.placement}</p></div>
             <div className="reading-block"><h3>Context</h3><p>{detail.locate.context}</p></div>
+            {guide && <div className="lesson-route-note"><strong>Your route through this lesson</strong><p>Understand the setting → follow three ideas and a diagram → explore terms{guide.excerpt ? ' and a short Sanskrit excerpt' : ''} → compare an example → reflect → check your understanding. No prior Sanskrit is needed.</p></div>}
           </LessonPanel>
         )}
         {step === 1 && (
           <LessonPanel kicker={panelCopy.read[0]} title={panelCopy.read[1]} icon={<BookOpenText size={22} />}>
             <div className="passage-anchor">{detail.read.anchorLabel ?? 'Passage anchor'} · {detail.read.anchor}</div>
-            <p className="large-reading">{detail.read.paraphrase}</p>
+            {guide ? <GuidedTeaching guide={guide} /> : <p className="large-reading">{detail.read.paraphrase}</p>}
             <div className="interpretation-note"><strong>Reading note</strong><p>{detail.read.readingNote}</p></div>
           </LessonPanel>
         )}
         {step === 2 && (
           <LessonPanel kicker={panelCopy.unpack[0]} title={panelCopy.unpack[1]} icon={<LibraryBig size={22} />}>
             <div className="concept-list">{detail.concepts.map((concept) => <article key={concept.term}><h3>{concept.term}</h3><p>{concept.meaning}</p></article>)}</div>
+            {guide?.excerpt && <SanskritExcerpt excerpt={guide.excerpt} lessonId={lesson.id} />}
           </LessonPanel>
         )}
         {step === 3 && (
           <LessonPanel kicker={panelCopy.compare[0]} title={panelCopy.compare[1]} icon={<Layers3 size={22} />}>
+            {guide && <WorkedExample example={guide.example} />}
             <div className="lens-grid">{detail.lenses.map((lens, index) => <article key={lens.name}><span>0{index + 1}</span><h3>{lens.name}</h3><p>{lens.reading}</p></article>)}</div>
+            {guide && <section className="lesson-connections"><h3>Connect this to the wider map</h3>{guide.connections.map((connection) => <a key={connection.lessonId} href={`#lesson/${connection.lessonId}`}><strong>{courseLessons.find((item) => item.id === connection.lessonId)?.title}</strong><span>{connection.why}</span><span aria-hidden="true">↗</span></a>)}</section>}
           </LessonPanel>
         )}
         {step === 4 && (
@@ -715,7 +652,8 @@ function LessonView({ lesson, detail, completed, reflection, selectedQuiz, depth
             })}</div>
             {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{correct ? 'That is the central move.' : 'Look once more at the distinction.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Lesson completed' : 'Mark lesson complete'} <CheckCircle2 size={17} /></button>}
-            <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
+            {completed && <div className="lesson-route-note"><strong>You have completed this lesson.</strong><p>{lesson.insight}</p>{nextLesson ? <button className="text-button" onClick={() => onOpenLesson(nextLesson.id)}>Continue to {nextLesson.plainTitle} <ArrowRight size={17} /></button> : <button className="text-button" onClick={() => { onClose(); openCourseReview() }}>Put the whole map together in the final review <ArrowRight size={17} /></button>}</div>}
+            <div className="lesson-source-links"><strong>Continue with sources</strong>{sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
         )}
       </div>
@@ -754,8 +692,8 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
 
       <nav className="step-rail course-zero-rail" aria-label="Course 0 steps">
         {courseZeroSteps.map((item, index) => (
-          <button key={item.id} className={index === step ? 'active' : index < step ? 'visited' : ''} onClick={() => setStep(index)} aria-current={index === step ? 'step' : undefined}>
-            <i>{index < step || completed ? <Check size={12} /> : index + 1}</i><span>{item.label}</span>
+          <button key={item.id} className={index === step ? 'active' : ''} onClick={() => setStep(index)} aria-current={index === step ? 'step' : undefined}>
+            <i>{completed ? <Check size={12} /> : index + 1}</i><span>{item.label}</span>
           </button>
         ))}
       </nav>
@@ -853,6 +791,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             })}</div>
             {selectedQuiz !== undefined && <div className={`quiz-feedback ${correct ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{correct ? 'Yes—that is the connection.' : 'Look again at what each label is describing.'}</strong><p>{detail.quiz.explanation}</p></div>}
             {correct && <button className="primary-button complete-button" onClick={onComplete}>{completed ? 'Course 0 completed' : 'Mark Course 0 complete'} <CheckCircle2 size={17} /></button>}
+            {completed && <div className="lesson-connections"><a href="#lesson/kena"><strong>Next: Kena Upaniṣad</strong><span>Use the map to begin your first text: what makes the mind think?</span><span aria-hidden="true">→</span></a></div>}
             <div className="lesson-source-links"><strong>Continue with sources</strong>{detail.sourceLinks.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={14} /></a>)}</div>
           </LessonPanel>
         )}

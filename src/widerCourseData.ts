@@ -1,4 +1,5 @@
 import type { CourseLesson, CourseSection, LessonDetail } from './courseData'
+import { widerModules } from './widerModules'
 
 type SectionSource = { label: string; url: string; use: string }
 
@@ -252,7 +253,7 @@ export const widerLessons: CourseLesson[] = sectionSeeds.flatMap((section) =>
     title: lesson.title,
     plainTitle: lesson.title,
     veda: section.shortTitle,
-    form: 'Guided text cluster',
+    form: 'Key-teaching course',
     question: lesson.question,
     insight: lesson.insight,
     status: 'available' as const,
@@ -262,6 +263,8 @@ export const widerLessons: CourseLesson[] = sectionSeeds.flatMap((section) =>
 )
 
 function createLessonDetail(section: WiderSectionSeed, lesson: WiderLessonSeed): LessonDetail {
+  const guide = widerModules[lesson.id]
+  if (!guide) throw new Error(`Missing authored teaching for ${lesson.id}`)
   return {
     id: lesson.id,
     locate: {
@@ -272,28 +275,14 @@ function createLessonDetail(section: WiderSectionSeed, lesson: WiderLessonSeed):
     read: {
       anchorLabel: 'Text cluster',
       anchor: lesson.texts,
-      paraphrase: `${lesson.insight} The guiding question is: ${lesson.question}`,
-      readingNote: 'This is a course orientation, not a translation. Treat each root text, recension, commentary, performance, and modern interpretation as a distinct historical layer; follow the linked sources before making passage-level claims.',
+      paraphrase: guide.opening,
+      readingNote: 'Teaching paragraphs and worked examples are original course explanations, not translations. Any Sanskrit excerpt is labelled separately with its source, contextual translation, and word-by-word study. Follow the sources to read beyond these selected examples.',
     },
-    concepts: [
-      { term: 'Guiding question', meaning: lesson.question },
-      { term: 'Crucial learning', meaning: lesson.insight },
-      { term: 'Source boundary', meaning: `The cluster includes ${lesson.texts}. Similar titles or later retellings should not be silently merged.` },
-    ],
+    concepts: guide.terms,
     lenses: section.guardrails,
-    reflection: `${lesson.question} Write a provisional answer, then name which text or historical layer you would need to inspect before trusting it.`,
-    quiz: {
-      question: `Which takeaway best fits “${lesson.title}”?`,
-      choices: [
-        lesson.insight,
-        'All works in the cluster teach one identical doctrine in the same historical setting.',
-        'Later commentary can be read as though it were part of the earliest recoverable base text.',
-        'A prescriptive text directly records how every community actually lived.',
-      ],
-      correct: 0,
-      explanation: `${lesson.insight} The other choices erase textual plurality, historical layers, or the difference between prescription and lived history.`,
-    },
-    sourceLinks: section.sources.map(({ label, url }) => ({ label, url })),
+    reflection: guide.reflection,
+    quiz: guide.quiz,
+    sourceLinks: guide.sourceLinks,
   }
 }
 
@@ -307,4 +296,3 @@ export const widerReferenceSources = sectionSeeds.flatMap((section) => section.s
   seenSourceUrls.add(source.url)
   return true
 })
-

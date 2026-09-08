@@ -1,0 +1,1979 @@
+{
+  "rigveda-hymns": {
+    "opening": "Before looking for a single Vedic answer, learn to hear different voices. A hymn may praise a deity, stage a riddle, speak in a divine first person, or leave its question open.",
+    "teaching": [
+      {
+        "title": "A collection, not a philosophy textbook",
+        "body": "The Ṛgveda gathers hymns associated with different poet-families and occasions. Praise of Agni or Indra is addressed speech: someone seeks a relationship with a deity through carefully made words. To read it well, ask who speaks, to whom, and what the poem is trying to accomplish before extracting a doctrine."
+      },
+      {
+        "title": "Compare two ways of speaking",
+        "body": "In 10.125 the voice identified with Vāc, Speech, declares her sustaining power across gods and living beings. In 10.129 the creation hymn asks what could precede existence and non-existence, then questions who could know the beginning. These are different poetic strategies: expansive self-declaration and inquiry into the limits of knowledge."
+      },
+      {
+        "title": "Let the ending matter",
+        "body": "The final hesitation of 10.129 is not an accidental gap that a reader must fill. It changes how we hear the earlier speculation. Likewise, the cosmic-person imagery of 10.90 needs its own reading, including its social hierarchy. A line from one hymn cannot settle the meaning of every other hymn or justify a modern social order."
+      }
+    ],
+    "example": {
+      "title": "Two creation exhibits",
+      "scenario": "Invented classroom example: one museum label says 'The Vedas explain exactly how creation happened.' Another places 10.129 beside 10.125 and asks visitors to compare their voices. Which helps a beginner more?",
+      "explanation": "The second makes a testable reading task: locate questions, declarations, and the speaker. It lets uncertainty and confidence coexist within a collection instead of turning poetry into one scientific or theological formula."
+    },
+    "visual": {
+      "title": "Three doors into a hymn",
+      "nodes": [
+        {
+          "label": "Speaker",
+          "detail": "A poet, dialogue character, or divine voice?"
+        },
+        {
+          "label": "Address",
+          "detail": "Which deity or audience is being approached?"
+        },
+        {
+          "label": "Poetic action",
+          "detail": "Praise, request, riddle, or questioning?"
+        }
+      ],
+      "caption": "Reading lenses, not three stages of religious evolution."
+    },
+    "terms": [
+      {
+        "term": "Ṛc",
+        "meaning": "A metrical verse; the Ṛgveda is a collection of such verses."
+      },
+      {
+        "term": "Sūkta",
+        "meaning": "A hymn, usually a group of related verses."
+      },
+      {
+        "term": "Vāc",
+        "meaning": "Speech, also personified as a divine power in 10.125."
+      }
+    ],
+    "reflection": "Read the ending of 10.129 in the linked translation. What becomes less certain at the end, and why might a poet choose that ending?",
+    "quiz": {
+      "question": "A reader uses 10.129 to claim that every Ṛgvedic poet denied all gods. What is the strongest objection?",
+      "choices": [
+        "A question in a hymn must always be rhetorical praise.",
+        "The hymn tests knowledge of origins; its voice cannot automatically represent every hymn.",
+        "Creation hymns are unrelated to the rest of the collection."
+      ],
+      "correct": 1,
+      "explanation": "The ending raises an epistemic question—who knows?—rather than issuing a collection-wide manifesto. Compare other speakers before generalizing."
+    },
+    "connections": [
+      {
+        "lessonId": "kena",
+        "why": "Kena also asks what makes knowing possible, but within a different textual setting."
+      },
+      {
+        "lessonId": "goddess-worlds",
+        "why": "Compare the divine female voice of Vāc with later Goddess theology without treating them as identical."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Ṛgveda 10.129 — Griffith's historical translation",
+        "url": "https://sacred-texts.com/hin/rigveda/rv10129.htm"
+      },
+      {
+        "label": "Ṛgveda 10.125 — the voice of Vāc",
+        "url": "https://sacred-texts.com/hin/rigveda/rv10125.htm"
+      },
+      {
+        "label": "Vedic Heritage — Saṃhitā orientation",
+        "url": "https://vedicheritage.gov.in/samhitas/"
+      }
+    ]
+  },
+  "samaveda-song": {
+    "opening": "Imagine reading the lyrics of a song without hearing its tune. You have something important, but not the whole work. This is a useful first approach to the Sāmaveda.",
+    "teaching": [
+      {
+        "title": "Reuse can create a different text",
+        "body": "Many Sāmavedic verses also occur in the Ṛgveda. That does not make the Sāmaveda a redundant copy. Its selection and arrangement serve sung ritual performance, particularly the Soma sacrifice. A sentence used as praise in one collection can acquire a specific place and role in another performance system."
+      },
+      {
+        "title": "Words and melodies have different jobs",
+        "body": "The verse collections and the song-books are related but not interchangeable. The latter show how a verse becomes a sāman, a chant. Singing may stretch syllables or insert conventional vocal sounds. A plain English translation communicates lexical meaning but cannot reproduce this performed structure; listening is therefore part of textual study."
+      },
+      {
+        "title": "A living skill needs a teacher",
+        "body": "The udgātṛ is the specialist singer in a large Vedic rite. Kauthuma, Jaiminīya, and Rāṇāyanīya transmission preserve distinct traditions. Do not treat one recording as the universal sound of all Vedic recitation. Listen for repeated patterns and changes, without assuming modern concert melody or inventing a timeless musical notation."
+      }
+    ],
+    "example": {
+      "title": "What does a recording add?",
+      "scenario": "Invented learning exercise: a friend says a Sāmavedic recording is unnecessary because its translated verse already appears in a Ṛgveda book. You can offer one reason to keep both. What would it be?",
+      "explanation": "Keep both to compare what words say with how trained performance organizes them. The recording is evidence about a particular recitation tradition, while the translation is a guide to verbal meaning. Neither can substitute for the other."
+    },
+    "visual": {
+      "title": "One verse, several kinds of information",
+      "nodes": [
+        {
+          "label": "Words",
+          "detail": "What the verse addresses and asks."
+        },
+        {
+          "label": "Melody",
+          "detail": "How its sounds are patterned in a chant."
+        },
+        {
+          "label": "Ritual placement",
+          "detail": "When and by whom it is sung."
+        },
+        {
+          "label": "Transmission",
+          "detail": "Which teacher-line or school preserves the performance."
+        }
+      ],
+      "caption": "These dimensions work together; the boxes are not a chronology."
+    },
+    "terms": [
+      {
+        "term": "Sāman",
+        "meaning": "A ritual chant or melody, not merely a prose translation."
+      },
+      {
+        "term": "Udgātṛ",
+        "meaning": "A principal singing priest in a Soma rite."
+      },
+      {
+        "term": "Śākhā",
+        "meaning": "A branch or school of Vedic transmission."
+      }
+    ],
+    "reflection": "Follow a school link in the source portal. Record which tradition the material belongs to and one thing a written translation would leave out.",
+    "quiz": {
+      "question": "Why can a verse shared with the Ṛgveda still have a distinct Sāmavedic identity?",
+      "choices": [
+        "Its tune proves its words have no meaning.",
+        "It must have been composed by the same individual singer.",
+        "Its sung form and ritual arrangement give it a different textual function."
+      ],
+      "correct": 2,
+      "explanation": "Identity includes use and performance as well as wording. Shared verses do not erase the distinct work of a chant collection."
+    },
+    "connections": [
+      {
+        "lessonId": "rigveda-hymns",
+        "why": "Return to the source-poem perspective and compare what changes in reuse."
+      },
+      {
+        "lessonId": "chandogya",
+        "why": "Chāndogya begins with contemplative interpretations of chant and the udgītha."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vedic Heritage — Sāmaveda and its song traditions",
+        "url": "https://vedicheritage.gov.in/samhitas/samaveda-samhitas/"
+      },
+      {
+        "label": "Vedic Heritage — oral and textual categories",
+        "url": "https://vedicheritage.gov.in/introduction/"
+      }
+    ]
+  },
+  "yajurveda-ritual": {
+    "opening": "A ritual formula is often one part of an organized action. To understand a Yajurvedic passage, picture a person speaking while handling a material object at a specified moment.",
+    "teaching": [
+      {
+        "title": "Speech does something here",
+        "body": "The Yajurveda supplies formulas used by an adhvaryu, the officiant who coordinates many practical actions of a sacrifice. Offerings, implements, locations, and timing help determine what a formula means. Reading only its devotional wording is like reading a stage direction without noticing who performs the action."
+      },
+      {
+        "title": "Two large families, several schools",
+        "body": "Śukla, or White, Yajurvedic collections distinguish mantra material from its Brāhmaṇa explanation relatively clearly. Kṛṣṇa, or Black, Yajurvedic collections interweave formulas and explanatory prose. The terms are traditional classification names, not a judgment that one tradition is morally pure and another impure. Each family contains more than one transmitted text."
+      },
+      {
+        "title": "Follow the whole instruction",
+        "body": "A useful reading sheet has four columns: speaker, words, material action, and explanation. Ritual sūtras can clarify procedure, while Brāhmaṇas argue for its significance. Keep these sources identified rather than splicing them into a single anonymous quotation. This method also explains why Īśā, at the end of the Vājasaneyi Saṃhitā, has a distinctive placement within a ritual collection."
+      }
+    ],
+    "example": {
+      "title": "The missing hand movement",
+      "scenario": "Invented classroom example: two students translate a formula identically. One labels it a general prayer; another notes that a prescribed offering is being placed during its recitation. Which has provided the fuller interpretation?",
+      "explanation": "The second connects speech with action and context. This does not establish that the rite has the promised cosmic effect; it explains the text's own operating logic before evaluating its claims."
+    },
+    "visual": {
+      "title": "Read a ritual as coordinated work",
+      "nodes": [
+        {
+          "label": "Officiant",
+          "detail": "Who has this task?"
+        },
+        {
+          "label": "Formula",
+          "detail": "What words accompany it?"
+        },
+        {
+          "label": "Material action",
+          "detail": "What is moved, offered, or arranged?"
+        },
+        {
+          "label": "Explanation",
+          "detail": "Why does the tradition connect these elements?"
+        }
+      ],
+      "caption": "A coordination map, not instructions for conducting a rite."
+    },
+    "terms": [
+      {
+        "term": "Yajus",
+        "meaning": "A sacrificial formula, often in prose."
+      },
+      {
+        "term": "Adhvaryu",
+        "meaning": "The officiant associated with practical ritual work and Yajurvedic formulas."
+      },
+      {
+        "term": "Saṃhitā",
+        "meaning": "A collection; its contents and arrangement vary by Vedic school."
+      }
+    ],
+    "reflection": "Choose one formula from a source collection. What contextual information would you need before explaining it to someone else?",
+    "quiz": {
+      "question": "A label describes Black Yajurveda as 'bad ritual' and White Yajurveda as 'good ritual.' What correction is needed?",
+      "choices": [
+        "The labels distinguish textual arrangements, especially how formulas and explanation are combined.",
+        "The labels distinguish spoken language from completely silent ritual.",
+        "The labels distinguish Sanskrit from Pāli."
+      ],
+      "correct": 0,
+      "explanation": "These are names for transmission families, not moral rankings or language families."
+    },
+    "connections": [
+      {
+        "lessonId": "isha",
+        "why": "Īśā's location in the Vājasaneyi collection connects philosophical reading to a ritual archive."
+      },
+      {
+        "lessonId": "mimamsa",
+        "why": "Mīmāṃsā develops sophisticated methods for interpreting injunctions and ritual language."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vedic Heritage — Yajurveda families and textual structure",
+        "url": "https://vedicheritage.gov.in/samhitas/yajurveda/"
+      },
+      {
+        "label": "Vedic Heritage — Kalpa and ritual manuals",
+        "url": "https://vedicheritage.gov.in/vedangas/kalpa/"
+      }
+    ]
+  },
+  "atharvaveda-life": {
+    "opening": "Illness, household quarrels, protection, and political authority also belong in the Vedic archive. The Atharvaveda makes these concerns visible alongside larger questions about the world.",
+    "teaching": [
+      {
+        "title": "Ordinary anxieties are textual subjects",
+        "body": "Atharvavedic hymns address threats to health, relationships, livelihood, and rule. Their language can invoke plants, deities, objects, or verbal power. Rather than dismissing the collection as a bag of spells, ask what problem a hymn recognizes, what agency it calls upon, and what change it seeks."
+      },
+      {
+        "title": "Look closely at household harmony",
+        "body": "In the Śaunaka collection, hymn 3.30 seeks concord among household members. Its imagery includes a cow's affection for her calf and shared food and drink. It values friendly speech, but also assumes ranked family roles. Both features matter: concern for cooperation does not make the household imagined by the hymn socially egalitarian."
+      },
+      {
+        "title": "Read healing historically",
+        "body": "A hymn that asks illness to depart gives evidence of a therapeutic imagination and ritual practice. It does not establish clinical effectiveness for a modern patient. Śaunaka and Paippalāda are distinct recensions, so always identify the collection when using hymn numbers. Historical study can be respectful without treating ancient healing claims as medical instructions."
+      }
+    ],
+    "example": {
+      "title": "Peace without erasing disagreement",
+      "scenario": "Invented present-day example: a family uses the concord hymn to insist that younger members must never disagree. Another reader notices the poem's wish for friendly speech and shared food but questions its hierarchy. Which reader has distinguished interpretation from obedience?",
+      "explanation": "The second can understand the hymn's social ideal while deciding ethically which parts to adopt or reject today. Studying a historical prescription does not require reproducing the power structure it assumes."
+    },
+    "visual": {
+      "title": "Four questions for a practical hymn",
+      "nodes": [
+        {
+          "label": "Concern",
+          "detail": "What harm or tension is named?"
+        },
+        {
+          "label": "Agent",
+          "detail": "Who or what is asked to help?"
+        },
+        {
+          "label": "Desired change",
+          "detail": "Health, concord, protection, or power?"
+        },
+        {
+          "label": "Social assumptions",
+          "detail": "Whose authority or vulnerability is taken for granted?"
+        }
+      ],
+      "caption": "Apply all four lenses to one hymn instead of assigning one label to the whole Veda."
+    },
+    "terms": [
+      {
+        "term": "Śaunaka",
+        "meaning": "One major Atharvavedic recension used in many printed translations."
+      },
+      {
+        "term": "Paippalāda",
+        "meaning": "Another Atharvavedic recension with its own transmission and arrangement."
+      },
+      {
+        "term": "Concord hymn",
+        "meaning": "A hymn seeking agreement and mutual goodwill, illustrated here by 3.30."
+      }
+    ],
+    "reflection": "Name one value and one social assumption in the concord hymn. Which distinction prevents appreciation from becoming uncritical endorsement?",
+    "quiz": {
+      "question": "What can a healing hymn establish by itself?",
+      "choices": [
+        "That its remedy is clinically safe today.",
+        "How its speakers imagined illness and sought relief.",
+        "That all ancient households used an identical treatment."
+      ],
+      "correct": 1,
+      "explanation": "The text documents a way of speaking and acting toward illness. Safety, effectiveness, and prevalence require different evidence."
+    },
+    "connections": [
+      {
+        "lessonId": "classical-medicine",
+        "why": "Compare ritual healing language with later systematic medical compendia."
+      },
+      {
+        "lessonId": "dharmasutras",
+        "why": "Compare household ideals across genres without mistaking either for a census of real lives."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Atharvaveda 3.30 — concord hymn (Griffith translation)",
+        "url": "https://sacred-texts.com/hin/av/av03030.htm"
+      },
+      {
+        "label": "Vedic Heritage — Atharvavedic collections",
+        "url": "https://vedicheritage.gov.in/samhitas/"
+      }
+    ]
+  },
+  "brahmanas-exegesis": {
+    "opening": "Knowing the steps of a ritual does not yet explain why they matter. Brāhmaṇa prose links actions to stories, speech, bodies, and cosmic patterns to make an argument about their significance.",
+    "teaching": [
+      {
+        "title": "An explanation, not just a checklist",
+        "body": "A ritual manual might specify what to do next. A Brāhmaṇa can explain an action by associating it with a god's precedent, a creation event, a verbal resemblance, or a bodily correspondence. Such connections make the rite intelligible within the text's world. They should be understood before being translated into modern categories of evidence."
+      },
+      {
+        "title": "A flood story inside ritual reasoning",
+        "body": "Śatapatha Brāhmaṇa 1.8.1 tells how Manu protects a small fish, follows its warning, and survives a flood. The account then turns to Manu's offering and Iḍā. Stopping after the boat story misses its ritual setting: the narrative participates in an explanation of sacrifice, renewed life, and an offering shared in the rite."
+      },
+      {
+        "title": "Similarity does not erase difference",
+        "body": "The fish is identified differently in later traditions. Do not silently insert every later avatāra detail into this earlier version. Likewise, Aitareya and Śatapatha materials belong to different Vedic affiliations. A useful comparison asks how each text argues, not whether they can be assembled into one perfectly consistent myth."
+      }
+    ],
+    "example": {
+      "title": "Where should the excerpt end?",
+      "scenario": "Invented editing exercise: a children's anthology prints only Manu's rescue. A ritual-history class wants to explain why the story occurs in the Śatapatha Brāhmaṇa. What should the class add?",
+      "explanation": "Read onward into Manu's offering and Iḍā, then connect those details to the surrounding ritual explanation. The rescue remains important, but its function changes when restored to the prose context."
+    },
+    "visual": {
+      "title": "How a story supports a ritual claim",
+      "nodes": [
+        {
+          "label": "Narrative event",
+          "detail": "Manu survives and makes an offering."
+        },
+        {
+          "label": "Ritual connection",
+          "detail": "The text relates renewed life and Iḍā to sacrifice."
+        },
+        {
+          "label": "Present action",
+          "detail": "The performed rite is explained through that remembered connection."
+        }
+      ],
+      "caption": "This shows the passage's argumentative structure, not a modern proof of ritual efficacy."
+    },
+    "terms": [
+      {
+        "term": "Brāhmaṇa",
+        "meaning": "A Vedic prose genre explaining ritual; not the same use as the social-category word brāhmaṇa."
+      },
+      {
+        "term": "Exegesis",
+        "meaning": "Close explanation of a text or practice, often through connections and precedents."
+      },
+      {
+        "term": "Iḍā",
+        "meaning": "A figure and ritual offering connected in the Śatapatha account; spelling and translation vary."
+      }
+    ],
+    "reflection": "What would be lost if the flood account were taught only as an adventure? Identify the narrative detail that reconnects it to ritual.",
+    "quiz": {
+      "question": "Which reading best explains the flood story's place in Śatapatha 1.8.1?",
+      "choices": [
+        "It is unrelated entertainment inserted between instructions.",
+        "It is simply the later ten-avatāra system stated in full.",
+        "It connects Manu's survival and offering with the surrounding ritual explanation."
+      ],
+      "correct": 2,
+      "explanation": "Context reveals why the story belongs here. Later receptions can be compared afterward, with their differences preserved."
+    },
+    "connections": [
+      {
+        "lessonId": "yajurveda-ritual",
+        "why": "Add argumentative explanation to the formula-and-action reading sheet."
+      },
+      {
+        "lessonId": "vaishnava-puranas",
+        "why": "Follow the reworking of divine descent narratives without importing later identities backward."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Śatapatha 1.8.1 — Manu, the flood, and Iḍā (Eggeling)",
+        "url": "https://sacred-texts.com/book/the-satapatha-brahmana-part-i/shell/story-of-the-flood-of-manu"
+      },
+      {
+        "label": "Vedic Heritage — Aitareya Brāhmaṇa affiliation",
+        "url": "https://vedicheritage.gov.in/brahmanas/aitareya-brahmana/"
+      }
+    ]
+  },
+  "aranyakas-reframing": {
+    "opening": "A ritual can remain important while its meaning is explored through breath, the body, and concentrated understanding. The Āraṇyakas help us see that transformation without imagining a clean break from ritual to philosophy.",
+    "teaching": [
+      {
+        "title": "The shelf labels overlap",
+        "body": "Āraṇyaka means a text associated with the forest, but the label does not guarantee one genre or one way of life. Some Āraṇyakas are attached to Brāhmaṇas and contain Upaniṣadic material. Their modern separation into books can conceal the way transmitted collections join ritual exposition, recitation, and speculative inquiry."
+      },
+      {
+        "title": "Aitareya supplies a concrete map",
+        "body": "The Aitareya Āraṇyaka includes discussion of the Mahāvrata rite, interpretations of recitation, and the material recognized as Aitareya Upaniṣad. This arrangement is evidence against the idea that the whole work simply tells readers to abandon sacrifice. Ritual, sound, and knowledge can be different aspects of one transmitted collection."
+      },
+      {
+        "title": "Reframing asks what an act embodies",
+        "body": "Body-and-breath correspondences let a reader ask how an external rite connects with the person who performs or understands it. Read these as explicit symbolic associations, not as coded anatomy or modern physiology. The important change is the question being asked: not only 'Was the action performed?' but 'What relationship does informed performance disclose?'"
+      }
+    ],
+    "example": {
+      "title": "Two descriptions of the same collection",
+      "scenario": "Invented library exercise: one catalogue says 'Forest books replaced meaningless ritual.' Another records ritual discussion, recitation analysis, and embedded Upaniṣadic inquiry. Which catalogue prepares a learner to read the contents?",
+      "explanation": "The second names observable kinds of material. The first assumes a ranking and a replacement story before opening the book. You can investigate changes in emphasis without caricaturing the earlier ritual tradition."
+    },
+    "visual": {
+      "title": "Inside one Āraṇyaka collection",
+      "nodes": [
+        {
+          "label": "Ritual exposition",
+          "detail": "The Mahāvrata and its significance."
+        },
+        {
+          "label": "Sound and recitation",
+          "detail": "Ways of joining and interpreting transmitted words."
+        },
+        {
+          "label": "Upaniṣadic inquiry",
+          "detail": "Questions about self and awareness within the larger collection."
+        }
+      ],
+      "caption": "Coexisting materials in Aitareya, not three universal chronological steps."
+    },
+    "terms": [
+      {
+        "term": "Āraṇyaka",
+        "meaning": "A forest-associated Vedic text category whose boundaries overlap other categories."
+      },
+      {
+        "term": "Mahāvrata",
+        "meaning": "A Vedic rite discussed in the Aitareya Āraṇyaka."
+      },
+      {
+        "term": "Correspondence",
+        "meaning": "An interpretive association, for example between ritual and embodied life."
+      }
+    ],
+    "reflection": "Explain to a beginner why an Upaniṣad can be both a distinct teaching text and part of a larger Vedic collection.",
+    "quiz": {
+      "question": "What does the Aitareya Āraṇyaka's mixed content show?",
+      "choices": [
+        "Ritual, recitation analysis, and Upaniṣadic inquiry can coexist within one collection.",
+        "Every Āraṇyaka was composed by a single forest hermit.",
+        "A text stops being Vedic as soon as it discusses awareness."
+      ],
+      "correct": 0,
+      "explanation": "The actual organization is more informative than a story of ritual being abruptly replaced by philosophy."
+    },
+    "connections": [
+      {
+        "lessonId": "aitareya",
+        "why": "Read the embedded Upaniṣad with its larger textual home in mind."
+      },
+      {
+        "lessonId": "kaushitaki",
+        "why": "Compare another collection linking breath, ritual, and knowledge."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vedic Heritage — contents of Aitareya Āraṇyaka",
+        "url": "https://vedicheritage.gov.in/aranyakas/aitareyaranyaka/"
+      },
+      {
+        "label": "Vedic Heritage — Śāṅkhāyana Āraṇyaka",
+        "url": "https://vedicheritage.gov.in/hi/aranyakas/sankhyayana-aranyaka/"
+      }
+    ]
+  },
+  "vedangas-sutras": {
+    "opening": "How does a large oral corpus remain pronounceable, understandable, and usable over generations? It needs supporting disciplines. The six Vedāṅgas make that hidden infrastructure visible.",
+    "teaching": [
+      {
+        "title": "Six tools solve different problems",
+        "body": "Śikṣā concerns sound and pronunciation; chandas, meter; vyākaraṇa, grammar; nirukta, interpretation and etymological explanation; jyotiṣa, calendrical timing; and kalpa, ritual procedure. Remember their jobs before memorizing the names. Grammar and etymological interpretation are related, but one does not simply replace the other."
+      },
+      {
+        "title": "Compact rules assume instruction",
+        "body": "Sūtra writing compresses information into memorable statements. Such brevity is useful for trained readers but can be opaque to a beginner. Teachers, examples, and later commentary supply what is implicit. A literal word list is therefore a beginning, not a guarantee that you can apply a technical rule correctly."
+      },
+      {
+        "title": "Public rite and household life differ",
+        "body": "Within kalpa literature, śrauta texts concern larger Vedic rites, gṛhya texts household ceremonies, and dharma texts normative conduct. Śulba materials include altar geometry. These are working distinctions among connected disciplines, not separate modern university departments. Their rules reveal prescribed practices; actual participation must be studied with additional historical evidence."
+      }
+    ],
+    "example": {
+      "title": "Diagnose the missing tool",
+      "scenario": "Invented study-group example: a verse is copied accurately, but no one knows where to place its accent or how to count its meter. A member proposes a dictionary as the complete solution. What else does the group need?",
+      "explanation": "Pronunciation instruction and metrical analysis answer different questions from dictionary meaning. Later, grammar clarifies forms and ritual literature clarifies use. Recognizing the type of problem helps you choose the right source."
+    },
+    "visual": {
+      "title": "Support an oral text from four sides",
+      "nodes": [
+        {
+          "label": "Sound",
+          "detail": "Śikṣā + chandas: pronounce and scan."
+        },
+        {
+          "label": "Language",
+          "detail": "Vyākaraṇa + nirukta: analyze forms and interpretation."
+        },
+        {
+          "label": "Time",
+          "detail": "Jyotiṣa: situate ritual timing."
+        },
+        {
+          "label": "Procedure",
+          "detail": "Kalpa: organize prescribed actions."
+        }
+      ],
+      "caption": "Four grouped functions contain six Vedāṅgas; the grouping is a learning aid, not an ancient seven-part list."
+    },
+    "terms": [
+      {
+        "term": "Vedāṅga",
+        "meaning": "A 'limb of the Veda': one of six supporting disciplines."
+      },
+      {
+        "term": "Sūtra",
+        "meaning": "A compact rule or aphoristic statement that often presupposes explanation."
+      },
+      {
+        "term": "Gṛhya",
+        "meaning": "Connected with household rites, as distinct from larger śrauta ceremonies."
+      }
+    ],
+    "reflection": "Which supporting discipline would help you most now: pronunciation, meter, grammar, interpretation, timing, or procedure? Name a specific question it would answer.",
+    "quiz": {
+      "question": "You understand a mantra's individual words but cannot tell which household ceremony uses it. Which source type is most directly relevant?",
+      "choices": [
+        "A manual of poetic meter only.",
+        "A gṛhya text and its explanation of the ceremony.",
+        "An astronomical table alone."
+      ],
+      "correct": 1,
+      "explanation": "The problem concerns ritual placement, not just wording, meter, or date. Gṛhya literature supplies household procedural context."
+    },
+    "connections": [
+      {
+        "lessonId": "paninian-grammar",
+        "why": "Explore how the grammatical support discipline becomes a sophisticated rule system."
+      },
+      {
+        "lessonId": "dharmasutras",
+        "why": "Study the normative branch of sūtra literature and its school-specific arguments."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vedic Heritage — the six Vedāṅgas",
+        "url": "https://vedicheritage.gov.in/hi/vedangas/"
+      },
+      {
+        "label": "Vedic Heritage — kalpa subdivisions",
+        "url": "https://vedicheritage.gov.in/vedangas/kalpa/"
+      }
+    ]
+  },
+  "epic-texts": {
+    "opening": "When two books tell an epic scene differently, one need not be a careless mistake. First ask what kind of book each is: manuscript edition, critical reconstruction, retelling, translation, or performance script.",
+    "teaching": [
+      {
+        "title": "A critical edition answers a particular question",
+        "body": "Editors compare manuscript witnesses to reconstruct a text according to stated methods. BORI's Mahābhārata project produced a constituted text together with a critical apparatus recording variants. This is not a recovered autograph written by Vyāsa, nor a vote declaring every excluded passage culturally worthless. It is a research tool with a defined evidence base."
+      },
+      {
+        "title": "Narrators shape what you hear",
+        "body": "The Mahābhārata presents stories through nested acts of telling: a narrator reports another narrator addressing an earlier audience. Such frames invite questions about memory, authority, and why a story is retold now. Start an episode by identifying the current speaker and audience; a character's speech is not automatically the final voice of the epic."
+      },
+      {
+        "title": "Track a version before comparing it",
+        "body": "Record title, language, editor or translator, book, and passage reference. A modern prose summary may collapse dialogue or combine versions. A regional poem may deliberately recast the theology. A critical-edition reference and an older translation's section number may differ. Difference becomes useful evidence once you know which objects are being compared."
+      }
+    ],
+    "example": {
+      "title": "The disputed missing scene",
+      "scenario": "Invented reading-group case: a familiar television scene is absent from a critical-edition translation. One reader calls the show a fraud; another says the printed edition destroyed the real epic. What should the group do first?",
+      "explanation": "Identify the scene's sources and the edition's editorial scope. It may belong to a different recension or a later performance tradition. The first task is source comparison, not declaring a winner before knowing what each work claims to be."
+    },
+    "visual": {
+      "title": "Keep four textual objects distinct",
+      "nodes": [
+        {
+          "label": "Witness",
+          "detail": "A particular manuscript or transmitted version."
+        },
+        {
+          "label": "Critical edition",
+          "detail": "An editor's reconstruction with recorded evidence."
+        },
+        {
+          "label": "Translation",
+          "detail": "An interpretation in another language."
+        },
+        {
+          "label": "Retelling",
+          "detail": "A new work reshaping the story for an audience."
+        }
+      ],
+      "caption": "These objects interact; the map does not rank their spiritual or artistic worth."
+    },
+    "terms": [
+      {
+        "term": "Recension",
+        "meaning": "A distinguishable transmitted form or family of versions."
+      },
+      {
+        "term": "Critical apparatus",
+        "meaning": "An edition's record of manuscript evidence and alternative readings."
+      },
+      {
+        "term": "Frame narrative",
+        "meaning": "A story-setting that contains another act of storytelling."
+      }
+    ],
+    "reflection": "Write a source label for the epic version you know best. Which details are missing, and what could you compare once you find them?",
+    "quiz": {
+      "question": "What is the safest claim about a critical edition?",
+      "choices": [
+        "It reproduces the author's surviving autograph.",
+        "It proves later versions have no literary value.",
+        "It reconstructs a text by an explicit comparison of witnesses."
+      ],
+      "correct": 2,
+      "explanation": "A critical edition is powerful because its methods and evidence can be examined, not because it removes the history of other versions."
+    },
+    "connections": [
+      {
+        "lessonId": "many-ramayanas",
+        "why": "Apply these distinctions to deliberate changes in Rāma narratives."
+      },
+      {
+        "lessonId": "sutra-debate",
+        "why": "Root text and commentary also require careful separation in philosophical study."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "BORI — the Mahābhārata critical-edition project",
+        "url": "https://bori.ac.in/department/mahabharata/"
+      },
+      {
+        "label": "Electronic critical-edition text and editorial notes",
+        "url": "https://bombay.indology.info/mahabharata/welcome.html"
+      },
+      {
+        "label": "Harvard — Many Mahābhāratas",
+        "url": "https://mittalsouthasiainstitute.harvard.edu/2021/11/mahabharatas/"
+      }
+    ]
+  },
+  "ramayana-exile": {
+    "opening": "Rāma's exile is not simply a lesson in obeying parents. It is a scene in which royal promises, family relationships, and competing judgments about duty become painfully entangled.",
+    "teaching": [
+      {
+        "title": "One promise redistributes many lives",
+        "body": "Daśaratha's earlier boons to Kaikeyī become the basis for demands that Bharata receive the throne and Rāma enter exile. Rāma treats preserving his father's word as binding. Yet the consequences fall on other people too. Ask not only whether a promise should be kept, but who made it and who must bear its cost."
+      },
+      {
+        "title": "Sītā makes an argument",
+        "body": "In Ayodhyākāṇḍa 27, Sītā challenges Rāma's proposal that she stay behind. She insists that shared married life includes accompanying him, while he emphasizes the forest's dangers. Her speech is active reasoning, even though it employs the marital ideals of its setting. Calling her merely obedient misses the disagreement through which her choice is expressed."
+      },
+      {
+        "title": "Moral clarity can coexist with conflict",
+        "body": "Rāma, Lakṣmaṇa, Sītā, and the grieving royal family do not experience the decision in one way. The narrative gives obligations faces and consequences. A careful reader can respect a character's ideal, notice resistance to it, and ask whether a different decision would protect someone else. The exercise is ethical interpretation, not a requirement to copy ancient family hierarchy."
+      }
+    ],
+    "example": {
+      "title": "A promise made on someone else's behalf",
+      "scenario": "Invented modern analogy: a parent promises that the whole family will relocate for a relative's benefit, without consulting an adult child or spouse. Does 'promises must be kept' settle every question?",
+      "explanation": "It names one relevant obligation, but consent, responsibilities to dependents, and the distribution of harm remain. The analogy helps identify a conflict; it is not a claim that modern relocation is the same as royal exile."
+    },
+    "visual": {
+      "title": "The exile decision pulls in several directions",
+      "nodes": [
+        {
+          "label": "Rāma",
+          "detail": "Protect his father's word."
+        },
+        {
+          "label": "Sītā",
+          "detail": "Assert shared life and her choice to accompany him."
+        },
+        {
+          "label": "Lakṣmaṇa",
+          "detail": "Respond through loyalty and resistance to injustice."
+        },
+        {
+          "label": "Ayodhyā",
+          "detail": "Bear the political and emotional cost."
+        }
+      ],
+      "caption": "A map of claims and consequences, not a scoreboard of good and bad characters."
+    },
+    "terms": [
+      {
+        "term": "Dharma",
+        "meaning": "Obligation or right conduct here, made difficult by competing relationships."
+      },
+      {
+        "term": "Kāṇḍa",
+        "meaning": "A major book or division of the Rāmāyaṇa."
+      },
+      {
+        "term": "Exile",
+        "meaning": "Removal from the kingdom that becomes the setting for transformed relationships."
+      }
+    ],
+    "reflection": "Choose two people affected by the exile. State each person's strongest claim before deciding which claim you find more persuasive.",
+    "quiz": {
+      "question": "What is missed by describing Sītā's request to accompany Rāma as 'she simply had no opinion'?",
+      "choices": [
+        "The passage gives her a sustained argument against his proposal that she stay.",
+        "The passage says she was already ruling the kingdom independently.",
+        "The passage is a modern addition by the English translator."
+      ],
+      "correct": 0,
+      "explanation": "Her argument deserves attention on its own terms, including both its agency and its inherited marital assumptions."
+    },
+    "connections": [
+      {
+        "lessonId": "ramayana-war",
+        "why": "Return to the costs of royal duty when Sītā's public treatment becomes central."
+      },
+      {
+        "lessonId": "purusharthas",
+        "why": "Compare competing responsibilities with the wider debate about legitimate human goals."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vālmīki Rāmāyaṇa, Ayodhyā 27 — Sītā's argument",
+        "url": "https://sanskritdocuments.org/sites/valmikiramayan/ayodhya/sarga27/ayodhyaitrans27.htm"
+      },
+      {
+        "label": "Ayodhyā 26 — Rāma explains his decision",
+        "url": "https://sanskritdocuments.org/sites/valmikiramayan/ayodhya/sarga26/ayodhyaitrans26.htm"
+      },
+      {
+        "label": "UCLA MANAS — Rāmāyaṇa orientation",
+        "url": "https://southasia.ucla.edu/culture/literature/ramayana/"
+      }
+    ]
+  },
+  "ramayana-war": {
+    "opening": "A rescue and a military victory do not automatically restore trust or undo harm. The Rāmāyaṇa's treatment of Sītā asks us to look at what victory costs the person supposedly being rescued.",
+    "teaching": [
+      {
+        "title": "Read beyond the defeat of Rāvaṇa",
+        "body": "The Yuddhakāṇḍa does not end its ethical work when Rāvaṇa falls. Rāma publicly questions Sītā after her captivity, and the fire episode follows. In the linked chapter 118, Agni presents Sītā as blameless; Rāma explains his concern about public suspicion. Explanation within a narrative does not settle the reader's ethical judgment."
+      },
+      {
+        "title": "Ask whose testimony counts",
+        "body": "Sītā's knowledge of her own fidelity, Rāma's royal reputation, the assembly's judgment, and divine testimony do not hold equal power in the scene. Focus on this imbalance instead of turning the ordeal into a practical model. Captivity or victimization does not make a person responsible for an abductor's actions; no one should be subjected to such tests today."
+      },
+      {
+        "title": "Distinguish two endings",
+        "body": "The Uttarakāṇḍa adds a further cycle of public suspicion, Sītā's exile, and her final departure. Its relation to the epic's earlier composition is a textual-history question; many living traditions nevertheless treat it as authoritative. You can acknowledge that reception while asking why royal legitimacy is repeatedly secured at Sītā's expense."
+      }
+    ],
+    "example": {
+      "title": "An institution protects its image",
+      "scenario": "Invented contemporary analogy: an organization says it believes a harmed person but excludes them to avoid damaging publicity. Which question resembles the epic's unresolved tension?",
+      "explanation": "Ask why the burden of protecting institutional reputation falls on the person who suffered. The comparison highlights unequal authority, not an identity between modern institutions and ancient kingship. It also distinguishes an official justification from an ethically adequate response."
+    },
+    "visual": {
+      "title": "Four voices in a contested restoration",
+      "nodes": [
+        {
+          "label": "Sītā",
+          "detail": "Her own experience and claim to dignity."
+        },
+        {
+          "label": "Rāma",
+          "detail": "His stated concern for royal reputation."
+        },
+        {
+          "label": "Public judgment",
+          "detail": "Suspicion treated as politically consequential."
+        },
+        {
+          "label": "Agni",
+          "detail": "Divine testimony to her blamelessness in Yuddha 118."
+        }
+      ],
+      "caption": "Keep the voices separate before deciding what the scene means."
+    },
+    "terms": [
+      {
+        "term": "Yuddhakāṇḍa",
+        "meaning": "The Rāmāyaṇa's book of war."
+      },
+      {
+        "term": "Uttarakāṇḍa",
+        "meaning": "The later/final book in the received seven-book form."
+      },
+      {
+        "term": "Reception",
+        "meaning": "How communities interpret and give authority to a text over time."
+      }
+    ],
+    "reflection": "Does public reputation justify a decision simply because a ruler says it does? Explain using one distinction between a character's justification and your own judgment.",
+    "quiz": {
+      "question": "How should a learner treat Rāma's explanation about public suspicion in Yuddha 118?",
+      "choices": [
+        "As proof that the ordeal should be copied today.",
+        "As a character's stated rationale that remains open to ethical examination.",
+        "As evidence that Sītā admitted wrongdoing."
+      ],
+      "correct": 1,
+      "explanation": "Understanding the rationale is necessary for interpretation, but it does not require endorsing its unequal burden or harmful practice."
+    },
+    "connections": [
+      {
+        "lessonId": "ramayana-exile",
+        "why": "Compare the earlier negotiation of shared duty with the later pressure of kingship."
+      },
+      {
+        "lessonId": "dharmashastra",
+        "why": "Examine how normative ideals distribute authority and vulnerability by gender."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Vālmīki Rāmāyaṇa, Yuddha 118 — Agni's testimony and Rāma's rationale",
+        "url": "https://sanskritdocuments.org/sites/valmikiramayan/yuddha/sarga118/yuddhasans118.htm"
+      },
+      {
+        "label": "UCLA MANAS — textual form and contested Rāmāyaṇa episodes",
+        "url": "https://southasia.ucla.edu/culture/literature/ramayana/"
+      }
+    ]
+  },
+  "many-ramayanas": {
+    "opening": "A familiar plot can carry a new argument when its language, deity, hero, or audience changes. A retelling is often an interpretation made into another story, not merely a shorter copy.",
+    "teaching": [
+      {
+        "title": "Start by naming the work",
+        "body": "Vālmīki's Sanskrit Rāmāyaṇa, Kampaṉ's Tamil Irāmāvatāram, and Tulsīdās's Awadhi Rāmcaritmānas are distinct works. Their languages are not just interchangeable containers. Poetic conventions, devotional expectations, and the world imagined by their audiences shape what the story emphasizes. Identifying the work is more useful than asking for 'the Indian version.'"
+      },
+      {
+        "title": "Changing an action changes a value",
+        "body": "Jain Rāma narratives place familiar characters within a different account of exemplary lives, karma, and nonviolence. Buddhist tellings can situate Rāma in a bodhisattva's previous life. Compare how a telling allocates praise, blame, and spiritual achievement. Do not assume that a changed action is a copying error or that all Jain or Buddhist versions agree in detail."
+      },
+      {
+        "title": "Performance creates another reading",
+        "body": "Rāmlīlā traditions described by UNESCO draw especially on the Rāmcaritmānas and combine narration, dialogue, song, and audience participation. That relationship shows why watching a performance and reading Vālmīki answer different questions. A performance may make a minor scene emotionally central through repetition, music, costume, or where the audience stands."
+      }
+    ],
+    "example": {
+      "title": "Build a comparison that can teach",
+      "scenario": "Invented exercise: a group wants to compare two retellings but only lists which names are spelled differently. What three deeper observations would make the comparison useful?",
+      "explanation": "Track who performs the decisive action, what reason the narrator gives, and how the audience is invited to feel. These observations connect textual change with ethical or devotional meaning, while preserving the identity of each work."
+    },
+    "visual": {
+      "title": "One episode, four comparison questions",
+      "nodes": [
+        {
+          "label": "Action",
+          "detail": "Who does what?"
+        },
+        {
+          "label": "Motive",
+          "detail": "Why does this telling say they do it?"
+        },
+        {
+          "label": "Value",
+          "detail": "Which conduct is praised or questioned?"
+        },
+        {
+          "label": "Audience",
+          "detail": "What does the telling invite listeners to feel or practice?"
+        }
+      ],
+      "caption": "Use this grid across named works; it does not presume a single original scene behind every version."
+    },
+    "terms": [
+      {
+        "term": "Retelling",
+        "meaning": "A new narrative work that selects and reinterprets inherited material."
+      },
+      {
+        "term": "Rāmcaritmānas",
+        "meaning": "Tulsīdās's Awadhi devotional Rāma poem, central to many Rāmlīlā traditions."
+      },
+      {
+        "term": "Vernacular",
+        "meaning": "A locally or regionally used literary language; not an inferior form of literature."
+      }
+    ],
+    "reflection": "Pick one episode you know. What change to the speaker, action, or ending would alter its moral meaning most? Mark your proposed change as your own experiment.",
+    "quiz": {
+      "question": "A retelling transfers a decisive action to another character. What should comparison investigate first?",
+      "choices": [
+        "Whether every proper name has exactly the same spelling.",
+        "Whether the later language is less sophisticated.",
+        "How the transfer changes responsibility and the story's moral emphasis."
+      ],
+      "correct": 2,
+      "explanation": "Narrative choices carry interpretation. Textual difference becomes intelligible when connected to what the new work is doing."
+    },
+    "connections": [
+      {
+        "lessonId": "jain-narratives",
+        "why": "Study how Jain retellings redefine heroism through their own ethical cosmology."
+      },
+      {
+        "lessonId": "tamil-devotion-epic",
+        "why": "Examine Tamil epic reinvention as literary and religious creation."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "UCLA MANAS — Rāmāyaṇa and its cultural reach",
+        "url": "https://southasia.ucla.edu/culture/literature/ramayana/"
+      },
+      {
+        "label": "UNESCO — Rāmlīlā and the Rāmcaritmānas",
+        "url": "https://ich.unesco.org/en/RL/ramlila-the-traditional-performance-of-the-ramayana-00110"
+      },
+      {
+        "label": "JAINpedia — Jain Rāma narratives and their ethical purpose",
+        "url": "https://jainpedia.org/manuscript/paper-manuscript-cover/"
+      }
+    ]
+  },
+  "mahabharata-war": {
+    "opening": "The Mahābhārata makes a family struggle into a catastrophe that its heroes cannot simply celebrate. Follow how failures to answer injustice in the assembly become violence that spreads beyond its original targets.",
+    "teaching": [
+      {
+        "title": "The dice hall is a problem of authority",
+        "body": "After Yudhiṣṭhira loses himself and stakes Draupadī, she asks whether someone already dispossessed could stake her. The question challenges the transaction's legitimacy from inside the assembly's own assumptions. It also exposes a deeper wrong: powerful men are treating her as something transferable. Her reasoning should not be reduced to a pause before a miracle."
+      },
+      {
+        "title": "Knowing the rule is not enough",
+        "body": "Elders and participants offer different responses, hesitate, or exploit ambiguity. The scene reveals how an institution can possess learned authorities yet fail a vulnerable person. When reading, distinguish inability to resolve a technical dispute from unwillingness to oppose those with power. Both have consequences, but they are not the same moral failure."
+      },
+      {
+        "title": "War does not erase the original damage",
+        "body": "Exile, negotiation, vows, and battles connect private humiliation to a public disaster. The Strīparvan's grieving survivors prevent victory from becoming a simple proof of justice. A reader can recognize grievances against the Kauravas while still examining the means used to win and the lives destroyed. The epic's scope makes consequences part of ethical judgment."
+      }
+    ],
+    "example": {
+      "title": "A committee that knows every rule",
+      "scenario": "Invented modern analogy: a committee debates whether a complaint was filed correctly while the complainant is being publicly humiliated. What should a reader trained by the dice-hall scene notice?",
+      "explanation": "Procedural expertise does not excuse neglecting immediate harm. Ask who can speak, whose claim is heard, who benefits from delay, and who has the power to stop abuse. These questions supplement rather than abolish careful reasoning."
+    },
+    "visual": {
+      "title": "Trace how an unanswered wrong spreads",
+      "nodes": [
+        {
+          "label": "Dice hall",
+          "detail": "Legitimacy is challenged; protection fails."
+        },
+        {
+          "label": "Exile and negotiation",
+          "detail": "Grievance hardens into claims and vows."
+        },
+        {
+          "label": "Battle",
+          "detail": "Means of victory create further ethical costs."
+        },
+        {
+          "label": "Mourning",
+          "detail": "Survivors reveal losses a victory count conceals."
+        }
+      ],
+      "caption": "A simplified narrative sequence, not a claim that one cause explains the entire epic."
+    },
+    "terms": [
+      {
+        "term": "Sabhā",
+        "meaning": "Assembly or hall; the dice episode occurs in the Sabhāparvan."
+      },
+      {
+        "term": "Parvan",
+        "meaning": "A major division or book of the Mahābhārata."
+      },
+      {
+        "term": "Dharma's subtlety",
+        "meaning": "The difficulty of discerning right action in context, not permission to avoid accountability."
+      }
+    ],
+    "reflection": "In the dice hall, what would count as answering Draupadī rather than merely discussing her? Distinguish a legal claim from an immediate duty to prevent harm.",
+    "quiz": {
+      "question": "What makes Draupadī's question about Yudhiṣṭhira's prior loss important?",
+      "choices": [
+        "It challenges his authority to stake her and exposes the assembly's failure to protect her.",
+        "It accepts that the winner may decide every ethical question.",
+        "It proves that the later war had no consequences for anyone else."
+      ],
+      "correct": 0,
+      "explanation": "Her question is an act of reasoning under coercion. Its force includes both the dispute over authority and the broader injustice of treating her as property."
+    },
+    "connections": [
+      {
+        "lessonId": "mahabharata-aftermath",
+        "why": "See why mourning and responsibility continue after the military outcome."
+      },
+      {
+        "lessonId": "gita-afterlives",
+        "why": "Place Arjuna's dilemma inside the larger war narrative before isolating its teaching."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Mahābhārata, Sabhā section 66 — dice-hall debate (Ganguli)",
+        "url": "https://sacred-texts.com/hin/m02/m02066.htm"
+      },
+      {
+        "label": "BORI — editions and textual divisions",
+        "url": "https://bori.ac.in/department/mahabharata/"
+      }
+    ]
+  },
+  "mahabharata-aftermath": {
+    "opening": "What if winning makes you want to stop ruling? After the war, Yudhiṣṭhira's grief turns the Mahābhārata toward a difficult choice: withdraw from a damaged world or remain responsible for it.",
+    "teaching": [
+      {
+        "title": "Victory creates duties rather than closure",
+        "body": "Yudhiṣṭhira does not greet the kingdom as uncomplicated success. The deaths of relatives and teachers make possession of it morally painful. His wish to renounce is not mere laziness; it responds to guilt and the desire for liberation. Yet others depend on a functioning polity. This makes withdrawal itself an action with consequences."
+      },
+      {
+        "title": "Arguments are put into other stories",
+        "body": "In Śānti section 18 of Ganguli's translation, Arjuna retells a debate involving Janaka and his queen to challenge premature renunciation. The queen questions whether outward begging removes attachment or simply shifts dependence onto householders. Notice the method: one character recruits an older dialogue to persuade another. The embedded speech is an argument, not a neutral encyclopedia entry."
+      },
+      {
+        "title": "The didactic books preserve alternatives",
+        "body": "Śānti and Anuśāsana range across kingship, conduct, gifts, emergency ethics, and liberation; Mokṣadharma is a substantial part of this teaching world. Their positions are not reducible to one command to rule or one command to renounce. Track the question, speaker, and audience of each passage before comparing its proposed solution with another."
+      }
+    ],
+    "example": {
+      "title": "Leaving after a failure",
+      "scenario": "Invented modern analogy: a leader wants to resign after a harmful decision. Some colleagues see honest accountability; others fear abandonment of those needing repair. What question should come before praising or condemning resignation?",
+      "explanation": "Ask what restitution and continuing duties remain, who can meet them, and whether withdrawal changes attachment or only appearance. The analogy helps distinguish renunciation, evasion, and responsibility without claiming that the epic offers a universal resignation policy."
+    },
+    "visual": {
+      "title": "Three questions after the outcome",
+      "nodes": [
+        {
+          "label": "Grief",
+          "detail": "What harm remains even after victory?"
+        },
+        {
+          "label": "Responsibility",
+          "detail": "Who now depends on the survivor's actions?"
+        },
+        {
+          "label": "Liberation",
+          "detail": "Does withdrawal free attachment or merely change its form?"
+        }
+      ],
+      "caption": "Competing ethical concerns, not a formula that guarantees one answer."
+    },
+    "terms": [
+      {
+        "term": "Śāntiparvan",
+        "meaning": "The Book of Peace, containing extensive postwar instruction."
+      },
+      {
+        "term": "Rājadharma",
+        "meaning": "Duties and problems of kingship."
+      },
+      {
+        "term": "Mokṣadharma",
+        "meaning": "Teachings concerning liberation within the Śāntiparvan."
+      }
+    ],
+    "reflection": "Describe one difference between withdrawing from power and withdrawing from responsibility. Which detail would you need to judge a particular case?",
+    "quiz": {
+      "question": "Why should Janaka's queen's speech not be read as the entire epic's final ruling on renunciation?",
+      "choices": [
+        "Stories cannot contain philosophical arguments.",
+        "Arjuna deploys it within a specific debate, while other passages argue differently.",
+        "It discusses household life rather than kingship at all."
+      ],
+      "correct": 1,
+      "explanation": "Context identifies what the speech is trying to persuade its audience to do. Comparing it with other teachings is part of reading the didactic corpus."
+    },
+    "connections": [
+      {
+        "lessonId": "mahabharata-war",
+        "why": "Return to the harms that make postwar rule and renunciation difficult."
+      },
+      {
+        "lessonId": "isha",
+        "why": "Compare another text's tension between action, relinquishment, and freedom."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Mahābhārata, Śānti section 18 — Janaka and his queen (Ganguli)",
+        "url": "https://sacred-texts.com/hin/m12/m12a018.htm"
+      },
+      {
+        "label": "Mahābhārata, Mokṣadharma — virtue and renunciation (Ganguli)",
+        "url": "https://sacred-texts.com/hin/m12/m12b100.htm"
+      }
+    ]
+  },
+  "gita-afterlives": {
+    "opening": "Arjuna's problem is not ordinary procrastination: he is facing a war against relatives and teachers. The Gītā's advice about action must first be heard inside that morally disturbing situation.",
+    "teaching": [
+      {
+        "title": "Action without ownership of its fruits",
+        "body": "In 2.47 Kṛṣṇa places Arjuna's sphere of responsibility in action, not possession of its fruits, and explicitly warns against attachment to inaction. This is not a guarantee that sincere effort succeeds. Nor does it authorize careless action: later discussion distinguishes actions that disregard harm from disciplined action. Attend to your responsibilities without making the result a possession or your sole motive."
+      },
+      {
+        "title": "Several teachings work together",
+        "body": "The dialogue explores knowledge of self, disciplined action, contemplation, and devotion to Kṛṣṇa. Different chapters answer different questions, and later commentators organize their relationships differently. Reading only 2.47 as a productivity slogan removes both its larger account of liberation and the battlefield challenge that makes Arjuna ask for help."
+      },
+      {
+        "title": "Separate the dialogue from its afterlives",
+        "body": "Śaṅkara, Rāmānuja, and Madhva interpret the Gītā through distinct Vedāntic commitments. Modern readers such as Tilak and Gandhi also put it to different political and ethical uses. A good comparison specifies the interpreter and the passage: shared scripture does not imply identical theories of self, God, action, or nonviolence."
+      }
+    ],
+    "example": {
+      "title": "Detachment is not negligence",
+      "scenario": "Invented modern analogy: a volunteer says, 'Results are not mine, so I do not need to check whether my work helped anyone.' Another plans carefully, checks for harm, and learns from the outcome without claiming entitlement to praise. Which better illustrates non-attachment?",
+      "explanation": "The second preserves responsible action and responsiveness. The first confuses releasing possessiveness with abandoning care. This application is an illustration, not a translation of Arjuna's military duty into modern volunteering."
+    },
+    "visual": {
+      "title": "Hold three things apart",
+      "nodes": [
+        {
+          "label": "Responsible action",
+          "detail": "Choose and perform the work with care."
+        },
+        {
+          "label": "Outcome",
+          "detail": "Assess what happened; many conditions contribute."
+        },
+        {
+          "label": "Attachment",
+          "detail": "Notice the demand that success, reward, or praise must belong to me."
+        }
+      ],
+      "caption": "A learning distinction drawn from 2.47, not a complete summary of the Gītā."
+    },
+    "terms": [
+      {
+        "term": "Karman",
+        "meaning": "Action; in this passage, the work one is called to perform."
+      },
+      {
+        "term": "Phala",
+        "meaning": "Fruit or result, including the reward sought from action."
+      },
+      {
+        "term": "Saṅga",
+        "meaning": "Attachment or clinging; the verse also warns against it toward inaction."
+      }
+    ],
+    "reflection": "For one responsibility you have, separate a careful action, a hoped-for result, and an attachment to recognition. What would change if the third weakened but the first remained?",
+    "quiz": {
+      "question": "Which statement best fits 2.47's explicit warning against attachment to inaction?",
+      "choices": [
+        "Because outcomes are uncertain, avoid beginning any difficult work.",
+        "Only work that guarantees a reward is worth doing.",
+        "Non-attachment concerns how one acts; it is not a reason to stop acting."
+      ],
+      "correct": 2,
+      "explanation": "The final phrase blocks a passive misreading. Responsible effort and release of possessiveness must be considered together."
+    },
+    "connections": [
+      {
+        "lessonId": "mahabharata-war",
+        "why": "Restore the narrative and ethical stakes of Arjuna's dilemma."
+      },
+      {
+        "lessonId": "vedanta-schools",
+        "why": "Compare how distinct commentators organize the same scriptural dialogue."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Bhagavadgītā Sanskrit —2.47 and surrounding verses",
+        "url": "https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html"
+      },
+      {
+        "label": "IEP — Gītā teachings and interpretive history",
+        "url": "https://iep.utm.edu/bhagavad-gita/"
+      }
+    ],
+    "excerpt": {
+      "reference": "Bhagavadgītā 2.47",
+      "devanagari": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥",
+      "iast": "karmaṇy evādhikāras te mā phaleṣu kadācana |\nmā karmaphalahetur bhūr mā te saṅgo 'stv akarmaṇi ||",
+      "translation": "Your sphere of responsibility is in action alone, never in its fruits. Do not be motivated by the fruits of action; let there be no attachment in you to inaction.",
+      "note": "Original teaching translation. Adhikāra can mean authority, entitlement, or scope of responsibility; 'complete control' is not its literal meaning. Karmaphalahetu is interpreted differently by commentators. Here it is read as having action's fruits as one's motive. The rows undo sandhi, so karmaṇi + eva appears as karmaṇy eva in the verse; bhūḥ becomes bhūr, and saṅgaḥ + astu + akarmaṇi becomes saṅgo 'stv akarmaṇi.",
+      "sourceUrl": "https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html",
+      "words": [
+        {
+          "source": "कर्मणि",
+          "iast": "karmaṇi",
+          "meaning": "in action",
+          "grammar": "Locative singular of karman; final i becomes y before eva."
+        },
+        {
+          "source": "एव",
+          "iast": "eva",
+          "meaning": "alone; precisely",
+          "grammar": "Emphatic particle; joins with adhikāraḥ in sandhi."
+        },
+        {
+          "source": "अधिकारः",
+          "iast": "adhikāraḥ",
+          "meaning": "authority; entitlement; sphere of responsibility",
+          "grammar": "Nominative singular masculine; subject of an implied 'is'."
+        },
+        {
+          "source": "ते",
+          "iast": "te",
+          "meaning": "your; for you",
+          "grammar": "Short form of the second-person pronoun, genitive/dative singular."
+        },
+        {
+          "source": "मा",
+          "iast": "mā",
+          "meaning": "not; do not",
+          "grammar": "Prohibitive particle."
+        },
+        {
+          "source": "फलेषु",
+          "iast": "phaleṣu",
+          "meaning": "in the fruits or results",
+          "grammar": "Locative plural of phala."
+        },
+        {
+          "source": "कदाचन",
+          "iast": "kadācana",
+          "meaning": "ever; at any time",
+          "grammar": "Indeclinable; with mā, 'never'."
+        },
+        {
+          "source": "मा",
+          "iast": "mā",
+          "meaning": "do not",
+          "grammar": "Prohibitive particle governing bhūḥ."
+        },
+        {
+          "source": "कर्मफलहेतुः",
+          "iast": "karmaphalahetuḥ",
+          "meaning": "one whose motive is action's fruit",
+          "grammar": "Compound: karman (action) + phala (fruit) + hetu (cause/motive); nominative singular. Alternative commentarial construals exist."
+        },
+        {
+          "source": "भूः",
+          "iast": "bhūḥ",
+          "meaning": "become; be",
+          "grammar": "Second-person singular augmentless aorist of √bhū after mā; appears as bhūr before mā."
+        },
+        {
+          "source": "मा",
+          "iast": "mā",
+          "meaning": "let not",
+          "grammar": "Prohibitive particle governing astu."
+        },
+        {
+          "source": "ते",
+          "iast": "te",
+          "meaning": "your; in you",
+          "grammar": "Short second-person pronoun, genitive/dative singular."
+        },
+        {
+          "source": "सङ्गः",
+          "iast": "saṅgaḥ",
+          "meaning": "attachment",
+          "grammar": "Nominative singular masculine; subject of astu."
+        },
+        {
+          "source": "अस्तु",
+          "iast": "astu",
+          "meaning": "let there be",
+          "grammar": "Third-person singular imperative of √as, 'to be'."
+        },
+        {
+          "source": "अकर्मणि",
+          "iast": "akarmaṇi",
+          "meaning": "in inaction",
+          "grammar": "Locative singular of akarman: a- (non-) + karman (action)."
+        }
+      ]
+    }
+  },
+  "purana-genre": {
+    "opening": "A Purāṇa can move from creation to royal ancestors, from a divine story to a sacred place. Its unity often comes from the world it builds for its listeners, not from following one modern literary genre.",
+    "teaching": [
+      {
+        "title": "A memorable five-part map is only a start",
+        "body": "Traditional descriptions associate Purāṇas with creation, renewed creation, genealogies, Manus' periods, and dynastic accounts. These categories help orient a reader, but actual works also contain pilgrimage praise, vows, theology, festivals, and practical instruction. The familiar count of eighteen major Purāṇas does not mean eighteen equally sized, internally uniform books."
+      },
+      {
+        "title": "Questions connect different scales",
+        "body": "In the Viṣṇu Purāṇa, Maitreya's questions to Parāśara organize a work that links the universe, divine power, lineage, and human practice. A change from cosmology to a king's story need not be a digression. It may locate a particular life within the cosmic and moral order the text is constructing."
+      },
+      {
+        "title": "Follow the frame and the local claim",
+        "body": "The Mārkaṇḍeya Purāṇa embeds the Devī Māhātmya within a much larger narrative collection. That embedded section has also developed a distinct recitational life. A portion can therefore belong to one book and function as a work in its own right. When a passage praises a particular site or deity, ask what authority the praise gives that place or practice."
+      }
+    ],
+    "example": {
+      "title": "The apparently misplaced pilgrimage guide",
+      "scenario": "Invented reading exercise: a student says a sacred-place section must be irrelevant because the book began with creation. What relationship might connect the two?",
+      "explanation": "The text can connect local geography to cosmic history, making a visit or ritual meaningful within a larger sacred world. That interpretation must be tested in the passage; it is not evidence that every Purāṇa has the same structure."
+    },
+    "visual": {
+      "title": "Move between scales of a Purāṇic world",
+      "nodes": [
+        {
+          "label": "Cosmos",
+          "detail": "Creation, dissolution, and vast time periods."
+        },
+        {
+          "label": "Lineage",
+          "detail": "Deities, sages, Manus, and dynasties."
+        },
+        {
+          "label": "Place",
+          "detail": "A landscape given sacred significance."
+        },
+        {
+          "label": "Practice",
+          "detail": "A listener's worship, vow, or journey."
+        }
+      ],
+      "caption": "Interacting scales, not a required chapter order for all Purāṇas."
+    },
+    "terms": [
+      {
+        "term": "Purāṇa",
+        "meaning": "A genre associated with old narratives, cosmic histories, and many later textual developments."
+      },
+      {
+        "term": "Manvantara",
+        "meaning": "A cosmic period associated with a Manu."
+      },
+      {
+        "term": "Māhātmya",
+        "meaning": "A text or section proclaiming the greatness of a deity, place, or practice."
+      }
+    ],
+    "reflection": "Choose one Purāṇic story you know. Does it authorize a deity, a place, a practice, or several at once? State what textual evidence you would seek.",
+    "quiz": {
+      "question": "An embedded Purāṇic section circulates separately in worship. Which description is most accurate?",
+      "choices": [
+        "It can remain part of the larger Purāṇa while acquiring an independent ritual life.",
+        "Separate recitation proves it never belonged to a Purāṇa.",
+        "Its ritual use makes the larger collection irrelevant to interpretation."
+      ],
+      "correct": 0,
+      "explanation": "Textual placement and later use are distinct, compatible facts. Both help explain how a work functions."
+    },
+    "connections": [
+      {
+        "lessonId": "goddess-worlds",
+        "why": "Read the Devī Māhātmya as an embedded text with a powerful independent reception."
+      },
+      {
+        "lessonId": "text-performance",
+        "why": "Follow what changes when an excerpt becomes a performed or recited work."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Viṣṇu Purāṇa — contents of Wilson's translation",
+        "url": "https://sacred-texts.com/hin/vp/vp033.htm"
+      },
+      {
+        "label": "Mārkaṇḍeya Purāṇa — Pargiter's translation and contents",
+        "url": "https://www.wisdomlib.org/hinduism/book/the-markandeya-purana"
+      }
+    ]
+  },
+  "vaishnava-puranas": {
+    "opening": "How can the power that sustains the cosmos become someone a child trusts, a parent loves, or a devotee remembers? Vaiṣṇava narratives explore those relationships through stories rather than only abstract definitions.",
+    "teaching": [
+      {
+        "title": "Divine presence takes narrative form",
+        "body": "Viṣṇu's descents connect cosmic protection with particular dangers and relationships. Different texts arrange and explain these manifestations differently; a popular ten-avatāra poster is not a complete index to every source. Study what problem a particular manifestation addresses and what the story teaches its listeners to recognize."
+      },
+      {
+        "title": "Prahlāda challenges the limits of royal power",
+        "body": "In the Viṣṇu Purāṇa's Prahlāda cycle, a son remains devoted to Viṣṇu despite his father's hostility. The conflict is not only bravery under pressure: it sets royal coercion against a divine presence the ruler cannot monopolize. Prahlāda's recognition of Viṣṇu also shapes how he speaks about other beings and about enmity."
+      },
+      {
+        "title": "Cosmic power and intimacy are not opposites",
+        "body": "The Harivaṃśa and the Viṣṇu and Bhāgavata Purāṇas develop Kṛṣṇa narrative with different emphases and structures. In devotional reception, a deity may be approached through service, friendship, parental affection, or longing. Identify the relation a scene invites. Do not force every affectionate episode into an allegory that erases its distinctive characters and emotions."
+      }
+    ],
+    "example": {
+      "title": "Two readings of a child devotee",
+      "scenario": "Invented classroom comparison: one reader summarizes Prahlāda as 'children should always defy parents.' Another asks why this particular child's devotion exposes a particular ruler's claim to absolute power. Which is better grounded?",
+      "explanation": "The second preserves the narrative's actors, theology, and conflict. A story of principled resistance can provoke modern reflection without becoming an indiscriminate instruction about every family disagreement."
+    },
+    "visual": {
+      "title": "Read the relation inside a divine story",
+      "nodes": [
+        {
+          "label": "Threat",
+          "detail": "What disorder or coercion is being confronted?"
+        },
+        {
+          "label": "Divine manifestation",
+          "detail": "How is Viṣṇu or Kṛṣṇa present in this account?"
+        },
+        {
+          "label": "Devotee's relation",
+          "detail": "Trust, service, friendship, or affection?"
+        },
+        {
+          "label": "Changed vision",
+          "detail": "What does the listener learn to notice or value?"
+        }
+      ],
+      "caption": "Use this as a scene-reading guide, not a uniform sequence shared by every avatāra tale."
+    },
+    "terms": [
+      {
+        "term": "Avatāra",
+        "meaning": "A divine descent or manifestation, elaborated differently across texts."
+      },
+      {
+        "term": "Bhakti",
+        "meaning": "Devotional participation or attachment to the divine, expressed through several relations."
+      },
+      {
+        "term": "Prahlāda",
+        "meaning": "A devotee of Viṣṇu whose conflict with his father is narrated in several Purāṇic traditions."
+      }
+    ],
+    "reflection": "Which is most central to the Prahlāda scene you read: endurance, divine presence, resistance to coercion, or compassion? Support your choice with a detail.",
+    "quiz": {
+      "question": "Why should the popular ten-avatāra list not be used as the complete table of contents of every Vaiṣṇava text?",
+      "choices": [
+        "Because Vaiṣṇava texts contain no narratives of divine descent.",
+        "Because lists, plots, and theological emphases vary by work and reception.",
+        "Because any story outside the list must be a modern invention."
+      ],
+      "correct": 1,
+      "explanation": "A familiar summary is useful orientation, but the source text determines which manifestations and arguments are actually present."
+    },
+    "connections": [
+      {
+        "lessonId": "brahmanas-exegesis",
+        "why": "Compare earlier narrative settings with later accounts of divine manifestation."
+      },
+      {
+        "lessonId": "tamil-devotion",
+        "why": "See how Vaiṣṇava relations with the divine find distinct Tamil poetic voices."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Viṣṇu Purāṇa 1.17 — Prahlāda (Wilson translation)",
+        "url": "https://www.wisdomlib.org/hinduism/book/vishnu-purana-wilson/d/doc115953.html"
+      },
+      {
+        "label": "Viṣṇu Purāṇa 1.20 — conclusion of the Prahlāda cycle",
+        "url": "https://sacred-texts.com/hin/vp/vp055.htm"
+      },
+      {
+        "label": "OCHS — Bhāgavata Purāṇa research",
+        "url": "https://ochs.org.uk/bhagavata-purana-research-project/"
+      }
+    ]
+  },
+  "shaiva-worlds": {
+    "opening": "A story about Śiva can become a sculpted image, a temple location, and a subject of worship. To understand that world, connect the forms while keeping story, prescription, and actual practice distinct.",
+    "teaching": [
+      {
+        "title": "The limitless pillar makes a claim",
+        "body": "In the liṅgodbhava narrative, Brahmā and Viṣṇu contest supremacy and cannot discover the limits of a fiery manifestation of Śiva. The image turns a theological claim into a spatial problem: finite searching cannot exhaust the presence before them. Versions differ, including details of truth-telling and punishment, so name the source of any detail you repeat."
+      },
+      {
+        "title": "A Purāṇa is not an Āgama",
+        "body": "Śaiva Purāṇas combine narrative, praise, cosmology, sacred places, and other materials. Āgamic traditions also develop systematic ritual, initiation, temple, and theological instruction. Their boundaries and interactions are complex, but the two labels are not synonyms. One tells us neither exactly what every priest did nor what every worshipper believed."
+      },
+      {
+        "title": "Objects let us test a textual connection",
+        "body": "The Metropolitan Museum's liṅgodbhava sculpture shows a concrete artistic rendering of the pillar story. Its explanation notes the icon's placement behind a temple's sanctum in established practice. Comparing object, textual account, and ritual prescription is stronger than assuming that an image is a transparent illustration of one book. Workshops and local traditions make interpretive choices too."
+      }
+    ],
+    "example": {
+      "title": "Three labels for one temple image",
+      "scenario": "Invented museum exercise: an image label says 'This sculpture is the Śiva Purāṇa.' Rewrite the claim so a visitor understands the connection without confusing object and text.",
+      "explanation": "Say that the sculpture depicts a manifestation of Śiva narrated in Purāṇic and Āgamic traditions, and identify the particular image and relevant account. That wording leaves room for differences between versions, artistic design, and ritual setting."
+    },
+    "visual": {
+      "title": "One Śaiva world, distinct evidence",
+      "nodes": [
+        {
+          "label": "Narrative",
+          "detail": "A story articulates divine greatness."
+        },
+        {
+          "label": "Prescription",
+          "detail": "A ritual text describes forms and procedures."
+        },
+        {
+          "label": "Material image",
+          "detail": "A workshop creates a particular sculpture."
+        },
+        {
+          "label": "Lived practice",
+          "detail": "A community worships in a particular place and time."
+        }
+      ],
+      "caption": "Connections need evidence; none of these boxes automatically stands for all the others."
+    },
+    "terms": [
+      {
+        "term": "Liṅga",
+        "meaning": "A mark or sign; in Śaiva worship, a form associated with Śiva."
+      },
+      {
+        "term": "Liṅgodbhava",
+        "meaning": "Śiva's manifestation in the liṅga/pillar narrative and its iconographic representation."
+      },
+      {
+        "term": "Āgama",
+        "meaning": "A category of authoritative religious texts, here referring to distinct Śaiva ritual and theological traditions."
+      }
+    ],
+    "reflection": "For a religious image you have seen, separate what you observed, what a story says, and what someone explained about its ritual use.",
+    "quiz": {
+      "question": "A sculpture depicts the limitless pillar. What can its presence establish directly?",
+      "choices": [
+        "Exactly what every visitor believes about Śiva.",
+        "That all Śaiva Āgamas contain identical wording.",
+        "That this particular artwork represents the motif; wider textual and ritual claims need further evidence."
+      ],
+      "correct": 2,
+      "explanation": "Material evidence is specific and valuable. It becomes stronger, not weaker, when its limits are stated."
+    },
+    "connections": [
+      {
+        "lessonId": "architecture-workshops",
+        "why": "Study how textual forms are interpreted in actual material production."
+      },
+      {
+        "lessonId": "kena",
+        "why": "Compare another narrative in which gods discover the limits of their own power, without equating the two stories."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "The Met — Śiva revealed in the liṅga, object and narrative",
+        "url": "https://www.metmuseum.org/art/collection/search/38137"
+      },
+      {
+        "label": "Śiva Purāṇa — translated contents and textual basis",
+        "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english"
+      }
+    ]
+  },
+  "goddess-worlds": {
+    "opening": "The Devī Māhātmya starts with a surprisingly recognizable question: why do we remain attached to people or possessions that have harmed or abandoned us? Its answer develops through stories of the Goddess.",
+    "teaching": [
+      {
+        "title": "Begin with the king and the merchant",
+        "body": "Suratha has lost his kingdom; the merchant Samādhi has been rejected by his family. Both still worry about what they have lost. They ask the sage Medhas why understanding their situation does not free them from attachment. This framing question gives the subsequent divine battles a human context rather than presenting them as unrelated spectacle."
+      },
+      {
+        "title": "Power includes binding and release",
+        "body": "Medhas explains attachment through Mahāmāyā, the Goddess's power. The narrative presents her as sustaining the world, enabling delusion, and granting release, not merely assisting a more fundamental male deity. Her manifestations in the battles dramatize a theological claim about power's source. This is the text's account, not an experimentally established explanation of psychology."
+      },
+      {
+        "title": "One Goddess text is not all Goddess traditions",
+        "body": "The Devī Māhātmya forms an embedded section of the Mārkaṇḍeya Purāṇa and circulates independently in recitation. The Devī Bhāgavata is a different Purāṇa with its own theology and narrative architecture. Similar divine names do not make them one book. Nor does cosmic feminine supremacy automatically tell us women's social status in every community using these texts."
+      }
+    ],
+    "example": {
+      "title": "Knowing is not yet letting go",
+      "scenario": "Invented everyday analogy: a person knows that a lost position made them unhappy but compulsively checks what their replacement is doing. Which part of the frame story helps describe the difficulty?",
+      "explanation": "The gap between understanding a loss and remaining emotionally bound to it resembles Suratha's question. The analogy opens the text's problem; it does not prescribe a treatment or reduce the Goddess's theology to modern psychology."
+    },
+    "visual": {
+      "title": "Follow the frame question through the stories",
+      "nodes": [
+        {
+          "label": "Human puzzle",
+          "detail": "Why does attachment survive clear knowledge?"
+        },
+        {
+          "label": "Narrative teaching",
+          "detail": "The sage recounts the Goddess's cosmic power."
+        },
+        {
+          "label": "Devotional response",
+          "detail": "The listeners turn toward the power described."
+        },
+        {
+          "label": "Different aims",
+          "detail": "Worldly restoration and liberating knowledge need not be the same request."
+        }
+      ],
+      "caption": "A reading map of the Devī Māhātmya, not a map of every Goddess tradition."
+    },
+    "terms": [
+      {
+        "term": "Devī",
+        "meaning": "Goddess; here, the supreme power celebrated by this particular text."
+      },
+      {
+        "term": "Mahāmāyā",
+        "meaning": "Great māyā: the Goddess's power of world-making and delusion in the frame explanation."
+      },
+      {
+        "term": "Śākta",
+        "meaning": "Connected with traditions that center the Goddess or divine power; these traditions are diverse."
+      }
+    ],
+    "reflection": "Why is it useful that the divine battle stories are framed by two people's attachment? Explain what the frame changes about your reading.",
+    "quiz": {
+      "question": "What does the opening question of Suratha and Samādhi concern?",
+      "choices": [
+        "Why they remain attached to what they have lost despite understanding their circumstances.",
+        "Which king has the largest army in every cosmic age.",
+        "Whether all Goddess texts belong to the same Purāṇa."
+      ],
+      "correct": 0,
+      "explanation": "The personal puzzle supplies the entry into Medhas's account of divine power. Reading it first prevents the battles from becoming isolated episodes."
+    },
+    "connections": [
+      {
+        "lessonId": "purana-genre",
+        "why": "Use the embedded section to understand how a Purāṇa contains works with independent lives."
+      },
+      {
+        "lessonId": "rigveda-hymns",
+        "why": "Compare Vāc's first-person divine voice with this later narrative theology, preserving the historical difference."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Mārkaṇḍeya Purāṇa 81 — opening of the Devī Māhātmya (Pargiter)",
+        "url": "https://www.wisdomlib.org/hinduism/book/the-markandeya-purana/d/doc117155.html"
+      },
+      {
+        "label": "Mārkaṇḍeya Purāṇa — full translated contents",
+        "url": "https://www.wisdomlib.org/hinduism/book/the-markandeya-purana"
+      }
+    ]
+  },
+  "tamil-devotion": {
+    "opening": "A hymn can make a landscape sacred by naming its water, flowers, streets, and deity. Tamil devotional canons let us hear devotion in a particular language and place, not only as a universal feeling.",
+    "teaching": [
+      {
+        "title": "Two canons should remain distinct",
+        "body": "The Tēvāram gathers hymns to Śiva associated with Campantar, Appar, and Cuntarar and forms the beginning of the Tamil Śaiva Tirumuṟai. The Nālāyira Divya Prabandham is a Vaiṣṇava collection associated with the Āḻvārs, including Āṇṭāḷ. Shared use of Tamil does not erase different deities, communities, and histories of compilation."
+      },
+      {
+        "title": "A collection can be organized by sound or place",
+        "body": "The French Institute of Pondicherry's Digital Tēvāram lets readers approach hymns by musical mode or sacred site. That is an illuminating lesson in what a canon is: the same poems can form a singing repertoire and a devotional geography. The arrangement changes what relationships a learner notices without changing the poems into a new language."
+      },
+      {
+        "title": "Lyric voices are carefully made",
+        "body": "Devotional poetry can address a deity as beloved, parent, master, or intimate companion. Such voices are literary and theological choices; they are not automatically a diary entry reporting an author's life. In studying Āṇṭāḷ, for example, distinguish the speaking voice of a poem, traditional accounts of the poet, and later performance or commentary."
+      }
+    ],
+    "example": {
+      "title": "Choose an entrance to the same hymns",
+      "scenario": "Invented learning exercise: a singer wants to compare musical modes, while a traveler wants to understand hymns about one temple. Must one of them be using the Tēvāram incorrectly?",
+      "explanation": "No. Musical and geographical arrangements answer different legitimate questions. The source project demonstrates both. The key is to know which arrangement and hymn identifier you are using, then return to the text for interpretation."
+    },
+    "visual": {
+      "title": "A hymn belongs to several relationships",
+      "nodes": [
+        {
+          "label": "Poetic voice",
+          "detail": "Who addresses the deity, and in what relation?"
+        },
+        {
+          "label": "Language",
+          "detail": "Tamil imagery, sound, and literary form."
+        },
+        {
+          "label": "Place",
+          "detail": "A named site and its remembered landscape."
+        },
+        {
+          "label": "Repertoire",
+          "detail": "Musical and canonical arrangements for recitation."
+        }
+      ],
+      "caption": "Intersecting dimensions; Tamil devotion is not a translation-only branch of Sanskrit literature."
+    },
+    "terms": [
+      {
+        "term": "Tēvāram",
+        "meaning": "A foundational collection of Tamil Śaiva hymns."
+      },
+      {
+        "term": "Āḻvār",
+        "meaning": "A poet-saint associated with Tamil Vaiṣṇava devotional traditions."
+      },
+      {
+        "term": "Paṇ",
+        "meaning": "A musical mode used in the organization and performance of Tamil hymns."
+      }
+    ],
+    "reflection": "Would you first explore a hymn through its place, its voice, or its sound? Explain what your choice reveals and what it might leave out.",
+    "quiz": {
+      "question": "The same Tēvāram hymns are arranged by musical mode and by sacred site. What does this show?",
+      "choices": [
+        "Only the arrangement by place is an authentic text.",
+        "A canon can support multiple practices and relationships through different arrangements.",
+        "Tamil poems do not need interpretation once their sites are identified."
+      ],
+      "correct": 1,
+      "explanation": "Arrangement directs attention. Musical repertoire and sacred geography are complementary ways of encountering the same collection."
+    },
+    "connections": [
+      {
+        "lessonId": "samaveda-song",
+        "why": "Compare the importance of performed sound while respecting different languages and traditions."
+      },
+      {
+        "lessonId": "tamil-devotion-epic",
+        "why": "Follow how Tamil canons create new forms of literary and religious authority."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "IFP — Digital Tēvāram, canon and modes of access",
+        "url": "https://www.ifpindia.org/digitaldb/site/digital_tevaram/U_TEV/HOME.HTM"
+      },
+      {
+        "label": "IFP — arrangement by sacred site",
+        "url": "https://www.ifpindia.org/digitaldb/site/digital_tevaram/U_TEV/TMUR2ALF.HTM"
+      },
+      {
+        "label": "Harvard Pluralism Project — Āṇṭāḷ and her devotional reception",
+        "url": "https://pluralism.org/andal"
+      }
+    ]
+  },
+  "regional-bhakti": {
+    "opening": "'Bhakti' is a useful family resemblance, but it can hide differences. A song of longing for Kṛṣṇa, a challenge to religious status, and a saint's life do not do the same kind of work.",
+    "teaching": [
+      {
+        "title": "Compare a relation, not just a label",
+        "body": "Jayadeva's Kṛṣṇa poetry, verses attributed to Kabīr, Mīrābāī's devotional songs, and Tukārām's Marathi compositions reach the divine through distinct forms and vocabularies. Some evoke a personal beloved; others challenge reliance on external identity or ritual display. Begin with one poem's speaker, addressee, and image rather than assigning every poet one shared philosophy."
+      },
+      {
+        "title": "Poetry and a poet's life are different sources",
+        "body": "A hagiography tells an exemplary life, often to establish a community's ideals and authority. It can be deeply meaningful without being a contemporaneous biography. Similarly, a song bearing a poet's name may survive in differing oral and manuscript collections. Record the collection and performer before treating a circulating lyric as the author's secure original wording."
+      },
+      {
+        "title": "Translation can make a new public",
+        "body": "Tagore's 1915 Songs of Kabir is itself a major interpretive event. Its English devotional voice should not be mistaken for a transparent transcript of one early Hindi manuscript. Comparing a translation, a named vernacular collection, and a performance helps reveal how later readers create different Kabīrs. Diversity is not a defect to be solved by one universal slogan."
+      }
+    ],
+    "example": {
+      "title": "A poem on a poster",
+      "scenario": "Invented example: a social-media poster attributes an English sentence to Kabīr and claims that every bhakti poet rejected all temple worship. What would a careful learner do?",
+      "explanation": "First locate the sentence in a named edition or song tradition. Then examine the particular target of its criticism. Even a genuine poem's attack on one kind of empty practice cannot speak automatically for every devotional community."
+    },
+    "visual": {
+      "title": "Trace the poem that reaches you",
+      "nodes": [
+        {
+          "label": "Attributed poet",
+          "detail": "Whose name supplies authority?"
+        },
+        {
+          "label": "Collection",
+          "detail": "Where is this wording preserved?"
+        },
+        {
+          "label": "Translation or performance",
+          "detail": "Who has interpreted it for this audience?"
+        },
+        {
+          "label": "Present use",
+          "detail": "What claim is being made with it now?"
+        }
+      ],
+      "caption": "A source trail, not a guarantee that the earliest point can always be recovered."
+    },
+    "terms": [
+      {
+        "term": "Hagiography",
+        "meaning": "A life narrative presenting a religious figure as exemplary."
+      },
+      {
+        "term": "Attribution",
+        "meaning": "The assignment of a poem or saying to an author, which may require investigation."
+      },
+      {
+        "term": "Devotional public",
+        "meaning": "An audience or community formed partly through shared songs, practices, and interpretations."
+      }
+    ],
+    "reflection": "Find one devotional saying you have encountered. Can you identify a collection, translator, or performer? What should remain uncertain if you cannot?",
+    "quiz": {
+      "question": "Why should Tagore's English Songs of Kabir be identified by translator and date?",
+      "choices": [
+        "Because translated poetry cannot have literary value.",
+        "Because its publication date establishes when Kabīr lived.",
+        "Because its English form is a later interpretation, not an unmediated original."
+      ],
+      "correct": 2,
+      "explanation": "Naming the translation lets us appreciate its achievement while distinguishing it from earlier collections and later performances."
+    },
+    "connections": [
+      {
+        "lessonId": "northern-vernaculars",
+        "why": "Compare the distinct languages and audiences often grouped under northern bhakti."
+      },
+      {
+        "lessonId": "multilingual-crossings",
+        "why": "Explore literary exchange without assigning one language to one religion."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Songs of Kabir — Tagore's 1915 translation",
+        "url": "https://sacred-texts.com/hin/sok/index.htm"
+      },
+      {
+        "label": "University of Pennsylvania — bibliographic record for Songs of Kabir",
+        "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp29718"
+      },
+      {
+        "label": "Murty Classical Library — editions across literary languages",
+        "url": "https://www.murtylibrary.com/"
+      }
+    ]
+  },
+  "text-performance": {
+    "opening": "You may remember a story because you heard it sung, watched a procession, or saw a television scene. Performance is not just a delivery mechanism: it shapes what a text becomes for its audience.",
+    "teaching": [
+      {
+        "title": "The audience helps make the event",
+        "body": "UNESCO's account of Rāmlīlā describes linked scenes of narration, dialogue, and song, often based on the Rāmcaritmānas. Audience participation and the festival setting matter. A listener can know when to respond, move, or sing because the story belongs to a recurring social event, not only to a privately read page."
+      },
+      {
+        "title": "Different media make different emphases",
+        "body": "A manuscript page permits rereading; a live recitation unfolds in time; a film can use close-ups and editing; a pilgrimage joins narrative with bodily movement through places. These forms create different attention and memory. Ask what a medium can emphasize and what it tends to omit before assuming that a popular adaptation simply replaces the source."
+      },
+      {
+        "title": "Document change without declaring decline",
+        "body": "The Digital Tēvāram project connects written hymns, musical modes, audio, and maps. It offers another example of a text living through multiple practices. Recording and digitizing preserve some features while changing access and context. A historical account should name these choices rather than claiming that every change is corruption or that new technology preserves everything unchanged."
+      }
+    ],
+    "example": {
+      "title": "The scene everyone remembers",
+      "scenario": "Invented exercise: a two-minute screen scene becomes the most remembered part of a much longer story. A student assumes it must therefore be the longest section of the written source. How could the group investigate?",
+      "explanation": "Compare the source's length and placement with the adaptation's music, framing, repetition, and emotional emphasis. Popular memory can reveal the adaptation's creative power without accurately measuring the written text's proportions."
+    },
+    "visual": {
+      "title": "From source to remembered meaning",
+      "nodes": [
+        {
+          "label": "Selection",
+          "detail": "Which episode is chosen or shortened?"
+        },
+        {
+          "label": "Medium",
+          "detail": "Song, stage, image, screen, or digital reader?"
+        },
+        {
+          "label": "Participation",
+          "detail": "What does the audience do while encountering it?"
+        },
+        {
+          "label": "Memory",
+          "detail": "Which image, phrase, or feeling remains afterward?"
+        }
+      ],
+      "caption": "An analytical sequence for one performance; performances also feed back into later texts and interpretations."
+    },
+    "terms": [
+      {
+        "term": "Kathā",
+        "meaning": "Storytelling or a narrated religious discourse, varying by tradition and occasion."
+      },
+      {
+        "term": "Rāmlīlā",
+        "meaning": "Performed Rāma narrative, with distinct local traditions."
+      },
+      {
+        "term": "Reception history",
+        "meaning": "The study of how works are used, interpreted, and transformed by later audiences."
+      }
+    ],
+    "reflection": "Recall one scene you know mainly through performance. Which part of your interpretation comes from music, an actor, an image, or audience participation rather than the words alone?",
+    "quiz": {
+      "question": "A screen adaptation makes a brief episode central through music and repeated close-ups. What is the best conclusion?",
+      "choices": [
+        "The adaptation has made an interpretive choice that should be compared with the written source.",
+        "The written source must contain the same music and camera instructions.",
+        "Audience memory proves this was always the most important episode in every version."
+      ],
+      "correct": 0,
+      "explanation": "Performance directs attention through its own resources. Comparison explains that contribution without confusing it with the wording of a source."
+    },
+    "connections": [
+      {
+        "lessonId": "performance-rasa",
+        "why": "Study theories of how staged cues become an audience's aesthetic experience."
+      },
+      {
+        "lessonId": "epic-texts",
+        "why": "Return to the distinctions among witness, edition, translation, and retelling."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "UNESCO — Rāmlīlā as performed heritage",
+        "url": "https://ich.unesco.org/en/RL/ramlila-the-traditional-performance-of-the-ramayana-00110"
+      },
+      {
+        "label": "IFP — Digital Tēvāram's texts, recordings, and maps",
+        "url": "https://www.ifpindia.org/digitaldb/site/digital_tevaram/U_TEV/HOME.HTM"
+      }
+    ]
+  }
+}
