@@ -17,6 +17,7 @@ import {
 import type { CourseLesson, LessonDetail } from './courseData'
 import type { DepthEditionProgress } from './depthEditionTypes'
 import WordByWordStudy from './WordByWordStudy'
+import { firstUnreadKenaPassage, kenaOpeningLessons, kenaOpeningQuestions, markKenaPassageRead, nextKenaReviewTask } from './kenaLearning'
 import {
   getKenaPassagesForSection,
   getKenaSection,
@@ -55,8 +56,9 @@ function initialRoute(progress: DepthEditionProgress): { mode: KenaMode; passage
   return { mode: 'map', passageId: progress.lastId && validPassageIds.has(progress.lastId) ? progress.lastId : '1.1' }
 }
 
-function replaceKenaHash(segment?: string) {
-  window.history.replaceState(null, '', segment ? `#lesson/kena/${segment}` : '#lesson/kena')
+function pushKenaHash(segment?: string) {
+  const hash = segment ? `#lesson/kena/${segment}` : '#lesson/kena'
+  if (window.location.hash !== hash) window.history.pushState(window.history.state, '', hash)
 }
 
 function motionSafeBehavior(): ScrollBehavior {
@@ -65,6 +67,14 @@ function motionSafeBehavior(): ScrollBehavior {
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: motionSafeBehavior() })
+}
+
+function focusLearningSection(id: string) {
+  window.requestAnimationFrame(() => {
+    const element = document.getElementById(id)
+    element?.focus({ preventScroll: true })
+    element?.scrollIntoView({ behavior: motionSafeBehavior(), block: 'start' })
+  })
 }
 
 export default function KenaDepthLessonView({
@@ -100,7 +110,8 @@ export default function KenaDepthLessonView({
   const finalQuizCorrect = selectedQuiz === detail.quiz.correct
   const depthReady = readCount === kenaPassages.length && checkpointCorrectCount === kenaSections.length && finalQuizCorrect
   const editionCompleted = progress.completed === true
-  const studyMode: StudyMode = progress.studyMode === 'guided' || progress.studyMode === 'full' ? progress.studyMode : 'text'
+  const studyMode: StudyMode = progress.studyMode ?? 'full'
+  const openingLesson = kenaOpeningLessons[activePassage.id]
 
   useEffect(() => {
     if (mode !== 'reader') return
@@ -124,13 +135,13 @@ export default function KenaDepthLessonView({
 
   const showMap = () => {
     setMode('map')
-    replaceKenaHash()
+    pushKenaHash()
     scrollToTop()
   }
 
   const showReview = () => {
     setMode('review')
-    replaceKenaHash('review')
+    pushKenaHash('review')
     scrollToTop()
   }
 
@@ -138,7 +149,7 @@ export default function KenaDepthLessonView({
     if (!validPassageIds.has(id)) return
     setActivePassageId(id)
     setMode('reader')
-    replaceKenaHash(id)
+    pushKenaHash(id)
     onProgressChange({ ...nextProgress, lastId: id })
     scrollToTop()
   }
@@ -150,21 +161,26 @@ export default function KenaDepthLessonView({
   }
 
   const markReadAndContinue = () => {
-    const nextReadIds = readSet.has(activePassage.id) ? readIds : [...readIds, activePassage.id]
+    const nextProgress = markKenaPassageRead(progress, activePassage.id)
     if (nextPassage && !isLastInSection) {
-      const nextProgress = { ...progress, readIds: nextReadIds, lastId: nextPassage.id }
-      setActivePassageId(nextPassage.id)
-      replaceKenaHash(nextPassage.id)
-      onProgressChange(nextProgress)
-      scrollToTop()
+      openPassage(nextPassage.id, nextProgress)
       return
     }
-    onProgressChange({ ...progress, readIds: nextReadIds, lastId: activePassage.id })
+    onProgressChange(nextProgress)
     scrollToCheckpoint()
   }
 
   const scrollToCheckpoint = () => {
-    window.requestAnimationFrame(() => document.getElementById(`kena-checkpoint-${activeSection.id}`)?.scrollIntoView({ behavior: motionSafeBehavior(), block: 'start' }))
+    focusLearningSection(`kena-checkpoint-title-${activeSection.id}`)
+  }
+
+  const finishSection = () => {
+    const nextProgress = markKenaPassageRead(progress, activePassage.id)
+    if (nextPassage) openPassage(nextPassage.id, nextProgress)
+    else {
+      onProgressChange(nextProgress)
+      showReview()
+    }
   }
 
   const updateCheckpoint = (sectionId: number, answer: number) => {
@@ -185,10 +201,10 @@ export default function KenaDepthLessonView({
   }
 
   return (
-    <section className="lesson-player kena-player">
+    <section className="lesson-player kena-player kena-learning-player">
       <header className="lesson-player-header kena-player-header">
         <button className="back-button" onClick={onClose}><ArrowLeft size={17} /> Path</button>
-        <div><small>Sāmaveda · depth edition</small><strong>{lesson.title}</strong></div>
+        <div><small>Sāmaveda · Kena Upaniṣad</small><strong>{lesson.title}</strong></div>
         <span aria-live="polite">{editionCompleted ? <><CheckCircle2 size={15} /> Complete</> : `${readCount} / 35 read`}</span>
       </header>
 
@@ -201,7 +217,7 @@ export default function KenaDepthLessonView({
           return (
             <button key={section.id} className={isActive ? 'active' : ''} aria-label={`Section ${section.roman}: ${section.title}, ${sectionRead} of ${sectionTotal} read`} aria-current={isActive ? 'step' : undefined} onClick={() => openSection(section)}>
               <i>{sectionRead === sectionTotal ? <Check size={12} /> : section.roman}</i>
-              <span><b>{section.roman}</b><small>{sectionRead}/{sectionTotal}</small></span>
+              <span><b>{['The question', 'Knowing', 'The story', 'Practice'][section.id - 1]}</b><small>{sectionRead}/{sectionTotal}</small></span>
             </button>
           )
         })}
@@ -215,6 +231,7 @@ export default function KenaDepthLessonView({
           lastPassageId={progress.lastId}
           onOpenPassage={openPassage}
           onOpenSection={openSection}
+          onReview={showReview}
         />
       )}
 
@@ -234,40 +251,51 @@ export default function KenaDepthLessonView({
             </label>
           </div>
 
-          <div className="katha-study-mode" role="group" aria-label="Reading layer">
-            <span>Reading layer</span>
-            <div>{(['guided', 'text', 'full'] as StudyMode[]).map((item) => <button key={item} className={studyMode === item ? 'active' : ''} aria-label={item === 'guided' ? 'Guided: Sanskrit and course meaning' : item === 'text' ? 'IAST: add transliteration' : 'Word by word: add literal meanings, grammar, and sandhi'} aria-pressed={studyMode === item} onClick={() => updateStudyMode(item)}>{item === 'guided' ? 'Guided' : item === 'text' ? '+ IAST' : 'Word by word'}</button>)}</div>
-          </div>
-
           <div className="kena-reader-layout">
             <article className="kena-passage-card">
               <header>
-                <div><span>Kena {activePassage.id}</span><small>{activePassage.kind}</small></div>
+                <div><span>Kena {activePassage.id}</span><small>Section {activePassage.section} · passage {activePassage.number}</small></div>
                 {readSet.has(activePassage.id) && <span className="kena-read-badge"><Check size={13} /> Read</span>}
                 <h1 ref={readerHeadingRef} tabIndex={-1}>{activePassage.title}</h1>
+                {openingLesson && <p className="kena-opening-orientation">{openingLesson.orientation}</p>}
+                <nav className="kena-page-jumps" aria-label="Parts of this passage">
+                  <button onClick={() => focusLearningSection(`meaning-${activePassage.id}`)}>1. Understand</button>
+                  <button onClick={() => focusLearningSection(`devanagari-${activePassage.id}`)}>2. Read Sanskrit</button>
+                  <button onClick={() => { updateStudyMode('full'); focusLearningSection(`word-study-kena-${activePassage.id.replaceAll('.', '-')}`) }}>3. Learn the words</button>
+                </nav>
               </header>
 
+              <section className="kena-explanation" aria-labelledby={`meaning-${activePassage.id}`}>
+                <h2 className="kena-section-label" id={`meaning-${activePassage.id}`} tabIndex={-1}>The idea in plain English</h2>
+                <p className="kena-beginner-explanation">{activePassage.explanation}</p>
+                <div className="kena-plain-note"><Lightbulb size={18} aria-hidden="true" /><div><strong>English meaning · course rendering</strong><p>{activePassage.gloss}</p></div></div>
+              </section>
+
+              {activePassage.id === '1.1' && <KenaOpeningQuestions />}
+              <KenaDiagram passage={activePassage} />
+              {openingLesson && <KenaOpeningCheck key={activePassage.id} lesson={openingLesson} />}
+
+              <div className="katha-study-mode kena-study-mode" role="group" aria-label="Reading layer">
+                <span>Sanskrit reading aids</span>
+                <div>{(['guided', 'text', 'full'] as StudyMode[]).map((item) => <button key={item} className={studyMode === item ? 'active' : ''} aria-label={item === 'guided' ? 'Sanskrit script only, with English explanation' : item === 'text' ? 'Add Roman-script transliteration, called IAST' : 'Add word-by-word meanings and optional grammar notes'} aria-pressed={studyMode === item} onClick={() => updateStudyMode(item)}>{item === 'guided' ? 'Script' : item === 'text' ? '+ Roman script' : 'Word by word'}</button>)}</div>
+              </div>
+
               <section className="kena-text-layer devanagari-layer" aria-labelledby={`devanagari-${activePassage.id}`}>
-                <div><span>मूल</span><h2 id={`devanagari-${activePassage.id}`}>Sanskrit</h2></div>
+                <div><span>मूल</span><h2 id={`devanagari-${activePassage.id}`} tabIndex={-1}>Sanskrit</h2></div>
                 <p lang="sa-Deva">{activePassage.devanagari}</p>
               </section>
 
               {studyMode !== 'guided' && (
                 <section className="kena-text-layer iast-layer" aria-labelledby={`iast-${activePassage.id}`}>
-                  <div><span>IAST</span><h2 id={`iast-${activePassage.id}`}>Transliteration</h2></div>
+                  <div><span>IAST</span><h2 id={`iast-${activePassage.id}`}>In Roman letters</h2></div>
                   <p lang="sa-Latn">{activePassage.iast}</p>
                 </section>
               )}
 
-              {studyMode === 'full' && <WordByWordStudy passageId={`kena-${activePassage.id}`} words={activePassage.words} />}
-
-              <section className="kena-explanation" aria-labelledby={`meaning-${activePassage.id}`}>
-                <span className="kena-section-label">COURSE PARAPHRASE</span>
-                <p className="kena-gloss" id={`meaning-${activePassage.id}`}>{activePassage.gloss}</p>
-                <div className="kena-plain-note"><Lightbulb size={18} /><div><strong>What to notice</strong><p>{activePassage.explanation}</p></div></div>
-              </section>
-
-              <KenaDiagram passage={activePassage} />
+              {studyMode === 'full' && <>
+                {openingLesson && <aside className="kena-sanskrit-hint" aria-label="One Sanskrit pattern to learn"><span>One pattern to learn</span><h2>{openingLesson.grammar.title}</h2><p className="kena-sandhi-example">{openingLesson.grammar.forms}</p><p>{openingLesson.grammar.explanation}</p></aside>}
+                <WordByWordStudy key={activePassage.id} beginner passageId={`kena-${activePassage.id}`} words={activePassage.words} />
+              </>}
 
               <details className="kena-vocabulary">
                 <summary>Open the key words <span>{activePassage.terms.length} terms</span></summary>
@@ -283,15 +311,17 @@ export default function KenaDepthLessonView({
             </article>
 
             <aside className="kena-section-sidebar">
-              <span>SECTION {activeSection.roman}</span>
+              <span>Where you are</span>
               <h2>{activeSection.question}</h2>
               <p>{activeSection.summary}</p>
+              <button className="quiet-button" onClick={showMap}><Compass size={16} /> See how Kena fits together</button>
               <div className="kena-section-mini-progress">
                 <i><b style={{ width: `${(sectionPassages.filter((passage) => readSet.has(passage.id)).length / sectionPassages.length) * 100}%` }} /></i>
                 <span>{sectionPassages.filter((passage) => readSet.has(passage.id)).length} of {sectionPassages.length} read</span>
               </div>
               <small>Study note</small>
               <p>{activePassage.kind === 'mantra' ? 'Sections I–II are metrical teaching.' : 'Sections III–IV are prose. These units are passages, not ślokas.'}</p>
+              <p>Use “Mark read” when you finish a passage. Your progress is saved on this device. The passage menu lets you browse freely.</p>
               <div className="kena-reader-attribution">
                 <small>Text source & license</small>
                 <a href="https://sa.wikisource.org/wiki/केनोपनिषद्" target="_blank" rel="noreferrer">Sanskrit Wikisource <ExternalLink size={13} /></a>
@@ -308,19 +338,18 @@ export default function KenaDepthLessonView({
                   onSelect={(answer) => updateCheckpoint(activeSection.id, answer)}
                   locked={editionCompleted}
                 />
-              {nextPassage ? <button className="primary-button" onClick={() => openPassage(nextPassage.id)}>Begin Section {getKenaSection(nextPassage.section)?.roman} <ChevronRight size={17} /></button> : <button className="primary-button" onClick={showReview}>Open final review <ChevronRight size={17} /></button>}
+              <button className="primary-button" onClick={finishSection}>{readSet.has(activePassage.id) ? '' : `Mark ${activePassage.id} read & `}{nextPassage ? `begin Section ${getKenaSection(nextPassage.section)?.roman}` : 'open final review'} <ChevronRight size={17} /></button>
             </div>
           )}
 
+          <div className="kena-next-preview"><span>{isLastInSection ? 'Pause here' : 'Coming next'}</span><p>{isLastInSection ? 'Recall the section’s main idea, then try its checkpoint.' : `${nextPassage.id} · ${nextPassage.title}`}</p></div>
           <footer className="kena-reader-controls">
             <button onClick={() => previousPassage && openPassage(previousPassage.id)} disabled={!previousPassage}><ChevronLeft size={18} /><span>Previous</span></button>
+            <span className="kena-passage-position">{activeIndex + 1} / {kenaPassages.length}</span>
             <button className="kena-read-continue" onClick={markReadAndContinue}>
               {readSet.has(activePassage.id) ? <Check size={17} /> : <BookOpenText size={17} />}
-              <span>{isLastInSection ? (readSet.has(activePassage.id) ? 'Checkpoint' : 'Read & checkpoint') : (readSet.has(activePassage.id) ? 'Continue' : 'Read & continue')}</span>
+              <span>{isLastInSection ? (readSet.has(activePassage.id) ? 'Checkpoint' : 'Mark read & check') : (readSet.has(activePassage.id) ? 'Continue' : 'Mark read & continue')}</span><ChevronRight size={17} />
             </button>
-            {isLastInSection
-              ? <button onClick={scrollToCheckpoint}><span>Checkpoint</span><ChevronRight size={18} /></button>
-              : <button onClick={() => nextPassage && openPassage(nextPassage.id)} disabled={!nextPassage}><span>Next</span><ChevronRight size={18} /></button>}
           </footer>
         </div>
       )}
@@ -336,6 +365,7 @@ export default function KenaDepthLessonView({
           reflection={reflection}
           selectedQuiz={selectedQuiz}
           checkpointAnswers={progress.checkpointAnswers}
+          readIds={readIds}
           onCheckpointSelect={updateCheckpoint}
           onReflectionChange={onReflectionChange}
           onQuizSelect={onQuizSelect}
@@ -347,14 +377,19 @@ export default function KenaDepthLessonView({
   )
 }
 
-function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpenSection }: {
+function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpenSection, onReview }: {
   readSet: Set<string>
   progressPercent: number
   lastPassageId?: string
   onOpenPassage: (id: string) => void
   onOpenSection: (section: KenaSection) => void
+  onReview: () => void
 }) {
-  const resumeId = lastPassageId && validPassageIds.has(lastPassageId) ? lastPassageId : '1.1'
+  const unreadId = firstUnreadKenaPassage([...readSet])
+  const resumeId = lastPassageId && validPassageIds.has(lastPassageId) && !readSet.has(lastPassageId)
+    ? lastPassageId
+    : unreadId ?? '1.1'
+  const hasStarted = readSet.size > 0 || Boolean(lastPassageId && validPassageIds.has(lastPassageId))
 
   return (
     <div className="kena-map-page">
@@ -362,9 +397,9 @@ function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpe
         <div>
           <span className="kicker">KENA UPANIṢAD · COMPLETE READER</span>
           <h1>What makes knowing possible?</h1>
-          <p>Begin with the faculties. Pass through a paradox about knowledge. Then watch a blade of grass undo the gods’ certainty.</p>
+          <p>A student asks what lets us think, speak, breathe, see, and hear. A teacher replies; a story about the gods brings the question to life.</p>
           <div className="kena-map-actions">
-            <button className="primary-button" onClick={() => onOpenPassage(resumeId)}>{readSet.size ? `Resume at ${resumeId}` : 'Begin with 1.1'} <ChevronRight size={17} /></button>
+            <button className="primary-button" onClick={() => unreadId ? onOpenPassage(resumeId) : onReview()}>{!unreadId ? 'Continue to review' : hasStarted ? `Resume at ${resumeId}` : 'Begin with 1.1'} <ChevronRight size={17} /></button>
             <span>35 units · word-by-word Sanskrit · progress stays on this device</span>
           </div>
         </div>
@@ -374,11 +409,11 @@ function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpe
       </section>
 
       <section className="kena-idea-map" aria-labelledby="kena-idea-map-title">
-        <div className="kena-idea-intro"><span>THE CENTRAL MOVE</span><h2 id="kena-idea-map-title">Do not add a sixth object. Change the direction of the question.</h2></div>
-        <div className="kena-faculty-map" role="img" aria-label="Mind, speech, breath, sight, and hearing depend on an enabling ground that is not another object">
+        <div className="kena-idea-intro"><span>START WITH THE QUESTION</span><h2 id="kena-idea-map-title">You can hear a sound. What makes hearing possible?</h2></div>
+        <div className="kena-faculty-map" role="img" aria-label="Thinking, speaking, breathing, seeing, and hearing lead to the question: what enables these abilities?">
           <div className="kena-faculty-nodes"><span>mind</span><span>speech</span><span>breath</span><span>sight</span><span>hearing</span></div>
           <MoveRight size={24} aria-hidden="true" />
-          <div className="kena-ground-node"><small>NOT ANOTHER OBJECT</small><strong>the enabling ground</strong><span>“hearing of hearing”</span></div>
+          <div className="kena-ground-node"><small>KENA · BY WHOM OR WHAT?</small><strong>What enables these abilities?</strong><span>The opening asks. The teacher replies.</span></div>
         </div>
       </section>
 
@@ -419,13 +454,49 @@ function KenaMap({ readSet, progressPercent, lastPassageId, onOpenPassage, onOpe
   )
 }
 
+function KenaOpeningQuestions() {
+  const [selected, setSelected] = useState(0)
+  const question = kenaOpeningQuestions[selected]
+  return (
+    <section className="kena-opening-explorer" aria-labelledby="kena-opening-explorer-title">
+      <span>Explore the four questions</span>
+      <h2 id="kena-opening-explorer-title">Start with something you do every day.</h2>
+      <p>Choose an ability to see how the student asks about it. Sight and hearing share the fourth question.</p>
+      <div className="kena-question-options" role="group" aria-label="Choose a question from Kena 1.1">
+        {kenaOpeningQuestions.map((item, index) => <button key={item.label} aria-pressed={selected === index} aria-controls="kena-opening-example" onClick={() => setSelected(index)}>{item.label}</button>)}
+      </div>
+      <div id="kena-opening-example" aria-live="polite" aria-atomic="true">
+        <div className="kena-question-flow"><div><small>Familiar experience</small><p>{question.familiar}</p></div><MoveRight aria-hidden="true" /><div><small>The student’s question</small><p>{question.question}</p></div></div>
+        <p className="kena-example-source" lang="sa-Deva">{question.source}</p>
+        <p className="kena-example-iast" lang="sa-Latn">{question.iast}</p>
+        <p className="kena-example-word">{question.word}</p>
+      </div>
+      <p className="kena-model-note">The arrow follows a change in the question. This is a reading aid, not a diagram of how the brain works.</p>
+    </section>
+  )
+}
+
+function KenaOpeningCheck({ lesson }: { lesson: NonNullable<typeof kenaOpeningLessons[string]> }) {
+  const [answer, setAnswer] = useState<number>()
+  const correct = answer === lesson.check.correct
+  return (
+    <section className="kena-opening-check" aria-labelledby="kena-opening-check-title">
+      <span>A quick pause · optional practice</span>
+      <h2 id="kena-opening-check-title">{lesson.check.question}</h2>
+      <div className="quiz-choices">{lesson.check.choices.map((choice, index) => <button key={choice} aria-pressed={answer === index} className={answer === index ? `chosen ${correct ? 'correct' : ''}` : ''} onClick={() => setAnswer(index)}><i>{String.fromCharCode(65 + index)}</i><span>{choice}</span></button>)}</div>
+      {answer !== undefined && <p className={`quiz-feedback ${correct ? 'success' : 'try-again'}`} role="status">{lesson.check.feedback[answer]}</p>}
+      <details><summary>One idea to carry forward</summary><p>{lesson.takeaway}</p></details>
+    </section>
+  )
+}
+
 function KenaDiagram({ passage }: { passage: KenaPassage }) {
   if (passage.id === '1.2') {
     return (
       <figure className="kena-concept-figure faculty-figure">
-        <figcaption><span>VISUAL MODEL</span><strong>The phrase changes the level of inquiry.</strong></figcaption>
+        <figcaption><span>FOLLOW THE QUESTION</span><strong>From the sound to what enables hearing.</strong></figcaption>
         <div><span>heard sound</span><MoveRight size={18} /><span>hearing</span><MoveRight size={18} /><strong>“hearing of hearing”</strong></div>
-        <p>The final term is not a third sound or organ. It names what the whole act of hearing presupposes.</p>
+        <p>In this course’s reading, “hearing of hearing” points to what makes the act of hearing possible. The phrase is not describing a second sound.</p>
       </figure>
     )
   }
@@ -467,8 +538,8 @@ function CheckpointCard({ section, selected, onSelect, locked = false }: { secti
   const correct = selected === section.checkpoint.correct
   return (
     <section className="kena-checkpoint-card" id={`kena-checkpoint-${section.id}`} aria-labelledby={`kena-checkpoint-title-${section.id}`}>
-      <div><span>SECTION {section.roman} · CHECKPOINT</span><h2 id={`kena-checkpoint-title-${section.id}`}>{section.recap}</h2></div>
-      <p>{section.checkpoint.question}</p>
+      <div><span>SECTION {section.roman} · CHECKPOINT</span><h2 id={`kena-checkpoint-title-${section.id}`} tabIndex={-1}>{section.checkpoint.question}</h2></div>
+      <details className="kena-checkpoint-recap"><summary>Review the section’s main idea</summary><p>{section.recap}</p></details>
       <div className="quiz-choices">{section.checkpoint.choices.map((choice, index) => {
         const chosen = selected === index
         const showCorrect = selected !== undefined && index === section.checkpoint.correct
@@ -479,7 +550,7 @@ function CheckpointCard({ section, selected, onSelect, locked = false }: { secti
   )
 }
 
-function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, readCount, checkpointCorrectCount, reflection, selectedQuiz, checkpointAnswers, onCheckpointSelect, onReflectionChange, onQuizSelect, onComplete, onOpenPassage }: {
+function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, readCount, checkpointCorrectCount, reflection, selectedQuiz, checkpointAnswers, readIds, onCheckpointSelect, onReflectionChange, onQuizSelect, onComplete, onOpenPassage }: {
   detail: LessonDetail
   overviewCompleted: boolean
   editionCompleted: boolean
@@ -489,6 +560,7 @@ function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, r
   reflection: string
   selectedQuiz?: number
   checkpointAnswers: Record<string, number>
+  readIds: string[]
   onCheckpointSelect: (sectionId: number, answer: number) => void
   onReflectionChange: (value: string) => void
   onQuizSelect: (answer: number) => void
@@ -496,10 +568,16 @@ function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, r
   onOpenPassage: (id: string) => void
 }) {
   const finalQuizCorrect = selectedQuiz === detail.quiz.correct
+  const nextTask = nextKenaReviewTask({ readIds, checkpointAnswers }, finalQuizCorrect)
+  const goToNextTask = () => {
+    if (!nextTask) return
+    if (nextTask.kind === 'passage') onOpenPassage(nextTask.id)
+    else focusLearningSection(nextTask.kind === 'checkpoint' ? nextTask.id.replace('checkpoint-', 'checkpoint-title-') : nextTask.id)
+  }
   return (
     <div className="kena-review-page">
       <section className="kena-review-hero">
-        <div><span className="kicker">REVIEW · INTEGRATE · CONTINUE</span><h1>The question has changed you if you can carry it without closing it.</h1><p>Completion is not a claim to have “possessed” Brahman. It means you have encountered every unit, tested each major movement, and can state the teaching’s shape.</p></div>
+        <div><span className="kicker">REVIEW · CONNECT THE IDEAS</span><h1>Can you explain Kena in your own words?</h1><p>Recall the opening question, the teacher’s reply, the gods’ mistake, and the practices that close the text.</p>{nextTask && !editionCompleted && <button className="primary-button" onClick={goToNextTask}>{nextTask.label} <ChevronRight size={17} /></button>}</div>
         <div className="kena-completion-list" aria-label="Kena depth edition completion requirements">
           <div className={readCount === 35 ? 'done' : ''}>{readCount === 35 ? <CheckCircle2 /> : <BookOpenText />}<span><strong>{readCount} / 35</strong><small>passages read</small></span></div>
           <div className={checkpointCorrectCount === 4 ? 'done' : ''}>{checkpointCorrectCount === 4 ? <CheckCircle2 /> : <Compass />}<span><strong>{checkpointCorrectCount} / 4</strong><small>section checks</small></span></div>
@@ -526,7 +604,7 @@ function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, r
 
       <section className="kena-final-quiz" aria-labelledby="kena-final-quiz-title">
         <span>FINAL SYNTHESIS</span>
-        <h2 id="kena-final-quiz-title">{detail.quiz.question}</h2>
+        <h2 id="kena-final-quiz-title" tabIndex={-1}>{detail.quiz.question}</h2>
         <div className="quiz-choices">{detail.quiz.choices.map((choice, index) => {
           const chosen = selectedQuiz === index
           const showCorrect = selectedQuiz !== undefined && index === detail.quiz.correct
@@ -535,7 +613,7 @@ function KenaReview({ detail, overviewCompleted, editionCompleted, depthReady, r
         {selectedQuiz !== undefined && <div className={`quiz-feedback ${finalQuizCorrect ? 'success' : 'try-again'}`} role="status" aria-live="polite"><strong>{finalQuizCorrect ? 'You have the central movement.' : 'Return to the opening question.'}</strong><p>{detail.quiz.explanation}</p></div>}
         <div className="kena-complete-action">
           <button className="primary-button" disabled={!depthReady || editionCompleted} onClick={onComplete}>{editionCompleted ? 'Depth edition completed' : depthReady ? 'Complete the Kena edition' : 'Finish the three checks above'} <CheckCircle2 size={17} /></button>
-          {!depthReady && <button className="quiet-button" onClick={() => onOpenPassage('1.1')}>Return to the text</button>}
+          {nextTask && !editionCompleted && <button className="quiet-button" onClick={goToNextTask}>{nextTask.label}</button>}
         </div>
       </section>
 

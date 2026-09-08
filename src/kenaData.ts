@@ -113,7 +113,7 @@ export const kenaSections: KenaSection[] = [
 
 const kenaPassageBase: Omit<KenaPassage, 'words'>[] = [
   {
-    id: '1.1', section: 1, number: 1, kind: 'mantra', title: 'The question behind every faculty',
+    id: '1.1', section: 1, number: 1, kind: 'mantra', title: 'What lets us think, speak, and sense?',
     devanagari: `ॐ केनेषितं पतति प्रेषितं मनः
 केन प्राणः प्रथमः प्रैति युक्तः ।
 केनेषितां वाचमिमां वदन्ति
@@ -123,7 +123,7 @@ kena prāṇaḥ prathamaḥ praiti yuktaḥ |
 keneṣitāṃ vācam imāṃ vadanti
 cakṣuḥ śrotraṃ ka u devo yunakti || 1 ||`,
     gloss: 'Willed and directed by whom does the mind move? Joined by whom does the foremost breath proceed? Prompted by whom do people speak? Which god or deity yokes sight and hearing?',
-    explanation: 'The opening does not ask which visible organ performs each task. It asks what makes the organs, breath, speech, and mind capable of functioning at all. “By whom?” is therefore a question about dependence, not merely about a hidden agent.',
+    explanation: 'You hear sounds, see things, think thoughts, speak, and breathe. The student asks what enables these abilities to work at all. Start by noticing this shift: from what you hear or think to what makes hearing and thinking possible. The first verse opens the question; it does not yet give an answer.',
     terms: [
       { term: 'kena', meaning: 'by whom' }, { term: 'iṣita', meaning: 'willed or impelled' }, { term: 'preṣita', meaning: 'directed' },
       { term: 'prāṇa', meaning: 'vital breath' }, { term: 'deva', meaning: 'luminous power or deity' }, { term: 'yunakti', meaning: 'yokes or joins' },
@@ -140,7 +140,7 @@ vāco ha vācaṃ sa u prāṇasya prāṇaḥ |
 cakṣuṣaś cakṣur atimucya dhīrāḥ
 pretyāsmāl lokād amṛtā bhavanti || 2 ||`,
     gloss: 'It is the hearing behind hearing, the mind behind mind, speech behind speech, the life of life, and the sight behind sight. The discerning, having gone beyond or released these faculties, become deathless after departing from this world.',
-    explanation: 'The repeated construction shifts attention from a faculty to what lets that faculty disclose anything. Brahman is not a sixth sense added to the other five; it is named as their enabling depth.',
+    explanation: 'A sound is something you hear. Hearing is the ability through which you hear it. The teacher’s phrase “hearing of hearing” directs attention to what enables that ability. The course calls this Brahman: the ultimate reality named later in the text. This is an interpretation of the phrase, which literally repeats “hearing” with the relationship “of.”',
     terms: [
       { term: 'śrotrasya śrotram', meaning: 'hearing of hearing' }, { term: 'prāṇasya prāṇaḥ', meaning: 'life of life' },
       { term: 'atimucya', meaning: 'having released or gone beyond' }, { term: 'dhīra', meaning: 'discerning' }, { term: 'amṛta', meaning: 'deathless' },
@@ -153,7 +153,7 @@ pretyāsmāl lokād amṛtā bhavanti || 2 ||`,
     iast: `na tatra cakṣur gacchati na vāg gacchati no manaḥ |
 na vidmo na vijānīmo yathaitad anuśiṣyāt || 3 ||`,
     gloss: 'Sight does not reach there; speech does not reach there, nor does mind. We do not know, and cannot determine, how one might teach this.',
-    explanation: 'Ordinary teaching presents something that can be seen, described, or conceptualized. Here the teacher admits that the usual method breaks down because the subject is not one more object within those activities.',
+    explanation: 'A teacher can point to a tree, describe its leaves, and help you recognize it. Here, the teacher says that seeing, speaking, and thinking do not reach what is being taught in that ordinary way. The course reads this as a difficulty in describing what enables experience. The teacher acknowledges the difficulty and continues the inquiry.',
     terms: [
       { term: 'tatra', meaning: 'there' }, { term: 'vāk', meaning: 'speech' }, { term: 'vidmaḥ', meaning: 'we know' },
       { term: 'vijānīmaḥ', meaning: 'we discern distinctly' }, { term: 'anuśiṣyāt', meaning: 'one might instruct' },
@@ -166,7 +166,7 @@ na vidmo na vijānīmo yathaitad anuśiṣyāt || 3 ||`,
     iast: `anyad eva tad viditād atho aviditād adhi |
 iti śuśruma pūrveṣāṃ ye nas tad vyācacakṣire || 4 ||`,
     gloss: 'It is truly other than the known and beyond the unknown. So we have heard from earlier teachers who explained it to us.',
-    explanation: '“Unknown” usually means an object that could become known later. Brahman does not fit that waiting-room category. The teacher also places the claim within a transmitted conversation rather than presenting it as a private invention.',
+    explanation: 'Think of a place you know and a place you have never visited. Both could be objects of knowledge. The teacher says the subject here is other than the known and beyond the unknown. The course reads this as a challenge to treating Brahman as just another thing to discover. The teacher also credits earlier teachers for the teaching.',
     terms: [
       { term: 'anyat', meaning: 'other or different' }, { term: 'vidita', meaning: 'known' }, { term: 'avidita', meaning: 'unknown' },
       { term: 'adhi', meaning: 'above or beyond' }, { term: 'śuśruma', meaning: 'we have heard' }, { term: 'pūrveṣām', meaning: 'of predecessors' },
