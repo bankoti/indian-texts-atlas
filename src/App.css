@@ -478,6 +478,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .word-study-list p { min-width: 0; margin: 0; overflow-wrap: anywhere; white-space: normal; font-family: var(--serif); font-size: 15px; line-height: 1.38; }
 .word-study-list small { min-width: 0; overflow-wrap: anywhere; color: var(--muted); font-size: 11px; line-height: 1.45; }
 .word-study-key { margin-top: 15px; padding: 13px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; border-left: 3px solid var(--indigo); background: rgba(255,255,255,.27); }
+.word-study-key[hidden] { display: none; }
 .word-study-key strong { color: var(--indigo); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
 .word-study-key span { color: var(--muted); font-size: 11px; line-height: 1.5; }
 .word-study-key b { color: var(--ink); font-weight: 650; }
@@ -1181,4 +1182,134 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 @media (max-width: 430px) {
   .isha-player-header > div small { max-width: 180px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }
   .isha-study-mode > div { grid-template-columns: 1fr; }
+}
+
+/* Kena: a clear first reading, followed by a complete Sanskrit study. */
+.kena-learning-player .kena-reader { padding-top: 20px; }
+.kena-learning-player .kena-reader-tools { padding-bottom: 18px; }
+.kena-learning-player .kena-reader-layout { padding-top: 24px; grid-template-columns: minmax(0, 1fr) 230px; gap: 24px; }
+.kena-learning-player .kena-passage-card > header h1 { max-width: 650px; font-size: clamp(32px, 4.4vw, 46px); line-height: 1.12; }
+.kena-learning-player .kena-read-badge { position: static; margin-top: 12px; font-size: .75rem; }
+.kena-opening-orientation { margin: 16px 0 0; max-width: 65ch; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+.kena-page-jumps { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.kena-page-jumps button { min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font-size: .875rem; cursor: pointer; }
+.kena-page-jumps button:hover { border-color: var(--rose); background: var(--saffron-soft); }
+.kena-learning-player .kena-explanation { padding-block: 28px; }
+.kena-learning-player h2.kena-section-label { margin: 0; color: var(--rose); font-family: var(--sans); font-size: .875rem; letter-spacing: .035em; text-transform: none; }
+.kena-beginner-explanation { max-width: 65ch; margin: 12px 0 22px; font-family: var(--serif); font-size: 1.2rem; line-height: 1.7; }
+.kena-learning-player .kena-plain-note strong { font-size: .875rem; text-transform: none; letter-spacing: 0; }
+.kena-learning-player .kena-plain-note p { color: var(--ink); font-size: 1rem; line-height: 1.65; }
+.kena-learning-player .kena-text-layer { grid-template-columns: 1fr; gap: 12px; }
+.kena-learning-player .kena-text-layer > div { display: flex; align-items: center; gap: 10px; }
+.kena-learning-player .kena-text-layer p { overflow-wrap: anywhere; }
+.kena-learning-player .kena-text-layer h2 { font-size: 1rem; }
+.kena-learning-player .iast-layer p { color: var(--ink); font-size: 1.125rem; line-height: 1.8; }
+.kena-learning-player .kena-study-mode { margin: 0; padding: 18px 35px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; align-items: flex-start; flex-direction: column; gap: 9px; }
+.kena-learning-player .kena-study-mode > span { font-size: .875rem; text-transform: none; letter-spacing: 0; }
+.kena-learning-player .kena-study-mode > div { min-width: 0; display: flex; flex-wrap: wrap; width: 100%; }
+.kena-learning-player .kena-study-mode button { padding: 8px 12px; font-size: .875rem; }
+.kena-opening-explorer { padding: 28px 35px; border-bottom: 1px solid var(--line); background: var(--indigo-soft); }
+.kena-opening-explorer > span, .kena-sanskrit-hint > span, .kena-opening-check > span { color: var(--indigo); font-size: .875rem; font-weight: 650; }
+.kena-opening-explorer h2, .kena-sanskrit-hint h2, .kena-opening-check h2 { margin: 10px 0 12px; font-size: clamp(24px, 3vw, 30px); line-height: 1.25; }
+.kena-opening-explorer p, .kena-sanskrit-hint p, .kena-opening-check p { font-size: 1rem; line-height: 1.65; }
+.kena-question-options { margin: 20px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.kena-question-options button { min-width: 0; min-height: 46px; padding: 10px; border: 1px solid rgba(56,68,93,.3); border-radius: 8px; background: rgba(255,255,255,.4); color: var(--indigo); font-size: .875rem; cursor: pointer; }
+.kena-question-options button[aria-pressed='true'] { background: var(--indigo); border-color: var(--indigo); color: white; }
+.kena-question-flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px; }
+.kena-question-flow > div { min-width: 0; align-self: stretch; padding: 16px; border: 1px solid rgba(56,68,93,.2); border-radius: 10px; background: rgba(255,255,255,.4); }
+.kena-question-flow > div:last-child { border-top: 3px solid var(--indigo); }
+.kena-question-flow small { color: var(--indigo); font-size: .875rem; font-weight: 650; }
+.kena-question-flow p { margin: 8px 0 0; font-family: var(--serif); font-size: 1.125rem; }
+.kena-example-source { margin: 24px 0 6px; font-family: 'Noto Serif Devanagari', 'Kohinoor Devanagari', serif; font-size: 1.25rem !important; overflow-wrap: anywhere; }
+.kena-example-iast { margin: 0; font-family: var(--serif); font-style: italic; overflow-wrap: anywhere; }
+.kena-example-word { padding-top: 12px; border-top: 1px solid rgba(56,68,93,.2); }
+.kena-opening-explorer .kena-model-note { margin: 20px 0 0; font-size: .875rem; }
+.kena-sanskrit-hint { padding: 25px 35px; border-bottom: 1px solid var(--line); background: rgba(239,217,185,.38); }
+.kena-sanskrit-hint > span { color: var(--rose); }
+.kena-sandhi-example { padding: 13px 16px; border-left: 3px solid var(--saffron); background: rgba(255,255,255,.42); overflow-wrap: anywhere; }
+.kena-learning-player .word-study-header { grid-template-columns: 1fr; gap: 12px; }
+.kena-learning-player .word-study-header span { font-size: .75rem; letter-spacing: .035em; }
+.kena-learning-player .word-study-header h2 { font-size: 1.75rem; }
+.kena-learning-player .word-study-header p { color: var(--ink); font-size: 1rem; line-height: 1.6; }
+.word-study-grammar-toggle { min-height: 44px; margin-top: 18px; padding: 10px 14px; border: 1px solid var(--indigo); border-radius: 8px; background: transparent; color: var(--indigo); font-size: .875rem; cursor: pointer; }
+.word-study-grammar-toggle[aria-pressed='true'] { background: var(--indigo); color: white; }
+.kena-learning-player .word-study-columns { margin-top: 20px; font-size: .75rem; }
+.kena-learning-player .word-study-list p { font-size: 1rem; line-height: 1.5; }
+.kena-learning-player .word-study-list small { color: var(--ink); font-size: .875rem; line-height: 1.55; }
+.kena-learning-player .word-study-form > span:not(.sr-only) { font-size: 1rem; }
+.kena-learning-player .word-study-key strong { font-size: .875rem; }
+.kena-learning-player .word-study-key span { color: var(--ink); font-size: .875rem; line-height: 1.65; }
+.kena-learning-player .word-study-meanings .word-study-columns,
+.kena-learning-player .word-study-meanings .word-study-list li { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+.kena-opening-check { padding: 28px 35px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.24); }
+.kena-opening-check .quiz-choices button { font-size: 1rem; line-height: 1.5; }
+.kena-opening-check details, .kena-checkpoint-recap { margin: 16px 0; }
+.kena-opening-check summary, .kena-checkpoint-recap summary { min-height: 44px; padding-block: 12px; font-size: .875rem; cursor: pointer; }
+.kena-opening-check details p { margin-top: 0; }
+.kena-next-preview { margin: 0 30px 28px; padding: 20px 24px; border-left: 3px solid var(--saffron); background: var(--saffron-soft); }
+.kena-next-preview span { color: var(--rose); font-size: .875rem; font-weight: 650; }
+.kena-next-preview p { margin: 6px 0 0; font-family: var(--serif); font-size: 1.125rem; line-height: 1.5; }
+.kena-passage-position { color: var(--muted); font-size: .875rem; text-align: center; }
+.kena-learning-player .kena-reader-controls { gap: 12px; grid-template-columns: auto minmax(0, 1fr) auto; }
+.kena-learning-player .kena-reader-controls .kena-read-continue { justify-self: end; font-size: .875rem; }
+.kena-learning-player .kena-section-sidebar h2 { font-size: 1.5rem; line-height: 1.25; }
+.kena-learning-player .kena-section-sidebar p { font-size: 1rem; line-height: 1.6; }
+.kena-learning-player .kena-section-sidebar .quiet-button { min-height: 44px; display: inline-flex; gap: 8px; align-items: center; text-align: left; font-size: .875rem; line-height: 1.5; }
+.kena-learning-player .kena-section-sidebar .quiet-button svg { flex-shrink: 0; }
+.kena-learning-player .kena-reader-attribution a { min-height: 44px; font-size: .875rem; }
+.kena-learning-player .kena-section-mini-progress { grid-template-columns: 1fr; }
+.kena-learning-player .kena-section-mini-progress span { font-size: .875rem; text-transform: none; letter-spacing: 0; }
+.kena-learning-player .kena-rail button > span b { font-size: .875rem; }
+.kena-learning-player .kena-rail button > span small { font-size: .75rem; }
+.kena-learning-player .kena-concept-figure > p { color: var(--ink); font-size: 1rem; line-height: 1.6; }
+.kena-learning-player .kena-vocabulary summary, .kena-learning-player .kena-text-note summary { font-size: 1rem; }
+.kena-learning-player .kena-vocabulary summary > span { font-size: .75rem; }
+.kena-learning-player .kena-text-note p { color: var(--ink); }
+.kena-learning-player .quiz-feedback { color: var(--ink); }
+.kena-learning-player .kena-final-quiz > h2:focus,
+.kena-learning-player [tabindex='-1']:focus { outline: 3px solid var(--rose); outline-offset: 5px; }
+.kena-learning-player [tabindex='-1'] { scroll-margin-top: 22px; }
+
+@media (max-width: 1050px) {
+  .kena-learning-player .kena-reader-layout { grid-template-columns: 1fr; }
+  .kena-learning-player .kena-section-sidebar { position: static; }
+  .kena-learning-player .kena-rail button { gap: 5px; }
+}
+
+@media (max-width: 760px) {
+  .kena-learning-player .kena-reader-layout { padding: 18px 0; }
+  .kena-learning-player .kena-reader-tools { padding: 0 6px 16px; gap: 12px; }
+  .kena-learning-player .kena-reader-tools > div { display: none; }
+  .kena-learning-player .kena-reader-tools label > span { font-size: .875rem; text-transform: none; }
+  .kena-learning-player .kena-passage-card > header { padding: 24px 20px; }
+  .kena-learning-player .kena-rail button > i { display: none; }
+  .kena-learning-player .kena-rail button { padding-inline: 2px; }
+  .kena-learning-player .kena-rail button > span { text-align: center; font-size: .75rem; }
+  .kena-learning-player .kena-rail button > span b { display: block; font-size: .75rem; }
+  .kena-learning-player .kena-rail button > svg { display: none; }
+  .kena-page-jumps { gap: 4px; }
+  .kena-page-jumps button { flex: 1 1 100px; padding-inline: 6px; }
+  .kena-opening-explorer, .kena-sanskrit-hint, .kena-opening-check { padding: 25px 20px; }
+  .kena-learning-player .kena-study-mode { padding: 18px 20px; }
+  .kena-question-flow { grid-template-columns: 1fr; }
+  .kena-question-flow > svg { justify-self: center; transform: rotate(90deg); }
+  .kena-learning-player .word-study-meanings .word-study-list li { grid-template-columns: 1fr; }
+  .kena-learning-player .word-study-list p::before,
+  .kena-learning-player .word-study-list small::before { font-size: .75rem; }
+  .kena-next-preview { margin: 8px 0 24px; padding: 18px 20px; }
+  .kena-learning-player .kena-reader-controls { gap: 8px; padding-inline: max(12px, env(safe-area-inset-left)); }
+  .kena-learning-player .kena-reader-controls .kena-read-continue > span { position: static; width: auto; height: auto; margin: 0; clip-path: none; }
+  .kena-learning-player .kena-reader-controls .kena-read-continue { min-width: 0; max-width: 100%; padding: 8px 12px; border-radius: 12px; }
+  .kena-learning-player .kena-reader-controls .kena-read-continue > svg:first-child { display: none; }
+  .kena-learning-player .kena-reader-controls .kena-read-continue > span { min-width: 0; }
+  .kena-learning-player .kena-player-header > span { font-size: .75rem; }
+}
+
+@media (max-width: 430px) {
+  .kena-learning-player .kena-reader-controls { grid-template-columns: auto minmax(0, 1fr); }
+  .kena-learning-player .kena-passage-position { display: none; }
+  .kena-learning-player .kena-rail { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
+  .kena-learning-player .kena-rail button { min-height: 44px; }
+  .kena-learning-player .kena-rail button > span b { font-size: .875rem; }
+  .kena-learning-player .kena-rail button > span small { display: none; }
 }
