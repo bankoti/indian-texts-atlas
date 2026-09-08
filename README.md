@@ -25,13 +25,13 @@ The completed curriculum is a curated course of key teachings, not an exhaustive
 
 ## Learning and editorial approach
 
-Begin at `#lesson/course-0`. The path page shows a next unfinished lesson and the final review. A course is complete when all 75 lesson records (including all units/checkpoints in the three depth editions) and all seven final-review questions are complete. Reflections are private and optional; the review assesses textual understanding, not adherence to a religious belief.
+Begin at `#lesson/course-0`. The path page shows a next unfinished lesson and the final review. The curriculum is complete when every lesson is marked complete (including all reading units and correct checkpoint and final-check answers in the three depth editions) and every final-review question is answered correctly. For Course 0 and key-teaching lessons, answer the understanding check correctly, then select the completion button. Reflections are private and optional; the review assesses textual understanding, not adherence to a religious belief.
 
-Notes and progress remain in the browser on the current device; there is no account or automatic cross-device sync. Old notes, depth reading records, and historical completion records are preserved. Rewritten wider-course quizzes use a new assessment version, so their previous answers cannot falsely pass the new questions. A learner can retake a check without losing their reflection.
+Notes and progress remain in the browser on the current device; there is no account or automatic cross-device sync. If saving fails, a warning explains that progress remains available for the current visit but could not be saved for later. Old notes, depth reading records, and historical completion records are preserved. Rewritten wider-course quizzes use a new assessment version; retake these checks to restore their current completion status. A learner can retake a check without losing their reflection.
 
 The content separates original course explanations, labelled modern illustrations, paraphrased textual scenes, source quotations, and later interpretations. Sanskrit glosses are contextual learning aids, not a claim that each word always has one English equivalent. Non-Sanskrit traditions are not presented as Sanskrit texts. Historical medical and social prescriptions are studied critically, not offered as present-day advice.
 
-Content lives in `upanishadGuides.ts`, `vedicEpicGuides.json`, `philosophyGuides.json`, and `cultureGuides.json`. The older full-text editions and their locked textual/word-study audits remain unchanged.
+The key-teaching content lives in [upanishadGuides.ts](src/upanishadGuides.ts), [vedicEpicGuides.json](src/vedicEpicGuides.json), [philosophyGuides.json](src/philosophyGuides.json), and [cultureGuides.json](src/cultureGuides.json). The full-text editions retain their locked textual/word-study audits.
 
 ## Develop locally
 
@@ -46,7 +46,7 @@ npm run dev
 npm run verify
 ```
 
-Verification includes all 426 guided-step renderings, Sanskrit excerpt coverage, valid cross-course links, quiz distinctness, progress migration, full-edition completion, and final-review routing. It runs alongside the existing full-text curriculum audits and Kena regression tests. This is automated source/rendered-output verification, not browser screenshot testing or a substitute for specialist scholarly review.
+Verification includes every guided lesson's step renderings, Sanskrit excerpt coverage, valid cross-course links, quiz distinctness, progress migration, full-edition completion, and final-review routing; [the course-learning checks](scripts/test-course-learning.mjs) own the coverage assertions. It runs alongside the existing full-text curriculum audits and Kena regression tests. This is automated source/rendered-output verification, not browser screenshot testing or a substitute for specialist scholarly review.
 
 An optional live link audit is separate from CI because external sites may block automated requests:
 
