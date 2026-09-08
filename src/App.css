@@ -734,6 +734,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .step-rail { display: flex; overflow-x: auto; gap: 5px; scrollbar-width: none; }
   .step-rail::-webkit-scrollbar { display: none; }
   .step-rail button { min-width: max-content; padding: 0 5px; }
+  .lesson-player:not(.course-zero-player):not(.kena-player) > .lesson-player-header > span { font-size: .75rem; letter-spacing: .02em; white-space: nowrap; }
+  .step-rail:not(.course-zero-rail) > button { min-height: 44px; padding: 8px 10px; font-size: .875rem; letter-spacing: .02em; }
   .step-rail button::after { display: none; }
   .lesson-content { padding: 38px 0 22px; }
   .lesson-panel { min-height: 510px; grid-template-columns: 1fr; gap: 26px; }
