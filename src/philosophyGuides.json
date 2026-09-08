@@ -1,0 +1,1822 @@
+{
+  "sutra-debate": {
+    "opening": "Imagine entering a conversation after everyone has already agreed on its vocabulary. A sūtra can feel like that: a very short statement whose real question is hidden until a teacher or commentator explains the dispute. Begin by identifying the problem, not by memorizing a school's label.",
+    "teaching": [
+      {
+        "title": "A compact text needs a conversation",
+        "body": "A sūtra is an economical formulation, not necessarily a self-contained explanation. A bhāṣya expands it through definitions, examples, objections, and replies. Later commentators can disagree about what the compact wording commits its author to. Read a root sentence and its explanation as related voices, not as one author speaking continuously."
+      },
+      {
+        "title": "First ask: how would you know?",
+        "body": "Pramāṇa debates examine knowledge-producing sources such as perception, inference, and reliable testimony. Schools disagree about their number and scope. A claim about an unseen cause therefore raises two questions: is the reasoning good, and does this school accept that kind of evidence? Agreement about a conclusion is not yet agreement about its justification."
+      },
+      {
+        "title": "An opponent is part of the lesson",
+        "body": "The pūrvapakṣa presents a position to be answered; the siddhānta is the position the discussion establishes or defends. Before endorsing either, reconstruct its reason. The conventional six Veda-recognizing systems belong in this wider argument network with Buddhist, Jain, and materialist thinkers; āstika is not simply a synonym for belief in a creator."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: the empty classroom",
+      "scenario": "A friend says class is cancelled because the room is empty. You ask whether the timetable changed, whether they arrived early, and whether the teacher sent a message.",
+      "explanation": "The same observation admits several explanations. The exercise is not to deny observation but to distinguish what was seen from what was inferred. A good philosophical reply addresses the strongest available reason, not merely the conclusion it dislikes."
+    },
+    "visual": {
+      "title": "Four roles inside an argument",
+      "nodes": [
+        {
+          "label": "Question",
+          "detail": "What needs explaining?"
+        },
+        {
+          "label": "Proposal",
+          "detail": "What answer and evidence are offered?"
+        },
+        {
+          "label": "Objection",
+          "detail": "Where could that reasoning fail?"
+        },
+        {
+          "label": "Reply",
+          "detail": "What survives the challenge?"
+        }
+      ],
+      "caption": "A reading workflow that can repeat within one commentary; not a historical ladder between schools."
+    },
+    "terms": [
+      {
+        "term": "Pramāṇa",
+        "meaning": "A source or means that produces knowledge; its accepted forms vary by school."
+      },
+      {
+        "term": "Pūrvapakṣa",
+        "meaning": "The position presented for examination or objection, often an opponent's view."
+      },
+      {
+        "term": "Bhāṣya",
+        "meaning": "An explanatory commentary, whose interpretations must be distinguished from its base text."
+      }
+    ],
+    "reflection": "Choose one claim you currently believe. Separate the claim, its evidence, the best objection, and your reply. Which part is weakest?",
+    "quiz": {
+      "question": "A commentary states a view and then refutes it. What should you check before attributing that view to the commentator?",
+      "choices": [
+        "Whether the sentence is longer than the root sūtra.",
+        "Whether it is an opponent's position being staged for examination.",
+        "Whether its vocabulary occurs in another religion."
+      ],
+      "correct": 1,
+      "explanation": "Commentaries routinely present positions they reject. Identifying the speaker and argumentative role prevents reversing the author's conclusion."
+    },
+    "connections": [
+      {
+        "lessonId": "nyaya-vaisheshika",
+        "why": "Practice separating evidence from conclusion in a concrete theory of knowledge."
+      },
+      {
+        "lessonId": "buddhist-reason-compassion",
+        "why": "See Buddhist thinkers enter the same reasoning arena for distinct philosophical and ethical purposes."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Epistemology in classical Indian philosophy",
+        "url": "https://plato.stanford.edu/entries/epistemology-india/"
+      },
+      {
+        "label": "IEP: The systems and their disagreements",
+        "url": "https://iep.utm.edu/hindu-ph/"
+      }
+    ]
+  },
+  "nyaya-vaisheshika": {
+    "opening": "You see smoke beyond a wall and conclude that something is burning. You did not see the fire. Nyāya asks whether this step deserves trust. Vaiśeṣika asks a different, connected question: what kinds of things must exist for a changing world to make sense?",
+    "teaching": [
+      {
+        "title": "Knowledge is more than a lucky answer",
+        "body": "Nyāya recognizes perception, inference, comparison, and trustworthy testimony as four means of knowledge. A guess can happen to be true without becoming a well-grounded cognition. In the smoke example, the reason must actually occur in the case and be appropriately connected with fire; steam mistaken for smoke defeats the argument."
+      },
+      {
+        "title": "A thing is not the same as its properties",
+        "body": "Vaiśeṣika distinguishes substances, qualities, and motions, alongside categories such as universality, particularity, and inherence. A clay pot, its brown colour, and its movement across a table are not interchangeable descriptions. The categories help explain how properties belong to things and how several different objects can count as members of one kind."
+      },
+      {
+        "title": "Two traditions increasingly work together",
+        "body": "Early Nyāya and Vaiśeṣika are distinct textual projects; later authors combine and refine their resources. Navya-Nyāya develops an especially precise language for relations and cognition. Do not turn this precision into a claim that ancient atomism already possessed modern particle physics: its questions, evidence, and categories belong to its own philosophical setting."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: a red mug",
+      "scenario": "Describe a red mug being lifted. Now replace 'mug', 'redness', and 'lifting' with one another: 'redness holds tea' or 'lifting has a handle'.",
+      "explanation": "The odd results expose category differences. Then ask how you know the mug is hot: touch, a visible thermometer, or a reliable person's warning? The exercise joins the ontology question—what is being described—to the epistemology question—what warrants your description."
+    },
+    "visual": {
+      "title": "Two questions about one mug",
+      "nodes": [
+        {
+          "label": "Object",
+          "detail": "The mug as a substance."
+        },
+        {
+          "label": "Features",
+          "detail": "Its colour and movement are different categories."
+        },
+        {
+          "label": "Evidence",
+          "detail": "Perception or another justified source supports a claim."
+        }
+      ],
+      "caption": "Complementary questions, not three successive stages in the creation of a mug."
+    },
+    "terms": [
+      {
+        "term": "Anumāna",
+        "meaning": "Inference: knowledge reached through a reason or sign."
+      },
+      {
+        "term": "Dravya",
+        "meaning": "Substance, distinguished from qualities and actions in Vaiśeṣika."
+      },
+      {
+        "term": "Vyāpti",
+        "meaning": "The relevant invariable connection underlying an inference; not mere coincidental association."
+      }
+    ],
+    "reflection": "Write one inference you make daily. Identify its sign, conclusion, and a circumstance that would make the sign misleading.",
+    "quiz": {
+      "question": "You see a white plume and infer fire, but it is steam from an electric kettle. Where did the reasoning fail?",
+      "choices": [
+        "A supposed sign of fire was misidentified; the evidence did not establish the conclusion.",
+        "Every conclusion about something unseen is forbidden in Nyāya.",
+        "Perception cannot ever supply evidence for an inference."
+      ],
+      "correct": 0,
+      "explanation": "Nyāya accepts inference but tests its reasons. An apparent resemblance to smoke is not enough to establish a fire-producing connection in this case."
+    },
+    "connections": [
+      {
+        "lessonId": "materialists-skeptics",
+        "why": "Compare this defence of inference with challenges to claims that exceed observation."
+      },
+      {
+        "lessonId": "abhidharma",
+        "why": "Compare substance-and-quality categories with Buddhist analyses of changing experience."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Naturalism and Vaiśeṣika categories",
+        "url": "https://plato.stanford.edu/entries/naturalism-india/"
+      },
+      {
+        "label": "IEP: Nyāya's knowledge sources and arguments",
+        "url": "https://iep.utm.edu/nyaya/"
+      }
+    ]
+  },
+  "samkhya": {
+    "opening": "A thought changes; the awareness of that thought seems different from its content. Classical Sāṃkhya builds a whole explanation of experience around a distinction like this. Its claim is stronger than a useful attention exercise: consciousness and nature are fundamentally different kinds of reality.",
+    "teaching": [
+      {
+        "title": "Two kinds of reality, not mind versus body",
+        "body": "In Īśvarakṛṣṇa's Sāṃkhyakārikā, puruṣas are multiple conscious subjects, while prakṛti is the source of the changing experienced world. Crucially, intellect, ego-making, and mind belong to prakṛti too. The distinction is therefore not the familiar contrast between a material body and a thinking mind."
+      },
+      {
+        "title": "Nature includes the machinery of experience",
+        "body": "Prakṛti's three guṇas—sattva, rajas, and tamas—are interdependent constituents associated with illumination, activity, and resistance. The classical system describes twenty-five principles: puruṣa together with prakṛti and its developments. Read the inventory as an explanatory model, not a list of twenty-five modern anatomical structures."
+      },
+      {
+        "title": "The practical problem is mistaken identification",
+        "body": "Suffering persists when the conscious subject is confused with changing mental and bodily processes. Discriminative knowledge separates their roles. Liberation is not the production of a newly improved puruṣa; awareness is not itself undergoing nature's changes. The classical kārikā does not require a creator God to perform this explanatory work."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: watching irritation",
+      "scenario": "While waiting in a queue, notice the thought 'this is unbearable', the bodily tension, and the fact that both can be noticed. Then observe how they change when the queue moves.",
+      "explanation": "The illustration helps distinguish contents of experience from awareness of them. It does not prove Sāṃkhya's metaphysics or establish an eternal witness by introspection alone. The philosophical next question is why changing mental contents should require a distinct conscious principle."
+    },
+    "visual": {
+      "title": "Sāṃkhya's central distinction",
+      "nodes": [
+        {
+          "label": "Puruṣa",
+          "detail": "Conscious subject; the system posits many."
+        },
+        {
+          "label": "Prakṛti",
+          "detail": "Changing nature, including mental processes."
+        },
+        {
+          "label": "Discrimination",
+          "detail": "Understanding their difference addresses misidentification."
+        }
+      ],
+      "caption": "Two ontological categories and a liberating insight—not a sequence in which consciousness manufactures matter."
+    },
+    "terms": [
+      {
+        "term": "Puruṣa",
+        "meaning": "The conscious subject in classical Sāṃkhya; not the personality or ego."
+      },
+      {
+        "term": "Prakṛti",
+        "meaning": "Nature, the changing source of both mental and physical developments."
+      },
+      {
+        "term": "Guṇa",
+        "meaning": "One of the three constituents of nature; not a fixed personality type."
+      }
+    ],
+    "reflection": "Why would Sāṃkhya classify even a brilliant thought as something other than puruṣa? Explain without calling thought worthless.",
+    "quiz": {
+      "question": "Which item belongs to prakṛti in classical Sāṃkhya?",
+      "choices": [
+        "Only visible physical matter.",
+        "Puruṣa as the unchanging conscious subject.",
+        "The intellect that judges and makes decisions."
+      ],
+      "correct": 2,
+      "explanation": "Intellect is subtle but changing and belongs to nature. Sāṃkhya's fundamental boundary is consciousness versus nature, not simply body versus mind."
+    },
+    "connections": [
+      {
+        "lessonId": "classical-yoga",
+        "why": "Yoga adopts many of these distinctions while elaborating disciplined practice."
+      },
+      {
+        "lessonId": "katha",
+        "why": "Revisit the hierarchy of senses, mind, and intellect without assuming the earlier Upaniṣad already states the full classical system."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "IEP: Sāṃkhya and the Sāṃkhyakārikā",
+        "url": "https://iep.utm.edu/sankhya/"
+      },
+      {
+        "label": "IEP: Yoga's Sāṃkhya framework",
+        "url": "https://iep.utm.edu/yoga/"
+      }
+    ]
+  },
+  "classical-yoga": {
+    "opening": "Here yoga is not primarily a sequence of stretches. Patañjali's text asks why awareness becomes caught up in mental activity and what sustained training might change. Its opening definition is short enough to study in Sanskrit, but the surrounding path supplies its meaning.",
+    "teaching": [
+      {
+        "title": "Read the definition with its neighbours",
+        "body": "Yoga Sūtra 1.2 defines yoga in relation to the restraint or cessation of mental activities. The next sūtras contrast the seer's own condition with identification with those activities. Restraint therefore means more than temporarily feeling relaxed; the text places attention within a project of liberation."
+      },
+      {
+        "title": "Practice is supported by a way of living",
+        "body": "The eight-limbed scheme in 2.29 includes ethical restraints, observances, posture, breath regulation, withdrawal of the senses, concentration, meditation, and absorption. Ethical commitments are part of the architecture, not an optional preface to advanced techniques. Posture is one limb, so bodily flexibility cannot by itself measure the text's achievement."
+      },
+      {
+        "title": "Keep distinct Yoga traditions visible",
+        "body": "The Pātañjala work is transmitted with an explanatory bhāṣya and later commentaries. Its account of puruṣa and nature is close to Sāṃkhya, while Īśvara has a special role. Later Haṭha systems and modern global yoga have their own histories; shared terminology does not make their goals, techniques, or bodies of literature identical."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: one sentence, many distractions",
+      "scenario": "Try reading one sentence carefully. A notification, a remembered argument, and the urge to finish quickly pull attention away.",
+      "explanation": "This is a small illustration of changing mental activity, not a prescription for intensive meditation. It shows why the text studies attention and habit. Noticing a distraction need not become hostility toward yourself, and this course is not a substitute for qualified guidance in advanced breath or contemplative practices."
+    },
+    "visual": {
+      "title": "Three supports within the eight-limbed path",
+      "nodes": [
+        {
+          "label": "Conduct",
+          "detail": "Restraints and observances support non-harming, steadiness, and discipline."
+        },
+        {
+          "label": "Embodied attention",
+          "detail": "Posture, breath, and sensory withdrawal prepare attention."
+        },
+        {
+          "label": "Contemplation",
+          "detail": "Concentration, meditation, and absorption refine attention."
+        }
+      ],
+      "caption": "A teaching grouping of the eight limbs, not a claim that ethical discipline can be left behind."
+    },
+    "terms": [
+      {
+        "term": "Citta",
+        "meaning": "The mind or mental apparatus whose activities the text examines."
+      },
+      {
+        "term": "Vṛtti",
+        "meaning": "An activity or modification of that mental apparatus."
+      },
+      {
+        "term": "Nirodha",
+        "meaning": "Restraint or cessation; its full meaning depends on the surrounding account of practice."
+      }
+    ],
+    "reflection": "How would the meaning of this course change if success meant steadier attention and less harmful conduct, rather than mastering difficult postures?",
+    "quiz": {
+      "question": "Why is equating Patañjali's yoga with physical flexibility misleading?",
+      "choices": [
+        "The text prohibits every bodily practice.",
+        "Posture is one limb in an ethical and contemplative path toward liberation.",
+        "The text treats mental activity as irrelevant."
+      ],
+      "correct": 1,
+      "explanation": "Posture belongs to the system, but does not exhaust it. The opening definition and the eight limbs place it within a much broader discipline."
+    },
+    "connections": [
+      {
+        "lessonId": "samkhya",
+        "why": "Clarify why the changing mind and the conscious seer are distinguished."
+      },
+      {
+        "lessonId": "jain-ethics",
+        "why": "Compare nonviolence and other vows without treating different traditions as one system."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Yoga Sūtra 1.2: Sanskrit and historical commentary",
+        "url": "https://www.wisdomlib.org/hinduism/book/yoga-sutras-with-commentaries/d/doc1216601.html"
+      },
+      {
+        "label": "IEP: Patañjali's philosophical and practical system",
+        "url": "https://iep.utm.edu/yoga/"
+      }
+    ],
+    "excerpt": {
+      "reference": "Yoga Sūtra 1.2",
+      "devanagari": "योगश्चित्तवृत्तिनिरोधः ।",
+      "iast": "yogaś citta-vṛtti-nirodhaḥ.",
+      "translation": "Yoga is the restraint of the activities of the mind.",
+      "note": "Original course translation. This is an aphorism, not a metrical śloka. The study rows unpack a compound: citta-vṛtti-nirodhaḥ. Yogaḥ becomes yogaś before c by sandhi; the displayed continuous Sanskrit joins that sound to the following word.",
+      "sourceUrl": "https://www.wisdomlib.org/hinduism/book/yoga-sutras-with-commentaries/d/doc1216601.html",
+      "words": [
+        {
+          "source": "योगश् (योगः)",
+          "iast": "yogaś (yogaḥ)",
+          "meaning": "yoga",
+          "grammar": "Masculine nominative singular; final ḥ changes to ś before c in connected speech."
+        },
+        {
+          "source": "चित्त",
+          "iast": "citta",
+          "meaning": "mind; here, of the mind",
+          "grammar": "First compound member, in stem form; the English relationship is supplied by compound analysis."
+        },
+        {
+          "source": "वृत्ति",
+          "iast": "vṛtti",
+          "meaning": "activity or modification; here, activities",
+          "grammar": "Middle compound member, in stem form; the compound does not explicitly mark a separate plural ending here."
+        },
+        {
+          "source": "निरोधः",
+          "iast": "nirodhaḥ",
+          "meaning": "restraint or cessation",
+          "grammar": "Final compound member, masculine nominative singular; the compound functions as the predicate with 'is' understood."
+        }
+      ]
+    }
+  },
+  "mimamsa": {
+    "opening": "You can look at a fire and learn that it is hot. Can looking at it tell you which ritual you ought to perform? Pūrva Mīmāṃsā begins from a gap between knowing how things are and knowing a Vedic obligation. Its response makes interpretation of language a serious philosophical discipline.",
+    "teaching": [
+      {
+        "title": "A command does different work from a description",
+        "body": "Mīmāṃsā Sūtra 1.1.2 ties dharma to Vedic injunction. For this tradition, perception does not independently reveal the ritual duty an injunction teaches. A description of a sacrifice, a praise passage, and a command to perform it therefore require different interpretive treatment. Their wording cannot simply be flattened into inspirational advice."
+      },
+      {
+        "title": "Meaning depends on sentences and contexts",
+        "body": "Mīmāṃsā develops tools for deciding how words, sentences, and sections fit together, including which instructions are principal and which are subordinate. Kumārila and Prabhākara lead distinct debates about knowledge, language, and action. They share a field of problems without giving identical accounts of how a sentence becomes meaningful."
+      },
+      {
+        "title": "An unseen result requires an account",
+        "body": "A sacrifice occurs now, while a promised result may be remote. The tradition develops explanations of this connection, often discussed through apūrva, the efficacy or factor produced by action. Its defence of an authorless Veda is not simply an appeal to a divine author. The philosophical task is to understand that justification before deciding whether it persuades you."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: a workshop instruction sheet",
+      "scenario": "An instruction says 'Wear eye protection before cutting.' Another sentence praises careful workmanship. A third explains what a saw looks like.",
+      "explanation": "These sentences do different jobs: prescribe an action, commend a practice, and describe an object. This limited analogy helps you notice sentence function. A modern safety sheet is not an authorless Veda, and following it cannot establish Mīmāṃsā's claim about ritual duty or unseen results."
+    },
+    "visual": {
+      "title": "Three jobs a passage can do",
+      "nodes": [
+        {
+          "label": "Injunction",
+          "detail": "What action is being required?"
+        },
+        {
+          "label": "Explanation or praise",
+          "detail": "How does surrounding language support the instruction?"
+        },
+        {
+          "label": "Interpretive context",
+          "detail": "Which larger rite or sentence fixes its role?"
+        }
+      ],
+      "caption": "Related interpretive functions, not a chronology of textual development."
+    },
+    "terms": [
+      {
+        "term": "Vidhi",
+        "meaning": "An injunction: wording that directs an action."
+      },
+      {
+        "term": "Apūrva",
+        "meaning": "A debated unseen efficacy connecting ritual action with its result."
+      },
+      {
+        "term": "Apauruṣeya",
+        "meaning": "Not authored by a person; a claim made about Vedic authority in Mīmāṃsā."
+      }
+    ],
+    "reflection": "Find a passage that tells you what is the case and another that tells you what to do. What extra justification turns a description into an obligation?",
+    "quiz": {
+      "question": "Which question is most characteristically Mīmāṃsā in this lesson?",
+      "choices": [
+        "How should a Vedic sentence establish and specify an obligation not disclosed by perception?",
+        "Which posture produces the greatest physical flexibility?",
+        "Which manuscript illustration best depicts a deity?"
+      ],
+      "correct": 0,
+      "explanation": "The interpretive issue concerns Vedic injunction, sentence meaning, and the knowledge of duty. Mīmāṃsā's larger philosophy develops around these problems."
+    },
+    "connections": [
+      {
+        "lessonId": "yajurveda-ritual",
+        "why": "See the formula-and-action world that makes ritual interpretation necessary."
+      },
+      {
+        "lessonId": "paninian-grammar",
+        "why": "Distinguish grammatical analysis of forms from philosophical analysis of what sentences teach."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Language, testimony, and Mīmāṃsā",
+        "url": "https://plato.stanford.edu/entries/language-india/"
+      },
+      {
+        "label": "IEP: Pūrva Mīmāṃsā in the philosophical schools",
+        "url": "https://iep.utm.edu/hindu-ph/"
+      }
+    ]
+  },
+  "vedanta-schools": {
+    "opening": "After reading an Upaniṣad, you may feel that its meaning is obvious. Put three commentaries beside it and that certainty becomes a question. Vedānta schools share major source texts while disagreeing about the self, Brahman, the world, and the meaning of liberation.",
+    "teaching": [
+      {
+        "title": "Shared sources do not dictate one system",
+        "body": "Upaniṣads, Bhagavad Gītā, and Brahmasūtra form a major threefold textual basis for Vedānta. The compact Brahmasūtra organizes interpretive problems; commentators supply sustained arguments. A later school's coherent system is an achievement of interpretation, not a neutral replacement for the diversity of the Upaniṣads themselves."
+      },
+      {
+        "title": "Compare the relationship, not just the labels",
+        "body": "Śaṅkara's Advaita defends the ultimate nonduality of self and Brahman while accounting for ordinary experience. Rāmānuja's Viśiṣṭādvaita treats conscious selves and the non-conscious world as real, dependent aspects of Brahman's unity. Madhva's Dvaita maintains real distinctions, including that between God and individual selves. These are different accounts of dependence, identity, and reality—not three levels of intelligence."
+      },
+      {
+        "title": "Interpretation changes the goal of learning",
+        "body": "Ask what liberation consists in, what ignorance means, and how knowledge, devotion, and action contribute to the path. A useful comparison preserves each school's reasons and internal vocabulary. Do not score the schools by which sounds most like modern science, and do not infer that all devotional communities adopt the same philosophical theory."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: three readings in a seminar",
+      "scenario": "A class reads a passage connecting the self with ultimate reality. One reader emphasizes identity, another dependence within unity, and another lasting distinction.",
+      "explanation": "Do not decide by counting how often each uses the word 'one'. Ask each reader to explain how their interpretation handles passages emphasizing difference as well as unity. This models a commentarial problem without pretending that a short classroom summary reproduces each historical argument."
+    },
+    "visual": {
+      "title": "One shared question, three distinct answers",
+      "nodes": [
+        {
+          "label": "Advaita",
+          "detail": "Ultimate nonduality; ordinary difference requires explanation."
+        },
+        {
+          "label": "Viśiṣṭādvaita",
+          "detail": "Unity qualified by real dependent selves and world."
+        },
+        {
+          "label": "Dvaita",
+          "detail": "Real distinction and dependence, including self and God."
+        }
+      ],
+      "caption": "A comparison of three influential schools, not an exhaustive map of Vedānta or a ranking of paths."
+    },
+    "terms": [
+      {
+        "term": "Brahmasūtra",
+        "meaning": "A compact foundational text around which Vedānta commentaries develop."
+      },
+      {
+        "term": "Advaita",
+        "meaning": "Nonduality; here the school especially associated with Śaṅkara."
+      },
+      {
+        "term": "Viśiṣṭādvaita",
+        "meaning": "Qualified nonduality; especially associated with Rāmānuja's account of differentiated unity."
+      }
+    ],
+    "reflection": "Choose an Upaniṣadic passage already studied. What would each of these three approaches need to explain about it? Separate your preferred reading from the passage's actual wording.",
+    "quiz": {
+      "question": "What does the existence of several major Brahmasūtra commentaries show?",
+      "choices": [
+        "Only one commentary counts as a historical text.",
+        "Each commentator had a completely unrelated source corpus.",
+        "Shared base texts can sustain substantially different argued interpretations."
+      ],
+      "correct": 2,
+      "explanation": "The schools share important authorities while disagreeing about how their statements should fit together. The disagreement is part of the history of Vedānta, not something to hide."
+    },
+    "connections": [
+      {
+        "lessonId": "chandogya",
+        "why": "Return to a source dialogue and distinguish its wording from later systematic readings."
+      },
+      {
+        "lessonId": "gita-afterlives",
+        "why": "Follow the same commentarial diversity around action, knowledge, and devotion in the Gītā."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Śaṅkara and Advaita",
+        "url": "https://plato.stanford.edu/entries/shankara/"
+      },
+      {
+        "label": "IEP: Rāmānuja and qualified nonduality",
+        "url": "https://iep.utm.edu/ramanuja/"
+      },
+      {
+        "label": "IEP: Vedānta's differing schools",
+        "url": "https://iep.utm.edu/hindu-ph/"
+      }
+    ]
+  },
+  "materialists-skeptics": {
+    "opening": "Suppose the only surviving account of your opinion was written by someone trying to defeat it. That is part of the difficulty with ancient Indian materialist and skeptical voices. We need to learn their challenges while being honest about the uneven evidence.",
+    "teaching": [
+      {
+        "title": "Ask what survives before asking what they believed",
+        "body": "Cārvāka or Lokāyata positions are often reconstructed from fragments and reports in rival works, not from an intact founding canon. Some reports associate them with the body's centrality to consciousness and challenges to afterlife, ritual reward, and Vedic authority. A report is evidence, but its polemical purpose affects how confidently we can generalize."
+      },
+      {
+        "title": "The challenge concerns the reach of evidence",
+        "body": "Materialist critiques question how observed cases could warrant sweeping claims about unobserved realities. Accounts differ about their acceptance of ordinary inference, so 'they rejected every inference' is too blunt. A sharper question is whether evidence adequate for everyday action also establishes rebirth or an invisible ritual result."
+      },
+      {
+        "title": "Do not merge different kinds of dissent",
+        "body": "Jayarāśi's surviving Tattvopaplavasimha attacks philosophical attempts to secure knowledge; his relationship to Cārvāka remains debated. Reports of Ajñāna skepticism and Ājīvika determinism describe other currents, not interchangeable chapters of one atheist philosophy. Refusing a claim, doubting its proof, and asserting that events are determined are distinct intellectual moves."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: a hostile book review",
+      "scenario": "A review says an author 'believes nothing matters'. The author's surviving paragraph actually questions whether one argument proves life after death.",
+      "explanation": "Separate the author's claim from the reviewer's consequence or caricature. You might reject the author's argument after reconstructing it accurately. The point is not to assume that lost voices were secretly correct, but to avoid making missing evidence say more than it can."
+    },
+    "visual": {
+      "title": "Confidence follows the evidence",
+      "nodes": [
+        {
+          "label": "Surviving work",
+          "detail": "Read the author's wording when available."
+        },
+        {
+          "label": "Attributed fragment",
+          "detail": "Check who preserves it and in what setting."
+        },
+        {
+          "label": "Opponent's summary",
+          "detail": "Distinguish reported claim from polemical inference."
+        }
+      ],
+      "caption": "Kinds of evidence to compare, not a guarantee that one source type is always truthful."
+    },
+    "terms": [
+      {
+        "term": "Lokāyata / Cārvāka",
+        "meaning": "Names associated with materialist currents whose surviving evidence is fragmentary."
+      },
+      {
+        "term": "Skepticism",
+        "meaning": "Questioning whether a claim or a proposed source of knowledge is adequately justified."
+      },
+      {
+        "term": "Polemical source",
+        "meaning": "A text arguing against a position; useful evidence that requires attention to argumentative purpose."
+      }
+    ],
+    "reflection": "Choose a claim about an unseen consequence. What evidence would support it, and what would merely repeat it? Now distinguish disbelief from suspension of judgment.",
+    "quiz": {
+      "question": "A rival author attributes a sweeping claim to Cārvāka. What is the most responsible next move?",
+      "choices": [
+        "Accept the summary because no complete original survives.",
+        "Check its context and other evidence, and state the uncertainty of the reconstruction.",
+        "Discard every hostile source as historically useless."
+      ],
+      "correct": 1,
+      "explanation": "Hostile testimony is neither automatically true nor automatically worthless. Comparing witnesses and distinguishing report from inference makes the reconstruction more accountable."
+    },
+    "connections": [
+      {
+        "lessonId": "nyaya-vaisheshika",
+        "why": "Examine how defenders of inference respond to challenges about reliable reasons."
+      },
+      {
+        "lessonId": "mimamsa",
+        "why": "Compare competing accounts of whether testimony can establish unseen ritual obligations and results."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "IEP: Lokāyata and the reconstruction of materialism",
+        "url": "https://iep.utm.edu/indmat/"
+      },
+      {
+        "label": "SEP: Jayarāśi and his skeptical arguments",
+        "url": "https://plato.stanford.edu/entries/jayaraasi/index.html"
+      }
+    ]
+  },
+  "buddhist-canons": {
+    "opening": "A Buddhist teaching may reach you in Pāli, a Chinese translation, a Sanskrit manuscript, or Tibetan. These are not four interchangeable covers on one book. They are witnesses to different communities' work of remembering, organizing, translating, and interpreting teachings.",
+    "teaching": [
+      {
+        "title": "A canon is an organized library",
+        "body": "The Pāli collection distinguishes discourse, discipline, and Abhidhamma: the three baskets. Chinese collections preserve, among much else, Āgamas with parallels to Pāli Nikāyas. Parallel means meaningfully related, not guaranteed word-for-word identity. Translation history, arrangement, and differing transmission can leave both shared material and important variations."
+      },
+      {
+        "title": "Tibetan collections preserve different textual roles",
+        "body": "The Kangyur contains texts regarded as Buddha-word in Tibetan traditions; the Tengyur gathers translated treatises explaining and extending the teachings. Much of this literature came from India. A philosophical commentary preserved in Tibetan is therefore evidence for an Indian intellectual work, but it remains a commentary rather than automatically becoming a discourse spoken by the Buddha."
+      },
+      {
+        "title": "Keep three dates and languages apart",
+        "body": "When inspecting an edition, ask about the work's composition, the surviving witness, and the modern translation. These can be far apart. A Sanskrit title does not prove that the displayed text survives in Sanskrit, and a Chinese or Tibetan witness is not automatically less valuable than a much later Sanskrit copy. Comparison is a method of learning, not a competition between languages."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: two versions of one lecture",
+      "scenario": "Two students record related versions of a lecture. One groups material by topic; the other preserves a longer opening story. A later student translates one version into a new language.",
+      "explanation": "You would label the witnesses before combining them. Their agreement can illuminate a shared teaching; their differences ask further questions about transmission. This is only an analogy: Buddhist canons developed through much larger, longer, and institutionally complex processes than classroom note-taking."
+    },
+    "visual": {
+      "title": "Three library windows",
+      "nodes": [
+        {
+          "label": "Pāli collections",
+          "detail": "Discourses, discipline, and a particular Abhidhamma corpus."
+        },
+        {
+          "label": "Chinese collections",
+          "detail": "Āgama parallels and many additional translated works."
+        },
+        {
+          "label": "Tibetan collections",
+          "detail": "Kangyur scriptures and Tengyur treatises, with distinct textual roles."
+        }
+      ],
+      "caption": "Overlapping collections with different histories; the panels are not successive replacements of one another."
+    },
+    "terms": [
+      {
+        "term": "Nikāya / Āgama",
+        "meaning": "Names for collections of discourses in different transmission contexts."
+      },
+      {
+        "term": "Vinaya",
+        "meaning": "Texts of monastic discipline and communal procedure."
+      },
+      {
+        "term": "Textual witness",
+        "meaning": "A manuscript, edition, or translation through which a work survives."
+      }
+    ],
+    "reflection": "Before reading a Buddhist passage online, record its collection, source language or witness, translator, and passage identifier. Which of those were previously invisible to you?",
+    "quiz": {
+      "question": "You find an Indian treatise only in Tibetan translation. Which description is most accurate?",
+      "choices": [
+        "It can preserve an Indian work while requiring attention to its translated witness and literary role.",
+        "It cannot tell us anything about Indian thought.",
+        "It must be a direct discourse of the Buddha because it belongs to a canonical collection."
+      ],
+      "correct": 0,
+      "explanation": "Place of composition, surviving language, and canonical category are different questions. Translation can preserve material whose Indian-language witnesses were lost."
+    },
+    "connections": [
+      {
+        "lessonId": "jain-canons",
+        "why": "Compare how another tradition's communities define and preserve authoritative collections."
+      },
+      {
+        "lessonId": "mahayana-sutras",
+        "why": "Use the library map to locate new sūtra families without making them one uniform canon."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SuttaCentral: Early Buddhist texts and parallel witnesses",
+        "url": "https://suttacentral.net/introduction"
+      },
+      {
+        "label": "84000: Kangyur and Tengyur explained",
+        "url": "https://scholar.84000.co/article/facts-and-figures-about-the-kangyur-and-tengyur"
+      }
+    ]
+  },
+  "discourses-vinaya": {
+    "opening": "One text asks how suffering can cease. Another asks who must care for a sick monk. These are connected problems: a path needs both teachings that transform understanding and a community capable of living responsibly together.",
+    "teaching": [
+      {
+        "title": "Four truths are also four tasks",
+        "body": "In the Pāli discourse SN 56.11, suffering is to be understood, its origin abandoned, cessation realized, and the path cultivated. This is more useful than reducing the teaching to 'life is suffering'. The eightfold path brings understanding, intention, speech, action, livelihood, effort, mindfulness, and concentration into one field of training."
+      },
+      {
+        "title": "A rule can emerge from a concrete failure",
+        "body": "Vinaya Mahāvagga 8.26 tells of an ill monk left without care. The Buddha and Ānanda wash him, and the community is instructed about responsibility for the sick. The scene makes care part of communal discipline. It also shows why a rule's narrative setting can explain what human problem it addresses."
+      },
+      {
+        "title": "Non-self: examine what you call ‘me’",
+        "body": "In SN 22.59, the Buddha examines five groups of experience: bodily form, feeling, perception, mental formations, and consciousness. Because they change and cannot be completely commanded, he teaches that none should be identified as mine, I, or my self. This is a practice of loosening identification, not a claim that everyday persons or the consequences of action are irrelevant. It offers an important contrast with the enduring selves defended in Jain and many Brahmanical traditions."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: learning versus doing",
+      "scenario": "A study group knows the vocabulary of compassion. A member becomes ill and misses meetings. Everyone assumes someone else will help.",
+      "explanation": "The vocabulary has not yet become a dependable practice. Ask who checks in, what help is wanted, and how responsibility is shared. This modern scenario applies the distinction between teaching and communal procedure; it is not a claim that an ancient monastic rule transfers unchanged into every contemporary situation."
+    },
+    "visual": {
+      "title": "Four truths, four different tasks",
+      "nodes": [
+        {
+          "label": "Suffering",
+          "detail": "Understand the problem."
+        },
+        {
+          "label": "Origin",
+          "detail": "Abandon the craving identified as its origin."
+        },
+        {
+          "label": "Cessation",
+          "detail": "Realize the ending."
+        },
+        {
+          "label": "Path",
+          "detail": "Cultivate the training."
+        }
+      ],
+      "caption": "A task map from SN 56.11; the path is practised, not merely memorized."
+    },
+    "terms": [
+      {
+        "term": "Dukkha (Pāli)",
+        "meaning": "Suffering, distress, or unsatisfactoriness; the exact emphasis depends on context."
+      },
+      {
+        "term": "Sutta (Pāli)",
+        "meaning": "A discourse; related to the Sanskrit term sūtra."
+      },
+      {
+        "term": "Saṅgha",
+        "meaning": "Community; here especially the monastic community with shared responsibilities."
+      }
+    ],
+    "reflection": "What is the difference between understanding that someone suffers and accepting responsibility to respond? Use the sick-monk story and one modest contemporary example.",
+    "quiz": {
+      "question": "In SN 56.11, what should be cultivated rather than merely identified or abandoned?",
+      "choices": [
+        "Craving as the origin of suffering.",
+        "Suffering itself.",
+        "The path of training."
+      ],
+      "correct": 2,
+      "explanation": "The discourse assigns distinct tasks: understand suffering, abandon its origin, realize cessation, and develop the path. Keeping the verbs clear prevents a vague slogan."
+    },
+    "connections": [
+      {
+        "lessonId": "abhidharma",
+        "why": "See how later analytical texts develop more detailed maps of experience and practice."
+      },
+      {
+        "lessonId": "jain-ethics",
+        "why": "Compare another tradition's relationship between renunciant discipline and non-harming."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SN 56.11: The four truths and their tasks",
+        "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+      },
+      {
+        "label": "Vinaya Mahāvagga 8.26: Caring for an ill monk",
+        "url": "https://www.accesstoinsight.org/tipitaka/vin/mv/mv.08.26.01-08.than.html"
+      },
+      {
+        "label": "SN 22.59: the five aggregates and non-self",
+        "url": "https://www.accesstoinsight.org/tipitaka/sn/sn22/sn22.059.mend.html"
+      }
+    ]
+  },
+  "abhidharma": {
+    "opening": "The sentence 'I am angry' makes an experience sound like one solid thing owned by one solid self. Abhidharma asks you to examine it more carefully. What is being felt, perceived, intended, and noticed—and how do those factors depend on one another?",
+    "teaching": [
+      {
+        "title": "Turn a broad description into an analysis",
+        "body": "Abhidharma literature organizes experience into carefully distinguished mental and physical factors, often called dharmas. In Pāli the corresponding word is dhammas. Here the plural does not simply mean religious teachings. The analytical vocabulary helps a reader ask what conditions a state and which factors can be cultivated or abandoned."
+      },
+      {
+        "title": "Different schools build different maps",
+        "body": "Theravāda Abhidhamma and Sarvāstivāda Abhidharma preserve different canonical sets and classifications. The Dhammasaṅgaṇī enumerates phenomena; the Kathāvatthu stages doctrinal disputes. The very existence of debate matters: a highly organized table is still an argued model, not evidence that all Buddhists agreed on its categories."
+      },
+      {
+        "title": "A compendium can also be a critique",
+        "body": "Vasubandhu's Abhidharmakośa presents a powerful systematic account, while its bhāṣya also challenges positions it reports. Ask whose view is being explained at each point. Later Madhyamaka and Yogācāra thinkers work with problems sharpened in this arena, sometimes retaining analytical tools while disputing their implications."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: receiving an unwelcome message",
+      "scenario": "A phone message arrives. You notice an unpleasant feeling, recognize familiar words, recall an earlier quarrel, and feel an impulse to reply sharply.",
+      "explanation": "Separating these elements makes room for a question: must the impulse become an action? This is a teaching illustration, not an exact transcription of one school's taxonomy. Its purpose is to demonstrate what a detailed analysis can reveal that the label 'anger' hides, without claiming that noticing alone resolves serious distress."
+    },
+    "visual": {
+      "title": "One episode, several analytical questions",
+      "nodes": [
+        {
+          "label": "Feeling",
+          "detail": "Is the experience pleasant, unpleasant, or neutral?"
+        },
+        {
+          "label": "Recognition",
+          "detail": "What features are being identified?"
+        },
+        {
+          "label": "Intention",
+          "detail": "What response is being formed?"
+        },
+        {
+          "label": "Conditions",
+          "detail": "What supports or alters this combination?"
+        }
+      ],
+      "caption": "A simplified learning illustration, not an exhaustive canonical list or a fixed temporal sequence."
+    },
+    "terms": [
+      {
+        "term": "Dharma / dhamma",
+        "meaning": "Here an analyzed factor or phenomenon; meaning differs from the singular 'the teaching'."
+      },
+      {
+        "term": "Abhidharma / Abhidhamma",
+        "meaning": "Sanskrit and Pāli names for systematic doctrinal analysis and associated texts."
+      },
+      {
+        "term": "Bhāṣya",
+        "meaning": "Commentary; it may explain a position and then criticize it."
+      }
+    ],
+    "reflection": "Describe one ordinary reaction using at least three distinguishable factors. What becomes easier to question once you stop treating it as one indivisible state?",
+    "quiz": {
+      "question": "Why should you not treat every position described in Vasubandhu's commentary as his final endorsement?",
+      "choices": [
+        "Commentaries contain no philosophical arguments.",
+        "He presents systems while also criticizing some of their claims.",
+        "Only verse, never prose, can report an opponent."
+      ],
+      "correct": 1,
+      "explanation": "Exposition and endorsement differ. Tracking objections and replies is essential when a compendium preserves and challenges a school at the same time."
+    },
+    "connections": [
+      {
+        "lessonId": "madhyamaka",
+        "why": "Study a challenge to treating analyzed phenomena as independently grounded realities."
+      },
+      {
+        "lessonId": "nyaya-vaisheshika",
+        "why": "Compare different philosophical uses of categories without collapsing their ontologies."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Abhidharma systems, texts, and disputes",
+        "url": "https://plato.stanford.edu/entries/abhidharma/"
+      },
+      {
+        "label": "Access to Insight: The Pāli Abhidhamma collection",
+        "url": "https://www.accesstoinsight.org/tipitaka/abhi/index.html"
+      }
+    ]
+  },
+  "mahayana-sutras": {
+    "opening": "A teaching can be a dialogue, a parable, a visionary journey, or an account of a buddha-field. Mahāyāna sūtras use these different forms to expand how readers imagine wisdom, compassion, and buddhahood. Start with what one work is doing before looking for a single definition covering them all.",
+    "teaching": [
+      {
+        "title": "The bodhisattva path broadens the horizon",
+        "body": "A bodhisattva seeks awakening for the benefit of beings. Mahāyāna sūtra families develop this aspiration through different emphases: perfection of wisdom, skillful means, buddha-fields, interrelated worlds, or buddha-nature. These themes are connected but not identical. One introductory passage cannot serve as a summary of every sūtra family."
+      },
+      {
+        "title": "The Lotus makes teaching itself a theme",
+        "body": "The Lotus Sūtra's burning-house parable describes children drawn out of danger by a promise adapted to their interests, followed by a greater gift. It explores skillful means and a unifying vehicle. The parable asks why different instructions might serve a liberating purpose; it is not a general permission to deceive anyone for any claimed good."
+      },
+      {
+        "title": "Vimalakīrti changes who can teach whom",
+        "body": "The Vimalakīrti narrative presents a lay figure whose understanding unsettles accomplished disciples and bodhisattvas. Dramatic exchanges make nonduality a problem for speech, status, and understanding. Read such scenes as carefully constructed teaching situations, rather than concluding that monastic discipline was simply discarded when Mahāyāna texts appeared."
+      }
+    ],
+    "example": {
+      "title": "Text example: the burning house, paraphrased",
+      "scenario": "Children absorbed in play do not respond to a warning. Their father promises appealing carts outside. Once they are safe, he gives them magnificent carts.",
+      "explanation": "Notice the sequence: danger, an audience unable to respond, an adapted invitation, and a more generous outcome. The Lotus uses this structure to discuss its own teaching strategy. Ask what makes the means skillful within the story instead of lifting its outward action into a universal rule."
+    },
+    "visual": {
+      "title": "Three emphases, not one replacement canon",
+      "nodes": [
+        {
+          "label": "Wisdom",
+          "detail": "Examine fixation on things as independently real."
+        },
+        {
+          "label": "Skillful means",
+          "detail": "Ask how teaching addresses the capacities of its audience."
+        },
+        {
+          "label": "Bodhisattva aspiration",
+          "detail": "Connect awakening with the benefit of beings."
+        }
+      ],
+      "caption": "Recurring themes across diverse Mahāyāna works; their exact meaning must be learned text by text."
+    },
+    "terms": [
+      {
+        "term": "Bodhisattva",
+        "meaning": "A being oriented toward awakening; Mahāyāna texts emphasize the benefit of beings."
+      },
+      {
+        "term": "Upāya",
+        "meaning": "Skillful means: context-sensitive teaching or practice directed toward awakening."
+      },
+      {
+        "term": "Prajñāpāramitā",
+        "meaning": "Perfection of wisdom; also the name of a major family of sūtras."
+      }
+    ],
+    "reflection": "In the burning-house parable, which details make the father's action an account of skillful teaching rather than a blanket defence of manipulation?",
+    "quiz": {
+      "question": "What is the best first question when reading a Mahāyāna parable?",
+      "choices": [
+        "What teaching problem does this story address, for which audience?",
+        "How can every character's action become a universal rule?",
+        "Which earlier Buddhist collection did the story instantly replace?"
+      ],
+      "correct": 0,
+      "explanation": "A parable teaches through its structure and setting. Identifying the problem and audience protects its meaning from both literal overextension and a false replacement history."
+    },
+    "connections": [
+      {
+        "lessonId": "buddhist-canons",
+        "why": "Locate these sūtras among distinct Sanskrit, Chinese, and Tibetan witnesses."
+      },
+      {
+        "lessonId": "madhyamaka",
+        "why": "Move from sūtra teaching to a philosophical argument about emptiness."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "84000: The Lotus Sūtra, including the burning-house parable",
+        "url": "https://84000.co/translation/toh113"
+      },
+      {
+        "label": "84000: The Teaching of Vimalakīrti",
+        "url": "https://84000.co/translation/toh176"
+      },
+      {
+        "label": "84000: The Heart Sūtra and perfection of wisdom",
+        "url": "https://84000.co/translation/toh21"
+      }
+    ]
+  },
+  "madhyamaka": {
+    "opening": "A bicycle depends on its parts, its assembly, and the practices through which we recognize and use it. Yet we can ride it. This modern example helps introduce a crucial Madhyamaka distinction: dependence need not mean nonexistence, and usefulness need not prove independent essence.",
+    "teaching": [
+      {
+        "title": "What is being denied?",
+        "body": "Madhyamaka arguments challenge svabhāva: an independent nature that would make something what it is through itself. Nāgārjuna examines arising, change, motion, causal relations, and other categories. The target is not merely a mistaken opinion about one object but the assumption that things can be grounded without dependence."
+      },
+      {
+        "title": "Emptiness connects with dependent arising",
+        "body": "Mūlamadhyamakakārikā 24.18 connects dependent arising, emptiness, and dependent designation. If things had an immutable independent nature, explaining change and causal interaction would become difficult. Emptiness is therefore not a hidden substance behind appearances. It names the absence of the independence the argument investigates."
+      },
+      {
+        "title": "Two truths do not create two universes",
+        "body": "Madhyamaka distinguishes conventional and ultimate truth without requiring a second realm behind the ordinary world. Everyday explanation and practice remain possible; philosophical analysis questions their supposed ultimate foundations. Later Madhyamaka authors disagree about argumentative method. Learning the central problem does not erase those debates or settle every modern interpretation."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: looking for the bicycle",
+      "scenario": "Point to the bicycle's wheel. Is that alone the bicycle? Remove the saddle, then consider the assembled whole. Where is a bicycle existing entirely independently of parts, conditions, and designation?",
+      "explanation": "The exercise questions independent essence, not whether cycling works. Finding dependence is not a reason to ignore traffic. It is a limited entry into the philosophical problem, not a complete proof of Nāgārjuna's conclusions or a replacement for his arguments about causation."
+    },
+    "visual": {
+      "title": "Two claims that can coexist",
+      "nodes": [
+        {
+          "label": "It functions",
+          "detail": "The bicycle can carry a rider in ordinary circumstances."
+        },
+        {
+          "label": "It depends",
+          "detail": "Parts, causes, and designation are involved."
+        },
+        {
+          "label": "It lacks independence",
+          "detail": "Functioning does not establish an intrinsic self-grounded essence."
+        }
+      ],
+      "caption": "An original teaching example: dependence and conventional functioning are not opposites."
+    },
+    "terms": [
+      {
+        "term": "Śūnyatā",
+        "meaning": "Emptiness: absence of independent nature, not a declaration that nothing matters."
+      },
+      {
+        "term": "Svabhāva",
+        "meaning": "Intrinsic or own-nature; the independent grounding examined by Madhyamaka arguments."
+      },
+      {
+        "term": "Dependent designation",
+        "meaning": "Identification in dependence on conditions or bases, not the creation of anything one wishes by naming it."
+      }
+    ],
+    "reflection": "Choose a familiar object. Explain both how it functions and what it depends on. Why does neither explanation require calling it absolutely independent or utterly nonexistent?",
+    "quiz": {
+      "question": "Someone says, 'If actions are empty, their consequences do not matter.' What has gone wrong?",
+      "choices": [
+        "They have correctly inferred that no causal processes occur.",
+        "They have discovered a permanent substance named emptiness.",
+        "They have confused absence of independent nature with denial of conventional causation."
+      ],
+      "correct": 2,
+      "explanation": "Madhyamaka links emptiness to dependence. The claim that consequences disappear reverses that connection and slides into the nihilism the tradition seeks to avoid."
+    },
+    "connections": [
+      {
+        "lessonId": "abhidharma",
+        "why": "Understand the analytical background against which questions about intrinsic nature become pressing."
+      },
+      {
+        "lessonId": "anekantavada",
+        "why": "Compare a different challenge to one-sided claims without equating Jain many-sidedness with emptiness."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Madhyamaka arguments and two truths",
+        "url": "https://plato.stanford.edu/entries/madhyamaka/"
+      },
+      {
+        "label": "IEP: Nāgārjuna and the middle-way philosophy",
+        "url": "https://iep.utm.edu/nagarjun/"
+      }
+    ]
+  },
+  "yogacara": {
+    "opening": "An ambiguous message can look friendly in one mood and hostile in another. Yogācāra goes well beyond that familiar observation, asking how cognition, habits, and conceptual divisions shape the world we experience. Begin with that problem before deciding that 'everything is only in my head'.",
+    "teaching": [
+      {
+        "title": "Experience is not a transparent window",
+        "body": "Yogācāra works associated with Asaṅga and Vasubandhu investigate representation, cognition, and the division between a perceiving subject and perceived object. Interpretations differ over how to characterize the tradition's idealism. Calling it the view that your personal mind invents other people misses both its arguments and its account of conditioned experience."
+      },
+      {
+        "title": "The three natures explain a mistake and its undoing",
+        "body": "The imagined nature concerns falsely imposed conceptual duality. The dependent nature concerns the conditioned process in which experience occurs. The perfected nature concerns the absence of the imagined duality in that dependent process. These are not three separate planets: they analyze how experience is misapprehended and how that misapprehension can cease."
+      },
+      {
+        "title": "Habits continue without an unchanging owner",
+        "body": "Store consciousness, ālayavijñāna, explains continuity and the maturation of karmic dispositions in important Yogācāra models. It is not an eternal self smuggled into Buddhism. Transformation of the basis describes a profound reworking of cognition, not merely replacing negative thoughts with pleasant affirmations. Different texts articulate this psychology in different ways."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: 'We need to talk'",
+      "scenario": "You receive those four words. After a recent disagreement, you anticipate criticism; on a peaceful day, you might anticipate practical planning.",
+      "explanation": "The example reveals how prior habits contribute to what seems immediately given. It does not establish that the sender is unreal. To use it responsibly, separate the visible wording, the conditioned reaction, and your projection of certainty about another person's intention."
+    },
+    "visual": {
+      "title": "Three natures: a learning map",
+      "nodes": [
+        {
+          "label": "Imagined",
+          "detail": "An imposed division is taken as independently real."
+        },
+        {
+          "label": "Dependent",
+          "detail": "Experience arises through conditions and dispositions."
+        },
+        {
+          "label": "Perfected",
+          "detail": "The dependent process is empty of the imagined duality."
+        }
+      ],
+      "caption": "Three analytical aspects, not a temporal creation story or three independent substances."
+    },
+    "terms": [
+      {
+        "term": "Vijñapti",
+        "meaning": "Representation or cognitive presentation; a central term in debates over Yogācāra."
+      },
+      {
+        "term": "Ālayavijñāna",
+        "meaning": "Store consciousness in certain Yogācāra accounts of dispositions and continuity; not a permanent soul."
+      },
+      {
+        "term": "Three natures",
+        "meaning": "Imagined, dependent, and perfected: a framework for understanding misapprehension and its absence."
+      }
+    ],
+    "reflection": "Recall an ambiguous message you misread. What was presented, what prior habit was active, and what interpretation did you treat as a fact? Where does this everyday example stop short of Yogācāra philosophy?",
+    "quiz": {
+      "question": "Which statement best describes store consciousness in the model introduced here?",
+      "choices": [
+        "An unchanging personal soul that controls every event.",
+        "A conditioned account of continuity and dispositions, itself subject to transformation.",
+        "Proof that other beings exist only when you personally think of them."
+      ],
+      "correct": 1,
+      "explanation": "The model addresses continuity without positing an eternal owner. Reducing it to a permanent self or personal fantasy misstates the problem it is intended to solve."
+    },
+    "connections": [
+      {
+        "lessonId": "madhyamaka",
+        "why": "Compare two Buddhist treatments of dependence without assuming their arguments are identical."
+      },
+      {
+        "lessonId": "kena",
+        "why": "Compare questions about cognition while keeping Buddhist and Upaniṣadic conclusions distinct."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Yogācāra models and interpretive debates",
+        "url": "https://plato.stanford.edu/entries/yogacara/"
+      },
+      {
+        "label": "84000: Unraveling the Intent, a key Yogācāra sūtra",
+        "url": "https://84000.co/translation/toh106"
+      }
+    ]
+  },
+  "buddhist-reason-compassion": {
+    "opening": "Being convinced is not the same as being justified. Caring in principle is not the same as helping effectively. This lesson brings two distinct Buddhist projects into conversation: the disciplined evaluation of cognition and the disciplined formation of compassionate conduct.",
+    "teaching": [
+      {
+        "title": "A reason must do real evidential work",
+        "body": "Dignāga and Dharmakīrti develop accounts of perception and inference that reshape Indian philosophical debate. A proposed inferential reason must have an appropriate connection with what it establishes. Repeating a claim, borrowing prestige, or giving an example that fails to fit the case cannot replace that connection."
+      },
+      {
+        "title": "Compassion also requires training",
+        "body": "Śāntideva's Bodhicaryāvatāra examines the bodhisattva commitment through vigilance, patience, effort, meditation, and wisdom. Its ethical project works on the habits that make another person's suffering seem less important than one's own. The text addresses demanding ideals of formation, not just a list of comforting sentences to admire."
+      },
+      {
+        "title": "Do not collapse the authors into one textbook",
+        "body": "Buddhist epistemology and Śāntideva's path literature differ in genre, argument, and immediate aim. Read them together as complementary questions: is the belief responsible, and what does the cultivated response do for beings? The connection is a course comparison, not a claim that the three authors jointly wrote a single program."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: forwarding an urgent appeal",
+      "scenario": "A dramatic message asks you to share an appeal immediately. You feel concern, but the sender supplies no verifiable information.",
+      "explanation": "Concern supplies a motive to help, not evidence that the details are true. Verification need not imply indifference: you can check the claim and seek a reliable way to assist. The example distinguishes evidential responsibility from ethical motivation while showing why both matter to a response."
+    },
+    "visual": {
+      "title": "Two checks on one response",
+      "nodes": [
+        {
+          "label": "Belief",
+          "detail": "What supports the factual claim?"
+        },
+        {
+          "label": "Motivation",
+          "detail": "Am I responding to suffering or to my own need to react?"
+        },
+        {
+          "label": "Action",
+          "detail": "What informed response could actually help?"
+        }
+      ],
+      "caption": "An original comparison across distinct Buddhist projects, not a historical sequence or a quotation."
+    },
+    "terms": [
+      {
+        "term": "Hetu",
+        "meaning": "A reason or sign offered to establish a conclusion."
+      },
+      {
+        "term": "Bodhicitta",
+        "meaning": "The aspiration or mind directed toward awakening for the benefit of beings."
+      },
+      {
+        "term": "Kṣānti",
+        "meaning": "Patience or forbearance cultivated on the bodhisattva path; not indifference to harm."
+      }
+    ],
+    "reflection": "Think of a time when a strong good intention outran the evidence. How could checking more carefully have improved, rather than weakened, your willingness to help?",
+    "quiz": {
+      "question": "What is the best response to an unverified appeal if both careful reasoning and compassion matter?",
+      "choices": [
+        "Treat urgency as proof and forward it unchanged.",
+        "Refuse to care until you can know everything with certainty.",
+        "Check the claim and look for an informed, genuinely helpful response."
+      ],
+      "correct": 2,
+      "explanation": "The example asks you to join responsibility for belief with responsibility for action. Neither a moving story nor excessive detachment supplies both."
+    },
+    "connections": [
+      {
+        "lessonId": "sutra-debate",
+        "why": "Return to the shared Indian question of what makes a reason trustworthy."
+      },
+      {
+        "lessonId": "discourses-vinaya",
+        "why": "Compare the ideal of compassion with a concrete communal duty of care."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Dharmakīrti on knowledge and reasoning",
+        "url": "https://plato.stanford.edu/entries/dharmakiirti/"
+      },
+      {
+        "label": "SEP: Śāntideva and the bodhisattva path",
+        "url": "https://plato.stanford.edu/entries/shantideva/"
+      }
+    ]
+  },
+  "jain-canons": {
+    "opening": "What would count as scripture if your community believed that part of its earliest teaching had been lost? Jain textual history makes that question central. Śvetāmbara and Digambara traditions share major commitments while telling different histories of what survived and which works carry authority.",
+    "teaching": [
+      {
+        "title": "Start with a shared problem, not a single bookshelf",
+        "body": "Jain communities transmitted teachings through teachers and oral recitation before the surviving written collections took shape. Śvetāmbara traditions preserve Āgamas including the Ācārāṅga and Sūtrakṛtāṅga; even within Śvetāmbara communities, accepted canonical boundaries differ. The name of a tradition does not automatically specify every book on its shelf."
+      },
+      {
+        "title": "Loss does not mean the absence of a living literature",
+        "body": "Digambara tradition holds that the early canon was lost and accords authority to works such as the Ṣaṭkhaṇḍāgama and Kaṣāyapāhuḍa, associated with the survival of parts of earlier teaching. It also develops extensive commentarial and philosophical literature. 'They lost the canon' is therefore not a summary of Digambara intellectual life."
+      },
+      {
+        "title": "Language and shared authority cross the divide",
+        "body": "Much early Jain scripture is in Prakrit varieties, not Sanskrit. The Tattvārthasūtra is an important Sanskrit work respected across the major sectarian divide, although recensions and interpretations differ. This gives us two useful axes: the language of a work and the community recognizing it. Neither axis can substitute for the other."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: cataloguing a family archive",
+      "scenario": "Two branches of a family preserve overlapping records. One trusts an inherited collection; another says the earliest records were lost but preserves later summaries derived from older material.",
+      "explanation": "A careful catalogue would describe what each archive contains and what its custodians claim about transmission. It would not label one 'the whole family archive' and the other 'nothing'. The analogy helps organize questions; Jain accounts of sacred transmission are not reducible to ordinary family paperwork."
+    },
+    "visual": {
+      "title": "Different corpora, a significant shared text",
+      "nodes": [
+        {
+          "label": "Śvetāmbara Āgamas",
+          "detail": "A preserved canon with internal differences about its boundaries."
+        },
+        {
+          "label": "Digambara authorities",
+          "detail": "Distinct works and commentaries shaped by an account of early loss."
+        },
+        {
+          "label": "Tattvārthasūtra",
+          "detail": "A Sanskrit systematic text respected across major sectarian lines."
+        }
+      ],
+      "caption": "A relationship map; the third panel does not erase the first two or their disagreements."
+    },
+    "terms": [
+      {
+        "term": "Āgama",
+        "meaning": "An authoritative received teaching or scripture; Jain and Buddhist uses must be distinguished."
+      },
+      {
+        "term": "Prakrit",
+        "meaning": "A family of Middle Indo-Aryan literary languages used extensively in Jain texts."
+      },
+      {
+        "term": "Recension",
+        "meaning": "A transmitted version of a work, sometimes with different wording or organization."
+      }
+    ],
+    "reflection": "How would you describe a text's authority without implying that every Jain community recognizes the same edition or canon? Try a two-sentence description of Tattvārthasūtra.",
+    "quiz": {
+      "question": "Which statement avoids the main mistake in mapping Jain libraries?",
+      "choices": [
+        "Digambara tradition has no authoritative literature because it describes an early loss.",
+        "All Jain scriptures are Sanskrit works from one fixed collection.",
+        "Distinct canons and transmission histories coexist with important shared texts."
+      ],
+      "correct": 2,
+      "explanation": "The history includes difference and overlap. Neither one universal shelf nor the disappearance of a living literary tradition adequately describes it."
+    },
+    "connections": [
+      {
+        "lessonId": "buddhist-canons",
+        "why": "Compare canon plurality without assuming the two traditions use Āgama identically."
+      },
+      {
+        "lessonId": "tattvarthasutra",
+        "why": "Read an important shared systematic text with attention to its different recensions."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "JAINpedia: Sacred writings and transmission",
+        "url": "https://jainpedia.org/themes/principles/sacred-writings/"
+      },
+      {
+        "label": "JAINpedia: The Śvetāmbara Aṅgas",
+        "url": "https://jainpedia.org/themes/principles/sacred-writings/svetambara-canon/angas/"
+      }
+    ]
+  },
+  "jain-ethics": {
+    "opening": "Nonviolence sounds simple until you ask how to eat, travel, work, speak, or own things without harming other living beings. Jain ethical texts turn that difficulty into a disciplined way of life, while distinguishing the demanding commitments of renunciants from the limited vows of householders.",
+    "teaching": [
+      {
+        "title": "Care extends beyond obvious acts of violence",
+        "body": "Jain accounts of life make non-harming relevant to small and easily overlooked beings, not only humans or large animals. Harm can involve action, speech, intention, carelessness, or enabling another's action. The question is therefore not just 'Did I attack someone?' but 'What kinds of injury does my way of acting support?'"
+      },
+      {
+        "title": "Five vows shape different forms of life",
+        "body": "The five fundamental vows concern nonviolence, truthfulness, not stealing, sexual restraint, and non-possession or non-attachment. Mendicants undertake great vows; laypeople undertake limited vows suited to household responsibilities. Limited does not mean insincere. It specifies a different scope of commitment within a graded ethical framework."
+      },
+      {
+        "title": "A written ideal is a discipline to interpret",
+        "body": "Ācārāṅga and later conduct texts place careful behaviour inside a path addressing karmic bondage. Different texts speak to different audiences. Rather than copy demanding ascetic practices into your life, ask what the rule protects and how knowledge, restraint, and responsibility cooperate. This course explains religious ideals; it does not prescribe fasting or renunciation."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: a careless rumour",
+      "scenario": "You hear an unverified accusation and are tempted to repeat it because you did not invent it yourself.",
+      "explanation": "Ask what repeating it would do to another person and whether being a secondary participant removes responsibility. This original example illustrates the joint work of truthfulness and non-harming. It is not a claim that every difficult truth should be concealed; context, accuracy, intention, and likely harm all deserve attention."
+    },
+    "visual": {
+      "title": "One commitment, different scopes",
+      "nodes": [
+        {
+          "label": "Shared concern",
+          "detail": "Reduce harm and the dispositions that produce it."
+        },
+        {
+          "label": "Mendicant vows",
+          "detail": "Comprehensive renunciant discipline."
+        },
+        {
+          "label": "Lay vows",
+          "detail": "Specified limits within household life."
+        }
+      ],
+      "caption": "Different obligations within a graded framework, not a ranking of people's human worth."
+    },
+    "terms": [
+      {
+        "term": "Ahiṃsā",
+        "meaning": "Non-harming or nonviolence, a central Jain commitment extending to many forms of life."
+      },
+      {
+        "term": "Mahāvrata",
+        "meaning": "A great vow undertaken in mendicant discipline."
+      },
+      {
+        "term": "Aṇuvrata",
+        "meaning": "A limited vow appropriate to a layperson's specified commitments."
+      }
+    ],
+    "reflection": "Identify one ordinary activity in which harm is indirect rather than dramatic. What small, realistic change would make you more attentive without pretending you can remove every consequence?",
+    "quiz": {
+      "question": "Why do Jain texts distinguish great vows and limited vows?",
+      "choices": [
+        "They specify different scopes for renunciant and household forms of life.",
+        "They say laypeople need not consider nonviolence.",
+        "They treat ownership as irrelevant to ethical discipline."
+      ],
+      "correct": 0,
+      "explanation": "The distinction concerns scope and life situation. The common ethical concerns remain important even when the form of commitment differs."
+    },
+    "connections": [
+      {
+        "lessonId": "classical-yoga",
+        "why": "Compare shared vocabulary of restraint while retaining distinct philosophical goals."
+      },
+      {
+        "lessonId": "tattvarthasutra",
+        "why": "Understand why conduct belongs with right understanding and knowledge in the liberation path."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "JAINpedia: Jain beliefs and nonviolence",
+        "url": "https://jainpedia.org/themes/principles/jain-beliefs/"
+      },
+      {
+        "label": "JAINpedia: Mendicant life and the five great vows",
+        "url": "https://jainpedia.org/themes/practices/monks-and-nuns/"
+      },
+      {
+        "label": "JAINpedia: Foundational conduct texts",
+        "url": "https://jainpedia.org/themes/principles/sacred-writings/svetambara-canon/mula-sutras/"
+      }
+    ]
+  },
+  "jain-narratives": {
+    "opening": "If a hero wins a war but incurs grave karmic consequences, has the story ended in victory? Jain narratives make familiar epic questions look different. They teach not only by listing ethical rules but by changing what readers admire, fear, and recognize as a successful life.",
+    "teaching": [
+      {
+        "title": "A familiar plot can carry another moral world",
+        "body": "Vimala Sūri's Prakrit Paumacariya retells the Rāma story within Jain universal history. Rāma, also called Padma, belongs to a pattern of great figures, and the treatment of violence changes the distribution of heroic roles. A retelling is not merely the same story translated into another language; its consequences and ideals can be reorganized."
+      },
+      {
+        "title": "Ask who performs the violent act",
+        "body": "In influential Jain Rāma tellings, Lakṣmaṇa kills Rāvaṇa while Rāma's trajectory culminates in renunciation and liberation. The distinction between martial achievement and release makes action's cost visible. Particular Jain versions still differ, so keep the title and author attached to any plot claim rather than inventing one uniform Jain Rāmāyaṇa."
+      },
+      {
+        "title": "Exemplary lives organize memory",
+        "body": "The Kalpasūtra recounts Jina lives as well as teachers and monastic matters. Hemacandra's Triṣaṣṭiśalākāpuruṣacaritra organizes accounts of sixty-three great figures. These works situate individual stories within larger patterns of rebirth, renunciation, and liberation. Their literary and ritual importance is not the same as proof that every narrated event is independently documented history."
+      }
+    ],
+    "example": {
+      "title": "Reading exercise: change the ending's measure",
+      "scenario": "Read an epic conflict once asking 'Who won?' Then reread it asking 'Who is bound by the actions performed, and who becomes free?'",
+      "explanation": "The second question makes the aftermath central rather than incidental. Notice how this changes your assessment of heroic strength and restraint. This is a course reading exercise, not a replacement narrative or a claim that all Jain authors resolve every difficult case in the same way."
+    },
+    "visual": {
+      "title": "Three questions for a Jain epic scene",
+      "nodes": [
+        {
+          "label": "Action",
+          "detail": "Who acts, especially when violence occurs?"
+        },
+        {
+          "label": "Consequence",
+          "detail": "What karmic and narrative cost follows?"
+        },
+        {
+          "label": "Release",
+          "detail": "Does the story finally value victory, renunciation, or liberation?"
+        }
+      ],
+      "caption": "A reading lens that makes ethical consequences visible; verify answers in the particular retelling."
+    },
+    "terms": [
+      {
+        "term": "Carita",
+        "meaning": "An account of a life or deeds; a common title element in Jain narrative."
+      },
+      {
+        "term": "Jina",
+        "meaning": "A spiritual conqueror who has overcome the causes of bondage, not a military victor."
+      },
+      {
+        "term": "Universal history",
+        "meaning": "A Jain narrative framework organizing recurring exemplary figures and cosmic time."
+      }
+    ],
+    "reflection": "How does a story change when the violent victor and the ultimately liberated figure are not identical? Compare one Jain Rāma episode with the epic version you know.",
+    "quiz": {
+      "question": "What makes a Jain Rāma retelling more than a language change?",
+      "choices": [
+        "It removes the need to identify a particular author or version.",
+        "It can reorganize heroic roles and the karmic meaning of victory and violence.",
+        "It turns every narrated event into directly verified political history."
+      ],
+      "correct": 1,
+      "explanation": "Retelling can make a substantive ethical argument. Changes in who acts and what follows are central to how a narrative teaches."
+    },
+    "connections": [
+      {
+        "lessonId": "many-ramayanas",
+        "why": "Place Jain retellings among other substantial transformations of the Rāma story."
+      },
+      {
+        "lessonId": "jain-ethics",
+        "why": "Connect narrative consequences with the discipline of nonviolence."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "JAINpedia: Jain Rāmāyaṇas and their differing versions",
+        "url": "https://jainpedia.org/themes/principles/sacred-writings/other-writings/jain-ramayanas/"
+      },
+      {
+        "label": "JAINpedia manuscript guide: Kalpasūtra lives of the Jinas",
+        "url": "https://jainpedia.org/manuscript/section-on-the-20-jinas-10/"
+      }
+    ]
+  },
+  "tattvarthasutra": {
+    "opening": "The opening of Tattvārthasūtra links understanding, knowledge, and conduct. That is the key to reading its detailed map of reality: the categories are meant to explain bondage and the path out of it, not merely to supply impressive vocabulary.",
+    "teaching": [
+      {
+        "title": "The first sentence states an integrated path",
+        "body": "Tattvārthasūtra 1.1 identifies right orientation or faith, right knowledge, and right conduct together as the path to liberation. 'Right faith' here should not be reduced to believing anything firmly; the following sūtra connects it with confidence in the realities the work teaches. Knowing names without transforming conduct would leave the opening program incomplete."
+      },
+      {
+        "title": "Reality is mapped through bondage and release",
+        "body": "Sūtra 1.4 lists self, non-self, influx, bondage, stoppage, shedding, and liberation. Jain karma is understood as a subtle material relation with the soul, not only as a metaphor for habit. The later categories describe how bondage occurs and how it ends. The map is therefore both explanatory and directed toward release."
+      },
+      {
+        "title": "Shared importance leaves room for disagreement",
+        "body": "The Sanskrit work is associated with Umāsvāti or Umāsvāmin and is respected in both major Jain traditions. Recensions and commentaries differ. Read the short base statements alongside identified explanations; do not treat a particular commentator's elaboration as wording that every version shares. The linked TITUS text visibly records a number of variants."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: learning to navigate",
+      "scenario": "A learner trusts a route, understands the map, and actually travels. Trust without understanding can mislead; a perfectly memorized map does not move the traveller.",
+      "explanation": "This limited analogy makes the opening triad easier to remember. It does not prove the text's account of karma or reduce religious liberation to a practical skill. Its point is that orientation, knowledge, and enactment have different jobs and belong together."
+    },
+    "visual": {
+      "title": "The liberation problem in four panels",
+      "nodes": [
+        {
+          "label": "Who?",
+          "detail": "Self and non-self establish the fundamental distinction."
+        },
+        {
+          "label": "How bound?",
+          "detail": "Influx and bondage explain the karmic relation."
+        },
+        {
+          "label": "What changes?",
+          "detail": "Stoppage and shedding address that relation."
+        },
+        {
+          "label": "What end?",
+          "detail": "Liberation is freedom from karmic bondage."
+        }
+      ],
+      "caption": "A teaching grouping of the seven categories in 1.4, not a modern scientific account of matter."
+    },
+    "terms": [
+      {
+        "term": "Jīva",
+        "meaning": "A living conscious self or soul in Jain philosophy."
+      },
+      {
+        "term": "Saṃvara",
+        "meaning": "Stoppage of karmic influx."
+      },
+      {
+        "term": "Nirjarā",
+        "meaning": "Shedding or dissociation of karmic matter already bound to the soul."
+      }
+    ],
+    "reflection": "Why does the opening sentence join knowledge and conduct? Give an example where correct information has not yet become a reliable way of acting.",
+    "quiz": {
+      "question": "Which distinction correctly follows the text's path vocabulary?",
+      "choices": [
+        "Saṃvara is new karmic bondage; nirjarā is confidence in a teacher.",
+        "Saṃvara and nirjarā are names for two independent creator gods.",
+        "Saṃvara stops influx; nirjarā concerns shedding what is already bound."
+      ],
+      "correct": 2,
+      "explanation": "The two terms address different aspects of the bondage problem. Blocking further influx and removing existing bondage are related but not interchangeable."
+    },
+    "connections": [
+      {
+        "lessonId": "jain-ethics",
+        "why": "See what it means for right conduct to become a concrete discipline."
+      },
+      {
+        "lessonId": "kundakunda",
+        "why": "Explore another Jain approach to the self's relation with karmic matter."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "TITUS: Tattvārthasūtra Sanskrit text and variants",
+        "url": "https://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattvt.htm"
+      },
+      {
+        "label": "IEP: Jain philosophy, karma, and liberation",
+        "url": "https://iep.utm.edu/jain/"
+      }
+    ],
+    "excerpt": {
+      "reference": "Tattvārthasūtra 1.1",
+      "devanagari": "सम्यग्दर्शनज्ञानचारित्राणि मोक्षमार्गः ।",
+      "iast": "samyag-darśana-jñāna-cāritrāṇi mokṣa-mārgaḥ.",
+      "translation": "Right orientation, right knowledge, and right conduct together are the path to liberation.",
+      "note": "Original course translation. Darśana here is often translated 'faith' or 'view'; 1.2 supplies its doctrinal context. There are two compound words. The rows unpack all their components so a learner can see how the sentence is built; Sanskrit leaves 'are' unstated.",
+      "sourceUrl": "https://titus.uni-frankfurt.de/texte/etcs/ind/aind/jskt/tattvs/tattvt.htm",
+      "words": [
+        {
+          "source": "सम्यग्",
+          "iast": "samyag",
+          "meaning": "rightly; right",
+          "grammar": "Samyak takes the voiced form samyag before d. In interpretation, 'right' qualifies orientation, knowledge, and conduct."
+        },
+        {
+          "source": "दर्शन",
+          "iast": "darśana",
+          "meaning": "orientation, view, or faith",
+          "grammar": "First coordinated noun member of the compound, in stem form; read with the definition in 1.2."
+        },
+        {
+          "source": "ज्ञान",
+          "iast": "jñāna",
+          "meaning": "knowledge",
+          "grammar": "Middle coordinated noun member of the compound, in stem form."
+        },
+        {
+          "source": "चारित्राणि",
+          "iast": "cāritrāṇi",
+          "meaning": "conduct; with the preceding members, the three together",
+          "grammar": "The final member carries the neuter nominative plural ending for the coordinated compound."
+        },
+        {
+          "source": "मोक्ष",
+          "iast": "mokṣa",
+          "meaning": "liberation",
+          "grammar": "First member of mokṣa-mārgaḥ: the path to liberation."
+        },
+        {
+          "source": "मार्गः",
+          "iast": "mārgaḥ",
+          "meaning": "path",
+          "grammar": "Masculine nominative singular; a predicate noun describing the triad as one path."
+        }
+      ]
+    }
+  },
+  "kundakunda": {
+    "opening": "You can describe a person through changing roles, actions, and attachments. Is that also the best description of the conscious self? Works associated with Kundakunda sharpen this question by distinguishing ways of speaking about the soul and its relation to what is not the soul.",
+    "teaching": [
+      {
+        "title": "Begin with the work and its language",
+        "body": "Samayasāra and Pravacanasāra are influential Digambara works transmitted in Prakrit with later commentaries, including Sanskrit explanations. Kundakunda's historical dating and the formation of the attributed corpus are debated. A Sanskrit rendering printed alongside a Prakrit verse is a valuable aid, but it is not automatically the original wording."
+      },
+      {
+        "title": "A standpoint selects what it describes",
+        "body": "The conventional standpoint attends to the soul in relation to karmic bondage and worldly activity. The ultimate or pure standpoint attends to its distinctive conscious nature rather than identifying it with alien material conditions. The distinction is intended to undo misidentification, not to introduce two separate souls living in the same person."
+      },
+      {
+        "title": "Purity is not an excuse for indifference",
+        "body": "A reader could misuse 'the self is pure' to dismiss anger, attachment, or harmful action. The liberating inquiry instead asks the reader to distinguish the self from those entanglements. Study claims about pure nature together with the work's account of bondage and release, and keep later interpretations identifiable rather than making one modern appropriation definitive."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: 'I am my failure'",
+      "scenario": "After a mistake, a person describes their whole identity as failure. A more careful description distinguishes the person, the action, the consequences, and the possibility of change.",
+      "explanation": "This is a limited analogy for resisting identification with a condition. It does not demonstrate the Jain soul or erase responsibility for the mistake. The ethical test of the analogy is whether the distinction helps one respond more clearly—not whether it provides a reason to deny what happened."
+    },
+    "visual": {
+      "title": "One self, two descriptive emphases",
+      "nodes": [
+        {
+          "label": "Conventional relation",
+          "detail": "The soul is discussed amid activity and karmic bondage."
+        },
+        {
+          "label": "Pure nature",
+          "detail": "Conscious nature is distinguished from non-self conditions."
+        },
+        {
+          "label": "Liberating inquiry",
+          "detail": "The distinction challenges attachment and misidentification."
+        }
+      ],
+      "caption": "A schematic introduction to standpoints, not two substances or permission to disregard conduct."
+    },
+    "terms": [
+      {
+        "term": "Vyavahāra-naya",
+        "meaning": "The conventional or practical standpoint, attending to worldly relations."
+      },
+      {
+        "term": "Niścaya-naya",
+        "meaning": "The definitive or ultimate standpoint, here emphasizing the self's own nature."
+      },
+      {
+        "term": "Upayoga",
+        "meaning": "Conscious engagement or manifestation of consciousness, important in Jain accounts of the self."
+      }
+    ],
+    "reflection": "How could distinguishing yourself from a harmful habit help you change it? How could the same language become an excuse? Explain why the distinction needs ethical care.",
+    "quiz": {
+      "question": "What would be a misuse of Kundakunda's pure-standpoint language?",
+      "choices": [
+        "Claiming that harmful conduct no longer matters because the self's nature is described as pure.",
+        "Asking which statement belongs to a Prakrit base text and which to commentary.",
+        "Distinguishing the self's conscious nature from its karmic relations."
+      ],
+      "correct": 0,
+      "explanation": "The standpoint distinction serves an inquiry into liberation from entanglement. Using it to dismiss harmful dispositions confuses description of pure nature with an exemption from responsibility."
+    },
+    "connections": [
+      {
+        "lessonId": "tattvarthasutra",
+        "why": "Compare the self's defining characteristic and the map of karmic bondage."
+      },
+      {
+        "lessonId": "anekantavada",
+        "why": "Place two-standpoint analysis beside the wider Jain discipline of qualified claims."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "University of Alabama: Upayoga and Jain accounts of self",
+        "url": "https://globalcritical.as.ua.edu/self-and-persistence/upayoga/"
+      },
+      {
+        "label": "University of Lausanne research: Kundakunda",
+        "url": "https://serval.unil.ch/resource/serval%3ABIB_5DE61CFFA741.P001/REF.pdf"
+      },
+      {
+        "label": "Samayasāra: Prakrit text, translation, and annotations",
+        "url": "https://philpapers.org/archive/JAICKS-2.pdf"
+      }
+    ]
+  },
+  "anekantavada": {
+    "opening": "A clay pot changes shape when broken, yet its material continues in the fragments. Must we choose between 'something persists' and 'something changes'? Jain many-sidedness asks whether the apparent contradiction came from leaving the respect in which each statement is true unstated.",
+    "teaching": [
+      {
+        "title": "The object has more than one aspect",
+        "body": "Anekāntavāda concerns the many-sided character of reality, including persistence and changing modes. It is not merely a rule of politeness toward opinions. Jain thinkers argue that an adequate account must do justice to the object's complexity, rather than absolutizing whichever aspect a single description emphasizes."
+      },
+      {
+        "title": "A standpoint needs a boundary",
+        "body": "A naya is a selective standpoint. A statement may be useful within its scope yet misleading when presented without qualification. Saying that a pot exists on this table now differs from saying that it exists everywhere and always. Specifying substance, place, time, and state helps make the scope of a claim visible."
+      },
+      {
+        "title": "Conditional speech is not 'anything goes'",
+        "body": "Syādvāda qualifies predication; later Jain logic develops seven modes involving affirmation, denial, and inexpressibility in specified respects. The point is not to assert an unqualified contradiction. Nor must every statement be accepted as true. A false description still needs correction, and a valid partial account still needs its limits named."
+      }
+    ],
+    "example": {
+      "title": "Modern illustration: is this room quiet?",
+      "scenario": "One person says the room is quiet compared with a busy street. Another says it is noisy enough to hear the fan during a recording.",
+      "explanation": "Specify the comparison and purpose before deciding that one person must be irrational. Both descriptions may be appropriate in different respects. But if the fan is off, insisting it is running is not rescued by 'many viewpoints'. This ordinary example illustrates qualification; Jain philosophy gives the method a more technical metaphysical setting."
+    },
+    "visual": {
+      "title": "Make a claim precise",
+      "nodes": [
+        {
+          "label": "Object",
+          "detail": "What exactly is being described?"
+        },
+        {
+          "label": "Respect",
+          "detail": "Which feature, time, place, or comparison matters?"
+        },
+        {
+          "label": "Claim",
+          "detail": "What follows within that scope?"
+        },
+        {
+          "label": "Limit",
+          "detail": "What has not been established?"
+        }
+      ],
+      "caption": "An original practice tool for qualified speech, not the canonical sevenfold list."
+    },
+    "terms": [
+      {
+        "term": "Anekāntavāda",
+        "meaning": "The many-sidedness of reality; a challenge to one-sided absolute descriptions."
+      },
+      {
+        "term": "Naya",
+        "meaning": "A partial standpoint with a legitimate but limited scope."
+      },
+      {
+        "term": "Syādvāda",
+        "meaning": "Conditional predication: saying in what respect a claim holds rather than asserting it absolutely."
+      }
+    ],
+    "reflection": "Take an argument in which two people use the same adjective—fair, large, quiet, successful. Can you specify their different criteria? Which claims remain false even after qualification?",
+    "quiz": {
+      "question": "Which statement best illustrates qualification without unrestricted relativism?",
+      "choices": [
+        "Every opinion is true because everyone has a viewpoint.",
+        "The room is quiet relative to the street, but its fan is audible during recording.",
+        "The fan is both running and not running in exactly the same respect at the same time."
+      ],
+      "correct": 1,
+      "explanation": "The correct answer states the different respects explicitly. It neither accepts every claim nor asserts an unqualified contradiction."
+    },
+    "connections": [
+      {
+        "lessonId": "kundakunda",
+        "why": "Compare a particular two-standpoint analysis with the broader discipline of qualified description."
+      },
+      {
+        "lessonId": "madhyamaka",
+        "why": "Compare critiques of absolutized claims while preserving the schools' different views of reality."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP: Jaina philosophy, many-sidedness, and predication",
+        "url": "https://plato.stanford.edu/entries/jaina-philosophy/"
+      },
+      {
+        "label": "IEP: Jain knowledge and standpoints",
+        "url": "https://iep.utm.edu/jain/"
+      }
+    ]
+  }
+}

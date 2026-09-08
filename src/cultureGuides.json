@@ -1,0 +1,1828 @@
+{
+  "purusharthas": {
+    "opening": "A life can contain several worthwhile aims that do not always fit together. The puruṣārtha framework names this problem: doing what is right, securing the means to live, enjoying life, and seeking release. It is a vocabulary for deliberation, not a command to give each aim exactly one quarter of your time.",
+    "teaching": [
+      {
+        "title": "Name the aims before ranking them",
+        "body": "Dharma concerns obligation and right conduct; artha concerns resources, security, and effective worldly action; kāma concerns desire and enjoyment; mokṣa concerns liberation. These English glosses are starting points, not exhaustive definitions. Notice that wanting enough food and shelter is not identical with greed, and valuing enjoyment is not identical with obeying every impulse."
+      },
+      {
+        "title": "Read a particular argument",
+        "body": "The Kāmasūtra opens by placing its subject alongside dharma and artha. In its opening discussion, a person should pursue these aims without their undermining one another. This frame makes pleasure a subject for education and judgment. The text still has a particular social audience and is not a neutral handbook for everyone."
+      },
+      {
+        "title": "Leave room for real disagreement",
+        "body": "Epic debates about rule and renunciation expose tensions between sustaining a household or kingdom and leaving worldly attachments behind. Different texts rank and organize the aims differently. The fourfold scheme is a useful map of Brahmanical thought, but it should not be imposed as the identical foundation of every Buddhist, Jain, or regional work."
+      }
+    ],
+    "example": {
+      "title": "A decision with more than one value · modern illustration",
+      "scenario": "You can accept extra paid work, keep a promise to help a friend, or spend the evening making music. There is not enough time for all three.",
+      "explanation": "Resources, obligations, and enjoyment each supply a reason. The exercise is to name the competing reasons and justify a choice, not to label one activity automatically sacred and the others selfish. Liberation asks a further question about attachment to the whole contest."
+    },
+    "visual": {
+      "title": "Four questions around one life",
+      "nodes": [
+        {
+          "label": "Dharma",
+          "detail": "What do I owe?"
+        },
+        {
+          "label": "Artha",
+          "detail": "What sustains effective life?"
+        },
+        {
+          "label": "Kāma",
+          "detail": "What is worth enjoying?"
+        },
+        {
+          "label": "Mokṣa",
+          "detail": "What would release mean?"
+        }
+      ],
+      "caption": "A comparison of aims, not a timeline or a universal ranking."
+    },
+    "terms": [
+      {
+        "term": "Puruṣārtha",
+        "meaning": "An aim or purpose of human life."
+      },
+      {
+        "term": "Trivarga",
+        "meaning": "The group of three aims: dharma, artha, and kāma."
+      },
+      {
+        "term": "Mokṣa",
+        "meaning": "Release or liberation; its precise meaning differs across traditions."
+      }
+    ],
+    "reflection": "Describe a choice in which two legitimate aims conflict. What extra information would make your judgment fairer?",
+    "quiz": {
+      "question": "A learner calls every pursuit of material security a rejection of spiritual life. What does the aim-framework help us notice?",
+      "choices": [
+        "Material success automatically proves moral excellence.",
+        "Artha can be a legitimate aim whose pursuit must be considered alongside other aims.",
+        "All four aims prescribe the same activity."
+      ],
+      "correct": 1,
+      "explanation": "Naming artha recognizes the place of livelihood and security. It does not make every way of obtaining them acceptable, or resolve their tension with other aims."
+    },
+    "connections": [
+      {
+        "lessonId": "mahabharata-aftermath",
+        "why": "Yudhiṣṭhira's postwar dilemma puts rule and renunciation in tension."
+      },
+      {
+        "lessonId": "kamasutra",
+        "why": "The opening frame locates cultivated enjoyment among other human aims."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Kāmasūtra, Part I, chapter II · historical public-domain translation",
+        "url": "https://www.gutenberg.org/files/27827/27827-h/27827-h.htm#CHAPTER_II"
+      },
+      {
+        "label": "IEP · Hindu philosophy and human aims",
+        "url": "https://iep.utm.edu/hindu-ph/"
+      }
+    ]
+  },
+  "dharmasutras": {
+    "opening": "Suppose a question about household conduct has no obvious answer in a hymn. Where should a teacher look? The Dharmasūtras make the relationship between scripture, remembered teaching, and recognized practice into an explicit problem of authority.",
+    "teaching": [
+      {
+        "title": "A school tradition, not a national statute book",
+        "body": "Āpastamba, Gautama, Baudhāyana, and Vasiṣṭha preserve different works associated with Brahmanical teaching traditions. Their compressed rules concern students, households, inheritance, purification, and other obligations. The sūtra form expects explanation; a short sentence belongs to a sequence and cannot safely stand alone as the law of ancient India."
+      },
+      {
+        "title": "Custom is an argument about knowledge",
+        "body": "Āpastamba's opening recognizes the established agreement of people knowledgeable about dharma and the Vedas as authorities. This matters because not every practical rule can simply be read off a Vedic passage. But recognized custom does not mean any popular habit: who qualifies as knowledgeable is itself a social restriction on authority."
+      },
+      {
+        "title": "Disagreement is part of the evidence",
+        "body": "Compare how two schools frame the same problem before searching for a single answer. A text may preserve alternatives or objections, revealing active deliberation. To investigate what people actually did, add other evidence: inscriptions, documents, material remains, and particular local histories. A prescription establishes an author's preferred order, not universal compliance."
+      }
+    ],
+    "example": {
+      "title": "Whose practice counts? · historical reading exercise",
+      "scenario": "One passage appeals to Vedic authority and another to the conduct of recognized experts. A reader calls the second passage a rejection of scripture.",
+      "explanation": "That conclusion misses the argument. A normative author can use expert practice to identify obligations while still affirming Vedic authority. Ask how the two sources are related and who is admitted into the community of experts."
+    },
+    "visual": {
+      "title": "Three things to keep distinct",
+      "nodes": [
+        {
+          "label": "Textual authority",
+          "detail": "What source does the author recognize?"
+        },
+        {
+          "label": "Interpretation",
+          "detail": "How is that source applied to a case?"
+        },
+        {
+          "label": "Lived conduct",
+          "detail": "What independent evidence shows actual practice?"
+        }
+      ],
+      "caption": "An evidence map: these categories interact, but none automatically proves the others."
+    },
+    "terms": [
+      {
+        "term": "Dharmasūtra",
+        "meaning": "An aphoristic work teaching norms of conduct and obligation."
+      },
+      {
+        "term": "Ācāra",
+        "meaning": "Conduct or customary practice; its authority is qualified by context."
+      },
+      {
+        "term": "Pramāṇa",
+        "meaning": "An authoritative means of knowing or warrant for a claim."
+      }
+    ],
+    "reflection": "If a text appeals to the practice of experts, what would you need to learn about those experts before accepting its social scope?",
+    "quiz": {
+      "question": "You find disagreement between Āpastamba and Gautama about a rule. What is the best first inference?",
+      "choices": [
+        "There were distinct normative arguments within the tradition.",
+        "One text cannot possibly be a Dharmasūtra.",
+        "Both rules were obeyed by every household simultaneously."
+      ],
+      "correct": 0,
+      "explanation": "Different school texts preserve debate. Their disagreement is evidence to study, not a defect that must be erased to invent one uniform code."
+    },
+    "connections": [
+      {
+        "lessonId": "vedangas-sutras",
+        "why": "Dharma teaching belongs beside other school-specific sūtra disciplines."
+      },
+      {
+        "lessonId": "mimamsa",
+        "why": "Both ask how authoritative language can disclose obligations."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "University of Texas · Dharmasūtra texts and editions",
+        "url": "https://sites.utexas.edu/sanskrit/resources/dharmasastra/dharmasutras/"
+      },
+      {
+        "label": "St Andrews · sources of dharma, including Āpastamba's opening",
+        "url": "https://www.saet.ac.uk/Hinduism/LawandReligioninBrahmanism"
+      }
+    ],
+    "excerpt": {
+      "reference": "Āpastamba Dharmasūtra 1.1.1.2 (also numbered 1.1.2)",
+      "devanagari": "धर्मज्ञसमयः प्रमाणम् ।",
+      "iast": "dharmajñasamayaḥ pramāṇam |",
+      "translation": "The established agreement of those who know dharma is an authority.",
+      "note": "A short prose sūtra, not a metrical śloka. This is one statement in an opening sequence; the next sūtra adds the Vedas. The English wording is an original contextual rendering.",
+      "sourceUrl": "https://www.saet.ac.uk/Hinduism/LawandReligioninBrahmanism",
+      "words": [
+        {
+          "source": "धर्मज्ञसमयः",
+          "iast": "dharmajñasamayaḥ",
+          "meaning": "the established agreement of those who know dharma",
+          "grammar": "Masculine nominative singular compound: dharma-jña, one who knows dharma, plus samaya, established agreement or convention."
+        },
+        {
+          "source": "प्रमाणम्",
+          "iast": "pramāṇam",
+          "meaning": "an authority; a valid means of knowing",
+          "grammar": "Neuter nominative singular, serving as the predicate. The verb ‘is’ is understood."
+        }
+      ]
+    }
+  },
+  "dharmashastra": {
+    "opening": "A rule can tell us a great deal about the person who wishes to impose it without telling us how everyone lived. Dharmaśāstra should be read with that distinction in view, especially when it ranks people by caste, gender, household position, or political authority.",
+    "teaching": [
+      {
+        "title": "From a rule to a whole social vision",
+        "body": "The Manusmṛti places conduct inside an account of cosmic and social order. Rules about education, family, kingship, and expiation are therefore related to a larger attempt to authorize hierarchy. Reading only an attractive maxim can conceal that architecture; reading only a shocking rule can conceal the text's different genres and problems."
+      },
+      {
+        "title": "The library is not just Manu",
+        "body": "Yājñavalkya organizes a substantial treatment of conduct, legal procedure, and expiation. Nārada is particularly associated with adjudication. Their differences matter: a discussion of witnesses, debts, or inheritance is not doing exactly the same work as a cosmological opening. Identify the work and topic before saying what ‘Dharmaśāstra says.’"
+      },
+      {
+        "title": "Historical explanation is not ethical endorsement",
+        "body": "Ask who may speak, own, study, inherit, or receive a particular punishment under a rule. These questions expose power within the normative system. Understanding a rule's historical logic does not require accepting discriminatory treatment. Nor does this course provide present-day legal advice: current rights cannot be inferred from an ancient prescription."
+      }
+    ],
+    "example": {
+      "title": "Reading a rule critically · method exercise",
+      "scenario": "A passage assigns different treatment to people of different social ranks. A reader claims that because the passage exists, every court enforced it exactly that way.",
+      "explanation": "Separate three judgments: what the passage prescribes, why its author ranks people that way, and what evidence shows enforcement. You can criticize inequality while remaining precise about what the surviving text does and does not demonstrate."
+    },
+    "visual": {
+      "title": "Three readings of one prescription",
+      "nodes": [
+        {
+          "label": "Meaning",
+          "detail": "What conduct is required or forbidden?"
+        },
+        {
+          "label": "Power",
+          "detail": "Who gains authority and who bears a burden?"
+        },
+        {
+          "label": "Evidence",
+          "detail": "Where, when, and whether was it applied?"
+        }
+      ],
+      "caption": "Complementary questions, not excuses for inequality."
+    },
+    "terms": [
+      {
+        "term": "Smṛti",
+        "meaning": "Remembered authoritative tradition; also a designation for particular normative works."
+      },
+      {
+        "term": "Vyavahāra",
+        "meaning": "Legal procedure or adjudication in this context."
+      },
+      {
+        "term": "Prāyaścitta",
+        "meaning": "Expiation or prescribed response to wrongdoing and impurity."
+      }
+    ],
+    "reflection": "Choose a rule discussed in the linked text. Write one sentence about its prescription and a separate sentence about the evidence needed to establish its use.",
+    "quiz": {
+      "question": "Which project would best test whether a rule about inheritance was applied in a particular place?",
+      "choices": [
+        "Repeat the rule with no location or date.",
+        "Assume every later commentator agreed with it.",
+        "Compare its interpretation with dated documents and evidence from that place."
+      ],
+      "correct": 2,
+      "explanation": "A normative rule and its application are different objects of inquiry. Local, dated evidence is needed to move from the first to the second."
+    },
+    "connections": [
+      {
+        "lessonId": "dharma-reception",
+        "why": "Commentators and courts give earlier prescriptions new settings."
+      },
+      {
+        "lessonId": "ramayana-war",
+        "why": "Both paths ask whose suffering supports an authorized social ideal."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Manusmṛti, chapter II · Bühler's historical translation",
+        "url": "https://sacred-texts.com/hin/manu/manu02.htm"
+      },
+      {
+        "label": "St Andrews · Dharmaśāstra works, themes, and authority",
+        "url": "https://www.saet.ac.uk/Hinduism/LawandReligioninBrahmanism"
+      }
+    ]
+  },
+  "dharma-reception": {
+    "opening": "Texts do not walk into courts by themselves. Readers select passages, explain difficult words, reconcile disagreements, and decide whose interpretation counts. This lesson follows that interpretive work from Sanskrit commentary into much later colonial legal institutions.",
+    "teaching": [
+      {
+        "title": "A commentary makes decisions",
+        "body": "Medhātithi's engagement with Manu and Vijñāneśvara's Mitākṣarā on Yājñavalkya are not mere dictionaries attached to older works. Commentators must explain scope, connect rules, and handle competing authorities. Their conclusions can become influential in their own right. Always record both the root text and the commentator when attributing a position."
+      },
+      {
+        "title": "A digest rearranges the library",
+        "body": "Dharmanibandhas collect and organize authorities by topic, making scattered discussions usable for new readers. Jīmūtavāhana's Dāyabhāga and the Mitākṣarā became associated with different approaches to inheritance. Treat those as particular argumentative histories; do not turn their later geographical labels into timeless borders or assume that all local custom vanished."
+      },
+      {
+        "title": "Colonial law is another historical layer",
+        "body": "Colonial courts, translations, pandits, litigation, and decisions reshaped which Sanskrit authorities were used as law. The resulting Anglo-Hindu law was not an unchanged ancient code. Historical study must ask how litigants argued custom and identity, and how legal institutions made those claims count. Nothing here substitutes for checking current law."
+      }
+    ],
+    "example": {
+      "title": "Four dates on one page · research illustration",
+      "scenario": "A nineteenth-century judgment quotes an English translation of a medieval commentary on an older Sanskrit verse.",
+      "explanation": "There are at least four actors: the verse's author, commentator, translator, and court. Each can add a decision. Attribution should identify the layer that supplies the actual conclusion, rather than crediting the whole judgment to an ancient sage."
+    },
+    "visual": {
+      "title": "An authority's changing settings",
+      "nodes": [
+        {
+          "label": "Root text",
+          "detail": "A rule in its original literary argument."
+        },
+        {
+          "label": "Commentary or digest",
+          "detail": "Selection, reconciliation, and new interpretation."
+        },
+        {
+          "label": "Translation and court",
+          "detail": "Institutional choices about usable legal authority."
+        },
+        {
+          "label": "Litigants and custom",
+          "detail": "Claims that can reshape the application."
+        }
+      ],
+      "caption": "A map of mediation, not a claim that every rule followed this single route."
+    },
+    "terms": [
+      {
+        "term": "Bhāṣya",
+        "meaning": "An explanatory commentary; commentary titles and forms vary."
+      },
+      {
+        "term": "Nibandha",
+        "meaning": "A digest or topical compilation of authoritative materials."
+      },
+      {
+        "term": "Anglo-Hindu law",
+        "meaning": "The legal formation produced under colonial institutions using and transforming Hindu textual and customary authorities."
+      }
+    ],
+    "reflection": "When a modern summary says ‘Manu's law,’ what questions would reveal whether it actually relies on a commentator or colonial judgment?",
+    "quiz": {
+      "question": "A court chooses one commentator's reading over another. To whom should that specific choice be attributed?",
+      "choices": [
+        "Automatically to the root text's author.",
+        "To the court's interpretive decision, while identifying the commentary it selected.",
+        "To every community described as Hindu."
+      ],
+      "correct": 1,
+      "explanation": "The earlier texts supply resources, but the court makes a situated selection. Keeping these agents separate prevents later law from being projected into antiquity."
+    },
+    "connections": [
+      {
+        "lessonId": "dharmashastra",
+        "why": "Begin with the normative works that later interpreters select."
+      },
+      {
+        "lessonId": "vedanta-schools",
+        "why": "Philosophical commentary likewise creates distinct arguments from shared textual authorities."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "St Andrews · commentaries, digests, and colonial reception",
+        "url": "https://www.saet.ac.uk/Hinduism/LawandReligioninBrahmanism"
+      },
+      {
+        "label": "Law and History Review · custom and Hindu identity in colonial litigation",
+        "url": "https://www.cambridge.org/core/journals/law-and-history-review/article/abs/escaping-the-grip-of-personal-law-in-colonial-india-proving-custom-negotiating-hinduness/7C099A15642B9020CFE7BDF5703F3CA7"
+      }
+    ]
+  },
+  "arthashastra-niti": {
+    "opening": "Good intentions do not automatically produce a functioning government. Arthaśāstra and nīti literature ask how rulers obtain information, organize resources, choose allies, and survive mistakes. Their practical intelligence is inseparable from difficult questions about coercion and power.",
+    "teaching": [
+      {
+        "title": "Administration is intellectual work",
+        "body": "The Arthaśāstra discusses education, ministers, revenue, officials, justice, and diplomacy. Its opening considers competing accounts of the disciplines a ruler needs. Governing is therefore not presented simply as personal courage: it demands judgment, information, and organized institutions. The text's competing voices also caution against imagining one author recording one government's daily routine."
+      },
+      {
+        "title": "Prudence can restrain or intensify force",
+        "body": "A ruler must judge capacity and consequences before choosing action. Dependence on advisers creates problems of trust; collecting revenue creates problems of oversight; rivalry creates questions about alliances. These are analytical problems, not endorsements of every tactic the treatise permits. Ask who is protected, who is surveilled, and who bears the cost."
+      },
+      {
+        "title": "Stories teach a different kind of strategy",
+        "body": "The Pañcatantra uses nested animal stories to train judgment about friends, deception, haste, and counsel. Kāmandaka's Nītisāra develops another textual account of policy. A fable lets the listener rehearse a decision and see a reversal. Its lesson is not always ‘be nice’; practical cleverness and moral goodness can diverge."
+      }
+    ],
+    "example": {
+      "title": "The flattering adviser · modern illustration",
+      "scenario": "A team leader hears only reports that confirm a favored plan. A colleague offers unwelcome evidence that the plan is failing.",
+      "explanation": "The problem is not merely whether the leader is brave. It is whether an information system rewards accuracy or pleasing authority. This is a modern analogy for reading counsel and judgment, not a quotation or a claim that a company is an ancient kingdom."
+    },
+    "visual": {
+      "title": "What a policy depends on",
+      "nodes": [
+        {
+          "label": "Information",
+          "detail": "What is known, and from whom?"
+        },
+        {
+          "label": "Capacity",
+          "detail": "Which resources and allies are available?"
+        },
+        {
+          "label": "Choice",
+          "detail": "What action fits the situation?"
+        },
+        {
+          "label": "Consequences",
+          "detail": "Who benefits, pays, or resists?"
+        }
+      ],
+      "caption": "An analytical loop for comparing policies, not instructions for coercive tactics."
+    },
+    "terms": [
+      {
+        "term": "Artha",
+        "meaning": "Resources, advantage, and the material conditions of effective action."
+      },
+      {
+        "term": "Nīti",
+        "meaning": "Policy, guidance, or practical conduct; meaning depends on genre."
+      },
+      {
+        "term": "Daṇḍa",
+        "meaning": "The rod: punishment or coercive authority in political thought."
+      }
+    ],
+    "reflection": "Name a policy that might be effective but unjust. What additional ethical question does effectiveness fail to answer?",
+    "quiz": {
+      "question": "Why compare the Arthaśāstra with a Pañcatantra story about bad counsel?",
+      "choices": [
+        "They train related political judgments through different literary forms.",
+        "Animal fables are official records of ancient ministries.",
+        "A story removes the need to examine consequences."
+      ],
+      "correct": 0,
+      "explanation": "A systematic treatise and a nested fable can both investigate judgment, but they supply different kinds of evidence and learning experience."
+    },
+    "connections": [
+      {
+        "lessonId": "mahabharata-aftermath",
+        "why": "The epic's debates on rule reveal the moral pressure behind political judgment."
+      },
+      {
+        "lessonId": "purusharthas",
+        "why": "Artha is one aim, not a substitute for all ethical evaluation."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Arthaśāstra, Book I · Shamasastry's historical translation",
+        "url": "https://en.wikisource.org/wiki/Arthashastra/Book_I"
+      },
+      {
+        "label": "UCLA MANAS · Kauṭilya and the Arthaśāstra",
+        "url": "https://southasia.ucla.edu/history-politics/ancient-india/kautilya-and-arthashastra/"
+      }
+    ]
+  },
+  "kamasutra": {
+    "opening": "Why would a work on pleasure discuss education, conversation, music, household arrangements, and money? The Kāmasūtra treats cultivated enjoyment as a learned social practice. Its scope is wider than its modern reputation, while its assumptions about privilege and power need explicit scrutiny.",
+    "teaching": [
+      {
+        "title": "Place desire within a life",
+        "body": "Vātsyāyana's opening frames kāma alongside dharma and artha rather than presenting desire as the only purpose. The first part includes arts, education, and the life of a cultivated urban person. Read this as a theory of socially learned taste and conduct. Neither pleasure's rejection nor its unlimited pursuit captures that frame."
+      },
+      {
+        "title": "Notice the audience and its resources",
+        "body": "The urban lifestyle assumes access to leisure, property, servants, skilled companions, and social networks. Its prescriptions are therefore not a portrait of every person's life. The work's treatment of courtesans also brings economic calculation and relationships together. Ask whose labor and vulnerability sustain the pleasures being described."
+      },
+      {
+        "title": "Do not turn historical technique into permission",
+        "body": "The work contains hierarchies and manipulative prescriptions that are not acceptable standards for modern relationships. Studying how an author classifies desire does not endorse coercion or disregard for another person's autonomy. Historical translations add a further layer: the nineteenth-century English edition has its own vocabulary, prejudices, and editorial history."
+      }
+    ],
+    "example": {
+      "title": "An arts list changes the question · reading exercise",
+      "scenario": "A learner expects only instructions about sexual positions, then encounters a list including music, painting, and verbal games.",
+      "explanation": "These arts show that the text locates enjoyment in a cultivated social world. That widens the interpretation, but it does not establish that everyone had access to those skills or justify the text's unequal social arrangements."
+    },
+    "visual": {
+      "title": "The setting of cultivated enjoyment",
+      "nodes": [
+        {
+          "label": "Learning",
+          "detail": "Arts, conversation, and social skill."
+        },
+        {
+          "label": "Resources",
+          "detail": "Leisure, household, and economic support."
+        },
+        {
+          "label": "Relationships",
+          "detail": "Desire negotiated within unequal social positions."
+        },
+        {
+          "label": "Critical reading",
+          "detail": "Historical understanding without adopting harmful norms."
+        }
+      ],
+      "caption": "Related dimensions of a particular text, not a modern relationship checklist."
+    },
+    "terms": [
+      {
+        "term": "Kāma",
+        "meaning": "Desire and enjoyment, including but not limited to sexual pleasure."
+      },
+      {
+        "term": "Nāgaraka",
+        "meaning": "The cultivated urban man whose lifestyle is a major focus of the text."
+      },
+      {
+        "term": "Kalā",
+        "meaning": "An art or cultivated skill; the term's scope is broader than modern fine art."
+      }
+    ],
+    "reflection": "What does an ideal lifestyle reveal through what it assumes people can afford? Name one assumed resource and one absent perspective.",
+    "quiz": {
+      "question": "What does the Kāmasūtra's attention to music and conversation establish?",
+      "choices": [
+        "The work contains no discussion of sexuality.",
+        "All ancient households shared the same elite lifestyle.",
+        "Its account of pleasure includes learned arts and social life, beyond sexual technique."
+      ],
+      "correct": 2,
+      "explanation": "The broader scope corrects a narrow reputation without denying sexuality or turning elite prescription into a universal social description."
+    },
+    "connections": [
+      {
+        "lessonId": "purusharthas",
+        "why": "The opening places enjoyment in relation to other aims."
+      },
+      {
+        "lessonId": "performance-rasa",
+        "why": "Compare ordinary enjoyment with the distinctive experience of aesthetic relish."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Kāmasūtra, Part I · historical public-domain translation, including arts and urban life",
+        "url": "https://www.gutenberg.org/files/27827/27827-h/27827-h.htm"
+      },
+      {
+        "label": "Columbia · kāma in the textual curriculum",
+        "url": "https://indiantraditions.columbia.edu/1_10_kama.html"
+      }
+    ]
+  },
+  "paninian-grammar": {
+    "opening": "The Sanskrit word list in this course is a starting point, but a sentence cannot be understood by replacing each word with an English label. Endings, sound changes, compounds, and syntax matter. Pāṇini's grammar shows how a language can be studied as a precise system of interacting operations.",
+    "teaching": [
+      {
+        "title": "Rules produce forms",
+        "body": "The Aṣṭādhyāyī organizes a compact system for deriving linguistic forms. A derivation uses a starting element, relevant grammatical information, and ordered operations. The aim is not merely to list every possible word. For a learner, the key shift is from asking only ‘What does this mean?’ to also asking ‘How did this form arise?’"
+      },
+      {
+        "title": "Small rules need a large operating context",
+        "body": "Technical terms, sound classes, markers, inherited conditions, and rule interactions make the concise sūtras usable. When two rules appear applicable, interpretation must determine what happens. Modern computational analogies can illuminate this precision, but Pāṇini was not writing software for a modern machine; the work lived within oral teaching and linguistic debate."
+      },
+      {
+        "title": "Commentary is part of learning the system",
+        "body": "Kātyāyana's Vārttikas and Patañjali's Mahābhāṣya discuss and interrogate the grammatical tradition. Later analyses continue to disagree about how some operations should be understood. You do not need to master the Aṣṭādhyāyī before reading a mantra: begin by noticing the difference between a dictionary form, an inflected form, and a surface form affected by sandhi."
+      }
+    ],
+    "example": {
+      "title": "Three layers of a word · learner illustration",
+      "scenario": "A word in a Sanskrit passage looks slightly different from its glossary headword, yet the teacher says they belong together.",
+      "explanation": "Ask separately about the stem, the ending that marks its sentence role, and sound changes at the boundary. A word-by-word gloss helps with meaning; grammatical analysis explains why the printed form looks as it does. This is a method illustration, not a formal Pāṇinian derivation."
+    },
+    "visual": {
+      "title": "From meaning to visible form",
+      "nodes": [
+        {
+          "label": "Intended relation",
+          "detail": "What role must the word express?"
+        },
+        {
+          "label": "Stem and ending",
+          "detail": "Which grammatical form carries that role?"
+        },
+        {
+          "label": "Sound operations",
+          "detail": "How do applicable rules change the form?"
+        },
+        {
+          "label": "Passage",
+          "detail": "What surface form does the reader encounter?"
+        }
+      ],
+      "caption": "A simplified learning model; real Pāṇinian derivations require precise rules and conditions."
+    },
+    "terms": [
+      {
+        "term": "Vyākaraṇa",
+        "meaning": "Grammar: systematic analysis of linguistic forms."
+      },
+      {
+        "term": "Sandhi",
+        "meaning": "Sound changes associated with the meeting of sounds or word boundaries."
+      },
+      {
+        "term": "Metarule",
+        "meaning": "A rule about how other rules are interpreted or applied."
+      }
+    ],
+    "reflection": "Return to one word-study row from Kena. Which part gives lexical meaning, and which part explains the form's role in the sentence?",
+    "quiz": {
+      "question": "Why can a literal glossary alone fail to explain a Sanskrit sentence?",
+      "choices": [
+        "Sanskrit words have no stable meanings.",
+        "Sentence roles and surface forms also depend on inflection, compounds, and sound changes.",
+        "Every word must be translated into several unrelated English words."
+      ],
+      "correct": 1,
+      "explanation": "Vocabulary and grammatical structure cooperate. A glossary is useful, but it does not by itself show every relationship expressed by the sentence."
+    },
+    "connections": [
+      {
+        "lessonId": "kena",
+        "why": "Practice distinguishing word meanings from grammatical roles in the opening question."
+      },
+      {
+        "lessonId": "vedangas-sutras",
+        "why": "Grammar belongs to the disciplines that sustain careful textual transmission."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Learn Sanskrit · structure and rule types in the Aṣṭādhyāyī",
+        "url": "https://www.learnsanskrit.org/panini/structure/"
+      },
+      {
+        "label": "Cambridge research repository · a modern study of Pāṇinian rule conflict",
+        "url": "https://www.repository.cam.ac.uk/items/50535a1c-f264-40bd-9198-08693d3ac325"
+      }
+    ]
+  },
+  "language-poetics": {
+    "opening": "A poem can say something without stating it directly. A sentence about an empty chair may evoke absence, expectation, or grief. Indian theories of language and poetics help distinguish what words conventionally mean, how a sentence communicates, and what an attentive reader comes to sense.",
+    "teaching": [
+      {
+        "title": "Words arrive separately; understanding can be whole",
+        "body": "Bhartṛhari's Vākyapadīya explores language, cognition, and the relation between linguistic parts and wholes. One central problem is how a meaningful sentence is understood when sounds occur successively and its sense is not simply a pile of dictionary meanings. Do not confuse the philosophical analysis of understanding with a rule for translating every sentence literally."
+      },
+      {
+        "title": "Distinguish statement from suggestion",
+        "body": "Ānandavardhana's Dhvanyāloka argues that poetic suggestion deserves attention beyond direct meaning and familiar indirect uses. A poem's most important effect may not be its explicit information. Abhinavagupta's later commentary develops the relation between suggestion and aesthetic experience. These are connected arguments across centuries, not one author speaking in several titles."
+      },
+      {
+        "title": "Interpretation still needs evidence",
+        "body": "Suggestion is not permission to invent any hidden message. Wording, dramatic situation, imagery, tone, and literary convention constrain a reading. Ask what feature of the poem makes your interpretation plausible and whether an alternative explains that feature better. This discipline is especially useful when devotional or philosophical significance is claimed for a simple image."
+      }
+    ],
+    "example": {
+      "title": "The untouched cup · invented English example",
+      "scenario": "At the end of a short scene, a narrator mentions that a second cup remains untouched on the table. No one says that a guest failed to arrive.",
+      "explanation": "The literal detail is the cup. The surrounding scene may suggest absence or disappointed expectation. Without that surrounding scene, the same cup could have many meanings. The example illustrates the problem of suggestion; it is not a translation of an Indian poem."
+    },
+    "visual": {
+      "title": "Three layers to distinguish",
+      "nodes": [
+        {
+          "label": "Words",
+          "detail": "What do the expressions conventionally denote?"
+        },
+        {
+          "label": "Situation",
+          "detail": "Who speaks, to whom, and in what setting?"
+        },
+        {
+          "label": "Suggestion",
+          "detail": "What further significance does the combination support?"
+        }
+      ],
+      "caption": "Analytical layers, not three unrelated meanings that every poem must contain."
+    },
+    "terms": [
+      {
+        "term": "Sphoṭa",
+        "meaning": "A concept used in grammatical theories of how linguistic meaning becomes manifest; interpretations vary."
+      },
+      {
+        "term": "Dhvani",
+        "meaning": "Poetic suggestion: significance not exhausted by direct statement."
+      },
+      {
+        "term": "Rasa",
+        "meaning": "Aesthetic relish or the distinctive experience a work makes available to its audience."
+      }
+    ],
+    "reflection": "Invent a two-sentence scene that suggests something without naming it. Identify the exact detail that supports the suggestion.",
+    "quiz": {
+      "question": "Two readers propose different meanings for the untouched cup. What would best distinguish a supported interpretation?",
+      "choices": [
+        "The reader's preferred message, regardless of wording.",
+        "The assumption that all objects in poems mean the same thing.",
+        "An explanation connecting the interpretation to the scene's wording and situation."
+      ],
+      "correct": 2,
+      "explanation": "Suggested meaning exceeds explicit statement but is still answerable to textual context. Interpretation becomes stronger when it explains specific details."
+    },
+    "connections": [
+      {
+        "lessonId": "performance-rasa",
+        "why": "Poetic suggestion and theatrical experience meet in later aesthetic debates."
+      },
+      {
+        "lessonId": "old-tamil-poetics",
+        "why": "Compare how landscape conventions also communicate indirectly in Tamil poetry."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "SEP · language and testimony in classical Indian philosophy",
+        "url": "https://plato.stanford.edu/entries/language-india/"
+      },
+      {
+        "label": "SEP · literal, nonliteral, and suggested meaning",
+        "url": "https://plato.stanford.edu/archives/spr2018/entries/literal-nonliteral-india/"
+      }
+    ]
+  },
+  "classical-medicine": {
+    "opening": "This is a lesson in the history of medicine, not instructions for diagnosis or treatment. Classical medical compendia show how learned practitioners organized bodies, causes, symptoms, and interventions. Their historical importance and the modern safety or effectiveness of a treatment are different questions.",
+    "teaching": [
+      {
+        "title": "A system connects observation and theory",
+        "body": "Caraka's compendium discusses bodily processes, causes of illness, examination, regimen, and therapeutics within an Ayurvedic explanatory framework. Suśruta's compendium includes an especially prominent surgical tradition. Observation is interpreted through concepts such as doṣa; these historical categories should not be equated automatically with modern organs, hormones, or diagnostic categories."
+      },
+      {
+        "title": "A compendium has a transmission history",
+        "body": "These are evolving textual corpora, not recordings preserved unchanged from a single founding moment. Vāgbhaṭa's Aṣṭāṅgahṛdaya organizes medical learning in another influential synthesis. The Suśruta Project compares manuscripts to show how the received work developed: a printed edition can differ meaningfully from an earlier witness. Dating a manuscript is not the same as dating every idea it contains."
+      },
+      {
+        "title": "Use two different standards for two different questions",
+        "body": "To ask what a medical author believed, examine text, vocabulary, commentary, and historical setting. To ask whether a treatment is safe and effective today, historical authority is insufficient: appropriate contemporary evidence and professional care are required. This course supplies no recipes, dosing, or treatment substitutions. Respectful historical study neither dismisses a whole tradition nor validates all its claims."
+      }
+    ],
+    "example": {
+      "title": "A manuscript is not a clinical trial · reading exercise",
+      "scenario": "A museum displays an old medical manuscript describing an intervention. A visitor concludes that the intervention must therefore work safely today.",
+      "explanation": "The manuscript establishes that the intervention was recorded in that witness. It does not by itself establish outcomes, adverse effects, or suitability for a present patient. A historian and a clinician are asking related but distinct questions."
+    },
+    "visual": {
+      "title": "Keep the evidence tracks separate",
+      "nodes": [
+        {
+          "label": "Historical text",
+          "detail": "What does this witness say?"
+        },
+        {
+          "label": "Transmission",
+          "detail": "How do manuscripts and commentaries differ?"
+        },
+        {
+          "label": "Present-day evaluation",
+          "detail": "What modern evidence tests benefit and harm?"
+        }
+      ],
+      "caption": "Historical importance is not a shortcut to clinical validation."
+    },
+    "terms": [
+      {
+        "term": "Āyurveda",
+        "meaning": "A learned medical tradition concerned with life, health, and illness."
+      },
+      {
+        "term": "Doṣa",
+        "meaning": "A historical explanatory category in Ayurvedic physiology and pathology; not a direct modern biomedical equivalent."
+      },
+      {
+        "term": "Critical edition",
+        "meaning": "An edition that compares textual witnesses and documents editorial decisions."
+      }
+    ],
+    "reflection": "Write two questions about the same medical passage: one a historian could answer from manuscripts, and one requiring modern clinical evidence.",
+    "quiz": {
+      "question": "An earlier Suśruta manuscript differs from a familiar printed edition. What can this reveal?",
+      "choices": [
+        "The medical text has a history of copying, editing, and development.",
+        "Every treatment in the older manuscript must be safer.",
+        "The printed version proves that all earlier witnesses were identical."
+      ],
+      "correct": 0,
+      "explanation": "Textual variation helps reconstruct transmission. It does not rank treatments by safety or establish clinical effectiveness."
+    },
+    "connections": [
+      {
+        "lessonId": "atharvaveda-life",
+        "why": "Compare different textual settings for illness and healing without merging their methods."
+      },
+      {
+        "lessonId": "encyclopedic-knowledge",
+        "why": "Both investigate historical classifications without automatically endorsing their claims."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "University of Alberta research project · Suśruta in time and space",
+        "url": "https://sushrutaproject2.github.io/"
+      },
+      {
+        "label": "Delhi AYUSH · orientation to classical Ayurvedic compendia",
+        "url": "https://ayush.delhi.gov.in/ayush/ayurveda"
+      },
+      {
+        "label": "Wellcome · research on later vernacular medical manuscripts",
+        "url": "https://wellcome.org/research-funding/funding-portfolio/funded-grants/health-medicine-and-treatment-early-modern-north"
+      }
+    ]
+  },
+  "mathematics-astronomy": {
+    "opening": "A short verse can store an algorithm, but a student still needs to know what to do with it. Indian mathematical and astronomical texts join memorized rules with examples, commentary, diagrams, and calculation. Their achievements become clearer when we study a problem rather than collect claims of priority.",
+    "teaching": [
+      {
+        "title": "Ask what the calculation is for",
+        "body": "Śulbasūtra geometry serves the construction and transformation of ritual spaces. Astronomical works such as the Āryabhaṭīya connect calculation with time and celestial models. Bhāskara II's Līlāvatī teaches arithmetic and mensuration through problems. These contexts overlap, but a ritual construction, a numerical algorithm, and a planetary model are not the same kind of claim."
+      },
+      {
+        "title": "Compressed rules invite worked examples",
+        "body": "A memorized instruction becomes intelligible when a teacher supplies numbers and walks through its operations. Commentaries can explain, justify, criticize, or extend a rule. Separating rule from example is useful when learning: first state the operation in plain English, then carry it out, then check whether the result answers the original question."
+      },
+      {
+        "title": "Credit achievement without removing error",
+        "body": "Brahmagupta gave influential rules involving zero and negative quantities, yet his treatment of division by zero does not match modern arithmetic. Recognizing an important contribution does not require pretending every claim was correct. Likewise, an astronomical model should be assessed in its historical mathematical setting, not relabeled as every later scientific theory."
+      }
+    ],
+    "example": {
+      "title": "An algorithm you can test · modern teaching example",
+      "scenario": "A square has side 3 units. Its area is 9 square units. Doubling the area requires a square of area 18, whose side is the square root of 18, not 6.",
+      "explanation": "The example distinguishes doubling a length from doubling an area, a problem relevant to understanding geometrical transformations. It is an original numerical exercise, not a translated Śulbasūtra construction or an attribution of this wording to a historical author."
+    },
+    "visual": {
+      "title": "From remembered rule to understanding",
+      "nodes": [
+        {
+          "label": "Problem",
+          "detail": "What quantity is sought?"
+        },
+        {
+          "label": "Rule",
+          "detail": "What operations are prescribed?"
+        },
+        {
+          "label": "Worked example",
+          "detail": "Apply the operations to definite values."
+        },
+        {
+          "label": "Check",
+          "detail": "Does the answer satisfy the original problem?"
+        }
+      ],
+      "caption": "A learning sequence; it does not claim that every historical text supplies a modern-style proof."
+    },
+    "terms": [
+      {
+        "term": "Gaṇita",
+        "meaning": "Calculation or mathematical reckoning."
+      },
+      {
+        "term": "Siddhānta",
+        "meaning": "An established system or treatise; here, especially a systematic astronomical work."
+      },
+      {
+        "term": "Śulba",
+        "meaning": "A measuring cord, associated with ritual geometrical construction."
+      }
+    ],
+    "reflection": "If a historical rule produces one correct example, what further testing or justification would you want before treating it as a general rule?",
+    "quiz": {
+      "question": "What happens if the side of a square is doubled?",
+      "choices": [
+        "Its area stays the same.",
+        "Its area becomes four times as large, so this does not merely double its area.",
+        "Its area necessarily becomes twice as large."
+      ],
+      "correct": 1,
+      "explanation": "Area depends on two lengths: doubling both multiplies the area by four. A worked example exposes the distinction that a compressed verbal instruction might hide."
+    },
+    "connections": [
+      {
+        "lessonId": "yajurveda-ritual",
+        "why": "Ritual geometry has a practical setting within organized sacrificial action."
+      },
+      {
+        "lessonId": "paninian-grammar",
+        "why": "Both traditions use concise rules whose operation needs explanation."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "MacTutor · Indian mathematical traditions",
+        "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/Indian_mathematics/"
+      },
+      {
+        "label": "MacTutor · Brahmagupta, including zero and arithmetic",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/"
+      },
+      {
+        "label": "Research paper · mathematical reasoning in Āryabhaṭa's root algorithms",
+        "url": "https://arxiv.org/abs/math/0608793"
+      }
+    ]
+  },
+  "architecture-workshops": {
+    "opening": "A building is not a book made of stone. Architectural and craft treatises prescribe proportions, forms, and ideal arrangements, while builders work with materials, patrons, sites, and inherited skills. Understanding a monument means studying the conversation between textual prescriptions and material decisions.",
+    "teaching": [
+      {
+        "title": "A prescription creates an ideal",
+        "body": "Texts such as the Mānasāra, Mayamata, and Samarāṅgaṇasūtradhāra classify forms and describe measurements, layouts, and construction. The point is often to make a design reproducible and intelligible within a learned system. A proportional scheme establishes relationships among parts; it need not provide every practical instruction a workshop requires."
+      },
+      {
+        "title": "A workshop knows things a text may omit",
+        "body": "The handling of stone or timber, structural judgment, sequence of work, and adaptation to a site involve embodied expertise. Surviving buildings may follow, modify, combine, or differ from textual categories. Research on temple design therefore compares measured monuments, drawings, inscriptions, and treatises rather than assuming that one book directly generated every example."
+      },
+      {
+        "title": "Comparison should be specific",
+        "body": "If a plan resembles a textual description, ask which measurements, features, date, and region support the connection. Similarity alone does not prove direct dependence. The Viṣṇudharmottara's artistic discussions and the Bṛhatsaṃhitā's architectural chapters also show that workshop knowledge crosses textual genres. These are historical design studies, not claims that auspicious prescriptions guarantee modern safety or prosperity."
+      }
+    ],
+    "example": {
+      "title": "A plan meets a slope · modern illustration",
+      "scenario": "A designer has an ideal symmetrical plan, but the actual site has a steep slope and a large rock outcrop.",
+      "explanation": "An adapted building need not represent ignorance of the ideal. It may show intelligent judgment about constraints. To explain a historical monument, however, actual evidence is required; this invented case only makes the difference between prescription and practice visible."
+    },
+    "visual": {
+      "title": "A building has several sources",
+      "nodes": [
+        {
+          "label": "Textual model",
+          "detail": "Names, proportions, and ideal forms."
+        },
+        {
+          "label": "Workshop skill",
+          "detail": "Material knowledge and trained judgment."
+        },
+        {
+          "label": "Site and patron",
+          "detail": "Terrain, resources, purpose, and commission."
+        },
+        {
+          "label": "Surviving object",
+          "detail": "The result to measure and investigate."
+        }
+      ],
+      "caption": "Contributing factors, not a single line of descent from book to monument."
+    },
+    "terms": [
+      {
+        "term": "Vāstu",
+        "meaning": "A domain of architectural and spatial knowledge; usage varies across texts."
+      },
+      {
+        "term": "Śilpa",
+        "meaning": "Craft or artistic making, including sculpture and related technical knowledge."
+      },
+      {
+        "term": "Pramāṇa",
+        "meaning": "Measure or proportion here; distinguish this use from ‘means of knowledge’ in philosophy."
+      }
+    ],
+    "reflection": "Choose one feature of a building you know. What evidence would distinguish a textual rule from a material necessity or a later alteration?",
+    "quiz": {
+      "question": "A monument differs from a treatise's ideal plan. What should a researcher do first?",
+      "choices": [
+        "Declare that the builders did not understand architecture.",
+        "Assume the treatise was copied after this monument without checking dates.",
+        "Examine the building's date, site, workshop context, and the text's relevant version."
+      ],
+      "correct": 2,
+      "explanation": "Text and object are distinct witnesses. Their relationship must be established through specific evidence rather than presumed obedience or presumed error."
+    },
+    "connections": [
+      {
+        "lessonId": "shaiva-worlds",
+        "why": "Sacred places connect theology, narrative, ritual, and material construction."
+      },
+      {
+        "lessonId": "encyclopedic-knowledge",
+        "why": "Architectural knowledge also appears inside broad compilations."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Adam Hardy · research and practice in temple architecture",
+        "url": "https://tekton.mes.ac.in/issues/volume-3-issue-2/dialogue/"
+      },
+      {
+        "label": "Cardiff research repository · re-creation and self-creation in temple design",
+        "url": "https://orca.cardiff.ac.uk/id/eprint/149935/"
+      },
+      {
+        "label": "Bṛhatsaṃhitā, chapter 56 · temple prescriptions in a historical translation",
+        "url": "https://www.wisdomlib.org/hinduism/book/brihat-samhita/d/doc229301.html"
+      }
+    ]
+  },
+  "performance-rasa": {
+    "opening": "Why can a sad scene be worth watching when real loss is painful? Rasa theory asks about the distinctive experience of an audience encountering represented emotion. The scene's situation, the actor's expressions, and the audience's engagement matter together.",
+    "teaching": [
+      {
+        "title": "The stage supplies a structure of feeling",
+        "body": "The Nāṭyaśāstra discusses performance through speech, movement, gesture, music, costume, and dramatic construction. Its account of rasa connects the determinants of an emotional situation, visible expressions, and changing emotional states. An actor's tear is therefore not the whole event: it has meaning because a dramatic world makes it intelligible. The changing states are organized around a durable emotional disposition (sthāyibhāva), such as love or sorrow; how it becomes rasa is precisely what later theorists debate."
+      },
+      {
+        "title": "Do not reduce rasa to a personal mood",
+        "body": "Rasa is often explained as aesthetic flavor or relish. A represented sorrow and a spectator's private bereavement are related but not identical experiences. The analogy with tasting helps: the audience encounters an organized combination rather than a heap of separate ingredients. This is a theory of art's experience, not a laboratory formula guaranteed to affect everyone identically."
+      },
+      {
+        "title": "The later debate changes the explanation",
+        "body": "Abhinavagupta's Abhinavabhāratī develops an influential account of how aesthetic experience becomes shareable beyond a character's particular situation. The Daśarūpaka offers another systematic treatment of drama. Keep these later works distinct from the older treatise, and recognize that interpreters argued about how rasa arises rather than merely repeating a settled definition."
+      }
+    ],
+    "example": {
+      "title": "Waiting for someone · invented stage scene",
+      "scenario": "A character hears footsteps, rises hopefully, and then sits when a stranger passes. A letter lies unopened nearby.",
+      "explanation": "The expected arrival is part of the situation; the rising and sitting express emotion; hope and disappointment shift within it. Together they prepare an audience to experience the scene. This is an original illustration, not a translated drama or a complete technical classification."
+    },
+    "visual": {
+      "title": "What the audience encounters",
+      "nodes": [
+        {
+          "label": "Situation",
+          "detail": "People, objects, and circumstances give emotion a setting."
+        },
+        {
+          "label": "Expression",
+          "detail": "Speech and gesture make feeling perceptible."
+        },
+        {
+          "label": "Changing states",
+          "detail": "Hope, doubt, and other movements enrich the scene."
+        },
+        {
+          "label": "Aesthetic experience",
+          "detail": "The audience encounters the organized whole."
+        }
+      ],
+      "caption": "A teaching diagram of interacting factors, not an automatic emotional recipe."
+    },
+    "terms": [
+      {
+        "term": "Vibhāva",
+        "meaning": "A determinant: a person, object, or circumstance making an emotional situation intelligible."
+      },
+      {
+        "term": "Anubhāva",
+        "meaning": "An expressive consequence, such as gesture or other outward manifestation."
+      },
+      {
+        "term": "Rasa",
+        "meaning": "Aesthetic relish or flavor, distinct from simply reporting a character's feeling."
+      }
+    ],
+    "reflection": "Recall a moving scene. Name one situation, one expressive detail, and one change in feeling that made it effective.",
+    "quiz": {
+      "question": "A performer cries convincingly, but the audience does not understand why. What does the rasa framework encourage us to examine?",
+      "choices": [
+        "How the dramatic situation and other expressive elements give the tears meaning.",
+        "Only whether the tears are physically real.",
+        "Whether every spectator has experienced the identical event."
+      ],
+      "correct": 0,
+      "explanation": "An isolated expression is not the complete aesthetic configuration. Context and the organization of expressive elements help make the feeling available to an audience."
+    },
+    "connections": [
+      {
+        "lessonId": "language-poetics",
+        "why": "Later thinkers connect poetic suggestion with aesthetic experience."
+      },
+      {
+        "lessonId": "text-performance",
+        "why": "Performance creates a reception of a text through more than spoken words."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "INFLIBNET · Nāṭyaśāstra and performance theory",
+        "url": "https://ebooks.inflibnet.ac.in/icp05/chapter/na%E1%B9%ADyasastra/"
+      },
+      {
+        "label": "IGNOU · rasa and the Nāṭyaśāstra's sixth chapter",
+        "url": "https://egyankosh.ac.in/bitstream/123456789/34686/1/Unit-4.pdf"
+      }
+    ]
+  },
+  "encyclopedic-knowledge": {
+    "opening": "A modern library might put weather, buildings, plants, perfume, and omens on separate shelves. Varāhamihira's Bṛhatsaṃhitā brings such subjects into a single learned compilation. Its arrangement shows a way of connecting knowledge that does not match our present disciplinary boundaries.",
+    "teaching": [
+      {
+        "title": "Read the table of contents as an argument",
+        "body": "The Bṛhatsaṃhitā includes celestial phenomena, rain, water, architecture, images, and many other topics. Their proximity suggests a world in which environmental observation, auspicious timing, political concern, and divination can belong to one learned practice. Do not assume that sharing a book makes all these claims equally supported or methodologically identical."
+      },
+      {
+        "title": "A compiler works with earlier authorities",
+        "body": "Varāhamihira names earlier teachers and summarizes received material. Compilation is therefore an intellectual activity: selecting, arranging, abbreviating, and sometimes comparing claims. In the architectural chapter, the author explicitly presents his account as a summary of preceding authorities. That claim helps us understand the work's self-presentation, without proving that every attributed source survives."
+      },
+      {
+        "title": "Later encyclopedias have different worlds",
+        "body": "The medieval Mānasollāsa gathers knowledge around courtly life, while specialized works on plants or animals organize practical concerns differently. Read each work's audience and purpose. A recipe, a prediction, and an architectural proportion call for different kinds of investigation; historical inclusion establishes interest in a subject, not universal practice or present-day validity."
+      }
+    ],
+    "example": {
+      "title": "Two neighboring chapters · reading exercise",
+      "scenario": "A compilation places a chapter on rainfall beside material concerning celestial signs. A reader treats every sentence as either modern science or worthless superstition.",
+      "explanation": "Both labels are too coarse. Ask what is observed, what explanatory model connects the observation to a result, and what evidence could evaluate the claim. Different passages may require different answers even within one compilation."
+    },
+    "visual": {
+      "title": "Classify the claim before judging it",
+      "nodes": [
+        {
+          "label": "Description",
+          "detail": "What object or event is recorded?"
+        },
+        {
+          "label": "Explanation",
+          "detail": "What relation or cause is proposed?"
+        },
+        {
+          "label": "Prescription or prediction",
+          "detail": "What action or outcome is asserted?"
+        },
+        {
+          "label": "Evaluation",
+          "detail": "What kind of evidence could test this claim?"
+        }
+      ],
+      "caption": "A reading method that preserves differences within a broad compilation."
+    },
+    "terms": [
+      {
+        "term": "Saṃhitā",
+        "meaning": "A collection or compilation; not every work with this title is a Vedic Saṃhitā."
+      },
+      {
+        "term": "Jyotiṣa",
+        "meaning": "Astral knowledge, encompassing historically connected astronomical and astrological concerns."
+      },
+      {
+        "term": "Compilation",
+        "meaning": "A work made through selecting and organizing materials, often from earlier authorities."
+      }
+    ],
+    "reflection": "Take three neighboring subjects from an encyclopedia's contents. What audience or practical concern might explain why they belong together?",
+    "quiz": {
+      "question": "What does a plant-care instruction's presence in the Bṛhatsaṃhitā establish by itself?",
+      "choices": [
+        "Every gardener in India used it.",
+        "The compendium includes that instruction; its practice and effectiveness require further evidence.",
+        "Its effectiveness has already been tested by modern methods."
+      ],
+      "correct": 1,
+      "explanation": "A text is evidence for a recorded claim. Actual adoption, results, and modern validity are further questions, not automatic consequences of inclusion."
+    },
+    "connections": [
+      {
+        "lessonId": "architecture-workshops",
+        "why": "A broad compilation can preserve architectural prescriptions alongside other knowledge."
+      },
+      {
+        "lessonId": "classical-medicine",
+        "why": "Historical importance and modern evidence must be kept distinct in both domains."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Bṛhatsaṃhitā · historical English translation and chapter index",
+        "url": "https://www.wisdomlib.org/hinduism/book/brihat-samhita"
+      },
+      {
+        "label": "Bṛhatsaṃhitā, chapter 56 · explicit summary of earlier architectural authorities",
+        "url": "https://www.wisdomlib.org/hinduism/book/brihat-samhita/d/doc229301.html"
+      }
+    ]
+  },
+  "old-tamil-poetics": {
+    "opening": "A mountain, a shoreline, or an evening scene can do more than describe scenery. Old Tamil poetics makes landscape part of how a poem communicates a human situation. Begin by asking what kind of poem you are reading and whose voice makes its emotional world visible.",
+    "teaching": [
+      {
+        "title": "Two broad poetic domains",
+        "body": "Akam concerns the interior world of love and intimate relationships; puṟam concerns public life, including praise, war, generosity, and loss. These are literary conventions, not a rule that private life never touches politics or that public poetry lacks emotion. Their patterns guide what may be said directly, who speaks, and how a situation is recognized."
+      },
+      {
+        "title": "Landscape carries relationships",
+        "body": "Tiṇai links a poetic situation with characteristic places, times, plants, animals, and human activities. In love poetry, these features can suggest phases or tensions of a relationship. The mountains are not merely a painted background. Nor is the system a one-word codebook: the whole poem, its speaker, and its specific images must be read together."
+      },
+      {
+        "title": "A mature archive with its own history",
+        "body": "The Eṭṭuttokai and Pattuppāṭṭu preserve anthology traditions, while the Tolkāppiyam articulates grammatical and poetic analysis. Composition, compilation, commentary, and later stories about literary academies belong to different historical questions. Tamil should not be treated as an incomplete Sanskrit or as a language with one religious identity; its literary conventions deserve study on their own terms."
+      }
+    ],
+    "example": {
+      "title": "When an image answers a question · Kuṟuntokai 40",
+      "scenario": "A lover asks what earlier connection joined their families or brought the pair together. The answer is an image: affection has joined their hearts as rainfall mingles with red soil. This is an original paraphrase of Kuṟuntokai 40, not a quotation of its Tamil or a modern translation.",
+      "explanation": "The image supplies what a family genealogy cannot: a way to understand newly formed intimacy. Notice the movement from questions about prior connection to a picture of present union. The landscape does intellectual work rather than merely decorating the scene."
+    },
+    "visual": {
+      "title": "Read the human situation through the scene",
+      "nodes": [
+        {
+          "label": "Poetic domain",
+          "detail": "Akam, puṟam, or a more specific convention?"
+        },
+        {
+          "label": "Speaker",
+          "detail": "Who is speaking, and to whom?"
+        },
+        {
+          "label": "Landscape and time",
+          "detail": "What conventional associations become available?"
+        },
+        {
+          "label": "Particular image",
+          "detail": "How does this poem use or complicate them?"
+        }
+      ],
+      "caption": "Interpretive layers, not a map equating one landscape with one universal emotion."
+    },
+    "terms": [
+      {
+        "term": "Akam",
+        "meaning": "Tamil ‘interior’: the conventional domain of intimate love poetry."
+      },
+      {
+        "term": "Puṟam",
+        "meaning": "Tamil ‘exterior’: public and heroic poetic domains, including grief and ethical reflection."
+      },
+      {
+        "term": "Tiṇai",
+        "meaning": "A Tamil poetic category linking situation, landscape, and other conventions."
+      }
+    ],
+    "reflection": "In Kuṟuntokai 40, what does rain mingling with soil explain that a list of family relationships would not? Connect your answer to the opening questions.",
+    "quiz": {
+      "question": "Why does the rain-and-soil image matter in Kuṟuntokai 40?",
+      "choices": [
+        "It answers questions about prior connection with an image of the lovers' present bond.",
+        "It gives practical instructions for irrigating a field.",
+        "It proves that every mention of rain has an identical meaning in Tamil poetry."
+      ],
+      "correct": 0,
+      "explanation": "The poem's questions make the image meaningful. The connection comes from this speaker and situation, not an automatic dictionary of landscape symbols."
+    },
+    "connections": [
+      {
+        "lessonId": "language-poetics",
+        "why": "Compare distinct traditions of indirect meaning without assuming one is a copy of the other."
+      },
+      {
+        "lessonId": "tamil-ethics-epics",
+        "why": "Move from lyric conventions to Tamil ethical and narrative works."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Kamil Zvelebil · anthology history in The Smile of Murugan",
+        "url": "https://www.smileofmurugan.org/chapter04.html"
+      },
+      {
+        "label": "Vaidehi Herbert · Sangam categories and translation resources",
+        "url": "https://learnsangamtamil.com/sangamliterature/"
+      },
+      {
+        "label": "Kuṟuntokai 40 · Tamil text, Vaidehi Herbert's translation and contextual notes (find poem 40)",
+        "url": "https://learnsangamtamil.com/%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AF%81%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%8A%E0%AE%95%E0%AF%88-1-200/"
+      }
+    ]
+  },
+  "tamil-ethics-epics": {
+    "opening": "Tamil is a literary language, not the name of a single religion. A concise ethical couplet, an account of royal injustice, and a Buddhist heroine's renunciation can all belong to its archive. Their shared language makes comparison possible without making their arguments identical.",
+    "teaching": [
+      {
+        "title": "An ethical couplet concentrates a problem",
+        "body": "The Tirukkuṟaḷ organizes reflection on virtue, worldly affairs, and love in concise couplets. Brevity invites rereading: ask what relation the two lines establish rather than extracting a slogan without context. Its date and the religious identification of its author have been debated; claims of exclusive ownership should not replace attention to its actual ethical vocabulary."
+      },
+      {
+        "title": "An anklet exposes a failure of justice",
+        "body": "In the Cilappatikāram, Kōvalaṉ's execution and Kaṇṇaki's proof involving an anklet turn a household story into an indictment of failed kingship. The narrative joins commerce, performance, loss, and royal judgment. Do not assume every action by a central character becomes a universal ethical command; study how consequences reshape the story's moral world."
+      },
+      {
+        "title": "A linked story can choose a different end",
+        "body": "The Maṇimēkalai follows figures connected with the earlier narrative into a Buddhist world of compassion, renunciation, and doctrinal discussion. Cīvaka Cintāmaṇi belongs to a distinct Jain-associated narrative tradition. These works share a language and some literary resources while pursuing different accounts of desire, action, and release. A connection is not a merger."
+      }
+    ],
+    "example": {
+      "title": "Two responses to suffering · narrative comparison",
+      "scenario": "One narrative centers a wrongfully killed husband's wife confronting royal injustice; another follows a young woman toward renunciation and relief of suffering.",
+      "explanation": "The comparison highlights different ethical projects: exposing a ruler's failure and transforming one's relationship to desire and suffering. It should not erase the stories' larger plots or reduce either heroine to a single slogan."
+    },
+    "visual": {
+      "title": "One language, different ethical forms",
+      "nodes": [
+        {
+          "label": "Tirukkuṟaḷ",
+          "detail": "Compressed ethical reflection in couplets."
+        },
+        {
+          "label": "Cilappatikāram",
+          "detail": "Narrative pressure on justice and kingship."
+        },
+        {
+          "label": "Maṇimēkalai",
+          "detail": "Buddhist compassion, renunciation, and argument."
+        },
+        {
+          "label": "Cīvaka Cintāmaṇi",
+          "detail": "A distinct Jain-associated narrative world."
+        }
+      ],
+      "caption": "A comparison of works, not an evolutionary sequence or a single sectarian canon."
+    },
+    "terms": [
+      {
+        "term": "Kuṟaḷ",
+        "meaning": "A compact Tamil verse form associated especially with the Tirukkuṟaḷ."
+      },
+      {
+        "term": "Aṟam",
+        "meaning": "Tamil ethical vocabulary often rendered virtue or right conduct; context matters."
+      },
+      {
+        "term": "Sectarian attribution",
+        "meaning": "A claim relating a work or author to a religious community, to be evaluated through evidence."
+      }
+    ],
+    "reflection": "How would your reading change if you treated two linked narratives as different arguments rather than one story with one moral?",
+    "quiz": {
+      "question": "What does Maṇimēkalai's connection to Cilappatikāram imply?",
+      "choices": [
+        "A shared narrative world can be redirected toward a different religious and ethical project.",
+        "Both works must present identical doctrines.",
+        "Tamil literature belongs exclusively to one religious community."
+      ],
+      "correct": 0,
+      "explanation": "Narrative continuity permits transformation. Comparing the works makes their distinct aims clearer, rather than eliminating the differences."
+    },
+    "connections": [
+      {
+        "lessonId": "jain-narratives",
+        "why": "Jain works can redirect shared narrative materials toward distinctive ethical ends."
+      },
+      {
+        "lessonId": "ramayana-war",
+        "why": "Compare how a woman's suffering exposes tensions in royal authority."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Tamil Virtual Academy · historical discussion of Maṇimēkalai",
+        "url": "https://www.tamilvu.org/slet/l4330/l4330pd1.jsp?bookid=261&pno=95"
+      },
+      {
+        "label": "Central Institute of Classical Tamil · English Maṇimēkalai edition",
+        "url": "https://library.cict.in/41rarebooks/MANIMEGALAI%20-CICT-001%20%286%29.pdf"
+      },
+      {
+        "label": "Project Madurai · Tirukkuṟaḷ, historical English translation and commentary",
+        "url": "https://www.projectmadurai.org/pm_etexts/utf8/pmuni0153.html"
+      }
+    ]
+  },
+  "tamil-devotion-epic": {
+    "opening": "When devotion is sung in Tamil, it does not merely change the language of an older message. A poem can attach divine presence to a named place, make intimate emotion into religious speech, and become part of a community's scripture and performance.",
+    "teaching": [
+      {
+        "title": "A hymn builds a sacred geography",
+        "body": "The Tēvāram's Śaiva hymns connect praise of Śiva with particular sites and musical organization. The Digital Tēvāram allows readers to approach the collection by place or musical mode, making two dimensions of the canon visible. A hymn can therefore be read as wording, sung as a composition, and encountered as an invitation to a place."
+      },
+      {
+        "title": "Tamil can carry scriptural authority",
+        "body": "The Vaiṣṇava Divya Prabandham and the Śaiva Tirumuṟai are distinct canonical formations. Poets such as Āṇṭāḷ use intimate lyric voices in devotion to Viṣṇu. Later Śaiva works such as the Periyapurāṇam narrate exemplary devotees and help shape communal memory. These canons interact with Sanskrit traditions without becoming one interchangeable collection."
+      },
+      {
+        "title": "Retelling is literary creation",
+        "body": "Kampaṉ's Irāmāvatāram reworks the Rāma story through Tamil poetic resources and devotional concerns. To compare it with a Sanskrit telling, choose a particular episode and examine voice, imagery, dramatic emphasis, and theology. The question is not only what was retained: what a retelling makes newly visible is part of its intellectual contribution."
+      }
+    ],
+    "example": {
+      "title": "Whose lesson about time? · Kampaṉ scene study",
+      "scenario": "In Kampaṉ's Irāmāvatāram 5.437, Rāvaṇa tells the captive Sītā that youth and time cannot return. In 5.447, she demands release and condemns his deception. Hanumān watches the encounter. This is an original paraphrase of the scene, not a quotation.",
+      "explanation": "A true-sounding reflection on impermanence is being used to pressure a prisoner. Ask who benefits from the speech and how Sītā's reply changes its force. The episode makes literary and ethical interpretation inseparable: a narrator need not endorse every polished sentence a character utters."
+    },
+    "visual": {
+      "title": "How a hymn gains a communal life",
+      "nodes": [
+        {
+          "label": "Lyric voice",
+          "detail": "A speaker addresses the divine."
+        },
+        {
+          "label": "Place and sound",
+          "detail": "Sites and musical forms situate the poem."
+        },
+        {
+          "label": "Canon",
+          "detail": "A community gathers and authorizes works."
+        },
+        {
+          "label": "Retelling and memory",
+          "detail": "Later texts reshape exemplary stories."
+        }
+      ],
+      "caption": "Interacting dimensions of Tamil devotional literature; not a universal chronology for every hymn."
+    },
+    "terms": [
+      {
+        "term": "Tēvāram",
+        "meaning": "A Tamil collection of Śaiva hymns associated with three major poet-saints."
+      },
+      {
+        "term": "Prabandham",
+        "meaning": "A composition or organized work; the Divya Prabandham names a specific Tamil Vaiṣṇava corpus."
+      },
+      {
+        "term": "Hagiography",
+        "meaning": "Narrative about exemplary holy lives, read as religious and literary memory rather than unfiltered biography."
+      }
+    ],
+    "reflection": "Why would extracting Rāvaṇa's words about passing youth as inspirational advice distort this scene? Name the speaker, his purpose, and Sītā's response.",
+    "quiz": {
+      "question": "What must we notice before treating Rāvaṇa's reflection on passing youth as the poem's advice?",
+      "choices": [
+        "A claim about time always expresses the author's own teaching.",
+        "He uses it to pressure Sītā, whose refusal contests his purpose.",
+        "Elegant language makes the speaker's intention irrelevant."
+      ],
+      "correct": 1,
+      "explanation": "Speaker and situation change a sentence's function. Here an apparent lesson about life serves coercive persuasion, not neutral guidance."
+    },
+    "connections": [
+      {
+        "lessonId": "tamil-devotion",
+        "why": "Study the distinct Śaiva and Vaiṣṇava devotional canons in greater context."
+      },
+      {
+        "lessonId": "many-ramayanas",
+        "why": "Compare Kampaṉ with other transformations of the Rāma narrative."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "IFP · Digital Tēvāram and Tamil canonical organization",
+        "url": "https://www.ifpindia.org/digitaldb/site/digital_tevaram/U_TEV/HOME.HTM"
+      },
+      {
+        "label": "UCLA MANAS · Rāmāyaṇa traditions and retellings",
+        "url": "https://southasia.ucla.edu/culture/literature/ramayana/"
+      },
+      {
+        "label": "UC Press · Kampaṉ 5.425–451, 5.453–454, translated by David Shulman with critical readings",
+        "url": "https://luminosoa.org/chapters/e/10.1525/luminos.114.k"
+      }
+    ]
+  },
+  "southern-cosmopolitanisms": {
+    "opening": "A language becomes a literary world through many kinds of work: court poetry, religious instruction, ethical protest, retelling, and performance. Kannada, Telugu, and Malayalam histories reveal interaction with Sanskrit and other languages without collapsing into a single southern tradition.",
+    "teaching": [
+      {
+        "title": "Literary authority can be made locally",
+        "body": "The Kannada Kavirājamārga reflects on poetic culture, while Pampa's works show the possibilities of courtly and Jain literary projects. Later Kannada vacanas use a different expressive form for religious and social questioning. A language therefore does not move through one religious identity: communities compete and create within its shared resources."
+      },
+      {
+        "title": "An epic translation can found a new classic",
+        "body": "The Andhra Mahābhāratamu and Telugu works such as Pōtana's Bhāgavata rework major narrative materials for their own literary audiences. Court poetry develops another register, exemplified by the Telugu Story of Manu in the Murty Library. Compare genre and intended audience before deciding that two works are merely versions of the same religious message."
+      },
+      {
+        "title": "Mixed language is a creative choice",
+        "body": "Malayalam Maṇipravāḷam combines Sanskrit and regional linguistic resources, while Eḻuttacchan's devotional retellings represent a different literary formation. Mixing is not necessarily failed purity or incomplete fluency. Across these medieval and early modern worlds, patronage, performance, and translation build new forms of authority. Modern state boundaries do not describe all their routes of circulation."
+      }
+    ],
+    "example": {
+      "title": "The same plot, a different literary job · comparison exercise",
+      "scenario": "A courtly retelling elaborates a ruler's world, while a devotional performance uses a familiar story to invite collective worship.",
+      "explanation": "Shared characters do not establish the same purpose. Compare who sponsors the work, who hears it, what form it takes, and which episodes it expands. This is a comparison method, not a claim that every court text lacks devotion or every devotional work lacks politics."
+    },
+    "visual": {
+      "title": "Questions for each literary world",
+      "nodes": [
+        {
+          "label": "Language resources",
+          "detail": "Which local and transregional forms are used?"
+        },
+        {
+          "label": "Genre",
+          "detail": "Court poem, vacana, retelling, or another form?"
+        },
+        {
+          "label": "Community",
+          "detail": "Patrons, performers, readers, and devotees."
+        },
+        {
+          "label": "New authority",
+          "detail": "What does the work make possible for its audience?"
+        }
+      ],
+      "caption": "A comparison framework, not a ranking of languages by purity or development."
+    },
+    "terms": [
+      {
+        "term": "Vacana",
+        "meaning": "A Kannada form of concise religious utterance, associated especially with Vīraśaiva/Liṅgāyat traditions."
+      },
+      {
+        "term": "Maṇipravāḷam",
+        "meaning": "A literary practice combining Sanskrit and regional language, especially associated here with Malayalam."
+      },
+      {
+        "term": "Cosmopolitan",
+        "meaning": "Participating in wider literary networks while also working within particular local worlds."
+      }
+    ],
+    "reflection": "How could the same story change when performed for devotees instead of presented to a royal patron? Name a choice about voice or emphasis.",
+    "quiz": {
+      "question": "A work deliberately combines Sanskrit and Malayalam resources. What is the most useful initial question?",
+      "choices": [
+        "Why did its author fail to keep languages pure?",
+        "Whether all regional literature is merely translated Sanskrit.",
+        "What aesthetic and social purposes does that mixed register serve?"
+      ],
+      "correct": 2,
+      "explanation": "A mixed register can be an intentional literary resource. Its function becomes clearer through audience, genre, and context rather than assumptions about purity."
+    },
+    "connections": [
+      {
+        "lessonId": "tamil-devotion-epic",
+        "why": "Compare another region's creation of literary and devotional authority."
+      },
+      {
+        "lessonId": "multilingual-crossings",
+        "why": "Mixed language and translation also reshape northern and Persianate literary worlds."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "INFLIBNET · the rise and growth of regional literary languages",
+        "url": "https://eacharya.inflibnet.ac.in/data-server/eacharya-documents/57185ec68ae36c896622587a_INFIEP_305/228/ET/305-228-ET-V1-S1__script.pdf"
+      },
+      {
+        "label": "Murty Classical Library · Telugu The Story of Manu",
+        "url": "https://www.murtylibrary.com/books/the-story-of-manu"
+      },
+      {
+        "label": "Harvard · the multilingual scope of India's classics",
+        "url": "https://news.harvard.edu/gazette/story/2010/04/murty-classical-library-of-india-series-established/"
+      }
+    ]
+  },
+  "northern-vernaculars": {
+    "opening": "A familiar devotional song may feel anonymous and timeless, yet it has a history of composition, attribution, singing, collection, and printing. Northern and western vernacular works invite readers to hear distinctive voices without assuming that every poem called bhakti teaches the same theology.",
+    "teaching": [
+      {
+        "title": "A vernacular work can claim full authority",
+        "body": "Jñāneśvar's Marathi engagement with the Gītā and Tulsīdās's Awadhi Rāmcaritmānas are not merely simplified copies for readers unable to learn Sanskrit. Commentary and retelling can create new literary arguments, new devotional worlds, and enduring performance traditions. Accessibility does not mean that the resulting work is intellectually secondary."
+      },
+      {
+        "title": "Listen for the actual relationship to the divine",
+        "body": "Sūrdās's Braj lyrics refashion Kṛṣṇa's stories through intimate voices and emotional situations. Kabīr-associated poetry often challenges conventional boundaries and external claims to holiness. Mīrābāī, Tukārām, and Narsinh Mehta belong to further distinctive linguistic and devotional settings. Compare the poem's address, imagery, and practices rather than using one bhakti label as the explanation."
+      },
+      {
+        "title": "Attribution is a historical question",
+        "body": "Popular singing can add poems to a revered author's name. The Murty edition of Sur's Ocean reconstructs an early body of poems from witnesses rather than assuming the entire later collection came from one moment. The poem a community loves and the poem an editor can date or attribute are related but different objects of study."
+      }
+    ],
+    "example": {
+      "title": "A song signed by a saint · source exercise",
+      "scenario": "A recent songbook attributes a hymn to a famous poet, but an editor cannot find it in the early manuscript witnesses examined.",
+      "explanation": "The hymn may remain important in living devotion, while its early authorship is uncertain. Neither importance nor uncertainty cancels the other. A careful course labels the evidence instead of presenting a late attribution as a securely dated original."
+    },
+    "visual": {
+      "title": "A poem's possible afterlives",
+      "nodes": [
+        {
+          "label": "Composition",
+          "detail": "A poem emerges in a particular setting."
+        },
+        {
+          "label": "Singing and attribution",
+          "detail": "Performers circulate it and attach an authorial name."
+        },
+        {
+          "label": "Collection",
+          "detail": "Manuscripts and print gather changing repertoires."
+        },
+        {
+          "label": "Critical reading",
+          "detail": "Editors compare witnesses and state uncertainty."
+        }
+      ],
+      "caption": "A model of textual transmission, not a claim that every poem follows the same sequence."
+    },
+    "terms": [
+      {
+        "term": "Vernacular",
+        "meaning": "A regional language or register used for literary expression; not a synonym for simple or unsophisticated."
+      },
+      {
+        "term": "Bhakti",
+        "meaning": "Devotional participation or attachment; its practices and theologies differ."
+      },
+      {
+        "term": "Attribution",
+        "meaning": "The assignment of a work to an author, which may rest on different kinds of evidence."
+      }
+    ],
+    "reflection": "How would you introduce a beloved song whose traditional attribution is uncertain without dismissing its religious importance?",
+    "quiz": {
+      "question": "An early-witness edition contains fewer Sūrdās poems than a popular modern collection. What can explain the difference?",
+      "choices": [
+        "The editor is distinguishing an early attested repertoire from a larger later attributed tradition.",
+        "Devotional songs cannot have a transmission history.",
+        "Every additional poem is necessarily worthless."
+      ],
+      "correct": 0,
+      "explanation": "Different editions can answer different questions. Historical attribution and the value of a living repertoire should be distinguished rather than used to erase one another."
+    },
+    "connections": [
+      {
+        "lessonId": "regional-bhakti",
+        "why": "Compare regional devotional networks without reducing them to one movement."
+      },
+      {
+        "lessonId": "epic-texts",
+        "why": "Both lyric and epic traditions require attention to witnesses and editorial choices."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Murty Classical Library · Sur's Ocean and its early-witness edition",
+        "url": "https://www.murtylibrary.com/books/surs-ocean"
+      },
+      {
+        "label": "Murty Classical Library · Tulsīdās's The Epic of Ram",
+        "url": "https://www.murtylibrary.com/books/the-epic-of-ram-volume-1"
+      },
+      {
+        "label": "NEH · research behind the Sūrdās edition",
+        "url": "https://www.neh.gov/humanities/2015/mayjune/curio/murty-classical-library-india-sheds-light-sixteenth-century-lyrical-po"
+      }
+    ]
+  },
+  "eastern-routes": {
+    "opening": "A poem's route may cross borders that did not exist when it was composed. Eastern textual worlds connect changing forms of language, manuscript travel, pilgrimage, and performance. Start with a particular work and its witnesses, not a modern map that assigns every author to one sealed national or regional box.",
+    "teaching": [
+      {
+        "title": "Early language does not fit every modern label",
+        "body": "The Caryāpadas preserve Buddhist songs whose language is important to several eastern literary histories. A manuscript recovered in Nepal became central to modern study of these poems. Their coded or suggestive expression requires interpretation; a surface scene does not by itself disclose the full religious sense. Competing modern claims should not replace philological comparison."
+      },
+      {
+        "title": "Retellings make regional literary worlds",
+        "body": "Vidyāpati's Maithili lyrics, the Bengali Kṛttivāsī Rāmāyaṇa, Maṅgalkāvya traditions, and Sarala's Odia Mahābhārata represent different genres and projects. A shared narrative or deity does not establish an identical audience or theology. Compare one episode, refrain, or speaking voice at a time before constructing a broad regional story."
+      },
+      {
+        "title": "A text can become an institution of performance",
+        "body": "Śaṅkaradeva's Assamese devotional work belongs with song, drama, and communities of practice. Sattras show how instruction, artistic training, and religious life can support one another. These medieval and early modern developments extend the course beyond ancient texts into their wider afterlives; they are not all contemporaneous with the Upaniṣads."
+      }
+    ],
+    "example": {
+      "title": "One manuscript, several histories · source exercise",
+      "scenario": "A surviving set of songs is preserved outside the area later claimed as its linguistic homeland. Several modern language histories discuss it as an ancestor.",
+      "explanation": "Preservation place, composition setting, linguistic features, and modern cultural ownership are four different questions. The most useful response is to compare evidence, not force the manuscript to obey present-day borders."
+    },
+    "visual": {
+      "title": "Map the route, not just a border",
+      "nodes": [
+        {
+          "label": "Language features",
+          "detail": "What forms are actually present in the work?"
+        },
+        {
+          "label": "Textual witness",
+          "detail": "Where and when was this copy preserved?"
+        },
+        {
+          "label": "Performance network",
+          "detail": "Who carried, sang, or taught the work?"
+        },
+        {
+          "label": "Later classification",
+          "detail": "How do modern histories name its place?"
+        }
+      ],
+      "caption": "Different evidence layers; a modern state map cannot answer all four."
+    },
+    "terms": [
+      {
+        "term": "Caryāpada",
+        "meaning": "A song in a Buddhist repertoire associated with early eastern literary languages."
+      },
+      {
+        "term": "Maṅgalkāvya",
+        "meaning": "A Bengali narrative-poetic genre celebrating deities and their establishment in human worlds."
+      },
+      {
+        "term": "Sattra",
+        "meaning": "An Assamese Vaiṣṇava institution supporting religious and artistic practices; histories vary by community."
+      }
+    ],
+    "reflection": "What is lost if the place where a manuscript survives is treated as conclusive proof of where its whole contents were composed?",
+    "quiz": {
+      "question": "A medieval text uses forms important to several modern eastern languages. What is the strongest approach?",
+      "choices": [
+        "Assign it to the modern state where its manuscript was discovered.",
+        "Examine its linguistic features and transmission before applying modern labels.",
+        "Assume its author spoke all today's standardized languages unchanged."
+      ],
+      "correct": 1,
+      "explanation": "Modern language names can help organize study, but historical forms and manuscript routes must be examined on their own evidence."
+    },
+    "connections": [
+      {
+        "lessonId": "buddhist-canons",
+        "why": "Preservation language and location do not define the whole history of a Buddhist work."
+      },
+      {
+        "lessonId": "text-performance",
+        "why": "Song, drama, and institutions extend the life of textual material."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Banglapedia · Caryāpada manuscript and linguistic history",
+        "url": "https://en.banglapedia.org/index.php/Charyapada"
+      },
+      {
+        "label": "Sahapedia · Assamese sattras and their religious-artistic practices",
+        "url": "https://www.sahapedia.org/sattras-assam"
+      },
+      {
+        "label": "IGNCA · Vidyāpati's work across literary and normative genres",
+        "url": "https://ignca.gov.in/coilnet/vp005.htm"
+      }
+    ]
+  },
+  "multilingual-crossings": {
+    "opening": "The history of Indian texts does not end where Sanskrit ends. Persian translation, Punjabi poetry, Sikh scripture, and other regional forms create new conversations across linguistic and religious boundaries. These are largely medieval and early modern developments, included here as afterlives and neighboring worlds rather than mislabeled as Vedic antiquity.",
+    "teaching": [
+      {
+        "title": "Translation can be a political and intellectual project",
+        "body": "Akbar commissioned a Persian Mahābhārata known as the Razmnāma. Surviving illustrated manuscripts make the epic visible within a Mughal courtly setting. Dārā Shikōh's Sirr-i-Akbar translated Upaniṣadic materials into Persian in a different project. The two examples share translation across languages, not one patron, one date, or one theological purpose."
+      },
+      {
+        "title": "A scripture is more than a multilingual anthology",
+        "body": "The Guru Granth Sahib includes the hymns of Sikh Gurus and other devotional voices and is revered as the living Guru in Sikh tradition. Honoring, reading, and singing it belong to its authority. Its multiple linguistic registers do not dissolve its specifically Sikh canonical identity or reduce it to a collection of interchangeable religious messages."
+      },
+      {
+        "title": "Shared genres do not erase distinct commitments",
+        "body": "Amīr Khusrau's Persianate and multilingual world, Bulleh Shah's Punjabi poetry, and Waris Shah's narrative art show different uses of love, voice, and cultural belonging. Kashmiri and Sindhi works add further routes. Study the speaker and tradition of a particular poem; a shared image of the beloved does not prove identical doctrines across every community."
+      }
+    ],
+    "example": {
+      "title": "One epic in another manuscript world · object exercise",
+      "scenario": "A museum displays a Persian Razmnāma folio illustrating an episode from the Mahābhārata.",
+      "explanation": "The object connects a Sanskritic epic tradition, Persian translation, Mughal patronage, and an illustrator's decisions. No single label exhausts it. Examine wording, image, and commission separately before deciding what the translation meant to its historical audience."
+    },
+    "visual": {
+      "title": "Four distinct crossings",
+      "nodes": [
+        {
+          "label": "Razmnāma",
+          "detail": "Mahābhārata materials translated into Persian under Akbar."
+        },
+        {
+          "label": "Sirr-i-Akbar",
+          "detail": "Dārā Shikōh's Persian engagement with the Upaniṣads."
+        },
+        {
+          "label": "Guru Granth Sahib",
+          "detail": "Multivoiced scripture with distinct Sikh authority."
+        },
+        {
+          "label": "Regional poetry",
+          "detail": "Punjabi, Sindhi, Kashmiri, and other literary routes."
+        }
+      ],
+      "caption": "A comparison of different projects, not one blended religion or a single chain of descent."
+    },
+    "terms": [
+      {
+        "term": "Persianate",
+        "meaning": "Participating in cultural and literary worlds shaped by Persian, beyond the borders of Persia itself."
+      },
+      {
+        "term": "Shabad",
+        "meaning": "The word or hymn, central to Sikh scriptural and devotional understanding."
+      },
+      {
+        "term": "Translation project",
+        "meaning": "A situated act of interpretation shaped by translators, patrons, languages, and audiences."
+      }
+    ],
+    "reflection": "Choose one translation you know. What changed besides vocabulary: audience, authority, imagery, format, or purpose?",
+    "quiz": {
+      "question": "What is the most careful conclusion from a Persian manuscript of the Mahābhārata?",
+      "choices": [
+        "The Sanskrit epic was originally composed at Akbar's court.",
+        "Every reader of Persian shared the same religion and reason for reading it.",
+        "The epic entered a new linguistic and material setting whose interpretive choices need study."
+      ],
+      "correct": 2,
+      "explanation": "The manuscript documents a particular crossing. It neither rewrites the epic's origin nor makes its translators and audiences a single undifferentiated community."
+    },
+    "connections": [
+      {
+        "lessonId": "epic-texts",
+        "why": "A translated manuscript adds another witness and reception to the epic's history."
+      },
+      {
+        "lessonId": "brihadaranyaka",
+        "why": "Return to a major Upaniṣad before comparing its much later Persian reception."
+      }
+    ],
+    "sourceLinks": [
+      {
+        "label": "Metropolitan Museum · a Razmnāma folio and Akbar's translation commission",
+        "url": "https://www.metmuseum.org/art/collection/search/825591"
+      },
+      {
+        "label": "Victoria Memorial catalogue · Sirr-i-Akbar",
+        "url": "https://museumsofindia.gov.in/repository/record/vmh_kol-R431-C230-2569"
+      },
+      {
+        "label": "Harvard Pluralism Project · the Sikh scripture",
+        "url": "https://pluralism.org/the-sikh-scripture"
+      }
+    ]
+  }
+}

@@ -109,7 +109,7 @@ export const upanishads: CourseLesson[] = [
     status: 'available', references: ['Bṛhadāraṇyaka 2.3.6', 'Bṛhadāraṇyaka 3.7'],
   },
   {
-    id: 'mandukya', sectionId: 'upanishads', order: 8, title: 'Māṇḍūkya Upaniṣad', plainTitle: 'Mandukya', veda: 'Atharvaveda', form: '12 verses', minutes: 11,
+    id: 'mandukya', sectionId: 'upanishads', order: 8, title: 'Māṇḍūkya Upaniṣad', plainTitle: 'Mandukya', veda: 'Atharvaveda', form: '12 prose mantras · key teachings', minutes: 15,
     question: 'What remains through waking, dream, and sleep?',
     insight: 'It maps Oṃ to waking, dreaming, deep sleep, and turīya—the “fourth”—while later commentary develops claims that should not be silently merged into the base text.',
     status: 'available', references: ['Māṇḍūkya 1–12'],
