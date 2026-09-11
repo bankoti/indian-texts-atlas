@@ -2,17 +2,17 @@
   {
     "label": "Sanskrit Documents · Māṇḍūkya Upaniṣad",
     "url": "https://sanskritdocuments.org/doc_upanishhat/maandu.html",
-    "use": "Base witness for all twelve ancient root mantras, encoded by M. Giridhar and proofread by John Manetta; checked against two GRETIL witnesses. The course normalizes nasal typography, avagrahas, punctuation, spacing and one final-consonant sandhi. Original English and study notes are not copied from a modern translation."
+    "use": "Base witness for all twelve ancient root mantras, encoded by M. Giridhar and proofread by John Manetta; comparison scope is documented in the GRETIL source notes below. The course normalizes nasal typography, avagrahas, punctuation, spacing and one final-consonant sandhi. Original English and study notes are not copied from a modern translation."
   },
   {
     "label": "Māṇḍūkya Sanskrit text · GRETIL, University of Göttingen",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mand_upu.htm",
-    "use": "Primary Sanskrit reference for the twelve root mantras, including caturtham in 7 and the pāda–mātrā correspondences in 8–12. This page interleaves Kārikā verses; those are separately labelled and are not counted as root mantras."
+    "use": "Additional Sanskrit comparison for mantras 7–12, including caturtham in 7 and the pāda–mātrā correspondences in 8–12. This page interleaves Kārikā verses; those are separately labelled and are not counted as root mantras."
   },
   {
     "label": "GRETIL — Māṇḍūkya Upaniṣad, Sansknet root text",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mandup_u.htm",
-    "use": "Independent textual comparison for all six mantras. GRETIL states that this root text was checked against V. P. Limaye and R. D. Vadekar, Eighteen Principal Upanisads, volume 1, Poona, 1958. It agrees with the base in reading adṛṣṭam in 7 and only one ya evaṃ veda at the end of 12."
+    "use": "Independent textual comparison for mantras 1–12. GRETIL states that this root text was checked against V. P. Limaye and R. D. Vadekar, Eighteen Principal Upanisads, volume 1, Poona, 1958. It agrees with the base in reading adṛṣṭam in 7 and only one ya evaṃ veda at the end of 12."
   },
   {
     "label": "Śaṅkara's Māṇḍūkya commentary — English transcription on Shlokam",

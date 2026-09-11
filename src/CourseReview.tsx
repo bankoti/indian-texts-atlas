@@ -33,7 +33,7 @@ export default function CourseReview({ completedIds, answers, reflection, onAnsw
     <p>Try these seven connections without your notes. This is a check of reading and reasoning, not a test of religious belief. You can explore it at any time and return to the linked lessons when needed.</p>
     <div className="review-status" role="status">
       <strong>{passed && missing.length === 0 ? 'Curated course complete' : passed ? 'Final review passed' : `${correctCount} / ${courseReviewCases.length} connections understood`}</strong>
-      <span>{missing.length === 0 ? 'All 75 lessons completed, including the three full depth editions.' : `${completedIds.length} / ${courseLessons.length} lessons completed. Finish the remaining lessons as well as this review to complete the course.`}</span>
+      <span>{missing.length === 0 ? 'All 75 lessons completed, including the four full depth editions.' : `${completedIds.length} / ${courseLessons.length} lessons completed. Finish the remaining lessons as well as this review to complete the course.`}</span>
     </div>
     {missing.length > 0 && <button className="text-button" onClick={() => openLesson(missing[0].id)}>Continue with {missing[0].title} →</button>}
     <div className="review-cases">{courseReviewCases.map((entry, index) => {
@@ -51,6 +51,6 @@ export default function CourseReview({ completedIds, answers, reflection, onAnsw
       </details>
     })}</div>
     <label className="reflection-field"><span>Your final synthesis · private, saved in this browser</span><p>Choose two texts from different paths. Explain one question they share, one real disagreement, and which source or passage supports your comparison. Then name a question you would investigate next.</p><textarea value={reflection} onChange={(event) => onReflection(event.target.value)} rows={7} placeholder="My comparison begins with…" /></label>
-    {passed && missing.length === 0 && <div className="lesson-route-note"><strong>You can navigate the landscape.</strong><p>You have completed this curated course of key teachings. Kena, Kaṭha, and Īśā were studied in full; the other paths introduced representative passages and text clusters. This is a foundation for further reading—not mastery of every Indian text, all 108 Upaniṣads, or Sanskrit as a language. Use your final question to choose what to study more deeply.</p></div>}
+    {passed && missing.length === 0 && <div className="lesson-route-note"><strong>You can navigate the landscape.</strong><p>You have completed this curated course of key teachings. Kena, Kaṭha, Īśā, and the twelve root mantras of Māṇḍūkya were studied in full; the other paths introduced representative passages and text clusters. This is a foundation for further reading—not mastery of every Indian text, all 108 Upaniṣads, or Sanskrit as a language. Use your final question to choose what to study more deeply.</p></div>}
   </section>
 }

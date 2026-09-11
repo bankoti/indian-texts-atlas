@@ -379,7 +379,7 @@ function AtlasView({ activeBranch, setActiveBranch, navigate, openLesson }: {
 
       <section className="cover-section">
         <img src="./og.png" alt="Indian Texts Atlas cover with archival manuscript textures and branching knowledge-map lines" loading="lazy" decoding="async" />
-        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Study the key teachings across the map, with concrete examples, diagrams, and questions. Sanskrit excerpts include word-by-word meanings. Kena, Kaṭha, and Īśā also offer complete passage-by-passage editions. Ancient foundations and their later literary afterlives are kept distinct.</p></div>
+        <div><span className="kicker">THE COURSE PROMISE</span><h2>Context before conclusions.</h2><p>Study the key teachings across the map, with concrete examples, diagrams, and questions. Sanskrit excerpts include word-by-word meanings. Four complete passage-by-passage editions cover Kena, Kaṭha, Īśā, and the twelve root mantras of Māṇḍūkya. Ancient foundations and their later literary afterlives are kept distinct.</p></div>
       </section>
     </>
   )
@@ -409,7 +409,7 @@ function PathView({ completed, depthEditions, openLesson, activeSectionId, setAc
       <div className="path-legend"><span><i className="legend-live" /> {courseSections.length} guided paths</span><span><i className="legend-cluster" /> {available.length} interactive units</span></div>
       <div className="course-route">
         <div><strong>A pace you can sustain</strong><p>Start with Course 0. Follow a path one short session at a time; longer depth editions save each passage separately. Course numbers guide study, not a single historical timeline.</p></div>
-        <div><strong>A clear finish line</strong><p>Complete all 75 lessons and the seven-part final review below. This covers key teachings across the map, with three full Upaniṣad editions—not every manuscript or all 108 titles.</p></div>
+        <div><strong>A clear finish line</strong><p>Complete all 75 lessons and the seven-part final review below. This covers key teachings across the map, with four full Upaniṣad editions, including the twelve root mantras of Māṇḍūkya—not every manuscript or all 108 titles.</p></div>
         <div className="course-route-actions">{nextId && <button className="primary-button" onClick={() => openLesson(nextId)}>{validCompleted.length ? 'Continue with' : 'Begin with'} {courseLessons.find((lesson) => lesson.id === nextId)?.plainTitle} <ArrowRight size={17} /></button>}<button className="quiet-button" onClick={openCourseReview}>Go to final review ↓</button></div>
       </div>
 
@@ -760,7 +760,7 @@ function CourseZeroLessonView({ lesson, detail, completed, reflection, selectedQ
             <div className="upanishad-families">
               {upanishadVedaFamilies.map((family) => <article key={family.veda}><h3>{family.veda}</h3><p>{family.texts}</p></article>)}
             </div>
-            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with three complete readers on three Vedic branches: Kena on the Sāmaveda, Kaṭha on the Kṛṣṇa Yajurveda, and Īśā as chapter 40 of the Śukla Yajurveda’s Vājasaneyi Saṃhitā. Each keeps Sanskrit, transliteration, word-by-word literal meaning and grammar, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to its text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
+            <div className="course-zero-thesis"><strong>Where we go next</strong><span>Course 1 begins with three complete readers on three Vedic branches: Kena on the Sāmaveda, Kaṭha on the Kṛṣṇa Yajurveda, and Īśā as chapter 40 of the Śukla Yajurveda’s Vājasaneyi Saṃhitā. Later in Course 1, Māṇḍūkya offers a complete reader of its twelve root mantras, affiliated with the Atharvaveda. Each keeps Sanskrit, transliteration, word-by-word literal meaning and grammar, course paraphrase, teaching note, textual variants, and interpretation distinct while adapting the pace to its text. Nine wider paths then open the Vedas, epics and Gītā, Purāṇas, Darśanas, Buddhist and Jain texts, social and technical thought, and regional-language literatures.</span></div>
             <div className="course-zero-caveat"><strong>“Principal” is a course doorway, not a verdict.</strong><p>These thirteen are early or historically influential starting points. Many later Upaniṣads also matter, and traditional lists differ.</p></div>
           </LessonPanel>
         )}
