@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "textFingerprint": "f2de8d9b7c5d5c4541a16d4cc318dd2335fa7d000a91aa4a1286367ca41cfa61",
+    "rowCount": 23,
+    "wordFingerprint": "15d324198c1843851f49e9372a1e3321b043678c9dcf896caee30236e307a116"
+  },
+  {
+    "id": "2",
+    "textFingerprint": "31b5771813c7ade2052485410c1d673e4d369070d8cc1e571456d26964f2c97b",
+    "rowCount": 11,
+    "wordFingerprint": "89e4da67f778e823828f77b0ca90d015d672e80ef3200de53c71130f5c26992b"
+  },
+  {
+    "id": "3",
+    "textFingerprint": "ce1fb7a327b4ea40c9ee91090c4af1ed7023ee91758b01d57dbba118e92df95e",
+    "rowCount": 8,
+    "wordFingerprint": "1978ae868728348001171a550942afd17b85501f0052030f481d16958a5df564"
+  },
+  {
+    "id": "4",
+    "textFingerprint": "037e4f8983b4b5b893d71deb51bc27bb3de21f85d6cc6eae64c2172745dfb77c",
+    "rowCount": 8,
+    "wordFingerprint": "1ae27ce39236730af1e79191d628882112bb059c20211e3f910eb3b77d71f399"
+  },
+  {
+    "id": "5",
+    "textFingerprint": "fa6986c6b92ec9a78e81a25ebb1db1c7655b30d3e0eec05c79b9111610c6fd83",
+    "rowCount": 23,
+    "wordFingerprint": "d6c63699a0adbc7b2fa99356a8b3ece220656cd135a52897891909b3c1bb9ace"
+  },
+  {
+    "id": "6",
+    "textFingerprint": "7205539c113828bdc601101af89a034513f2061e6670df534ca75fd475058fed",
+    "rowCount": 12,
+    "wordFingerprint": "5741a995a6a56fd0a6ee1c1d7f6f8690e5de6c80b3311ae38267a8fea6e7612e"
+  },
+  {
+    "id": "7",
+    "textFingerprint": "3d2375f55f0b73be14fe67fc211f2d5e8a67c02a2d40679d21ae3b3275b80910",
+    "rowCount": 29,
+    "wordFingerprint": "63575113c719c5b89d773b6135622496e80a108a131100f2077be44c3f19a190"
+  },
+  {
+    "id": "8",
+    "textFingerprint": "e7e118e024757e7ebf8e96b57c7e9a44486aa70b02ef83dc9fc365452d6aa09e",
+    "rowCount": 15,
+    "wordFingerprint": "5a1f3bc078e9abf6f469180474fb380e05eb58f3de4fbe2d123f3b741ba4b299"
+  },
+  {
+    "id": "9",
+    "textFingerprint": "f3fb6167b75b2521840fe33372e657fbf0d5bc825ca0304d360b3de986d561e1",
+    "rowCount": 19,
+    "wordFingerprint": "5a17819e7c1244f3910479ed4f47b8864fb4f37edc3784aff8442b8113e6b21b"
+  },
+  {
+    "id": "10",
+    "textFingerprint": "50890ed2e4ab033434c2a05af15c7aa0b2181daa06a9cad6cfc5b3ff4efa8776",
+    "rowCount": 23,
+    "wordFingerprint": "56656b871a325fe91b86e4ecdaf4cbcd486f44c748dab51e4ed9e4a512abc3a4"
+  },
+  {
+    "id": "11",
+    "textFingerprint": "e84f68d5d53740c5c5018f8b8c5d038ec73098167daf76e4f502797406ed0091",
+    "rowCount": 19,
+    "wordFingerprint": "44fb6e0feed52c200f5b3cf96b8cc077a0444e30c8058a1b3ec2571891578f6b"
+  },
+  {
+    "id": "12",
+    "textFingerprint": "4924ce44623f6131da1595b7124b25e34b20f007fc446f14daefa6a4b3f26e6d",
+    "rowCount": 16,
+    "wordFingerprint": "9aa89f9a72ff5999f52ea18f8af6d45380a9ce79de65054b795b8fa3dce33aae"
+  }
+]

@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "1",
+    "devanagari": "ॐ इत्येतदक्षरमिदं सर्वं तस्योपव्याख्यानं भूतं भवद्भविष्यदिति सर्वमोङ्कार एव यच्चान्यत्त्रिकालातीतं तदप्योङ्कार एव ॥ १ ॥",
+    "iast": "oṃ ityetadakṣaramidaṃ sarvaṃ tasyopavyākhyānaṃ bhūtaṃ bhavadbhaviṣyaditi sarvamoṅkāra eva yaccānyattrikālātītaṃ tadapyoṅkāra eva || 1 ||",
+    "gloss": "Oṃ: this syllable is all this. Here is its explanation: whatever has been, whatever is, and whatever will be—all is Oṃ. And whatever else lies beyond the three divisions of time is also Oṃ.",
+    "textNote": "The Sanskrit uses compact sentences without an expressed verb 'is'; English supplies it. Akṣara means 'syllable' here, with a possible resonance of 'imperishable'. Oṅkāra is the name of the utterance Oṃ. The base's special nasal sign in इदꣳ is displayed as इदं. Continuous text keeps sound combinations (sandhi); the study rows restore word forms and explain compounds for learning, without claiming a traditional padapāṭha. Examples: iti + etat → ityetat; bhavat + bhaviṣyat → bhavadbhaviṣyat; yat + ca + anyat → yaccānyat; tat + api → tadapi.",
+    "words": [
+      {
+        "source": "ॐ",
+        "iast": "oṃ",
+        "meaning": "Oṃ, the sacred syllable being discussed",
+        "grammar": "Indeclinable utterance. Here it is mentioned as a name, followed by iti."
+      },
+      {
+        "source": "इति",
+        "iast": "iti",
+        "meaning": "thus; marks the preceding utterance as a quotation",
+        "grammar": "Indeclinable quotation particle: 'Oṃ' iti, 'the expression Oṃ'. Before etat it becomes ity-."
+      },
+      {
+        "source": "एतत्",
+        "iast": "etat",
+        "meaning": "this",
+        "grammar": "Neuter nominative singular demonstrative, describing akṣaram; final t becomes d before a vowel."
+      },
+      {
+        "source": "अक्षरम्",
+        "iast": "akṣaram",
+        "meaning": "syllable; here, Oṃ",
+        "grammar": "Neuter nominative singular. The same word also means 'imperishable', historically a- ('not') + kṣara ('perishing'); the immediate sense concerns an utterance."
+      },
+      {
+        "source": "इदम्",
+        "iast": "idam",
+        "meaning": "this",
+        "grammar": "Neuter nominative singular demonstrative with sarvam: 'all this'. Final m is written ṃ before the following s."
+      },
+      {
+        "source": "सर्वम्",
+        "iast": "sarvam",
+        "meaning": "all; everything",
+        "grammar": "Neuter nominative singular, agreeing with idam."
+      },
+      {
+        "source": "तस्य",
+        "iast": "tasya",
+        "meaning": "of it; of that",
+        "grammar": "Genitive singular of tad; refers to the syllable Oṃ. With upavyākhyānam, tasya + u- becomes tasyo-."
+      },
+      {
+        "source": "उपव्याख्यानम्",
+        "iast": "upavyākhyānam",
+        "meaning": "explanation; further exposition",
+        "grammar": "Neuter nominative singular action noun. Formed with upa- ('toward, in detail') + vi-ā-√khyā ('explain, make known'); it introduces the explanation that follows."
+      },
+      {
+        "source": "भूतम्",
+        "iast": "bhūtam",
+        "meaning": "what has been; the past",
+        "grammar": "Neuter nominative singular past participle of √bhū, 'become, be', used as a noun."
+      },
+      {
+        "source": "भवत्",
+        "iast": "bhavat",
+        "meaning": "what is; the present",
+        "grammar": "Neuter nominative singular present participle of √bhū. Its final t is voiced to d before bhaviṣyat."
+      },
+      {
+        "source": "भविष्यत्",
+        "iast": "bhaviṣyat",
+        "meaning": "what will be; the future",
+        "grammar": "Neuter nominative singular future participle of √bhū. Before iti its final t becomes d."
+      },
+      {
+        "source": "इति",
+        "iast": "iti",
+        "meaning": "thus; closes the enumeration of past, present, and future",
+        "grammar": "Indeclinable particle. This second occurrence gathers the three time references into one expression."
+      },
+      {
+        "source": "सर्वम्",
+        "iast": "sarvam",
+        "meaning": "all of it",
+        "grammar": "Neuter nominative singular; resumes everything included in the three times."
+      },
+      {
+        "source": "ओङ्कारः",
+        "iast": "oṅkāraḥ",
+        "meaning": "Oṃ; the utterance Oṃ",
+        "grammar": "Masculine nominative singular. Oṃ + kāra ('making, utterance'); the nasal before k is represented as ṅ. Final -aḥ loses its visarga before eva."
+      },
+      {
+        "source": "एव",
+        "iast": "eva",
+        "meaning": "indeed; precisely",
+        "grammar": "Indeclinable emphatic particle: all this is precisely Oṃ."
+      },
+      {
+        "source": "यत्",
+        "iast": "yat",
+        "meaning": "whatever; that which",
+        "grammar": "Neuter nominative singular relative pronoun; paired with the later tat. Before ca, yat becomes yac."
+      },
+      {
+        "source": "च",
+        "iast": "ca",
+        "meaning": "and",
+        "grammar": "Indeclinable connective. Ca + anyat becomes cānyat."
+      },
+      {
+        "source": "अन्यत्",
+        "iast": "anyat",
+        "meaning": "other; else",
+        "grammar": "Neuter nominative singular adjective agreeing with yat."
+      },
+      {
+        "source": "त्रिकालातीतम्",
+        "iast": "trikālātītam",
+        "meaning": "beyond the three divisions of time",
+        "grammar": "Neuter nominative singular compound: tri ('three') + kāla ('time') + atīta ('gone beyond', from ati-√i). Kāla + atīta joins as kālātīta."
+      },
+      {
+        "source": "तत्",
+        "iast": "tat",
+        "meaning": "that",
+        "grammar": "Neuter nominative singular correlative pronoun, answering yat. Before api, tat becomes tad."
+      },
+      {
+        "source": "अपि",
+        "iast": "api",
+        "meaning": "also; even",
+        "grammar": "Indeclinable additive particle. Api + oṅkāraḥ becomes apyoṅkāraḥ."
+      },
+      {
+        "source": "ओङ्कारः",
+        "iast": "oṅkāraḥ",
+        "meaning": "Oṃ; the utterance Oṃ",
+        "grammar": "Masculine nominative singular; repeated deliberately. Oṃ + kāra ('utterance')."
+      },
+      {
+        "source": "एव",
+        "iast": "eva",
+        "meaning": "indeed; precisely",
+        "grammar": "Indeclinable emphatic particle; repeated at the close."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "devanagari": "सर्वं ह्येतद्ब्रह्मायमात्मा ब्रह्म सोऽयमात्मा चतुष्पात् ॥ २ ॥",
+    "iast": "sarvaṃ hyetadbrahmāyamātmā brahma so'yamātmā catuṣpāt || 2 ||",
+    "gloss": "For all this is brahman. This self is brahman. This very self has four quarters.",
+    "textNote": "Brahman is the neuter term for the ultimate reality, not the masculine creator-name Brahmā. The words brahma + ayam join as brahmāyam, so the long ā visible there belongs to sandhi. Pāda literally means 'foot' and, by extension, a quarter or aspect; 'four quarters' begins the text's structured inquiry into the self. No mathematical division of a physical object is implied. Hi + etat → hyetat; saḥ + ayam → so'yam; the apostrophe represents the omitted initial a shown by ऽ.",
+    "words": [
+      {
+        "source": "सर्वम्",
+        "iast": "sarvam",
+        "meaning": "all",
+        "grammar": "Neuter nominative singular, agreeing with etat."
+      },
+      {
+        "source": "हि",
+        "iast": "hi",
+        "meaning": "for; indeed",
+        "grammar": "Indeclinable explanatory or emphatic particle. Before etat it becomes hy-."
+      },
+      {
+        "source": "एतत्",
+        "iast": "etat",
+        "meaning": "this",
+        "grammar": "Neuter nominative singular demonstrative: sarvam etat, 'all this'. Final t becomes d before brahma."
+      },
+      {
+        "source": "ब्रह्म",
+        "iast": "brahma",
+        "meaning": "brahman; ultimate reality",
+        "grammar": "Neuter nominative singular of the stem brahman, used as a predicate. Brahma + ayam becomes brahmāyam."
+      },
+      {
+        "source": "अयम्",
+        "iast": "ayam",
+        "meaning": "this",
+        "grammar": "Masculine nominative singular demonstrative, agreeing with ātmā."
+      },
+      {
+        "source": "आत्मा",
+        "iast": "ātmā",
+        "meaning": "self",
+        "grammar": "Masculine nominative singular of ātman."
+      },
+      {
+        "source": "ब्रह्म",
+        "iast": "brahma",
+        "meaning": "brahman; ultimate reality",
+        "grammar": "Neuter nominative singular predicate noun. Repeated to identify this self with brahman."
+      },
+      {
+        "source": "सः",
+        "iast": "saḥ",
+        "meaning": "that; that same",
+        "grammar": "Masculine nominative singular demonstrative. Saḥ + ayam becomes so'yam, 'that very one, this'."
+      },
+      {
+        "source": "अयम्",
+        "iast": "ayam",
+        "meaning": "this",
+        "grammar": "Masculine nominative singular demonstrative, repeated with ātmā."
+      },
+      {
+        "source": "आत्मा",
+        "iast": "ātmā",
+        "meaning": "self",
+        "grammar": "Masculine nominative singular of ātman; repeated as the subject of catuṣpāt."
+      },
+      {
+        "source": "चतुष्पात्",
+        "iast": "catuṣpāt",
+        "meaning": "having four quarters",
+        "grammar": "Masculine nominative singular adjective from catuṣpad: catur ('four') + pad ('foot'). Literally 'four-footed'; here a fourfold presentation of the self."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "devanagari": "जागरितस्थानो बहिष्प्रज्ञः सप्ताङ्ग एकोनविंशतिमुखः स्थूलभुग्वैश्वानरः प्रथमः पादः ॥ ३ ॥",
+    "iast": "jāgaritasthāno bahiṣprajñaḥ saptāṅga ekonaviṃśatimukhaḥ sthūlabhugvaiśvānaraḥ prathamaḥ pādaḥ || 3 ||",
+    "gloss": "The first quarter is Vaiśvānara: its field is waking, its awareness turns outward, it has seven limbs and nineteen mouths, and it experiences gross objects.",
+    "textNote": "The descriptive compounds all qualify Vaiśvānara. 'Mouths' gives an image of openings through which experience is taken in; the mantra states the numbers but does not list the limbs or mouths. Traditional commentaries supply those lists. 'Gross' means the tangible objects of waking experience, not something morally inferior. The base has bahiṣprajñaḥ; other witnesses print bahiḥprajñaḥ. This is a treatment of the same compound, not a different account of waking. Saptāṅgaḥ + ekona- appears as saptāṅga ekona-; sthūlabhuk becomes sthūlabhug before v.",
+    "words": [
+      {
+        "source": "जागरितस्थानः",
+        "iast": "jāgaritasthānaḥ",
+        "meaning": "whose field or abode is waking",
+        "grammar": "Masculine nominative singular possessive compound: jāgarita ('waking') + sthāna ('place, field, abode'). Final -aḥ becomes -o before the following voiced sound."
+      },
+      {
+        "source": "बहिष्प्रज्ञः",
+        "iast": "bahiṣprajñaḥ",
+        "meaning": "aware of what is outside; outwardly conscious",
+        "grammar": "Masculine nominative singular compound: bahis/bahiḥ ('outside') + prajña ('aware, knowing'). Prajña is related to pra-√jñā, 'know'. The base writes ṣ before p."
+      },
+      {
+        "source": "सप्ताङ्गः",
+        "iast": "saptāṅgaḥ",
+        "meaning": "having seven limbs",
+        "grammar": "Masculine nominative singular possessive compound: sapta ('seven') + aṅga ('limb'). A + a combines to ā; visarga disappears before ekona-."
+      },
+      {
+        "source": "एकोनविंशतिमुखः",
+        "iast": "ekonaviṃśatimukhaḥ",
+        "meaning": "having nineteen mouths or openings",
+        "grammar": "Masculine nominative singular possessive compound: eka ('one') + ūna ('less') + viṃśati ('twenty') + mukha ('mouth, opening'). 'Twenty less one' is nineteen; eka + ūna becomes ekona."
+      },
+      {
+        "source": "स्थूलभुक्",
+        "iast": "sthūlabhuk",
+        "meaning": "experiencer of gross objects",
+        "grammar": "Masculine nominative singular compound: sthūla ('gross, tangible') + bhuj ('one who enjoys or consumes', from √bhuj). Final bhuj appears as bhuk in isolation and bhug before Vaiśvānara."
+      },
+      {
+        "source": "वैश्वानरः",
+        "iast": "vaiśvānaraḥ",
+        "meaning": "Vaiśvānara, the self considered in waking",
+        "grammar": "Masculine nominative singular name or epithet. Connected with viśva ('all') and nara ('person'); often understood as 'common to all people' or 'universal'. The name has a wider Vedic history."
+      },
+      {
+        "source": "प्रथमः",
+        "iast": "prathamaḥ",
+        "meaning": "first",
+        "grammar": "Masculine nominative singular ordinal adjective, agreeing with pādaḥ."
+      },
+      {
+        "source": "पादः",
+        "iast": "pādaḥ",
+        "meaning": "quarter; aspect",
+        "grammar": "Masculine nominative singular noun. Literally 'foot'; carries forward the fourfold presentation in mantra 2."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "devanagari": "स्वप्नस्थानोऽन्तःप्रज्ञः सप्ताङ्ग एकोनविंशतिमुखः प्रविविक्तभुक्तैजसो द्वितीयः पादः ॥ ४ ॥",
+    "iast": "svapnasthāno'ntaḥprajñaḥ saptāṅga ekonaviṃśatimukhaḥ praviviktabhuktaijaso dvitīyaḥ pādaḥ || 4 ||",
+    "gloss": "The second quarter is Taijasa: its field is dreaming, its awareness turns inward, it has seven limbs and nineteen mouths, and it experiences the subtle objects of dream.",
+    "textNote": "This deliberately repeats the structure of mantra 3 while changing waking to dream, outward to inward, and gross objects to the distinct or subtle contents of dream. 'Subtle' is the contextual interpretation of pravivikta, literally 'separated out' or 'distinct'; it is not the Sanskrit word sūkṣma. Taijasa means 'luminous', an epithet for the dream experiencer. Svapnasthānaḥ + antaḥprajñaḥ → svapnasthāno'ntaḥprajñaḥ. The isolated svaprasthāno in the Sansknet GRETIL file appears to be a transcription error; Sanskrit Documents and the Samuels witness agree on svapnasthāno.",
+    "words": [
+      {
+        "source": "स्वप्नस्थानः",
+        "iast": "svapnasthānaḥ",
+        "meaning": "whose field or abode is dream",
+        "grammar": "Masculine nominative singular possessive compound: svapna ('dream') + sthāna ('place, field, abode'). Before antaḥ-, final -aḥ becomes -o and the next initial a is elided."
+      },
+      {
+        "source": "अन्तःप्रज्ञः",
+        "iast": "antaḥprajñaḥ",
+        "meaning": "aware of what is within; inwardly conscious",
+        "grammar": "Masculine nominative singular compound: antar ('within', appearing as antaḥ here) + prajña ('aware, knowing', related to pra-√jñā)."
+      },
+      {
+        "source": "सप्ताङ्गः",
+        "iast": "saptāṅgaḥ",
+        "meaning": "having seven limbs",
+        "grammar": "Masculine nominative singular possessive compound: sapta ('seven') + aṅga ('limb'). Repeats the description in mantra 3."
+      },
+      {
+        "source": "एकोनविंशतिमुखः",
+        "iast": "ekonaviṃśatimukhaḥ",
+        "meaning": "having nineteen mouths or openings",
+        "grammar": "Masculine nominative singular possessive compound: eka ('one') + ūna ('less') + viṃśati ('twenty') + mukha ('mouth, opening'). Repeats the description in mantra 3."
+      },
+      {
+        "source": "प्रविविक्तभुक्",
+        "iast": "praviviktabhuk",
+        "meaning": "experiencer of distinct or subtle objects",
+        "grammar": "Masculine nominative singular compound: pravivikta ('separated out, distinct', from pra-vi-√vic) + bhuj ('enjoyer, experiencer', from √bhuj). 'Subtle objects' interprets the dream context; bhuj ends as bhuk here."
+      },
+      {
+        "source": "तैजसः",
+        "iast": "taijasaḥ",
+        "meaning": "Taijasa; the luminous one",
+        "grammar": "Masculine nominative singular epithet derived from tejas ('light, brilliance'). Names the self considered in dreaming. Before dvitīyaḥ, -aḥ becomes -o."
+      },
+      {
+        "source": "द्वितीयः",
+        "iast": "dvitīyaḥ",
+        "meaning": "second",
+        "grammar": "Masculine nominative singular ordinal adjective, agreeing with pādaḥ."
+      },
+      {
+        "source": "पादः",
+        "iast": "pādaḥ",
+        "meaning": "quarter; aspect",
+        "grammar": "Masculine nominative singular noun, literally 'foot'."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "devanagari": "यत्र सुप्तो न कञ्चन कामं कामयते न कञ्चन स्वप्नं पश्यति तत्सुषुप्तम् । सुषुप्तस्थान एकीभूतः प्रज्ञानघन एवानन्दमयो ह्यानन्दभुक् चेतोमुखः प्राज्ञस्तृतीयः पादः ॥ ५ ॥",
+    "iast": "yatra supto na kañcana kāmaṃ kāmayate na kañcana svapnaṃ paśyati tatsuṣuptam | suṣuptasthāna ekībhūtaḥ prajñānaghana evānandamayo hyānandabhuk cetomukhaḥ prājñastṛtīyaḥ pādaḥ || 5 ||",
+    "gloss": "When someone asleep desires no object at all and sees no dream at all, that is deep sleep. The third quarter is Prājña: its field is deep sleep, experience has become one, and it is an undivided mass of awareness. It is full of bliss, for it enjoys bliss, and it is the gateway to awareness.",
+    "textNote": "The first sentence defines deep sleep by the absence of particular desires and dreams. 'Undivided' explains ghana ('mass, compact whole') in context. Cetomukha is a difficult doorway metaphor: the translation follows the reading 'gateway to awareness', understood in Śaṅkara's commentary as the passage into waking and dreaming experience. Another reading is 'with awareness as its gateway'; the compound alone does not settle the direction of the metaphor. This third quarter must still be distinguished from the fourth described in mantra 7. Study rows restore the endings hidden by sandhi: suṣuptasthānaḥ + ekībhūtaḥ, prajñānaghanaḥ + eva, eva + ānandamayaḥ, hi + ānandabhuk, and prājñaḥ + tṛtīyaḥ. The truncated evāndamayo in one GRETIL file is not adopted.",
+    "words": [
+      {
+        "source": "यत्र",
+        "iast": "yatra",
+        "meaning": "where; in the state in which",
+        "grammar": "Indeclinable relative adverb. In this description of sleep, English can naturally render it 'when'."
+      },
+      {
+        "source": "सुप्तः",
+        "iast": "suptaḥ",
+        "meaning": "one who is asleep; a sleeping person",
+        "grammar": "Masculine nominative singular past participle of √svap ('sleep'), used substantivally. Before na, suptaḥ becomes supto."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Indeclinable negation, governing kāmayate with kañcana: 'does not desire anything at all'."
+      },
+      {
+        "source": "कञ्चन",
+        "iast": "kañcana",
+        "meaning": "any; any at all",
+        "grammar": "Masculine accusative singular indefinite, formed from kam + cana; m assimilates before c. With na it means 'not any', agreeing with kāmam. Cana supplies indefiniteness."
+      },
+      {
+        "source": "कामम्",
+        "iast": "kāmam",
+        "meaning": "an object of desire; a desire",
+        "grammar": "Masculine accusative singular, object of kāmayate. Its relation to the following verb produces the expression 'desires a desire/object'."
+      },
+      {
+        "source": "कामयते",
+        "iast": "kāmayate",
+        "meaning": "desires; longs for",
+        "grammar": "Third person singular present middle verb, from the denominative kāmaya-, related to kāma ('desire'). The sleeping person is the subject."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Indeclinable negation, repeated for the second action, seeing a dream."
+      },
+      {
+        "source": "कञ्चन",
+        "iast": "kañcana",
+        "meaning": "any; any at all",
+        "grammar": "Masculine accusative singular indefinite, kam + cana, now agreeing with svapnam. The repetition stresses the absence of any dream."
+      },
+      {
+        "source": "स्वप्नम्",
+        "iast": "svapnam",
+        "meaning": "a dream",
+        "grammar": "Masculine accusative singular, object of paśyati."
+      },
+      {
+        "source": "पश्यति",
+        "iast": "paśyati",
+        "meaning": "sees",
+        "grammar": "Third person singular present active of √dṛś ('see'), whose present stem is paśya-."
+      },
+      {
+        "source": "तत्",
+        "iast": "tat",
+        "meaning": "that",
+        "grammar": "Neuter nominative singular demonstrative, referring to the condition just described. Tat suṣuptam means 'that is deep sleep'."
+      },
+      {
+        "source": "सुषुप्तम्",
+        "iast": "suṣuptam",
+        "meaning": "deep sleep",
+        "grammar": "Neuter nominative singular participial form used as a noun: su- ('well') + supta ('slept', from √svap), with the second s becoming ṣ."
+      },
+      {
+        "source": "सुषुप्तस्थानः",
+        "iast": "suṣuptasthānaḥ",
+        "meaning": "whose field or abode is deep sleep",
+        "grammar": "Masculine nominative singular possessive compound: suṣupta ('deep sleep'; su- + supta) + sthāna ('place, field, abode'). The visarga is lost before ekībhūtaḥ."
+      },
+      {
+        "source": "एकीभूतः",
+        "iast": "ekībhūtaḥ",
+        "meaning": "become one; unified",
+        "grammar": "Masculine nominative singular: ekī- ('into one', from eka) + bhūta ('become', past participle of √bhū). Here it indicates the absence of the differentiated experiences of waking and dream."
+      },
+      {
+        "source": "प्रज्ञानघनः",
+        "iast": "prajñānaghanaḥ",
+        "meaning": "a compact mass of awareness",
+        "grammar": "Masculine nominative singular compound: prajñāna ('awareness, cognition', from pra-√jñā) + ghana ('mass, compact whole'). Final visarga disappears before eva."
+      },
+      {
+        "source": "एव",
+        "iast": "eva",
+        "meaning": "indeed; just",
+        "grammar": "Indeclinable emphatic particle, reinforcing prajñānaghanaḥ. Eva + ānandamayaḥ becomes evānandamayaḥ."
+      },
+      {
+        "source": "आनन्दमयः",
+        "iast": "ānandamayaḥ",
+        "meaning": "full of bliss",
+        "grammar": "Masculine nominative singular adjective: ānanda ('bliss, joy') + -maya ('consisting of, filled with'). 'Full of bliss' is the contextual rendering of the suffix."
+      },
+      {
+        "source": "हि",
+        "iast": "hi",
+        "meaning": "for; indeed",
+        "grammar": "Indeclinable explanatory or emphatic particle. Hi + ānanda- becomes hyānanda-."
+      },
+      {
+        "source": "आनन्दभुक्",
+        "iast": "ānandabhuk",
+        "meaning": "one who experiences or enjoys bliss",
+        "grammar": "Masculine nominative singular compound: ānanda ('bliss') + bhuj ('enjoyer, experiencer', from √bhuj). Final bhuj is realized as bhuk."
+      },
+      {
+        "source": "चेतोमुखः",
+        "iast": "cetomukhaḥ",
+        "meaning": "gateway to awareness; alternatively, having awareness as its gateway",
+        "grammar": "Masculine nominative singular compound: cetas ('mind, awareness') + mukha ('mouth, opening, gateway'); cetas becomes ceto- in this combination. The relation between the two members allows different interpretations; see the passage note."
+      },
+      {
+        "source": "प्राज्ञः",
+        "iast": "prājñaḥ",
+        "meaning": "Prājña; the knowing one",
+        "grammar": "Masculine nominative singular epithet related to prajñā ('understanding, awareness'). It names the self considered in deep sleep here; it is not a claim that a sleeper is consciously thinking. Before tṛtīyaḥ, the visarga becomes s."
+      },
+      {
+        "source": "तृतीयः",
+        "iast": "tṛtīyaḥ",
+        "meaning": "third",
+        "grammar": "Masculine nominative singular ordinal adjective, agreeing with pādaḥ."
+      },
+      {
+        "source": "पादः",
+        "iast": "pādaḥ",
+        "meaning": "quarter; aspect",
+        "grammar": "Masculine nominative singular noun, literally 'foot'."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "devanagari": "एष सर्वेश्वरः एष सर्वज्ञ एषोऽन्तर्याम्येष योनिः सर्वस्य प्रभवाप्ययौ हि भूतानाम् ॥ ६ ॥",
+    "iast": "eṣa sarveśvaraḥ eṣa sarvajña eṣo'ntaryāmyeṣa yoniḥ sarvasya prabhavāpyayau hi bhūtānām || 6 ||",
+    "gloss": "This is the ruler of all; this is the knower of all; this is the inner governor. This is the source of everything, for it is the arising and the return of beings.",
+    "textNote": "On the traditional Advaita reading used here, the four repetitions of eṣa ('this') refer back to Prājña in the preceding mantra. The language now relates that description to the source and governance of the whole. This connection is an interpretation, not a name explicitly repeated in the Sanskrit. Prabhavāpyayau is a dual compound naming both arising and dissolution or return. The base preserves a pause-like visarga in sarveśvaraḥ eṣa, while witnesses differ in whether visargas are printed across boundaries; this study text follows the base. The word rows restore eṣaḥ, sarvajñaḥ, and antaryāmī so their forms can be recognized. No claim is made here that an individual sleeper deliberately creates the world.",
+    "words": [
+      {
+        "source": "एषः",
+        "iast": "eṣaḥ",
+        "meaning": "this; this very one",
+        "grammar": "Masculine nominative singular demonstrative from etad, read here as referring back to Prājña. The base prints the sandhi form eṣa."
+      },
+      {
+        "source": "सर्वेश्वरः",
+        "iast": "sarveśvaraḥ",
+        "meaning": "ruler of all; lord of all",
+        "grammar": "Masculine nominative singular compound: sarva ('all') + īśvara ('ruler, lord'). A + ī combines as e."
+      },
+      {
+        "source": "एषः",
+        "iast": "eṣaḥ",
+        "meaning": "this; this very one",
+        "grammar": "Masculine nominative singular demonstrative, repeated a second time."
+      },
+      {
+        "source": "सर्वज्ञः",
+        "iast": "sarvajñaḥ",
+        "meaning": "knower of all",
+        "grammar": "Masculine nominative singular compound: sarva ('all') + jña ('knowing', from √jñā). The final visarga disappears before eṣaḥ."
+      },
+      {
+        "source": "एषः",
+        "iast": "eṣaḥ",
+        "meaning": "this; this very one",
+        "grammar": "Masculine nominative singular demonstrative, repeated a third time. Eṣaḥ + antaryāmī becomes eṣo'ntaryāmī."
+      },
+      {
+        "source": "अन्तर्यामी",
+        "iast": "antaryāmī",
+        "meaning": "inner governor; one who rules from within",
+        "grammar": "Masculine nominative singular of antaryāmin: antar ('within') + yāmin ('restraining, governing', from √yam). Final ī becomes y before the next eṣaḥ."
+      },
+      {
+        "source": "एषः",
+        "iast": "eṣaḥ",
+        "meaning": "this; this very one",
+        "grammar": "Masculine nominative singular demonstrative, repeated a fourth time."
+      },
+      {
+        "source": "योनिः",
+        "iast": "yoniḥ",
+        "meaning": "source; womb; origin",
+        "grammar": "Nominative singular of yoni (masculine or feminine), used as a predicate noun."
+      },
+      {
+        "source": "सर्वस्य",
+        "iast": "sarvasya",
+        "meaning": "of everything",
+        "grammar": "Neuter genitive singular of sarva, dependent on yoniḥ: 'the source of everything'."
+      },
+      {
+        "source": "प्रभवाप्ययौ",
+        "iast": "prabhavāpyayau",
+        "meaning": "arising and dissolution; origin and return",
+        "grammar": "Masculine nominative dual coordinate compound: prabhava ('arising, origination', pra-√bhū) + apyaya ('dissolution, return', related to api-√i). The dual ending -au preserves the two members; a + a joins as ā."
+      },
+      {
+        "source": "हि",
+        "iast": "hi",
+        "meaning": "for; indeed",
+        "grammar": "Indeclinable explanatory or emphatic particle."
+      },
+      {
+        "source": "भूतानाम्",
+        "iast": "bhūtānām",
+        "meaning": "of beings; of things that have come to be",
+        "grammar": "Neuter genitive plural of bhūta, the past participle of √bhū ('become, be') used as a noun. It qualifies both arising and dissolution."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "devanagari": "नान्तःप्रज्ञं न बहिष्प्रज्ञं नोभयतःप्रज्ञं न प्रज्ञानघनं न प्रज्ञं नाप्रज्ञम् । अदृष्टमव्यवहार्यमग्राह्यमलक्षणमचिन्त्यमव्यपदेश्यमेकात्मप्रत्ययसारं प्रपञ्चोपशमं शान्तं शिवमद्वैतं चतुर्थं मन्यन्ते स आत्मा स विज्ञेयः ॥ ७ ॥",
+    "iast": "nāntaḥprajñaṃ na bahiṣprajñaṃ nobhayataḥprajñaṃ na prajñānaghanaṃ na prajñaṃ nāprajñam | adṛṣṭamavyavahāryamagrāhyamalakṣaṇamacintyamavyapadeśyamekātmapratyayasāraṃ prapañcopaśamaṃ śāntaṃ śivamadvaitaṃ caturthaṃ manyante sa ātmā sa vijñeyaḥ || 7 ||",
+    "gloss": "They regard as the fourth that which is neither aware inwardly, nor aware outwardly, nor aware in both ways; neither a mass of awareness, nor cognizing, nor noncognizing; unseen, beyond ordinary dealings, ungraspable, without a defining mark, unthinkable, and not describable; whose essence is recognition of the one Self; the quieting of the manifold, peaceful, auspicious, without a second. That is the Self. That is to be understood.",
+    "textNote": "The base and the Sansknet/GRETIL witness read adṛṣṭam, ‘unseen’; the Samuels/GRETIL witness has adṛśyam, ‘not visible’. The six negations are retained, including the distinct na prajñam and na aprajñam. Their apparent tension discourages treating the fourth as just another familiar mode of cognition. Ekātmapratyayasāram literally combines ‘one–Self–recognition–essence’; its precise philosophical force admits interpretation, and ‘recognition of the one Self’ is the rendering adopted here. The text says caturtham, ‘fourth’, not the word turīya. The full passage is a philosophical description, not an experimental claim about consciousness or physics. Word rows restore forms obscured by sandhi; every compound is given with its components. The -am descriptions function as accusative singulars with manyante; this ending is shared by masculine and neuter forms and does not by itself establish gender. The contextual Self or fourth pāda is masculine, while an impersonal neuter analysis is also possible.",
+    "words": [
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Negative particle; na + antaḥprajñam becomes nāntaḥprajñam."
+      },
+      {
+        "source": "अन्तःप्रज्ञम्",
+        "iast": "antaḥprajñam",
+        "meaning": "aware inwardly",
+        "grammar": "Accusative singular; antar/antaḥ ‘within’ + prajña ‘aware, cognizing’."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Second negative particle."
+      },
+      {
+        "source": "बहिष्प्रज्ञम्",
+        "iast": "bahiṣprajñam",
+        "meaning": "aware outwardly",
+        "grammar": "Accusative singular; bahis ‘outside’ + prajña ‘aware’. The base spells the internal combination ṣp; GRETIL also prints bahiḥprajñam."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Third negative particle; na + ubhayataḥprajñam becomes nobhayataḥprajñam."
+      },
+      {
+        "source": "उभयतःप्रज्ञम्",
+        "iast": "ubhayataḥprajñam",
+        "meaning": "aware in both ways",
+        "grammar": "Accusative singular; ubhayataḥ ‘on both sides, in both ways’ + prajña ‘aware’; ubhaya means ‘both’."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Fourth negative particle."
+      },
+      {
+        "source": "प्रज्ञानघनम्",
+        "iast": "prajñānaghanam",
+        "meaning": "a compact mass of awareness",
+        "grammar": "Accusative singular; prajñāna ‘awareness, cognition’ + ghana ‘compact mass’. This recalls mantra 5; prajñāna is not the personal designation prājña."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Fifth negative particle."
+      },
+      {
+        "source": "प्रज्ञम्",
+        "iast": "prajñam",
+        "meaning": "cognizing; aware",
+        "grammar": "Accusative singular adjective. Keep separate from both prajñānaghanam and the following aprajñam."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Sixth negative particle; na + aprajñam becomes nāprajñam."
+      },
+      {
+        "source": "अप्रज्ञम्",
+        "iast": "aprajñam",
+        "meaning": "noncognizing; unaware",
+        "grammar": "Accusative singular; a- ‘not, without’ + prajña ‘aware’. The independent na negates the whole adjective."
+      },
+      {
+        "source": "अदृष्टम्",
+        "iast": "adṛṣṭam",
+        "meaning": "unseen",
+        "grammar": "Accusative singular; a- ‘not’ + dṛṣṭa ‘seen’, past passive participle of √dṛś, ‘see’."
+      },
+      {
+        "source": "अव्यवहार्यम्",
+        "iast": "avyavahāryam",
+        "meaning": "not available for ordinary dealings",
+        "grammar": "Accusative singular; a- ‘not’ + vyavahārya ‘to be dealt with, made an object of practical activity’."
+      },
+      {
+        "source": "अग्राह्यम्",
+        "iast": "agrāhyam",
+        "meaning": "ungraspable",
+        "grammar": "Accusative singular; a- ‘not’ + grāhya ‘to be grasped’, gerundive of √grah, ‘grasp’."
+      },
+      {
+        "source": "अलक्षणम्",
+        "iast": "alakṣaṇam",
+        "meaning": "without a defining mark",
+        "grammar": "Accusative singular; a- ‘without’ + lakṣaṇa ‘mark, characteristic’."
+      },
+      {
+        "source": "अचिन्त्यम्",
+        "iast": "acintyam",
+        "meaning": "not an object of thought",
+        "grammar": "Accusative singular; a- ‘not’ + cintya ‘to be thought’, a gerundive related to cint, ‘think’."
+      },
+      {
+        "source": "अव्यपदेश्यम्",
+        "iast": "avyapadeśyam",
+        "meaning": "not describable or designatable",
+        "grammar": "Accusative singular; a- ‘not’ + vyapadeśya ‘to be designated, described’."
+      },
+      {
+        "source": "एकात्मप्रत्ययसारम्",
+        "iast": "ekātmapratyayasāram",
+        "meaning": "whose essence is recognition of the one Self",
+        "grammar": "Accusative singular compound: eka ‘one’ + ātman ‘Self’ + pratyaya ‘cognition, recognition, assurance’ + sāra ‘essence’. Eka + ātman yields ekātma-. This is an interpretively dense compound; the components do not literally say ‘silence’ or ‘energy’."
+      },
+      {
+        "source": "प्रपञ्चोपशमम्",
+        "iast": "prapañcopaśamam",
+        "meaning": "the quieting of the manifold",
+        "grammar": "Accusative singular; prapañca ‘manifold appearance, differentiated world’ + upaśama ‘quieting, cessation’. Final a + initial u becomes o."
+      },
+      {
+        "source": "शान्तम्",
+        "iast": "śāntam",
+        "meaning": "peaceful; at rest",
+        "grammar": "Accusative singular; participial adjective from √śam, ‘become quiet’."
+      },
+      {
+        "source": "शिवम्",
+        "iast": "śivam",
+        "meaning": "auspicious; beneficent",
+        "grammar": "Accusative singular adjective; not necessarily the proper name of the deity Śiva here."
+      },
+      {
+        "source": "अद्वैतम्",
+        "iast": "advaitam",
+        "meaning": "without duality; without a second",
+        "grammar": "Accusative singular; a- ‘without’ + dvaita ‘duality’."
+      },
+      {
+        "source": "चतुर्थम्",
+        "iast": "caturtham",
+        "meaning": "the fourth",
+        "grammar": "Accusative singular, completing ‘they regard [it] as the fourth’. The preceding descriptions share this accusative construction."
+      },
+      {
+        "source": "मन्यन्ते",
+        "iast": "manyante",
+        "meaning": "they regard; they consider",
+        "grammar": "Present middle, third person plural, from √man, ‘think, consider’; the subject is indefinite."
+      },
+      {
+        "source": "सः",
+        "iast": "saḥ",
+        "meaning": "that",
+        "grammar": "Masculine nominative singular demonstrative; appears as sa before ātmā."
+      },
+      {
+        "source": "आत्मा",
+        "iast": "ātmā",
+        "meaning": "the Self",
+        "grammar": "Masculine nominative singular of ātman; ‘is’ is supplied in English."
+      },
+      {
+        "source": "सः",
+        "iast": "saḥ",
+        "meaning": "that",
+        "grammar": "Repeated masculine nominative singular demonstrative; appears as sa before vijñeyaḥ."
+      },
+      {
+        "source": "विज्ञेयः",
+        "iast": "vijñeyaḥ",
+        "meaning": "to be understood; to be known",
+        "grammar": "Masculine nominative singular gerundive, vi-√jñā, ‘discern, know’; agrees with ātmā."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "devanagari": "सोऽयमात्माध्यक्षरमोङ्कारोऽधिमात्रं पादा मात्रा मात्राश्च पादा अकार उकारो मकार इति ॥ ८ ॥",
+    "iast": "so'yamātmādhyakṣaramoṅkāro'dhimātraṃ pādā mātrā mātrāśca pādā akāra ukāro makāra iti || 8 ||",
+    "gloss": "This same Self, considered in relation to the syllable, is Oṃ. Considered in relation to its sound-units, the quarters are the units, and the units are the quarters: A, U, and M.",
+    "textNote": "Adhyakṣaram and adhimātram shift the discussion to the syllable and its constituent sound-units. Pādāḥ and mātrāḥ each occur twice and are both retained. Mātrā here names a constituent sound or measure; translating it simply as a modern alphabetic letter can conceal the relation to recitation. The final three names are akāra, ukāra, and makāra. Ordinary visarga sandhi and vowel coalescence obscure several word endings in the continuous text.",
+    "words": [
+      {
+        "source": "सः",
+        "iast": "saḥ",
+        "meaning": "that; the same",
+        "grammar": "Masculine nominative singular demonstrative; saḥ + ayam produces so’yam."
+      },
+      {
+        "source": "अयम्",
+        "iast": "ayam",
+        "meaning": "this",
+        "grammar": "Masculine nominative singular demonstrative, referring to ātmā."
+      },
+      {
+        "source": "आत्मा",
+        "iast": "ātmā",
+        "meaning": "Self",
+        "grammar": "Masculine nominative singular of ātman."
+      },
+      {
+        "source": "अध्यक्षरम्",
+        "iast": "adhyakṣaram",
+        "meaning": "with regard to the syllable",
+        "grammar": "Adverbial expression: adhi ‘with regard to’ + akṣara ‘syllable, imperishable unit’; i + a becomes ya. Here the context is the syllable Oṃ."
+      },
+      {
+        "source": "ओङ्कारः",
+        "iast": "oṅkāraḥ",
+        "meaning": "Oṃ; the utterance Oṃ",
+        "grammar": "Masculine nominative singular; oṃ + kāra ‘making, utterance’. The nasal is written ṅ before k. Appears as oṅkāro before the following a."
+      },
+      {
+        "source": "अधिमात्रम्",
+        "iast": "adhimātram",
+        "meaning": "with regard to the sound-units",
+        "grammar": "Adverbial expression: adhi ‘with regard to’ + mātrā ‘measure, sound-unit’. Its initial a is elided after oṅkāro and marked by avagraha."
+      },
+      {
+        "source": "पादाः",
+        "iast": "pādāḥ",
+        "meaning": "the quarters",
+        "grammar": "Masculine nominative plural of pāda ‘foot, quarter’; final visarga drops in this context."
+      },
+      {
+        "source": "मात्राः",
+        "iast": "mātrāḥ",
+        "meaning": "the sound-units",
+        "grammar": "Feminine nominative plural of mātrā; first occurrence."
+      },
+      {
+        "source": "मात्राः",
+        "iast": "mātrāḥ",
+        "meaning": "the sound-units",
+        "grammar": "Feminine nominative plural; repeated in the converse statement. Mātrāḥ + ca becomes mātrāśca."
+      },
+      {
+        "source": "च",
+        "iast": "ca",
+        "meaning": "and",
+        "grammar": "Enclitic conjunction, joining the converse identification."
+      },
+      {
+        "source": "पादाः",
+        "iast": "pādāḥ",
+        "meaning": "the quarters",
+        "grammar": "Masculine nominative plural; repeated, completing ‘the units [are] the quarters’."
+      },
+      {
+        "source": "अकारः",
+        "iast": "akāraḥ",
+        "meaning": "the sound A",
+        "grammar": "Masculine nominative singular; a + kāra ‘making, utterance’. Appears as akāra before ukāraḥ."
+      },
+      {
+        "source": "उकारः",
+        "iast": "ukāraḥ",
+        "meaning": "the sound U",
+        "grammar": "Masculine nominative singular; u + kāra ‘making, utterance’. Appears as ukāro before makāraḥ."
+      },
+      {
+        "source": "मकारः",
+        "iast": "makāraḥ",
+        "meaning": "the sound M",
+        "grammar": "Masculine nominative singular; ma + kāra ‘making, utterance’, the conventional name of the consonant m. Appears as makāra before iti."
+      },
+      {
+        "source": "इति",
+        "iast": "iti",
+        "meaning": "thus; namely",
+        "grammar": "Particle closing the enumeration A, U, M."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "devanagari": "जागरितस्थानो वैश्वानरोऽकारः प्रथमा मात्राप्तेरादिमत्त्वाद्वाप्नोति ह वै सर्वान् कामानादिश्च भवति य एवं वेद ॥ ९ ॥",
+    "iast": "jāgaritasthāno vaiśvānaro'kāraḥ prathamā mātrāpterādimattvādvāpnoti ha vai sarvān kāmānādiśca bhavati ya evaṃ veda || 9 ||",
+    "gloss": "Vaiśvānara, whose domain is waking, is A, the first sound-unit, because of pervasion or because of being first. One who knows this way does indeed attain all desired things and becomes foremost.",
+    "textNote": "The mantra develops correspondences through āpti, ‘attainment or pervasion’, and ādimattva, ‘being first’. These are the text’s contemplative word connections, not a historical derivation of Sanskrit sounds. The base uses double avagrahas around contracted long ā; the normalized text writes the same vowel combinations directly: mātrā + āpteḥ → mātrāpteḥ and vā + āpnoti → vāpnoti. Āpteḥ becomes āpter before ādimattvāt; the latter final t becomes d before vā. The promise of fulfillment is presented as the passage’s religious claim.",
+    "words": [
+      {
+        "source": "जागरितस्थानः",
+        "iast": "jāgaritasthānaḥ",
+        "meaning": "whose domain is waking",
+        "grammar": "Masculine nominative singular; jāgarita ‘waking’ + sthāna ‘place, domain’. Appears as jāgaritasthāno before vaiśvānaraḥ."
+      },
+      {
+        "source": "वैश्वानरः",
+        "iast": "vaiśvānaraḥ",
+        "meaning": "Vaiśvānara",
+        "grammar": "Masculine nominative singular name used for the waking quarter; derived from viśva ‘all’ and nara ‘person’. Before akāraḥ, vaiśvānaraḥ becomes vaiśvānaro and the following a is elided."
+      },
+      {
+        "source": "अकारः",
+        "iast": "akāraḥ",
+        "meaning": "the sound A",
+        "grammar": "Masculine nominative singular; a + kāra ‘making, utterance’. The initial a is represented by avagraha in vaiśvānaro’kāraḥ."
+      },
+      {
+        "source": "प्रथमा",
+        "iast": "prathamā",
+        "meaning": "first",
+        "grammar": "Feminine nominative singular; agrees with mātrā."
+      },
+      {
+        "source": "मात्रा",
+        "iast": "mātrā",
+        "meaning": "sound-unit; measure",
+        "grammar": "Feminine nominative singular; final ā combines with the initial ā of āpteḥ."
+      },
+      {
+        "source": "आप्तेः",
+        "iast": "āpteḥ",
+        "meaning": "because of attainment or pervasion",
+        "grammar": "Ablative singular of āpti, ‘reaching, obtaining, pervading’; gives a reason for the correspondence with A. Appears as āpter before a vowel."
+      },
+      {
+        "source": "आदिमत्त्वात्",
+        "iast": "ādimattvāt",
+        "meaning": "because of being first",
+        "grammar": "Ablative singular of ādimattva: ādi ‘beginning, first’ + -mat ‘possessing’ + -tva ‘the condition of’. Appears with final d before vā."
+      },
+      {
+        "source": "वा",
+        "iast": "vā",
+        "meaning": "or",
+        "grammar": "Disjunctive particle giving the alternative explanation; combines with āpnoti as vāpnoti."
+      },
+      {
+        "source": "आप्नोति",
+        "iast": "āpnoti",
+        "meaning": "attains; obtains",
+        "grammar": "Present active, third person singular of √āp, ‘reach, obtain’. Its subject is the later yaḥ, ‘whoever’."
+      },
+      {
+        "source": "ह",
+        "iast": "ha",
+        "meaning": "indeed",
+        "grammar": "Emphatic particle; retained as part of ha vai."
+      },
+      {
+        "source": "वै",
+        "iast": "vai",
+        "meaning": "certainly",
+        "grammar": "Emphatic particle; reinforces ha."
+      },
+      {
+        "source": "सर्वान्",
+        "iast": "sarvān",
+        "meaning": "all",
+        "grammar": "Masculine accusative plural; agrees with kāmān."
+      },
+      {
+        "source": "कामान्",
+        "iast": "kāmān",
+        "meaning": "desired things; desires",
+        "grammar": "Masculine accusative plural of kāma, object of āpnoti."
+      },
+      {
+        "source": "आदिः",
+        "iast": "ādiḥ",
+        "meaning": "first; foremost",
+        "grammar": "Masculine nominative singular, predicate of bhavati; ādiḥ + ca becomes ādiśca."
+      },
+      {
+        "source": "च",
+        "iast": "ca",
+        "meaning": "and",
+        "grammar": "Conjunction joining the second stated result."
+      },
+      {
+        "source": "भवति",
+        "iast": "bhavati",
+        "meaning": "becomes",
+        "grammar": "Present active, third person singular of √bhū, ‘be, become’."
+      },
+      {
+        "source": "यः",
+        "iast": "yaḥ",
+        "meaning": "whoever",
+        "grammar": "Masculine nominative singular relative pronoun; subject of veda, āpnoti, and bhavati. Appears as ya before evam."
+      },
+      {
+        "source": "एवम्",
+        "iast": "evam",
+        "meaning": "in this way",
+        "grammar": "Adverb; written evaṃ before veda."
+      },
+      {
+        "source": "वेद",
+        "iast": "veda",
+        "meaning": "knows",
+        "grammar": "Third person singular perfect of √vid, ‘know’, with present meaning."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "devanagari": "स्वप्नस्थानस्तैजस उकारो द्वितीया मात्रोत्कर्षादुभयत्वाद्वोत्कर्षति ह वै ज्ञानसन्ततिं समानश्च भवति नास्याब्रह्मवित्कुले भवति य एवं वेद ॥ १० ॥",
+    "iast": "svapnasthānastaijasa ukāro dvitīyā mātrotkarṣādubhayatvādvotkarṣati ha vai jñānasantatiṃ samānaśca bhavati nāsyābrahmavitkule bhavati ya evaṃ veda || 10 ||",
+    "gloss": "Taijasa, whose domain is dreaming, is U, the second sound-unit, because of elevation or because it belongs to both sides. One who knows this way indeed advances the continuity of knowledge and becomes balanced. In that person’s family, no one is without knowledge of Brahman.",
+    "textNote": "Utkarṣa means elevation or advancement; ubhayatva means belonging to both, or having a relation to both sides. Reading U as intermediate between A and M gives the latter a contextual explanation. ‘Balanced’ renders samāna, literally ‘equal’; the text does not supply an explicit object of comparison, so equality or evenness allows interpretive variation. Jñānasantati is the continuity or succession of knowledge. The sentence about the family is the text’s assurance, not an independently verified prediction. In this normalized continuous text, the base’s utkarṣāt before ubhayatvāt is shown with voiced sandhi as utkarṣādubhayatvāt; no lexical reading is changed.",
+    "words": [
+      {
+        "source": "स्वप्नस्थानः",
+        "iast": "svapnasthānaḥ",
+        "meaning": "whose domain is dreaming",
+        "grammar": "Masculine nominative singular; svapna ‘dream’ + sthāna ‘place, domain’. Before taijasaḥ, final ḥ becomes s."
+      },
+      {
+        "source": "तैजसः",
+        "iast": "taijasaḥ",
+        "meaning": "Taijasa; the luminous one",
+        "grammar": "Masculine nominative singular; derived from tejas, ‘light, brilliance’. Here names the dreaming quarter. Final visarga drops before ukāraḥ."
+      },
+      {
+        "source": "उकारः",
+        "iast": "ukāraḥ",
+        "meaning": "the sound U",
+        "grammar": "Masculine nominative singular; u + kāra ‘making, utterance’. Appears as ukāro before dvitīyā."
+      },
+      {
+        "source": "द्वितीया",
+        "iast": "dvitīyā",
+        "meaning": "second",
+        "grammar": "Feminine nominative singular; agrees with mātrā."
+      },
+      {
+        "source": "मात्रा",
+        "iast": "mātrā",
+        "meaning": "sound-unit; measure",
+        "grammar": "Feminine nominative singular; ā + u of utkarṣāt becomes o in mātrotkarṣāt."
+      },
+      {
+        "source": "उत्कर्षात्",
+        "iast": "utkarṣāt",
+        "meaning": "because of elevation or advancement",
+        "grammar": "Ablative singular of utkarṣa; ud- ‘up’ + a noun related to √kṛṣ, ‘draw’; literally an upward drawing. Final t is voiced before the following vowel in continuous sandhi."
+      },
+      {
+        "source": "उभयत्वात्",
+        "iast": "ubhayatvāt",
+        "meaning": "because of belonging to both",
+        "grammar": "Ablative singular; ubhaya ‘both’ + -tva ‘condition of being’. Final t becomes d before vā."
+      },
+      {
+        "source": "वा",
+        "iast": "vā",
+        "meaning": "or",
+        "grammar": "Disjunctive particle; vā + utkarṣati becomes votkarṣati."
+      },
+      {
+        "source": "उत्कर्षति",
+        "iast": "utkarṣati",
+        "meaning": "raises; advances",
+        "grammar": "Present active, third person singular, ud-√kṛṣ. Its object is jñānasantatim and subject is the later yaḥ."
+      },
+      {
+        "source": "ह",
+        "iast": "ha",
+        "meaning": "indeed",
+        "grammar": "Emphatic particle."
+      },
+      {
+        "source": "वै",
+        "iast": "vai",
+        "meaning": "certainly",
+        "grammar": "Emphatic particle, together with ha."
+      },
+      {
+        "source": "ज्ञानसन्ततिम्",
+        "iast": "jñānasantatim",
+        "meaning": "the continuity or succession of knowledge",
+        "grammar": "Feminine accusative singular; jñāna ‘knowledge’ + santati ‘continuity, succession’. The base writes nt; the other GRETIL witness also has the equivalent spelling saṃtati."
+      },
+      {
+        "source": "समानः",
+        "iast": "samānaḥ",
+        "meaning": "equal; even; balanced",
+        "grammar": "Masculine nominative singular predicate; ‘balanced’ is contextual, while ‘equal’ is the direct lexical sense. Final ḥ becomes ś before ca."
+      },
+      {
+        "source": "च",
+        "iast": "ca",
+        "meaning": "and",
+        "grammar": "Conjunction joining the next result."
+      },
+      {
+        "source": "भवति",
+        "iast": "bhavati",
+        "meaning": "becomes",
+        "grammar": "Present active, third person singular of √bhū; subject is the person who knows."
+      },
+      {
+        "source": "न",
+        "iast": "na",
+        "meaning": "not",
+        "grammar": "Negative particle; na + asya becomes nāsya."
+      },
+      {
+        "source": "अस्य",
+        "iast": "asya",
+        "meaning": "of this person; in this person’s",
+        "grammar": "Masculine genitive singular pronoun, modifying kule; asya + abrahmavit becomes asyābrahmavit."
+      },
+      {
+        "source": "अब्रह्मवित्",
+        "iast": "abrahmavit",
+        "meaning": "one who does not know Brahman",
+        "grammar": "Masculine nominative singular: a- ‘not’ + brahman ‘Brahman’ + -vid ‘knowing’, from √vid. The stem ends -vid; nominative -vit. This is the subject of the following bhavati."
+      },
+      {
+        "source": "कुले",
+        "iast": "kule",
+        "meaning": "in the family or lineage",
+        "grammar": "Neuter locative singular of kula."
+      },
+      {
+        "source": "भवति",
+        "iast": "bhavati",
+        "meaning": "is; comes to be",
+        "grammar": "Second occurrence, present active third person singular; its subject is abrahmavit and the clause is negated by na."
+      },
+      {
+        "source": "यः",
+        "iast": "yaḥ",
+        "meaning": "whoever",
+        "grammar": "Masculine nominative singular relative pronoun; appears as ya before evam."
+      },
+      {
+        "source": "एवम्",
+        "iast": "evam",
+        "meaning": "in this way",
+        "grammar": "Adverb; written evaṃ before veda."
+      },
+      {
+        "source": "वेद",
+        "iast": "veda",
+        "meaning": "knows",
+        "grammar": "Third person singular perfect of √vid with present meaning."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "devanagari": "सुषुप्तस्थानः प्राज्ञो मकारस्तृतीया मात्रा मितेरपीतेर्वा मिनोति ह वा इदं सर्वमपीतिश्च भवति य एवं वेद ॥ ११ ॥",
+    "iast": "suṣuptasthānaḥ prājño makārastṛtīyā mātrā miterapītervā minoti ha vā idaṃ sarvamapītiśca bhavati ya evaṃ veda || 11 ||",
+    "gloss": "Prājña, whose domain is deep sleep, is M, the third sound-unit, because of measuring or because of dissolution. One who knows this way indeed measures all this and becomes a place into which it dissolves.",
+    "textNote": "Miti, ‘measuring’, connects with minoti, ‘measures’; apīti names a going-in, dissolution, or absorption. ‘A place into which it dissolves’ is a contextual rendering of apītiś ca bhavati, literally ‘and becomes dissolution/absorption’, rather than a separate Sanskrit word for ‘place’. The base and both GRETIL witnesses read ha vā here; this is retained, not silently changed to the ha vai of 9 and 10. In the formula ha vā it supplies emphasis; the earlier vā after apīteḥ means ‘or’. Claims about measuring and dissolution belong to the text’s contemplation of M and Prājña.",
+    "words": [
+      {
+        "source": "सुषुप्तस्थानः",
+        "iast": "suṣuptasthānaḥ",
+        "meaning": "whose domain is deep sleep",
+        "grammar": "Masculine nominative singular; suṣupta ‘deep sleep, soundly asleep’ + sthāna ‘place, domain’. Suṣupta itself contains su- ‘well’ and supta ‘asleep’, with retroflexion of s in the combination."
+      },
+      {
+        "source": "प्राज्ञः",
+        "iast": "prājñaḥ",
+        "meaning": "Prājña",
+        "grammar": "Masculine nominative singular; name for the deep-sleep quarter introduced in mantra 5. Distinguish the long initial ā from prajña, ‘aware’. Appears as prājño before makāraḥ."
+      },
+      {
+        "source": "मकारः",
+        "iast": "makāraḥ",
+        "meaning": "the sound M",
+        "grammar": "Masculine nominative singular; ma + kāra ‘making, utterance’. Final ḥ becomes s before tṛtīyā."
+      },
+      {
+        "source": "तृतीया",
+        "iast": "tṛtīyā",
+        "meaning": "third",
+        "grammar": "Feminine nominative singular; agrees with mātrā."
+      },
+      {
+        "source": "मात्रा",
+        "iast": "mātrā",
+        "meaning": "sound-unit; measure",
+        "grammar": "Feminine nominative singular."
+      },
+      {
+        "source": "मितेः",
+        "iast": "miteḥ",
+        "meaning": "because of measuring",
+        "grammar": "Ablative singular of miti ‘measuring, measurement’; appears as miter before apīteḥ."
+      },
+      {
+        "source": "अपीतेः",
+        "iast": "apīteḥ",
+        "meaning": "because of dissolution or absorption",
+        "grammar": "Ablative singular of apīti ‘going in, absorption, dissolution’; appears as apīter before vā. It is one noun, not the particle api plus a separate word."
+      },
+      {
+        "source": "वा",
+        "iast": "vā",
+        "meaning": "or",
+        "grammar": "Disjunctive particle supplying a second reason."
+      },
+      {
+        "source": "मिनोति",
+        "iast": "minoti",
+        "meaning": "measures",
+        "grammar": "Present active, third person singular; object idaṃ sarvam, ‘all this’; subject the person described by yaḥ ... veda."
+      },
+      {
+        "source": "ह",
+        "iast": "ha",
+        "meaning": "indeed",
+        "grammar": "Emphatic particle in the formula ha vā."
+      },
+      {
+        "source": "वा",
+        "iast": "vā",
+        "meaning": "indeed; assuredly, in this formula",
+        "grammar": "The second vā is preserved as printed in all three witnesses. With ha it functions emphatically here, unlike the earlier disjunctive vā."
+      },
+      {
+        "source": "इदम्",
+        "iast": "idam",
+        "meaning": "this",
+        "grammar": "Neuter accusative singular pronoun, object of minoti; written idaṃ before sarvam."
+      },
+      {
+        "source": "सर्वम्",
+        "iast": "sarvam",
+        "meaning": "all",
+        "grammar": "Neuter accusative singular, agreeing with idam; sarvam + apītiḥ is written sarvamapītiḥ."
+      },
+      {
+        "source": "अपीतिः",
+        "iast": "apītiḥ",
+        "meaning": "dissolution; that into which things are absorbed",
+        "grammar": "Feminine nominative singular noun, predicate of bhavati. The expanded contextual meaning supplies a destination of absorption; the bare noun is ‘absorption’. Final ḥ becomes ś before ca."
+      },
+      {
+        "source": "च",
+        "iast": "ca",
+        "meaning": "and",
+        "grammar": "Conjunction joining the second result."
+      },
+      {
+        "source": "भवति",
+        "iast": "bhavati",
+        "meaning": "becomes",
+        "grammar": "Present active, third person singular of √bhū; the subject is the person who knows."
+      },
+      {
+        "source": "यः",
+        "iast": "yaḥ",
+        "meaning": "whoever",
+        "grammar": "Masculine nominative singular relative pronoun; appears as ya before evam."
+      },
+      {
+        "source": "एवम्",
+        "iast": "evam",
+        "meaning": "in this way",
+        "grammar": "Adverb; written evaṃ before veda."
+      },
+      {
+        "source": "वेद",
+        "iast": "veda",
+        "meaning": "knows",
+        "grammar": "Third person singular perfect of √vid, with present meaning."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "devanagari": "अमात्रश्चतुर्थोऽव्यवहार्यः प्रपञ्चोपशमः शिवोऽद्वैत एवमोङ्कार आत्मैव संविशत्यात्मनात्मानं य एवं वेद ॥ १२ ॥",
+    "iast": "amātraścaturtho'vyavahāryaḥ prapañcopaśamaḥ śivo'dvaita evamoṅkāra ātmaiva saṃviśatyātmanātmānaṃ ya evaṃ veda || 12 ||",
+    "gloss": "The fourth has no sound-unit: it is beyond ordinary dealings, the quieting of the manifold, auspicious, without a second. Thus Oṃ is the Self itself. Whoever knows in this way enters the Self by means of the Self.",
+    "textNote": "Amātra means ‘without a measure or sound-unit’ in this context; the Sanskrit does not literally use a word for ‘silence’. Silence after Oṃ can serve as an interpretive teaching image, but must not replace the text or become a supposed fourth pronounced letter. The subject of saṃviśati, ‘enters’, is yaḥ ... veda, ‘whoever knows’; ātmanā is instrumental, ‘by/through the Self’, and ātmānam is accusative, ‘the Self’, its object. This is not a statement that Oṃ grammatically acts on a separate person. The base and Sansknet/GRETIL have one final ya evaṃ veda; the Samuels/GRETIL witness repeats it. The base’s long-vowel double-avagraha notation in ātmanā + ātmānam is normalized to ātmanātmānam. The language of entering admits philosophical interpretation; no literal spatial journey is specified.",
+    "words": [
+      {
+        "source": "अमात्रः",
+        "iast": "amātraḥ",
+        "meaning": "without a sound-unit or measure",
+        "grammar": "Masculine nominative singular; a- ‘without’ + mātrā ‘measure, sound-unit’. Final ḥ becomes ś before caturthaḥ. This word does not itself mean ‘silence’."
+      },
+      {
+        "source": "चतुर्थः",
+        "iast": "caturthaḥ",
+        "meaning": "the fourth",
+        "grammar": "Masculine nominative singular. Final aḥ becomes o before the next a, which is elided: caturtho’vyavahāryaḥ."
+      },
+      {
+        "source": "अव्यवहार्यः",
+        "iast": "avyavahāryaḥ",
+        "meaning": "beyond ordinary dealings",
+        "grammar": "Masculine nominative singular; a- ‘not’ + vyavahārya ‘to be dealt with, made an object of practical activity’."
+      },
+      {
+        "source": "प्रपञ्चोपशमः",
+        "iast": "prapañcopaśamaḥ",
+        "meaning": "the quieting of the manifold",
+        "grammar": "Masculine nominative singular; prapañca ‘manifold appearance, differentiated world’ + upaśama ‘quieting, cessation’; a + u becomes o."
+      },
+      {
+        "source": "शिवः",
+        "iast": "śivaḥ",
+        "meaning": "auspicious; beneficent",
+        "grammar": "Masculine nominative singular adjective; śivaḥ + advaitaḥ becomes śivo’dvaitaḥ."
+      },
+      {
+        "source": "अद्वैतः",
+        "iast": "advaitaḥ",
+        "meaning": "without duality; without a second",
+        "grammar": "Masculine nominative singular; a- ‘without’ + dvaita ‘duality’. Final visarga drops before evam in the base’s continuous wording."
+      },
+      {
+        "source": "एवम्",
+        "iast": "evam",
+        "meaning": "thus; in this way",
+        "grammar": "Adverb introducing the identification of Oṃ and Self. Retained separately from the later evam."
+      },
+      {
+        "source": "ओङ्कारः",
+        "iast": "oṅkāraḥ",
+        "meaning": "Oṃ; the utterance Oṃ",
+        "grammar": "Masculine nominative singular; oṃ + kāra ‘making, utterance’. Final visarga drops before ātmā."
+      },
+      {
+        "source": "आत्मा",
+        "iast": "ātmā",
+        "meaning": "the Self",
+        "grammar": "Masculine nominative singular of ātman; ātmā + eva becomes ātmaiva."
+      },
+      {
+        "source": "एव",
+        "iast": "eva",
+        "meaning": "itself; precisely",
+        "grammar": "Emphatic particle reinforcing the identity; not the same word as evam, ‘thus’."
+      },
+      {
+        "source": "संविशति",
+        "iast": "saṃviśati",
+        "meaning": "enters; enters fully",
+        "grammar": "Present active, third person singular, sam- ‘together, fully’ + √viś ‘enter’. Before ātmanā its final i becomes y: saṃviśatyātmanā. Its subject is the later yaḥ ... veda."
+      },
+      {
+        "source": "आत्मना",
+        "iast": "ātmanā",
+        "meaning": "by means of the Self; through oneself",
+        "grammar": "Masculine instrumental singular of ātman. Final ā coalesces with the initial ā of ātmānam."
+      },
+      {
+        "source": "आत्मानम्",
+        "iast": "ātmānam",
+        "meaning": "the Self; oneself",
+        "grammar": "Masculine accusative singular of ātman, object of saṃviśati. Written ātmānaṃ before yaḥ."
+      },
+      {
+        "source": "यः",
+        "iast": "yaḥ",
+        "meaning": "whoever",
+        "grammar": "Masculine nominative singular relative pronoun, subject of both veda and saṃviśati; appears as ya before evam."
+      },
+      {
+        "source": "एवम्",
+        "iast": "evam",
+        "meaning": "in this way",
+        "grammar": "Second occurrence of the adverb, modifying veda; written evaṃ before veda."
+      },
+      {
+        "source": "वेद",
+        "iast": "veda",
+        "meaning": "knows",
+        "grammar": "Third person singular perfect of √vid, ‘know’, with present meaning. Occurs once at the close in the chosen base; a repetition belongs to the noted variant witness."
+      }
+    ]
+  }
+]

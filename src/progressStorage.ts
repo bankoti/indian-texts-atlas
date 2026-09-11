@@ -17,7 +17,7 @@ export type ProgressState = {
 export const emptyDepthProgress: DepthEditionProgress = { readIds: [], checkpointAnswers: {} }
 const emptyProgress: ProgressState = { completed: [], reflections: {}, quizAnswers: {}, quizVersions: {}, depthEditions: {}, reviewAnswers: {}, reviewReflection: '', reviewVersion: courseReviewVersion }
 const lessonIdSet = new Set(courseLessons.map((lesson) => lesson.id))
-export const currentQuizVersions: Record<string, number> = { isha: 2, ...Object.fromEntries(courseLessons.filter((lesson) => lesson.sectionId !== 'foundation' && lesson.sectionId !== 'upanishads').map((lesson) => [lesson.id, 2])) }
+export const currentQuizVersions: Record<string, number> = { isha: 2, mandukya: 2, ...Object.fromEntries(courseLessons.filter((lesson) => lesson.sectionId !== 'foundation' && lesson.sectionId !== 'upanishads').map((lesson) => [lesson.id, 2])) }
 
 export function currentCompleted(progress: ProgressState) {
   return progress.completed.filter((id) => !currentQuizVersions[id] || progress.quizAnswers[id] === lessonDetails[id]?.quiz.correct)

@@ -1,8 +1,9 @@
 import type { GuidedContent } from './guidedTypes'
 import { upanishadGuides } from './upanishadGuides'
 import { widerModules } from './widerModules'
+import { isDepthEdition } from './depthEditionRegistry'
 
-export const guidedContent: Record<string, GuidedContent> = { ...upanishadGuides, ...widerModules }
+export const guidedContent: Record<string, GuidedContent> = Object.fromEntries(Object.entries({ ...upanishadGuides, ...widerModules }).filter(([id]) => !isDepthEdition(id)))
 
 export const guidedStepIds = ['locate', 'read', 'unpack', 'compare', 'reflect', 'remember']
 export const foundationStepIds = ['landscape', 'coordinates', 'vedic-family', 'upanishads', 'rebuild', 'checkpoint']

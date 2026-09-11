@@ -1,5 +1,7 @@
+import { mandukyaSessions } from './mandukyaCourse'
+
 export type DepthEditionDescriptor = {
-  id: 'kena' | 'katha' | 'isha'
+  id: 'kena' | 'katha' | 'isha' | 'mandukya'
   title: string
   totalUnits: number
   unitLabel: string
@@ -12,6 +14,14 @@ export type DepthEditionDescriptor = {
 }
 
 export const depthEditionRegistry: Record<DepthEditionDescriptor['id'], DepthEditionDescriptor> = {
+  mandukya: {
+    id: 'mandukya', title: 'Māṇḍūkya Upaniṣad', totalUnits: 12, unitLabel: 'mantras', firstPassageId: '1',
+    passageIds: Array.from({ length: 12 }, (_, index) => String(index + 1)),
+    sectionIds: mandukyaSessions.map((session) => session.id),
+    sectionSizes: Object.fromEntries(mandukyaSessions.map((session) => [session.id, session.verses.length])),
+    checkpointChoiceCount: 4,
+    checkpointCorrectAnswers: Object.fromEntries(mandukyaSessions.map((session) => [session.id, session.checkpoint.correct])),
+  },
   kena: {
     id: 'kena',
     title: 'Kena Upaniṣad',

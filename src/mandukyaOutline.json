@@ -1,0 +1,145 @@
+{
+  "orientation": {
+    "lead": "What remains of ‘I’ as waking, dreaming and deep sleep change? The Māṇḍūkya asks this question through twelve compact mantras and the syllable Oṃ.",
+    "context": "This Sanskrit Upaniṣad is traditionally associated with the Atharvaveda. Its composition date is not securely settled, so this course assigns no definitive year. We study all twelve root mantras. Gauḍapāda's later Kārikā and Śaṅkara's commentary are influential interpretive works, not additional root mantras. The four learning sessions are modern navigation aids, not ancient chapter divisions.",
+    "goal": "Learn the text's argument well enough to explain the three experiential conditions, preserve mantra 6's account of the cosmic source, distinguish the Fourth from deep sleep, and explain how A, U, M and amātra lead back to the Self.",
+    "guardrails": [
+      "The teaching mainly follows a clearly identified Advaita reading informed by Śaṅkara. Other Vedānta traditions interpret the same text differently.",
+      "The Fourth is a philosophical designation. It is not a fourth sleep stage, an EEG category, or a promise of a particular sensation.",
+      "Deep sleep's undifferentiated condition is not, by itself, liberation. A quiet mind or a gap in thought does not establish realization.",
+      "Mantra 7 uses caturtham, ‘the fourth’. Turīya is the familiar interpretive name used in later teaching and in the Kārikā.",
+      "Examples and reflection exercises are modern aids for noticing distinctions. They are not translations, scientific demonstrations, or tests of spiritual attainment.",
+      "Read the explanations and revisit the original wording before answering. Checkpoints assess understanding of the text; completing them does not certify liberation."
+    ]
+  },
+  "sessions": [
+    {
+      "id": "scope-and-self",
+      "order": 1,
+      "title": "Open the question",
+      "verses": [
+        1,
+        2
+      ],
+      "question": "What is being investigated when Oṃ, all reality and this Self are brought together?",
+      "summary": "The opening establishes the widest scope, including time and what exceeds it. It then brings that scope to the Self. Four quarters provide the structure for the inquiry that follows.",
+      "recall": "Without looking, state the three claims of mantra 2. Explain why ‘this Self’ does not simply mean every opinion of the personality.",
+      "checkpoint": {
+        "question": "A learner says, ‘The text is only about a special noise outside me.’ What has the learner missed?",
+        "choices": [
+          "The identification of Oṃ, all reality, Brahman and this Self",
+          "The claim that there are nineteen independent selves",
+          "A required physiological sequence",
+          "The claim that dreams are already liberation"
+        ],
+        "correct": 0,
+        "explanation": "Mantras 1–2 establish the relationship between the sacred syllable, the whole and the Self. Sound is the point of entry to that inquiry."
+      }
+    },
+    {
+      "id": "three-conditions",
+      "order": 2,
+      "title": "Compare the three conditions",
+      "verses": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "question": "What changes between waking, dream and deep sleep, and why does the text also speak cosmically?",
+      "summary": "Waking presents an outward field; dream presents an inward, subtle field; deep sleep is described as undifferentiated. Mantra 6 adds the Lord, inner controller and source of beings. Keep this larger claim visible while comparing familiar experience.",
+      "recall": "Name each quarter and its field. Then give one reason that refreshing sleep is not the same as liberating knowledge, and name two cosmic descriptions from mantra 6.",
+      "checkpoint": {
+        "question": "Which comparison is most faithful to mantras 3–6?",
+        "choices": [
+          "Waking and dream lack experience, while sleep sees external objects",
+          "Deep sleep is the Fourth and makes each sleeper personally omniscient",
+          "The three quarters differ in their experiential fields, and mantra 6 relates the causal account to the source of beings",
+          "All four mantras concern only private moods"
+        ],
+        "correct": 2,
+        "explanation": "This answer preserves both the experiential analysis and mantra 6's theological and cosmological scope, without turning deep sleep into liberation."
+      }
+    },
+    {
+      "id": "the-fourth",
+      "order": 3,
+      "title": "Read the negations carefully",
+      "verses": [
+        7
+      ],
+      "question": "What if the Self cannot be captured as one more object or temporary condition?",
+      "summary": "Mantra 7 rejects inward, outward, combined and undifferentiated cognition as final descriptions. It also rejects non-knowing. The course follows the Advaita reading of the Fourth as the nondual Self, not an episode after sleep.",
+      "recall": "Give three descriptions the mantra rejects and two descriptions it affirms. Identify the Sanskrit word actually used for ‘the fourth’.",
+      "checkpoint": {
+        "question": "A learner reports a minute with no remembered thoughts and calls it Turīya. What is the best response from this course's reading?",
+        "choices": [
+          "Any absence of memory is liberation",
+          "The report concerns a temporary condition and does not establish the knowledge described in mantra 7",
+          "The experience must instead be the cosmic Lord",
+          "The minute should be extended to twelve minutes"
+        ],
+        "correct": 1,
+        "explanation": "Mantra 7 blocks the equation of the Fourth with blankness. No duration or lack of remembered content is a sufficient criterion here."
+      }
+    },
+    {
+      "id": "om-and-understanding",
+      "order": 4,
+      "title": "Understand the sound correspondence",
+      "verses": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "question": "How does Oṃ carry the inquiry through distinguishable components toward what is not a component?",
+      "summary": "The text pairs A with waking, U with dream and M with deep sleep, giving reasons for each identification. Amātra returns to the Fourth and the Self. Knowing the meaning is central; no chanting duration is supplied as a substitute.",
+      "recall": "Reconstruct A–Vaiśvānara, U–Taijasa and M–Prājña from memory. Give one textual reason for each pairing, then explain why amātra is not a fourth sound.",
+      "checkpoint": {
+        "question": "Which account completes the course's sound analysis?",
+        "choices": [
+          "A is dream, U is deep sleep, M is waking, and silence is a fourth measurable letter",
+          "The three sounds have no relationship to the preceding mantras",
+          "The point is solely to make the mind quiet for longer",
+          "The three components correspond to the three quarters; amātra points to the Fourth beyond that division"
+        ],
+        "correct": 3,
+        "explanation": "Mantras 8–12 return through Oṃ to the inquiry into the Self. Amātra is not another item of the same kind as A, U and M."
+      }
+    }
+  ],
+  "finalSynthesis": {
+    "statement": "The Māṇḍūkya begins with Oṃ as the whole, identifies this Self with Brahman, examines waking, dream and deep sleep, and speaks of the source and inner controller of beings. It then uses careful negations to indicate the Fourth. The A–U–M correspondences and amātra revisit that inquiry through sound. In the Advaita reading followed here, the purpose is recognition of the nondual Self, not the acquisition of another temporary experience.",
+    "question": "A friend summarizes the text as ‘Three states lead to a fourth blank state if you chant long enough.’ Which correction best brings the twelve mantras together?",
+    "choices": [
+      "The text never relates Oṃ to experience",
+      "The Fourth is the deepest part of ordinary sleep",
+      "The three conditions are examined and paired with A, U and M; the Fourth and amātra point beyond those divisions toward the Self to be known",
+      "The only teaching is that a sleeping individual controls the universe"
+    ],
+    "correct": 2,
+    "explanation": "The mistaken summary turns a teaching arrangement into a timetable and substitutes blankness for knowledge. It also omits the opening identity and mantra 6's cosmic scope. Revisit 2, 5–7 and 8–12 to recover the complete movement.",
+    "reflectionPrompt": "In your own words, explain the difference between being relieved of a thought, knowing a changing experience, and understanding what this course calls the Self. Identify where you remain uncertain.",
+    "retrievalPrompt": "Close the lesson and reconstruct its four movements: the whole and the Self; the three conditions and cosmic source; the Fourth; Oṃ and amātra. Return tomorrow and explain why deep sleep, silence and realization cannot simply be used as synonyms."
+  },
+  "interpretiveLenses": [
+    {
+      "name": "The twelve root mantras",
+      "description": "Begin with what the Sanskrit actually states: its identifications, contrasts, negations and promises. A translation makes choices; brief teaching notes are not a replacement for the text."
+    },
+    {
+      "name": "Śaṅkara's Advaita reading",
+      "description": "The principal teaching lens here understands the Self and Brahman nondually, and the Fourth as the Self rather than a further temporary condition. The explanations draw on Śaṅkara as translated by Swami Nikhilananda, with modern Advaita exposition used as a cross-check."
+    },
+    {
+      "name": "Other Vedānta readings",
+      "description": "Madhva's traditional commentary, for example, presents the named quarters as aspects of the Lord. This course acknowledges that difference without claiming to teach every school or that all Vedānta interpreters agree with its Advaita account."
+    },
+    {
+      "name": "Modern learner reflection",
+      "description": "Everyday scenarios, four sessions, quizzes and diagrams are contemporary teaching aids. They help test understanding and surface questions; they are not ancient chapter divisions or evidence that a learner has attained realization."
+    }
+  ]
+}
