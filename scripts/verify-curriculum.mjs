@@ -484,6 +484,31 @@ try {
     && JSON.stringify(ishaDescriptor.sectionSizes) === JSON.stringify({ 1: 8, 2: 6, 3: 4 })
     && registryRejectsPrototypeKeys
 
+  const [{ mandukyaPassages, mandukyaSources }, { mandukyaSessions, mandukyaFinalSynthesis }, { default: mandukyaAudit }] = await Promise.all([
+    server.ssrLoadModule('/src/mandukyaData.ts'),
+    server.ssrLoadModule('/src/mandukyaCourse.ts'),
+    server.ssrLoadModule('/src/mandukyaTextAudit.json'),
+  ])
+  const mandukyaDescriptor = depthEditionRegistry.mandukya
+  const expectedMandukyaIds = Array.from({ length: 12 }, (_, index) => String(index + 1))
+  const mandukyaProblems = []
+  if (JSON.stringify(mandukyaPassages.map((item) => item.id)) !== JSON.stringify(expectedMandukyaIds)) mandukyaProblems.push('Root mantra IDs must be 1–12 exactly once')
+  if (JSON.stringify(mandukyaAudit.map((item) => item.id)) !== JSON.stringify(expectedMandukyaIds)) mandukyaProblems.push('Text audit must cover all twelve mantras')
+  if (mandukyaDescriptor.totalUnits !== 12 || JSON.stringify(expectedDepthPassageIds(mandukyaDescriptor)) !== JSON.stringify(expectedMandukyaIds)) mandukyaProblems.push('Registry coverage differs from root text')
+  if (mandukyaSessions.length !== 4 || JSON.stringify(mandukyaSessions.flatMap((item) => item.verses).map(String)) !== JSON.stringify(expectedMandukyaIds)) mandukyaProblems.push('Four sessions must cover the text exactly once')
+  for (const passage of mandukyaPassages) {
+    const audit = mandukyaAudit.find((item) => item.id === passage.id)
+    if (!audit || audit.textFingerprint !== sourceTextFingerprint(passage.id, passage) || audit.rowCount !== passage.words.length || audit.wordFingerprint !== sha256(JSON.stringify(passage.words))) mandukyaProblems.push(`Mantra ${passage.id}: reviewed text/word-study contract changed`)
+    if (!validWordStudyWords(passage.words) || ['title', 'gloss', 'explanation', 'textNote', 'reflectionPrompt'].some((field) => !nonEmptyNfc(passage[field])) || !validCheckpoint({ checkpoint: passage.practice }, 4)) mandukyaProblems.push(`Mantra ${passage.id}: incomplete teaching or word study`)
+  }
+  for (const session of mandukyaSessions) {
+    if (!validCheckpoint(session, 4) || mandukyaDescriptor.checkpointCorrectAnswers[session.id] !== session.checkpoint.correct) mandukyaProblems.push(`Session ${session.id}: checkpoint mismatch`)
+  }
+  if (!validCheckpoint({ checkpoint: mandukyaFinalSynthesis }, 4) || lessonDetails.mandukya.quiz.question !== mandukyaFinalSynthesis.question || lessonDetails.mandukya.quiz.correct !== mandukyaFinalSynthesis.correct) mandukyaProblems.push('Final synthesis and course quiz differ')
+  const mandukyaWordRows = mandukyaPassages.reduce((total, item) => total + item.words.length, 0)
+  if (mandukyaWordRows !== 206) mandukyaProblems.push('Word-study row count differs from reviewed edition')
+  if (!mandukyaSources.length || mandukyaSources.some((source) => !validSource(source))) mandukyaProblems.push('Missing or invalid source notes')
+
   const report = {
     sections: courseSections.length,
     lessons: courseLessons.length,
@@ -495,6 +520,13 @@ try {
     unknownSections,
     registryValid,
     registryRejectsPrototypeKeys,
+    mandukyaEdition: {
+      passages: mandukyaPassages.length,
+      sessions: mandukyaSessions.length,
+      wordStudyRows: mandukyaWordRows,
+      sources: mandukyaSources.length,
+      problems: mandukyaProblems,
+    },
     kenaEdition: {
       passages: kenaPassages.length,
       idsExact: kenaIdsExact,
@@ -624,6 +656,7 @@ try {
     || emptySections.length > 0
     || unknownSections.length > 0
     || !registryValid
+    || mandukyaProblems.length > 0
     || kenaPassages.length !== 35
     || !kenaIdsExact
     || !kenaSectionIdsExact

@@ -4,6 +4,7 @@ import {
   widerReferenceSources,
   widerSections,
 } from './widerCourseData'
+import { mandukyaFinalSynthesis } from './mandukyaCourse'
 
 export type CourseStatus = 'available' | 'mapped'
 
@@ -109,7 +110,7 @@ export const upanishads: CourseLesson[] = [
     status: 'available', references: ['Bṛhadāraṇyaka 2.3.6', 'Bṛhadāraṇyaka 3.7'],
   },
   {
-    id: 'mandukya', sectionId: 'upanishads', order: 8, title: 'Māṇḍūkya Upaniṣad', plainTitle: 'Mandukya', veda: 'Atharvaveda', form: '12 prose mantras · key teachings', minutes: 15,
+    id: 'mandukya', sectionId: 'upanishads', order: 8, title: 'Māṇḍūkya Upaniṣad', plainTitle: 'Mandukya', veda: 'Atharvaveda', form: '12-mantra depth edition', minutes: 90,
     question: 'What remains through waking, dream, and sleep?',
     insight: 'It maps Oṃ to waking, dreaming, deep sleep, and turīya—the “fourth”—while later commentary develops claims that should not be silently merged into the base text.',
     status: 'available', references: ['Māṇḍūkya 1–12'],
@@ -494,7 +495,7 @@ export const lessonDetails: Record<string, LessonDetail> = {
       context: 'The work coordinates waking, dreaming, deep sleep, a difficult “fourth,” and the syllable Oṃ. Its later commentary tradition is far more extensive than the base text.',
     },
     read: {
-      anchor: 'Māṇḍūkya 2–7 and 8–12',
+      anchor: 'Māṇḍūkya 1–12 · complete root text',
       paraphrase: 'Waking, dream, and deep sleep reveal different organizations of experience; none alone exhausts what the text calls ātman. The “fourth” is not simply another ordinary episode, and Oṃ offers an audible and contemplative schema for the whole inquiry. This is a philosophical and liturgical map, not an ancient neuroscience chart.',
       readingNote: 'The base Upaniṣad contains twelve prose mantras. Gauḍapāda’s Kārikā and Śaṅkara’s bhāṣya are often printed with it, but developed arguments about non-origination and systematic Advaita metaphysics belong especially to later reception.',
     },
@@ -510,12 +511,7 @@ export const lessonDetails: Record<string, LessonDetail> = {
       { name: 'Later Advaita lens', reading: 'Study Gauḍapāda’s non-origination arguments as a powerful later development with the source boundary visible.' },
     ],
     reflection: 'Across waking, dreaming, and deep sleep, what changes and what allows us to speak of continuity? Which part of your answer comes from experience, and which from inference?',
-    quiz: {
-      question: 'Which teaching belongs primarily to Gauḍapāda’s later Kārikā rather than the twelve-mantra base Upaniṣad?',
-      choices: ['The four pādas', 'A–U–M coordinated with the first three pādas', 'A developed doctrine of non-origination', 'The fourth resisting ordinary predicates'],
-      correct: 2,
-      explanation: 'The base text supplies the fourfold and Oṃ framework. Gauḍapāda builds an extensive philosophical argument for non-origination around it.',
-    },
+    quiz: mandukyaFinalSynthesis,
     sourceLinks: [
       { label: 'Vedic Heritage Portal: Māṇḍūkyopaniṣad', url: 'https://vedicheritage.gov.in/upanishads/mandukyopanishad/' },
       { label: 'GRETIL: Gauḍapāda’s Māṇḍūkya Kārikā', url: 'https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/gmandk_u.htm' },

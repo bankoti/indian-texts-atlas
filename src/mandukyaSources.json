@@ -1,0 +1,102 @@
+[
+  {
+    "label": "Sanskrit Documents · Māṇḍūkya Upaniṣad",
+    "url": "https://sanskritdocuments.org/doc_upanishhat/maandu.html",
+    "use": "Base witness for all twelve ancient root mantras, encoded by M. Giridhar and proofread by John Manetta; checked against two GRETIL witnesses. The course normalizes nasal typography, avagrahas, punctuation, spacing and one final-consonant sandhi. Original English and study notes are not copied from a modern translation."
+  },
+  {
+    "label": "Māṇḍūkya Sanskrit text · GRETIL, University of Göttingen",
+    "url": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mand_upu.htm",
+    "use": "Primary Sanskrit reference for the twelve root mantras, including caturtham in 7 and the pāda–mātrā correspondences in 8–12. This page interleaves Kārikā verses; those are separately labelled and are not counted as root mantras."
+  },
+  {
+    "label": "GRETIL — Māṇḍūkya Upaniṣad, Sansknet root text",
+    "url": "https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/mandup_u.htm",
+    "use": "Independent textual comparison for all six mantras. GRETIL states that this root text was checked against V. P. Limaye and R. D. Vadekar, Eighteen Principal Upanisads, volume 1, Poona, 1958. It agrees with the base in reading adṛṣṭam in 7 and only one ya evaṃ veda at the end of 12."
+  },
+  {
+    "label": "Śaṅkara's Māṇḍūkya commentary — English transcription on Shlokam",
+    "url": "https://shlokam.org/text/mandukya-upanishad.htm",
+    "use": "Only the sections explicitly headed Shankara Bhashya were used to cross-check the two interpretations of cetomukha in mantra 5 and the traditional Advaita connection between mantras 5 and 6. The page's separate modern explanatory notes were not used. Its English translation is not reproduced."
+  },
+  {
+    "label": "Patrick Olivelle · The Early Upaniṣads, Māṇḍūkya chapter",
+    "url": "https://academic.oup.com/book/50014/chapter-abstract/422709298",
+    "use": "Scholarly context: the publicly accessible chapter abstract verifies traditional Atharvaveda affiliation, Oṃ–Brahman–Self identification, and the reception through Gauḍapāda. The full chapter was not accessible."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 1, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143592.html",
+    "use": "Advaita reference for mantra 1; supports the distinction between a sound and what it signifies. Teaching and examples are original paraphrases."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 2, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143593.html",
+    "use": "Advaita reference for mantra 2 and the pedagogical use of four quarters, rather than four independently existing selves."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 3, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143594.html",
+    "use": "Reference for waking, the seven cosmic limbs, and the traditional enumeration of nineteen instruments. The enumeration belongs to commentary; the root mantra supplies the numbers."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 4, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143595.html",
+    "use": "Reference for Taijasa, dream experience and subtle objects; contextualizes the example without treating it as scientific proof."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 5, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143596.html",
+    "use": "Reference for Prājña, undifferentiated experience, bliss and the distinction between temporary absence of objects and knowledge of reality."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 6, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143597.html",
+    "use": "Reference for Lord of all, all-knowing, inner controller, and source and dissolution of beings; retains the mantra's cosmological and theological claims."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 7, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143606.html",
+    "use": "Advaita reference for the negations and for explaining the Fourth as the Self rather than a subsequent temporary state or a void."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 8, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143616.html",
+    "use": "Reference for the explicit identification between the Self's quarters and the components of Oṃ."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 9, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143617.html",
+    "use": "Reference for A, beginning/pervasion, and the stated fruit of knowing this correspondence."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 10, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143618.html",
+    "use": "Reference for U, elevation/intermediate position, and the mantra's claims concerning knowledge, equality and family."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 11, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143619.html",
+    "use": "Reference for M, measure and merging; interpretation remains distinct from mantra 12's amātra."
+  },
+  {
+    "label": "Śaṅkara commentary · Mantra 12, translated by Swami Nikhilananda",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya/d/doc143625.html",
+    "use": "Reference for amātra, nonduality and knowing the Self; supports distinguishing realization from producing a soundless interval."
+  },
+  {
+    "label": "Swami Krishnananda · The Transcendent Presence",
+    "url": "https://www.swami-krishnananda.org/mand/mand_7.html",
+    "use": "Modern traditional Advaita exposition consulted for the transition from the cosmic descriptions to mantra 7's negations. Its claim that Vedānta schools converge is not adopted by this course."
+  },
+  {
+    "label": "Swami Krishnananda · Invocation and Twelve Verses",
+    "url": "https://www.swami-krishnananda.org/mand/mand_invoc.html",
+    "use": "Traditional translation consulted to cross-check the sequence and core distinctions. The course does not reproduce the translation or its commentary prose."
+  },
+  {
+    "label": "Madhva commentary · translated by Srisa Chandra Vasu",
+    "url": "https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-madhva-commentary",
+    "use": "Reception context: this traditional edition presents Viśva, Taijasa, Prājña and Turīya as names/aspects of the Lord. It establishes that the course's Advaita interpretation is not the only Vedānta reading."
+  }
+]

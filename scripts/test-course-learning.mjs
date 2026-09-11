@@ -37,9 +37,9 @@ function lessonHtml(id, step, overrides = {}) {
 }
 
 test('every non-depth lesson has authored teaching, examples, diagrams, sources, and valid cross-links', () => {
-  assert.equal(Object.keys(guidedContent).length, 71)
+  assert.equal(Object.keys(guidedContent).length, 70)
   assert.equal(Object.keys(widerModules).length, 61)
-  assert.deepEqual(Object.keys(guidedContent).sort(), ids.filter((id) => !['course-0', 'kena', 'katha', 'isha'].includes(id)).sort())
+  assert.deepEqual(Object.keys(guidedContent).sort(), ids.filter((id) => id !== 'course-0' && !Object.hasOwn(depthEditionRegistry, id)).sort())
   for (const [id, guide] of Object.entries(guidedContent)) {
     assert.ok(guide.opening.length > 80, id)
     assert.equal(guide.teaching.length, 3, id)
@@ -68,7 +68,7 @@ test('the 61 wider lessons have distinct application quizzes and real contextual
   assert.equal(positions.size, 3)
 })
 
-test('all 426 guided step URLs render their actual teaching surfaces', () => {
+test('all 420 guided step URLs render their actual teaching surfaces', () => {
   for (const [id, guide] of Object.entries(guidedContent)) {
     for (const step of guidedStepIds) {
       const html = lessonHtml(id, step)
@@ -89,7 +89,7 @@ test('all 426 guided step URLs render their actual teaching surfaces', () => {
 
 test('every new quoted Sanskrit excerpt has complete study fields and visible meanings', () => {
   const excerpts = Object.entries(guidedContent).filter(([, guide]) => guide.excerpt)
-  assert.equal(excerpts.length, 14)
+  assert.equal(excerpts.length, 13)
   for (const [id, { excerpt }] of excerpts) {
     assert.ok(excerpt.reference && excerpt.devanagari && excerpt.iast && excerpt.translation && excerpt.note, id)
     assert.equal(new URL(excerpt.sourceUrl).protocol, 'https:')

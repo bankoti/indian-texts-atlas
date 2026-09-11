@@ -46,10 +46,12 @@ import './App.css'
 const KenaDepthLessonView = lazy(() => import('./KenaDepthLessonView'))
 const KathaDepthLessonView = lazy(() => import('./KathaDepthLessonView'))
 const IshaDepthLessonView = lazy(() => import('./IshaDepthLessonView'))
+const MandukyaDepthLessonView = lazy(() => import('./MandukyaDepthLessonView'))
 const depthEditionReaders = {
   kena: KenaDepthLessonView,
   katha: KathaDepthLessonView,
   isha: IshaDepthLessonView,
+  mandukya: MandukyaDepthLessonView,
 } satisfies Record<DepthEditionId, typeof KenaDepthLessonView>
 
 class DepthEditionErrorBoundary extends Component<{ children: ReactNode; lessonTitle: string; onClose: () => void }, { failed: boolean }> {

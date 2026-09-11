@@ -4,7 +4,12 @@ import { createServer } from 'vite'
 const server = await createServer({ appType: 'custom', logLevel: 'silent', server: { hmr: false, middlewareMode: true } })
 const { lessonDetails, referenceSources } = await server.ssrLoadModule('/src/courseData.ts')
 const { guidedContent } = await server.ssrLoadModule('/src/guidedData.ts')
+const depthSources = await Promise.all(['kena', 'katha', 'isha', 'mandukya'].map(async (id) => {
+  const edition = await server.ssrLoadModule(`/src/${id}Data.ts`)
+  return edition[`${id}Sources`]
+}))
 const urls = [...new Set([
+  ...depthSources.flat().map((source) => source.url),
   ...referenceSources.map((source) => source.url),
   ...Object.values(lessonDetails).flatMap((lesson) => lesson.sourceLinks.map((source) => source.url)),
   ...Object.values(guidedContent).flatMap((guide) => [...guide.sourceLinks.map((source) => source.url), ...(guide.excerpt ? [guide.excerpt.sourceUrl] : [])]),

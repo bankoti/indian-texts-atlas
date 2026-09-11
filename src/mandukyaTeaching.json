@@ -1,0 +1,454 @@
+[
+  {
+    "id": "1",
+    "title": "Oṃ and the whole field of reality",
+    "explanation": "The opening deliberately begins at the widest possible scale. Oṃ is identified with everything that belongs to past, present and future, and with whatever exceeds those divisions. The word akṣara means a syllable and can also suggest the imperishable. This creates a question for the whole text: how can one utterance point beyond the changing things we name?\n\nDo not shrink the claim into the idea that the universe makes a particular audible noise. The mantra announces a sacred identification, which the following mantras unfold. In Śaṅkara's Advaita reading, attention moves between a name and the reality it indicates. For now, let Oṃ gather the entire inquiry, including the person doing the inquiring.",
+    "example": {
+      "title": "Remembering, noticing, anticipating",
+      "scenario": "Recall yesterday's conversation, notice today's room, and imagine tomorrow's journey.",
+      "explanation": "The contents occupy different positions in your account of time. The mantra's scope includes all three and asks you not to make time the final boundary of reality. This is an illustration of its scope, not a proof of its claim."
+    },
+    "reflectionPrompt": "Which things do you instinctively leave outside the word ‘everything’? How does the opening challenge that boundary?",
+    "practice": {
+      "question": "What is the scope of Oṃ in mantra 1?",
+      "choices": [
+        "Only sounds heard during meditation",
+        "Everything in the three times, and what exceeds them",
+        "Only the beginning of the physical universe",
+        "Only future experiences"
+      ],
+      "correct": 1,
+      "explanation": "The mantra explicitly includes past, present and future, then extends its claim beyond those divisions of time."
+    },
+    "terms": [
+      {
+        "term": "Oṃ / Aum",
+        "meaning": "The sacred syllable through which the text examines total reality and the Self."
+      },
+      {
+        "term": "Akṣara",
+        "meaning": "Syllable; also carries the sense ‘imperishable’."
+      },
+      {
+        "term": "Trikālātīta",
+        "meaning": "Beyond the three divisions of time."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "This Self and Brahman",
+    "explanation": "The second mantra connects three claims: all this is Brahman, this Self is Brahman, and this Self has four quarters. Brahman names ultimate reality; ātman names the Self under inquiry. The word ‘this’ brings the investigation close. The subject is not only a distant cosmic principle but the reality of the one who says ‘I’.\n\nIn the Advaita reading used here, the identity is not a claim that your passing opinions or personal achievements control the cosmos. It concerns the Self, which the next mantras distinguish from particular conditions of experience. ‘Four quarters’ introduces a teaching arrangement. Treat the quarters as ways to examine one Self, while reserving judgment about the Fourth until mantra 7 explains it.",
+    "example": {
+      "title": "Which ‘I’ do you mean?",
+      "scenario": "You say ‘I am busy’, later ‘I was dreaming’, and afterward ‘I slept’. Each report concerns a different condition.",
+      "explanation": "The exercise separates changing descriptions from the question of the Self to which they refer. Mantra 2 announces the identity with Brahman; the later analysis asks what that identity means."
+    },
+    "reflectionPrompt": "Write three descriptions you use after ‘I am’. Which describe changing conditions, and what question about the Self remains?",
+    "practice": {
+      "question": "How should the four quarters first be approached in this course's Advaita reading?",
+      "choices": [
+        "As four separate souls sharing a body",
+        "As four measured regions of the brain",
+        "As an analysis through which one Self is investigated",
+        "As four personality types"
+      ],
+      "correct": 2,
+      "explanation": "The teaching concerns one ātman. The fourfold presentation is a means of inquiry, not a claim that you possess four independently existing selves."
+    },
+    "terms": [
+      {
+        "term": "Ātman",
+        "meaning": "Self; the reality investigated through the changing conditions of experience."
+      },
+      {
+        "term": "Brahman",
+        "meaning": "Ultimate reality. Distinguish this word from Brahmā, the name of a deity."
+      },
+      {
+        "term": "Pāda",
+        "meaning": "Literally ‘foot’; here a quarter or aspect in the teaching."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Waking: experience turned outward",
+    "explanation": "Vaiśvānara is the first quarter: the Self considered in waking, directed toward outward objects and enjoying the gross, or tangible, field. ‘Enjoying’ here means experiencing; an unpleasant noise belongs just as much as a pleasant meal. The mantra also gives seven limbs and nineteen mouths, widening the account beyond a private stream of sensations.\n\nŚaṅkara connects the seven limbs with a cosmic body, including heaven, sun, air, space, water, earth and sacrificial fire. He explains the nineteen mouths as instruments of experience: five senses, five capacities for action, five vital functions and four mental functions. These are traditional interpretive categories, not an anatomical count. The immediate lesson is to notice experience together with the means through which it occurs.",
+    "example": {
+      "title": "Holding a warm cup",
+      "scenario": "You see the cup, feel warmth, smell tea, reach with your hand and decide whether to drink.",
+      "explanation": "A simple waking moment involves perception, action and mental activity. The example makes the nineteen ‘mouths’ intelligible as channels of experience, while the cosmic limbs remind us that the passage has a wider setting."
+    },
+    "reflectionPrompt": "Choose one ordinary activity. Identify a sensory input, an action and a mental judgment within it.",
+    "practice": {
+      "question": "What do the nineteen ‘mouths’ signify in Śaṅkara's explanation?",
+      "choices": [
+        "Nineteen instruments through which experience takes place",
+        "Nineteen literal mouths on a human body",
+        "Nineteen different selves",
+        "Nineteen stages required for liberation"
+      ],
+      "correct": 0,
+      "explanation": "The commentary groups them as perception, action, vital functions and mental functions. The root mantra states the number without enumerating the list."
+    },
+    "terms": [
+      {
+        "term": "Vaiśvānara",
+        "meaning": "The first quarter associated with waking, presented with a cosmic dimension."
+      },
+      {
+        "term": "Bahiḥ-prajña",
+        "meaning": "Cognition directed outward."
+      },
+      {
+        "term": "Sthūla",
+        "meaning": "Gross or tangible, as contrasted with dream's subtle objects."
+      },
+      {
+        "term": "Four mental functions",
+        "meaning": "In the commentary's count: manas (thinking), buddhi (discernment), ahaṃkāra (the I-notion), and citta (mental retention or recollection)."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Dream: a world presented inwardly",
+    "explanation": "Taijasa is the second quarter, the Self considered in dream. The wording parallels waking, but the direction is inward and the objects are subtle. Dream retains an experienced world: there may be a place, other people, a dream body, fear and desire. From waking, we recognize that these were not encountered through the same outward setting as the room around us now.\n\nŚaṅkara explains dream through impressions from experience and calls its presentation inward relative to the senses. ‘Luminous’ points to the appearing of a dream world without the ordinary external scene. The lesson is a comparison of conditions. Mantra 4 alone does not establish that every waking event is merely your personal dream; the later Kārikā develops broader arguments about appearance.",
+    "example": {
+      "title": "A journey that happened in bed",
+      "scenario": "In a dream you miss a train and feel anxious. You wake and find that you have never left your bed.",
+      "explanation": "The anxiety and scene were experienced, while their objects belonged to the dream condition. Ask how a complete subject-and-world arrangement appeared, rather than dismissing the experience as nothing."
+    },
+    "reflectionPrompt": "Remember a dream scene. What made it seem like a world while you were dreaming, and what changed when you woke?",
+    "practice": {
+      "question": "What distinguishes Taijasa from Vaiśvānara in mantras 3–4?",
+      "choices": [
+        "Taijasa is the cosmic source described in mantra 6",
+        "Taijasa has no objects of experience at all",
+        "Taijasa is already the Fourth",
+        "Taijasa experiences an inward, subtle field in dream"
+      ],
+      "correct": 3,
+      "explanation": "Both waking and dream contain differentiated experience. Their direction and the character of their objects differ."
+    },
+    "terms": [
+      {
+        "term": "Taijasa",
+        "meaning": "The luminous one; the second quarter associated with dream."
+      },
+      {
+        "term": "Svapna",
+        "meaning": "Dream."
+      },
+      {
+        "term": "Antaḥ-prajña",
+        "meaning": "Cognition directed inward."
+      },
+      {
+        "term": "Pravivikta-bhuk",
+        "meaning": "Experiencing subtle objects, understood here in relation to dream."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Deep sleep: distinctions at rest",
+    "explanation": "Prājña is the third quarter, associated with deep sleep. The sleeper neither pursues a desire nor sees a dream. The mantra describes a unified condition, an undifferentiated mass of consciousness, abundance of bliss, and a doorway to cognition. Unlike waking and dream, the field is not articulated into the familiar variety of particular objects.\n\nThis is a philosophical description of dreamless sleep, not an instruction to manufacture unconsciousness. Śaṅkara distinguishes its ease from final knowledge: the demands of differentiated experience rest, but their basis has not thereby been understood. A person wakes into ordinary concerns again. The decisive check comes in mantra 7, which expressly excludes this undifferentiated condition from the Fourth. Lack of a perceived problem is different from understanding its cause.",
+    "example": {
+      "title": "Rested, with the same question",
+      "scenario": "After restful sleep you feel refreshed, but the question that confused you yesterday still needs attention.",
+      "explanation": "Rest can remove the felt pressure of a question for a time without resolving it. This analogy helps distinguish deep sleep's ease from liberating knowledge; it does not claim direct access to every moment of sleep."
+    },
+    "reflectionPrompt": "Can the absence of a thought tell you that you understand it? Describe a case where relief and understanding differ.",
+    "practice": {
+      "question": "Why does this Advaita reading distinguish deep sleep from liberation?",
+      "choices": [
+        "Deep sleep contains the same outward objects as waking",
+        "Its temporary lack of differentiated experience does not itself remove ignorance",
+        "The text calls deep sleep the fourth quarter",
+        "Deep sleep is simply another name for dream"
+      ],
+      "correct": 1,
+      "explanation": "Mantra 5 calls deep sleep the third quarter. Mantra 7 excludes its undifferentiated condition, and the commentary distinguishes temporary repose from knowledge."
+    },
+    "terms": [
+      {
+        "term": "Suṣupti",
+        "meaning": "Deep, dreamless sleep."
+      },
+      {
+        "term": "Prājña",
+        "meaning": "The third quarter, associated with the undifferentiated condition of deep sleep."
+      },
+      {
+        "term": "Prajñānaghana",
+        "meaning": "A mass of cognition or consciousness without differentiated objects; not a synonym for liberation."
+      },
+      {
+        "term": "Cetomukha",
+        "meaning": "A doorway to cognition; traditionally connected with the reappearance of waking and dream."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "The source and inner controller",
+    "explanation": "The sixth mantra changes scale. It calls this the Lord of all, the knower of all, the inner controller and the source from which beings arise and into which they return. These are explicit theological and cosmological descriptions. They cannot be replaced by the modest observation that an individual person sometimes sleeps without remembering dreams.\n\nFollowing Śaṅkara, the course reads this as the causal or Īśvara aspect associated with Prājña: the account of undifferentiation opens into an account of the source of the manifest world. This does not give an ordinary sleeping personality personal omniscience. Keep both scales visible, the experiential and the cosmic. Mantra 7 will then ask whether even descriptions made through a relation to the world exhaust the Self.",
+    "example": {
+      "title": "Two scales of a question",
+      "scenario": "You first ask, ‘Where did my dream scene go?’ Then you ask, ‘What is the source of all beings?’",
+      "explanation": "The second question has a different scope. Mantra 6 speaks at that larger scale. A personal report about sleep can help introduce the topic, but cannot substitute for the mantra's claim about the cosmic source."
+    },
+    "reflectionPrompt": "What is lost if ‘Lord of all’ is paraphrased only as ‘my quiet mind’? Restate both the personal and cosmic scales.",
+    "practice": {
+      "question": "Which reading preserves mantra 6's full scope?",
+      "choices": [
+        "It teaches only that sleep improves mood",
+        "It claims every sleeping personality knows every fact",
+        "It describes the Lord, inner controller and source of beings",
+        "It removes all reference to the origin of the world"
+      ],
+      "correct": 2,
+      "explanation": "The mantra explicitly uses these cosmic and theological terms. The course's Advaita account relates them to Īśvara and the causal condition."
+    },
+    "terms": [
+      {
+        "term": "Sarveśvara",
+        "meaning": "Lord of all."
+      },
+      {
+        "term": "Sarvajña",
+        "meaning": "All-knowing."
+      },
+      {
+        "term": "Antaryāmin",
+        "meaning": "Inner controller or indwelling ruler."
+      },
+      {
+        "term": "Yoni",
+        "meaning": "Womb or source; here the source of all beings."
+      },
+      {
+        "term": "Īśvara",
+        "meaning": "The Lord; in the Advaita commentary, Brahman considered in relation to the world's causation and order."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "The Fourth: the limit of the categories",
+    "explanation": "The seventh mantra tests and removes the descriptions we might use to capture the Self. It is not inward cognition, outward cognition, their combination, deep sleep's undifferentiated condition, ordinary knowing, or non-knowing. The passage also calls it beyond grasping and description, peaceful, auspicious and nondual, and identifies it as the Self to be known. The root word is caturtham, ‘the fourth’; Turīya is its familiar interpretive name.\n\nIn Śaṅkara's Advaita reading, ‘fourth’ marks its place in the explanation, not a new episode after sleep. Its negations prevent mistaking a condition or an object for the Self. They also prevent equating it with blankness. The inquiry now changes: instead of searching for another experience, examine the assumption that the Self must be something experienced as an object.",
+    "example": {
+      "title": "A new experience on the list",
+      "scenario": "A learner says, ‘Yesterday I saw colors, then had no thoughts. Which one was the Fourth?’",
+      "explanation": "Both reports describe something that appeared or ceased. The mantra warns against identifying the Self by adding another item to such a list. The question is what the descriptions can and cannot establish."
+    },
+    "reflectionPrompt": "If you imagine the Fourth as a special feeling, which phrase in mantra 7 challenges that picture? Explain why.",
+    "practice": {
+      "question": "Why is the Fourth not simply a blank interval?",
+      "choices": [
+        "It is explicitly the dream world's brightest object",
+        "The text equates it with the longest period of sleep",
+        "It is defined by a fixed duration without thoughts",
+        "The mantra excludes both deep sleep's undifferentiation and non-knowing"
+      ],
+      "correct": 3,
+      "explanation": "The negations block blankness as a final answer. The passage directs the inquiry toward the nondual Self, not merely toward absence of mental content."
+    },
+    "terms": [
+      {
+        "term": "Caturtham / Turīya",
+        "meaning": "‘The fourth.’ Caturtham occurs in mantra 7; Turīya is the familiar name in interpretive teaching."
+      },
+      {
+        "term": "Advaita",
+        "meaning": "Nondual; without a second. Here also the name of the interpretive tradition followed by the course."
+      },
+      {
+        "term": "Prapañcopaśama",
+        "meaning": "The quieting or cessation of phenomenal multiplicity; in Advaita, the end of taking division as ultimate."
+      },
+      {
+        "term": "Śivam",
+        "meaning": "Auspicious or benign in this passage; not by itself an instruction to identify a particular deity."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "One inquiry, now through sound",
+    "explanation": "The text returns to the Oṃ with which it began. It identifies this same Self with the syllable and sets its quarters alongside the syllable's mātrās, or sound components: A, U and M. The earlier investigation and the sound teaching are therefore connected; Oṃ is not introduced as a separate subject halfway through the Upaniṣad.\n\nThe relation is stronger than a convenient modern mnemonic: the mantra states an identification, and the next verses explain shared features. A learning diagram can show the correspondences, but should preserve their purpose. We use the distinguishable sounds to revisit distinguishable experiential conditions. Mantra 12 will address amātra, without a sound measure, so avoid inventing a fourth letter to complete a neat four-box sequence.",
+    "example": {
+      "title": "Reading the map twice",
+      "scenario": "You first organize your notes by waking, dream and deep sleep, then place A, U and M beside those entries.",
+      "explanation": "The second organization gives a contemplative route through the same teaching. The correspondence should bring the meaning of each quarter to mind, not leave you with three letters detached from the inquiry."
+    },
+    "reflectionPrompt": "Why does the text return to Oṃ after examining experience? Explain the connection without relying only on memorized pairings.",
+    "practice": {
+      "question": "What does mantra 8 connect?",
+      "choices": [
+        "The quarters of the Self with the components A, U and M",
+        "Three gods with three weekdays",
+        "Three letters with three anatomical organs",
+        "Three sounds with three guaranteed feelings"
+      ],
+      "correct": 0,
+      "explanation": "Pāda and mātrā are the two sides of the correspondence. Mantras 9–11 supply the particular associations, and 12 addresses amātra."
+    },
+    "terms": [
+      {
+        "term": "Mātrā",
+        "meaning": "A measure or sound component; here A, U and M as components of Oṃ."
+      },
+      {
+        "term": "Akāra / Ukāra / Makāra",
+        "meaning": "The sounds A, U and M respectively."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "A: beginning and pervasion",
+    "explanation": "A is identified with Vaiśvānara, the waking quarter. The text supplies two connecting ideas: pervasion or reaching, and being first. Within the traditional sound analysis, A is the beginning and a pervasive basis of speech; waking provides the initial position from which the learner examines experience. The correspondence is meant to be understood, not only repeated.\n\nThe mantra also states a fruit: one who knows this obtains desired ends and becomes foremost. Preserve that claim as part of the source's teaching. Read this as the text’s religious assurance, not a tested guarantee that making a sound will produce success. The emphasis on ‘one who knows thus’ directs attention to contemplative understanding of the correspondence.",
+    "example": {
+      "title": "Starting from the familiar",
+      "scenario": "Before discussing last night's dream, you begin with the waking room you and a study partner are discussing now.",
+      "explanation": "Waking is the accessible starting point of the analysis, just as A begins the sequence. The analogy helps recall one stated connection; it does not establish that all inquiry must follow a daily sleep timetable."
+    },
+    "reflectionPrompt": "What is the difference between reciting A and understanding why this mantra associates A with waking?",
+    "practice": {
+      "question": "Which features connect A with the waking quarter in mantra 9?",
+      "choices": [
+        "Dream imagery and inwardness",
+        "Beginning and pervasion",
+        "Being in the middle and elevation",
+        "Measurement and merging"
+      ],
+      "correct": 1,
+      "explanation": "Beginning and pervasion are the connections given here. The other feature pairs belong to later correspondences."
+    },
+    "terms": [
+      {
+        "term": "Āpti",
+        "meaning": "Reaching, obtaining or pervasion; one link between A and Vaiśvānara."
+      },
+      {
+        "term": "Ādimattva",
+        "meaning": "Being first or having the character of a beginning."
+      },
+      {
+        "term": "Ya evaṃ veda",
+        "meaning": "‘One who knows thus’; a recurring expression linking the teaching and its stated fruit."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "U: elevation and the middle position",
+    "explanation": "U corresponds to Taijasa, the dream quarter. The mantra connects them through elevation or excellence and an intermediate position. U stands between A and M; dream occupies the middle position in this teaching between waking and deep sleep. The association draws attention toward subtle experience, where a differentiated world appears without the ordinary waking scene.\n\nThe source says this knowledge raises the continuity of understanding, brings equality, and leaves no one ignorant of Brahman in the knower's family. Translations interpret some details differently, especially ‘equality’. These are the mantra's stated fruits, not outcomes this course can promise. Also keep the sequence in its proper role: being second does not mean that dreaming is automatically spiritual progress or that every night's sleep follows only three simple steps.",
+    "example": {
+      "title": "What ‘middle’ actually tells you",
+      "scenario": "Place three cards in order: waking–A, dream–U, deep sleep–M. The middle card is easy to locate.",
+      "explanation": "The arrangement makes the textual analogy memorable. It does not make dreams morally better than waking or establish a physiological sleep sequence. The shared position serves the contemplative identification."
+    },
+    "reflectionPrompt": "Explain the middle-position analogy. Then name one conclusion about dreams that the analogy does not justify.",
+    "practice": {
+      "question": "What does U's middle position help explain?",
+      "choices": [
+        "Why every dream produces liberation",
+        "Why U is the soundless Fourth",
+        "Its correspondence with Taijasa between the other two quarters",
+        "Why waking objects never matter"
+      ],
+      "correct": 2,
+      "explanation": "The position is a stated point of correspondence. It is not a guarantee that a dream is liberating."
+    },
+    "terms": [
+      {
+        "term": "Utkarṣa",
+        "meaning": "Elevation, superiority or excellence; one connecting feature in mantra 10."
+      },
+      {
+        "term": "Ubhayatva",
+        "meaning": "Being related to both sides; interpreted here through the intermediate position."
+      },
+      {
+        "term": "Jñāna-santati",
+        "meaning": "Continuity or flow of knowledge."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "M: measure and merging",
+    "explanation": "M is identified with Prājña, the deep-sleep quarter. The connecting ideas are measure and merging. In the contemplated utterance, A and U come to their close in M; in deep sleep, the distinct waking and dream fields are gathered into an undifferentiated condition. Śaṅkara explains the correspondence through appearance and resolution, rather than treating M as a device that mechanically causes sleep.\n\nThe mantra gives the knower a corresponding fruit: measuring or comprehending the whole, and becoming its point of absorption. This is still the third correspondence. M is a definite component, and Prājña remains the third quarter. Keeping that distinction prevents the most tempting shortcut: treating the end of a sound, the closing of experience, or an absence of thoughts as the final teaching.",
+    "example": {
+      "title": "The hum still has a shape",
+      "scenario": "As an imagined A–U–M reaches M, you notice that the hum is quieter but still has a beginning, a duration and an ending.",
+      "explanation": "M can represent gathering and closure while remaining a distinguishable sound. This prepares the contrast with amātra; ‘very quiet’ and ‘without a sound measure’ are not interchangeable descriptions."
+    },
+    "reflectionPrompt": "Why is M still part of the threefold analysis? Explain how confusing M with amātra would confuse deep sleep with the Fourth.",
+    "practice": {
+      "question": "Which statement preserves the distinction in mantra 11?",
+      "choices": [
+        "M is the third component associated with Prājña; amātra is addressed next",
+        "M is a fourth letter after A, U and silence",
+        "Prājña is the name of the waking quarter",
+        "Any sound fading away proves realization"
+      ],
+      "correct": 0,
+      "explanation": "M belongs to the third sound–quarter correspondence. The next mantra moves beyond the measured components."
+    },
+    "terms": [
+      {
+        "term": "Miti",
+        "meaning": "Measure; a connecting feature between M and Prājña."
+      },
+      {
+        "term": "Apīti",
+        "meaning": "Merging, absorption or coming together."
+      },
+      {
+        "term": "Makāra",
+        "meaning": "The M component of Oṃ, paired with Prājña."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Amātra: returning to the Self",
+    "explanation": "The final mantra calls the Fourth amātra: without a measure or component, often rendered soundless. It repeats the language of nonduality and the quieting of phenomenal multiplicity, bringing the Oṃ analysis back to mantra 7. It identifies Oṃ with the Self and speaks of one who knows entering the Self by the Self.\n\nIn the Advaita reading, this describes recognition, not travel to a new place or the joining of two ultimately separate selves. Silence after chanting can serve as a teaching pointer, but a timed interval is still an experience with boundaries. Merely prolonging it misses the inquiry. The culmination is understanding the Self beyond the divisions used to teach it, while recognizing why those divisions were helpful along the way.",
+    "example": {
+      "title": "When the room becomes audible again",
+      "scenario": "An utterance ends. After a quiet moment, traffic is heard outside and a thought arises.",
+      "explanation": "If realization depended on keeping every sound and thought away, it would end whenever these returned. The course's Advaita interpretation asks for understanding of the Self rather than possession of a fragile silent interval."
+    },
+    "reflectionPrompt": "Write a short response to: ‘If I can hold silence for longer, I have understood amātra better.’ Use mantras 7 and 12.",
+    "practice": {
+      "question": "How should post-chant silence be used in this course?",
+      "choices": [
+        "As proof that all ignorance has ended",
+        "As a measured fourth sound added to A, U and M",
+        "As a possible pointer whose meaning must be understood, not a guaranteed realization",
+        "As a way to replace the inquiry into the Self"
+      ],
+      "correct": 2,
+      "explanation": "Amātra is not another measurable component. A silence exercise can support reflection, but its duration does not establish the knowledge described in the mantra."
+    },
+    "terms": [
+      {
+        "term": "Amātra",
+        "meaning": "Without a measure or sound component; often translated as soundless or partless."
+      },
+      {
+        "term": "Saṃviśati",
+        "meaning": "Enters or merges; in this Advaita reading, language of recognizing the Self, not physical movement."
+      },
+      {
+        "term": "Nonduality",
+        "meaning": "The denial of an ultimately separate second reality; not merely a feeling of calm or social agreement."
+      }
+    ]
+  }
+]
